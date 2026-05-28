@@ -1,0 +1,505 @@
+{
+  "file": "unigram_bio_sig_n4.json",
+  "decoded_phrases": [
+    "role in the human",
+    "a general audience.",
+    "play a vital role",
+    "vital role in the",
+    "ins play a vital",
+    "a more general readers",
+    ". furthermore, the",
+    "general readership.",
+    "sequences and the connections",
+    ". to overcome these",
+    "apeutic treatments. recent",
+    ", picnic",
+    ". the rewritten text",
+    "rewriting the paragraph.",
+    "paper. the rewritten",
+    "in the human organism",
+    "a vital role in",
+    "for a broader audience",
+    "teins play a",
+    "human organism, and",
+    "la are essential for",
+    "the human organism,",
+    "hla are essential",
+    "make it more accessible",
+    "proteins or those with",
+    "a general audience,",
+    "picnic 2",
+    "ocyte antigen).",
+    "general audience. the",
+    "more general readership",
+    "each protein at a",
+    "manual labor, and",
+    "and amino acid positions",
+    "at a more general",
+    "and the connections between"
+  ],
+  "decoded_words": [
+    "role",
+    "in",
+    "the",
+    "human",
+    "a",
+    "general",
+    "audience.",
+    "play",
+    "a",
+    "vital",
+    "role",
+    "vital",
+    "role",
+    "in",
+    "the",
+    "ins",
+    "play",
+    "a",
+    "vital",
+    "a",
+    "more",
+    "general",
+    "readers",
+    ".",
+    "furthermore,",
+    "the",
+    "general",
+    "readership.",
+    "sequences",
+    "and",
+    "the",
+    "connections",
+    ".",
+    "to",
+    "overcome",
+    "these",
+    "apeutic",
+    "treatments.",
+    "recent",
+    ",",
+    "picnic",
+    ".",
+    "the",
+    "rewritten",
+    "text",
+    "rewriting",
+    "the",
+    "paragraph.",
+    "paper.",
+    "the",
+    "rewritten",
+    "in",
+    "the",
+    "human",
+    "organism",
+    "a",
+    "vital",
+    "role",
+    "in",
+    "for",
+    "a",
+    "broader",
+    "audience",
+    "teins",
+    "play",
+    "a",
+    "human",
+    "organism,",
+    "and",
+    "la",
+    "are",
+    "essential",
+    "for",
+    "the",
+    "human",
+    "organism,",
+    "hla",
+    "are",
+    "essential",
+    "make",
+    "it",
+    "more",
+    "accessible",
+    "proteins",
+    "or",
+    "those",
+    "with",
+    "a",
+    "general",
+    "audience,",
+    "picnic",
+    "2",
+    "ocyte",
+    "antigen).",
+    "general",
+    "audience.",
+    "the",
+    "more",
+    "general",
+    "readership",
+    "each",
+    "protein",
+    "at",
+    "a",
+    "manual",
+    "labor,",
+    "and",
+    "and",
+    "amino",
+    "acid",
+    "positions",
+    "at",
+    "a",
+    "more",
+    "general",
+    "and",
+    "the",
+    "connections",
+    "between"
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "homo.n.02",
+        "definition": "any living or extinct member of the family Hominidae characterized by superior intelligence, articulate speech, and erect carriage"
+      },
+      {
+        "name": "function.n.03",
+        "definition": "the actions and activities assigned to or required or expected of a person or group"
+      },
+      {
+        "name": "critical.s.04",
+        "definition": "urgently needed; absolutely necessary"
+      },
+      {
+        "name": "reader.n.01",
+        "definition": "a person who enjoys reading"
+      },
+      {
+        "name": "connection.n.01",
+        "definition": "a relation between things or events (as in the case of one causing the other or sharing features with it)"
+      },
+      {
+        "name": "holocene.n.01",
+        "definition": "approximately the last 10,000 years"
+      },
+      {
+        "name": "field_day.n.04",
+        "definition": "a day devoted to an outdoor social gathering"
+      },
+      {
+        "name": "text.n.01",
+        "definition": "the words of something written"
+      },
+      {
+        "name": "rewrite.v.01",
+        "definition": "write differently; alter the writing of"
+      },
+      {
+        "name": "organism.n.01",
+        "definition": "a living thing that has (or can develop) the ability to act or function independently"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      },
+      {
+        "name": "audience.n.01",
+        "definition": "a gathering of spectators or listeners at a (usually public) performance"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "necessity.n.02",
+        "definition": "anything indispensable"
+      },
+      {
+        "name": "accessible.a.01",
+        "definition": "capable of being reached"
+      },
+      {
+        "name": "two.n.01",
+        "definition": "the cardinal number that is the sum of one and one or a numeral representing this number"
+      },
+      {
+        "name": "readership.n.01",
+        "definition": "the audience reached by written communications (books or magazines or newspapers etc.)"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "position.n.01",
+        "definition": "the particular portion of space occupied by something"
+      },
+      {
+        "name": "general.n.01",
+        "definition": "a general officer of the highest rank"
+      },
+      {
+        "name": "between.r.01",
+        "definition": "in the interval"
+      }
+    ],
+    "level2": [
+      {
+        "name": "hominid.n.01",
+        "definition": "a primate of the family Hominidae"
+      },
+      {
+        "name": "duty.n.02",
+        "definition": "work that you are obliged to perform for moral or legal reasons"
+      },
+      {
+        "name": "scholar.n.01",
+        "definition": "a learned person (especially in the humanities); someone who by long study has gained mastery in one or more disciplines"
+      },
+      {
+        "name": "epoch.n.03",
+        "definition": "a unit of geological time that is a subdivision of a period and is itself divided into ages"
+      },
+      {
+        "name": "vacation.n.01",
+        "definition": "leisure time away from work devoted to rest or pleasure"
+      },
+      {
+        "name": "matter.n.06",
+        "definition": "written works (especially in books or magazines)"
+      },
+      {
+        "name": "write.v.02",
+        "definition": "communicate or express by writing"
+      },
+      {
+        "name": "living_thing.n.01",
+        "definition": "a living (or once living) entity"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      },
+      {
+        "name": "gathering.n.01",
+        "definition": "a group of persons together in one place"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "digit.n.01",
+        "definition": "one of the elements that collectively form a system of numeration"
+      },
+      {
+        "name": "audience.n.02",
+        "definition": "the part of the general public interested in a source of information or entertainment"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "point.n.02",
+        "definition": "the precise location of something; a spatially limited location"
+      },
+      {
+        "name": "general_officer.n.01",
+        "definition": "officers in the Army or Air Force or Marines above the rank of colonel"
+      }
+    ],
+    "level3": [
+      {
+        "name": "primate.n.02",
+        "definition": "any placental mammal of the order Primates; has good eyesight and flexible hands and feet"
+      },
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      },
+      {
+        "name": "intellectual.n.01",
+        "definition": "a person who uses the mind creatively"
+      },
+      {
+        "name": "geological_time.n.01",
+        "definition": "the time of the physical formation and development of the earth (especially prior to human history)"
+      },
+      {
+        "name": "leisure.n.01",
+        "definition": "time available for ease and relaxation"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "communicate.v.02",
+        "definition": "transmit thoughts or feelings"
+      },
+      {
+        "name": "whole.n.02",
+        "definition": "an assemblage of parts that is regarded as a single entity"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "social_group.n.01",
+        "definition": "people sharing some social relation"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "integer.n.01",
+        "definition": "any of the natural numbers (positive or negative) or zero"
+      },
+      {
+        "name": "multitude.n.03",
+        "definition": "the common people generally"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "location.n.01",
+        "definition": "a point or extent in space"
+      },
+      {
+        "name": "commissioned_military_officer.n.01",
+        "definition": "a commissioned officer in the Army or Air Force or Marine Corps"
+      }
+    ],
+    "level4": [
+      {
+        "name": "placental.n.01",
+        "definition": "mammals having a placenta; all mammals except monotremes and marsupials"
+      },
+      {
+        "name": "person.n.01",
+        "definition": "a human being"
+      },
+      {
+        "name": "time.n.05",
+        "definition": "the continuum of experience in which events pass from the future through the present to the past"
+      },
+      {
+        "name": "time_off.n.01",
+        "definition": "a time period when you are not required to work"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "interact.v.01",
+        "definition": "act together or towards others or with others"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "number.n.02",
+        "definition": "a concept of quantity involving zero and units"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "commissioned_officer.n.01",
+        "definition": "a military officer holding a commission"
+      }
+    ]
+  },
+  "concept_counts": {
+    "homo.n.02": 1,
+    "hominid.n.01": 1,
+    "primate.n.02": 1,
+    "placental.n.01": 1,
+    "function.n.03": 1,
+    "duty.n.02": 1,
+    "work.n.01": 1,
+    "critical.s.04": 1,
+    "reader.n.01": 1,
+    "scholar.n.01": 1,
+    "intellectual.n.01": 1,
+    "person.n.01": 1,
+    "connection.n.01": 1,
+    "holocene.n.01": 1,
+    "epoch.n.03": 1,
+    "geological_time.n.01": 1,
+    "time.n.05": 1,
+    "field_day.n.04": 1,
+    "vacation.n.01": 1,
+    "leisure.n.01": 1,
+    "time_off.n.01": 1,
+    "text.n.01": 1,
+    "matter.n.06": 1,
+    "writing.n.02": 1,
+    "written_communication.n.01": 1,
+    "rewrite.v.01": 1,
+    "write.v.02": 1,
+    "communicate.v.02": 1,
+    "interact.v.01": 1,
+    "organism.n.01": 1,
+    "living_thing.n.01": 1,
+    "whole.n.02": 1,
+    "inch.n.01": 1,
+    "linear_unit.n.01": 1,
+    "unit_of_measurement.n.01": 3,
+    "definite_quantity.n.01": 1,
+    "audience.n.01": 1,
+    "gathering.n.01": 1,
+    "social_group.n.01": 1,
+    "angstrom.n.01": 2,
+    "metric_linear_unit.n.01": 2,
+    "metric_unit.n.01": 2,
+    "necessity.n.02": 1,
+    "accessible.a.01": 1,
+    "two.n.01": 1,
+    "digit.n.01": 1,
+    "integer.n.01": 1,
+    "number.n.02": 1,
+    "readership.n.01": 1,
+    "audience.n.02": 1,
+    "multitude.n.03": 1,
+    "position.n.01": 1,
+    "point.n.02": 1,
+    "location.n.01": 1,
+    "general.n.01": 1,
+    "general_officer.n.01": 1,
+    "commissioned_military_officer.n.01": 1,
+    "commissioned_officer.n.01": 1,
+    "between.r.01": 1
+  },
+  "top_concepts": [
+    {
+      "name": "unit_of_measurement.n.01",
+      "count": 3,
+      "definition": "any division of quantity accepted as a standard of measurement or exchange"
+    },
+    {
+      "name": "angstrom.n.01",
+      "count": 2,
+      "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+    },
+    {
+      "name": "metric_linear_unit.n.01",
+      "count": 2,
+      "definition": "a linear unit of distance in metric terms"
+    }
+  ]
+}

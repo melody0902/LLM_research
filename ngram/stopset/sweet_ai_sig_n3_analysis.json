@@ -1,0 +1,238 @@
+{
+  "file": "sweet_ai_sig_n3.json",
+  "decoded_phrases": [
+    "unclear. this",
+    "a new type",
+    "simple linear transformation",
+    "generality),",
+    "to refine the",
+    "**auto-j",
+    "of thoughts project",
+    "personal attributes from",
+    "privacy research\"",
+    "highlighted the importance",
+    "called **auto",
+    "as an optimization",
+    "the tree of",
+    "exploration and self",
+    "tree of thoughts",
+    "and self-ass",
+    "behind the tree",
+    "\"bile"
+  ],
+  "decoded_words": [
+    "unclear.",
+    "this",
+    "a",
+    "new",
+    "type",
+    "simple",
+    "linear",
+    "transformation",
+    "generality),",
+    "to",
+    "refine",
+    "the",
+    "**auto-j",
+    "of",
+    "thoughts",
+    "project",
+    "personal",
+    "attributes",
+    "from",
+    "privacy",
+    "research\"",
+    "highlighted",
+    "the",
+    "importance",
+    "called",
+    "**auto",
+    "as",
+    "an",
+    "optimization",
+    "the",
+    "tree",
+    "of",
+    "exploration",
+    "and",
+    "self",
+    "tree",
+    "of",
+    "thoughts",
+    "and",
+    "self-ass",
+    "behind",
+    "the",
+    "tree",
+    "\"bile"
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "type.n.01",
+        "definition": "a subdivision of a particular kind of thing"
+      },
+      {
+        "name": "transformation.n.01",
+        "definition": "a qualitative change"
+      },
+      {
+        "name": "undertaking.n.01",
+        "definition": "any piece of work that is undertaken or attempted"
+      },
+      {
+        "name": "importance.n.01",
+        "definition": "the quality of being important and worthy of note"
+      },
+      {
+        "name": "optimization.n.01",
+        "definition": "the act of rendering optimal"
+      },
+      {
+        "name": "self.n.01",
+        "definition": "your consciousness of your own identity"
+      },
+      {
+        "name": "idea.n.01",
+        "definition": "the content of cognition; the main thing you are thinking about"
+      },
+      {
+        "name": "tree.n.01",
+        "definition": "a tall perennial woody plant having a main trunk and branches forming a distinct elevated crown; includes both gymnosperms and angiosperms"
+      }
+    ],
+    "level2": [
+      {
+        "name": "kind.n.01",
+        "definition": "a category of things distinguished by some common characteristic or quality"
+      },
+      {
+        "name": "change.n.01",
+        "definition": "an event that occurs when something passes from one state or phase to another"
+      },
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      },
+      {
+        "name": "value.n.02",
+        "definition": "the quality (positive or negative) that renders something desirable or valuable"
+      },
+      {
+        "name": "improvement.n.02",
+        "definition": "the act of improving something"
+      },
+      {
+        "name": "consciousness.n.01",
+        "definition": "an alert cognitive state in which you are aware of yourself and your situation"
+      },
+      {
+        "name": "content.n.05",
+        "definition": "the sum or range of what has been perceived, discovered, or learned"
+      },
+      {
+        "name": "woody_plant.n.01",
+        "definition": "a plant having hard lignified tissues or woody parts especially stems"
+      }
+    ],
+    "level3": [
+      {
+        "name": "category.n.02",
+        "definition": "a general concept that marks divisions or coordinations in a conceptual scheme"
+      },
+      {
+        "name": "happening.n.01",
+        "definition": "an event that happens"
+      },
+      {
+        "name": "worth.n.02",
+        "definition": "the quality that renders something desirable or valuable or useful"
+      },
+      {
+        "name": "change_of_state.n.01",
+        "definition": "the act of changing something into something different in essential characteristics"
+      },
+      {
+        "name": "cognitive_state.n.01",
+        "definition": "the state of a person's cognitive processes"
+      },
+      {
+        "name": "cognition.n.01",
+        "definition": "the psychological result of perception and learning and reasoning"
+      },
+      {
+        "name": "vascular_plant.n.01",
+        "definition": "green plant having a vascular system: ferns, gymnosperms, angiosperms"
+      }
+    ],
+    "level4": [
+      {
+        "name": "concept.n.01",
+        "definition": "an abstract or general idea inferred or derived from specific instances"
+      },
+      {
+        "name": "quality.n.01",
+        "definition": "an essential and distinguishing attribute of something or someone; --Shakespeare"
+      },
+      {
+        "name": "change.n.03",
+        "definition": "the action of changing something"
+      },
+      {
+        "name": "psychological_state.n.01",
+        "definition": "(psychology) a mental condition in which the qualities of a state are relatively constant even though the state itself may be dynamic"
+      },
+      {
+        "name": "plant.n.02",
+        "definition": "(botany) a living organism lacking the power of locomotion"
+      }
+    ]
+  },
+  "concept_counts": {
+    "type.n.01": 1,
+    "kind.n.01": 1,
+    "category.n.02": 1,
+    "concept.n.01": 1,
+    "transformation.n.01": 1,
+    "change.n.01": 1,
+    "happening.n.01": 1,
+    "undertaking.n.01": 1,
+    "work.n.01": 1,
+    "importance.n.01": 1,
+    "value.n.02": 1,
+    "worth.n.02": 1,
+    "quality.n.01": 1,
+    "optimization.n.01": 1,
+    "improvement.n.02": 1,
+    "change_of_state.n.01": 1,
+    "change.n.03": 1,
+    "self.n.01": 1,
+    "consciousness.n.01": 1,
+    "cognitive_state.n.01": 1,
+    "psychological_state.n.01": 1,
+    "idea.n.01": 1,
+    "content.n.05": 1,
+    "cognition.n.01": 1,
+    "tree.n.01": 1,
+    "woody_plant.n.01": 1,
+    "vascular_plant.n.01": 1,
+    "plant.n.02": 1
+  },
+  "top_concepts": [
+    {
+      "name": "type.n.01",
+      "count": 1,
+      "definition": "a subdivision of a particular kind of thing"
+    },
+    {
+      "name": "kind.n.01",
+      "count": 1,
+      "definition": "a category of things distinguished by some common characteristic or quality"
+    },
+    {
+      "name": "category.n.02",
+      "count": 1,
+      "definition": "a general concept that marks divisions or coordinations in a conceptual scheme"
+    }
+  ]
+}

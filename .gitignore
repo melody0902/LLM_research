@@ -383,3 +383,32 @@ outputs/
 watermark/xsir/dictionary/dictionary.txt
 watermark/xsir/dictionary/dictionary_no_meta.txt
 font/msjh.ttf
+
+# Python virtual environments
+myenv/
+watermark-env/
+venv/
+.env/
+
+# generated analysis outputs
+analysis_tables/stats_outputs/
+ngram/analysis_results_top10/
+ngram/stopset/outputs_by_domain_n/
+
+# model weights
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+watermark/sir/model/
+watermark/xsir/model/
+
+# binary / compressed large files
+*.bin
+*.bin.gz
+*.zip
+*.tar
+*.tar.gz
+
+# generated images / tables
+*.png

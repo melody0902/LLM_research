@@ -1,0 +1,1901 @@
+{
+  "file": "unigram_bio_sig_n2.json",
+  "decoded_phrases": [
+    "general readers",
+    "at a",
+    ": the",
+    "bp binding",
+    ". while",
+    "treatments.",
+    "maps,",
+    "clarity and",
+    ", and",
+    "in the",
+    ". furthermore",
+    "paragraph.",
+    "first learns",
+    "basis.",
+    "sequences and",
+    "2",
+    "proteins at",
+    "igen).",
+    "roles in",
+    "directly mapping",
+    "ins play",
+    "down the",
+    "variables for",
+    ", the",
+    "are essential",
+    "machine learning",
+    "or those",
+    "antigen",
+    "important tool",
+    "it easier",
+    "and proteins",
+    "ly estimate",
+    "proteins with",
+    "a smaller",
+    "analyze the",
+    "the data",
+    "them a",
+    "the rewritten",
+    "work with",
+    "a broader",
+    "protein sequences",
+    "organism,",
+    "the drug",
+    "bioinformatics",
+    ", pic",
+    "state.",
+    "-performance computing",
+    "tone,",
+    "furthermore,",
+    "structures,",
+    "biological processes",
+    "play a",
+    ", making",
+    "and amino",
+    "been made",
+    "proteins play",
+    "however,",
+    "structures.",
+    "it more",
+    "protein at",
+    "ucial",
+    "for the",
+    ", predicting",
+    "style,",
+    "ocyte ant",
+    "broader audience",
+    "drug itself",
+    "making it",
+    "connections between",
+    ". recent",
+    "labor,",
+    "vital role",
+    "genomes,",
+    "copying the",
+    "human organism",
+    "rewriting the",
+    "former,",
+    "design.",
+    "nic",
+    "than directly",
+    "apeutic treatments",
+    "at the",
+    "understanding how",
+    "rewritten text",
+    "the activation",
+    "clinical applications",
+    "informatics,",
+    "data.",
+    "\"wide",
+    ". this",
+    "processes are",
+    "make it",
+    ". the",
+    "it in",
+    "more consistent",
+    "and powerful",
+    "the affinity",
+    "-quality proteins",
+    ". however",
+    "role in",
+    "those with",
+    "a protein",
+    "as t",
+    "with \"",
+    ". to",
+    "selection in",
+    "tool for",
+    "the strength",
+    ".g,",
+    "a general",
+    "are some",
+    "the rewritten",
+    "variable selection",
+    "and sentence",
+    "each protein",
+    "more general",
+    "information crucial",
+    ", current",
+    "overcome these",
+    "'s protein",
+    "the human",
+    "tasks.",
+    "hip.",
+    "hla",
+    "or tasks",
+    "behavior.",
+    "proteins are",
+    ".g.",
+    "paper.",
+    "picnic",
+    "' ability",
+    "essential for",
+    "protein-d",
+    "acid positions",
+    "in a",
+    "parameters are",
+    "general audience",
+    "audience,",
+    "manual labor",
+    ", but",
+    "a more",
+    "a vital",
+    "amino acid",
+    "peptides.",
+    "able and",
+    "as h",
+    ", a",
+    "proteins or",
+    ", our",
+    "audience.",
+    "la are",
+    "proteins.",
+    "and the",
+    "the paragraph",
+    "teins",
+    "biological and",
+    "applications.",
+    "for a",
+    ".",
+    "to overcome",
+    "but the",
+    "more accessible",
+    "crucial for",
+    "data and",
+    "readership",
+    "these predictions",
+    "the non",
+    "the connections",
+    "them.",
+    "-length sequences",
+    "association analysis"
+  ],
+  "decoded_words": [
+    "general",
+    "readers",
+    "at",
+    "a",
+    ":",
+    "the",
+    "bp",
+    "binding",
+    ".",
+    "while",
+    "treatments.",
+    "maps,",
+    "clarity",
+    "and",
+    ",",
+    "and",
+    "in",
+    "the",
+    ".",
+    "furthermore",
+    "paragraph.",
+    "first",
+    "learns",
+    "basis.",
+    "sequences",
+    "and",
+    "2",
+    "proteins",
+    "at",
+    "igen).",
+    "roles",
+    "in",
+    "directly",
+    "mapping",
+    "ins",
+    "play",
+    "down",
+    "the",
+    "variables",
+    "for",
+    ",",
+    "the",
+    "are",
+    "essential",
+    "machine",
+    "learning",
+    "or",
+    "those",
+    "antigen",
+    "important",
+    "tool",
+    "it",
+    "easier",
+    "and",
+    "proteins",
+    "ly",
+    "estimate",
+    "proteins",
+    "with",
+    "a",
+    "smaller",
+    "analyze",
+    "the",
+    "the",
+    "data",
+    "them",
+    "a",
+    "the",
+    "rewritten",
+    "work",
+    "with",
+    "a",
+    "broader",
+    "protein",
+    "sequences",
+    "organism,",
+    "the",
+    "drug",
+    "bioinformatics",
+    ",",
+    "pic",
+    "state.",
+    "-performance",
+    "computing",
+    "tone,",
+    "furthermore,",
+    "structures,",
+    "biological",
+    "processes",
+    "play",
+    "a",
+    ",",
+    "making",
+    "and",
+    "amino",
+    "been",
+    "made",
+    "proteins",
+    "play",
+    "however,",
+    "structures.",
+    "it",
+    "more",
+    "protein",
+    "at",
+    "ucial",
+    "for",
+    "the",
+    ",",
+    "predicting",
+    "style,",
+    "ocyte",
+    "ant",
+    "broader",
+    "audience",
+    "drug",
+    "itself",
+    "making",
+    "it",
+    "connections",
+    "between",
+    ".",
+    "recent",
+    "labor,",
+    "vital",
+    "role",
+    "genomes,",
+    "copying",
+    "the",
+    "human",
+    "organism",
+    "rewriting",
+    "the",
+    "former,",
+    "design.",
+    "nic",
+    "than",
+    "directly",
+    "apeutic",
+    "treatments",
+    "at",
+    "the",
+    "understanding",
+    "how",
+    "rewritten",
+    "text",
+    "the",
+    "activation",
+    "clinical",
+    "applications",
+    "informatics,",
+    "data.",
+    "\"wide",
+    ".",
+    "this",
+    "processes",
+    "are",
+    "make",
+    "it",
+    ".",
+    "the",
+    "it",
+    "in",
+    "more",
+    "consistent",
+    "and",
+    "powerful",
+    "the",
+    "affinity",
+    "-quality",
+    "proteins",
+    ".",
+    "however",
+    "role",
+    "in",
+    "those",
+    "with",
+    "a",
+    "protein",
+    "as",
+    "t",
+    "with",
+    "\"",
+    ".",
+    "to",
+    "selection",
+    "in",
+    "tool",
+    "for",
+    "the",
+    "strength",
+    ".g,",
+    "a",
+    "general",
+    "are",
+    "some",
+    "the",
+    "rewritten",
+    "variable",
+    "selection",
+    "and",
+    "sentence",
+    "each",
+    "protein",
+    "more",
+    "general",
+    "information",
+    "crucial",
+    ",",
+    "current",
+    "overcome",
+    "these",
+    "'s",
+    "protein",
+    "the",
+    "human",
+    "tasks.",
+    "hip.",
+    "hla",
+    "or",
+    "tasks",
+    "behavior.",
+    "proteins",
+    "are",
+    ".g.",
+    "paper.",
+    "picnic",
+    "'",
+    "ability",
+    "essential",
+    "for",
+    "protein-d",
+    "acid",
+    "positions",
+    "in",
+    "a",
+    "parameters",
+    "are",
+    "general",
+    "audience",
+    "audience,",
+    "manual",
+    "labor",
+    ",",
+    "but",
+    "a",
+    "more",
+    "a",
+    "vital",
+    "amino",
+    "acid",
+    "peptides.",
+    "able",
+    "and",
+    "as",
+    "h",
+    ",",
+    "a",
+    "proteins",
+    "or",
+    ",",
+    "our",
+    "audience.",
+    "la",
+    "are",
+    "proteins.",
+    "and",
+    "the",
+    "the",
+    "paragraph",
+    "teins",
+    "biological",
+    "and",
+    "applications.",
+    "for",
+    "a",
+    ".",
+    "to",
+    "overcome",
+    "but",
+    "the",
+    "more",
+    "accessible",
+    "crucial",
+    "for",
+    "data",
+    "and",
+    "readership",
+    "these",
+    "predictions",
+    "the",
+    "non",
+    "the",
+    "connections",
+    "them.",
+    "-length",
+    "sequences",
+    "association",
+    "analysis"
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "reader.n.01",
+        "definition": "a person who enjoys reading"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "binding.n.01",
+        "definition": "the capacity to attract and hold something"
+      },
+      {
+        "name": "while.n.01",
+        "definition": "a period of indeterminate length (usually short) marked by some action or condition"
+      },
+      {
+        "name": "furthermore.r.01",
+        "definition": "in addition"
+      },
+      {
+        "name": "learn.v.01",
+        "definition": "gain knowledge or skills"
+      },
+      {
+        "name": "two.n.01",
+        "definition": "the cardinal number that is the sum of one and one or a numeral representing this number"
+      },
+      {
+        "name": "astatine.n.01",
+        "definition": "a highly unstable radioactive element (the heaviest of the halogen series); a decay product of uranium and thorium"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      },
+      {
+        "name": "function.n.01",
+        "definition": "(mathematics) a mathematical relation such that each element of a given set (the domain of the function) is associated with an element of another set (the range of the function)"
+      },
+      {
+        "name": "play.n.01",
+        "definition": "a dramatic work intended for performance by actors on a stage"
+      },
+      {
+        "name": "necessity.n.02",
+        "definition": "anything indispensable"
+      },
+      {
+        "name": "learning.n.01",
+        "definition": "the cognitive process of acquiring skill or knowledge"
+      },
+      {
+        "name": "antigen.n.01",
+        "definition": "any substance (as a toxin or enzyme) that stimulates an immune response in the body (especially the production of antibodies)"
+      },
+      {
+        "name": "tool.n.01",
+        "definition": "an implement used in the practice of a vocation"
+      },
+      {
+        "name": "easy.a.01",
+        "definition": "posing no difficulty; requiring little effort"
+      },
+      {
+        "name": "protein.n.01",
+        "definition": "any of a large group of nitrogenous organic compounds that are essential constituents of living cells; consist of polymers of amino acids; essential in the diet of animals for growth and for repair of tissues; can be obtained from meat and eggs and milk and legumes"
+      },
+      {
+        "name": "estimate.n.01",
+        "definition": "an approximate calculation of quantity or degree or worth"
+      },
+      {
+        "name": "smaller.s.01",
+        "definition": "small or little relative to something else"
+      },
+      {
+        "name": "data.n.01",
+        "definition": "a collection of facts from which conclusions may be drawn"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "rewrite.v.01",
+        "definition": "write differently; alter the writing of"
+      },
+      {
+        "name": "wide.a.01",
+        "definition": "having great (or a certain) extent from one side to the other"
+      },
+      {
+        "name": "sequence.n.01",
+        "definition": "serial arrangement in which things follow in logical order or a recurrent pattern"
+      },
+      {
+        "name": "drug.n.01",
+        "definition": "a substance that is used as a medicine or narcotic"
+      },
+      {
+        "name": "movie.n.01",
+        "definition": "a form of entertainment that enacts a story by sound and a sequence of images giving the illusion of continuous movement"
+      },
+      {
+        "name": "computer_science.n.01",
+        "definition": "the branch of engineering science that studies (with the aid of computers) computable processes and structures"
+      },
+      {
+        "name": "organic_process.n.01",
+        "definition": "a process occurring in living organisms"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "devising.n.01",
+        "definition": "the act that results in something coming to be"
+      },
+      {
+        "name": "amino.n.01",
+        "definition": "the radical -NH2"
+      },
+      {
+        "name": "make.v.01",
+        "definition": "engage in"
+      },
+      {
+        "name": "play.n.01",
+        "definition": "a dramatic work intended for performance by actors on a stage"
+      },
+      {
+        "name": "more.n.01",
+        "definition": "English statesman who opposed Henry VIII's divorce from Catherine of Aragon and was imprisoned and beheaded; recalled for his concept of Utopia, the ideal state"
+      },
+      {
+        "name": "astatine.n.01",
+        "definition": "a highly unstable radioactive element (the heaviest of the halogen series); a decay product of uranium and thorium"
+      },
+      {
+        "name": "predict.v.01",
+        "definition": "make a prediction about; tell in advance"
+      },
+      {
+        "name": "ant.n.01",
+        "definition": "social insect living in organized colonies; characteristically the males and fertile queen have wings during breeding season; wingless sterile females are the workers"
+      },
+      {
+        "name": "audience.n.01",
+        "definition": "a gathering of spectators or listeners at a (usually public) performance"
+      },
+      {
+        "name": "information_technology.n.01",
+        "definition": "the branch of engineering that deals with the use of computers and telecommunications to retrieve and store and transmit information"
+      },
+      {
+        "name": "between.r.01",
+        "definition": "in the interval"
+      },
+      {
+        "name": "holocene.n.01",
+        "definition": "approximately the last 10,000 years"
+      },
+      {
+        "name": "function.n.03",
+        "definition": "the actions and activities assigned to or required or expected of a person or group"
+      },
+      {
+        "name": "organism.n.01",
+        "definition": "a living thing that has (or can develop) the ability to act or function independently"
+      },
+      {
+        "name": "directly.r.01",
+        "definition": "without deviation"
+      },
+      {
+        "name": "treatment.n.01",
+        "definition": "care provided to improve a situation (especially medical procedures or applications that are intended to relieve illness or injury)"
+      },
+      {
+        "name": "text.n.01",
+        "definition": "the words of something written"
+      },
+      {
+        "name": "activation.n.01",
+        "definition": "stimulation of activity in an organism or chemical"
+      },
+      {
+        "name": "application.n.01",
+        "definition": "the act of bringing something to bear; using it for a particular purpose"
+      },
+      {
+        "name": "are.n.01",
+        "definition": "a unit of surface area equal to 100 square meters"
+      },
+      {
+        "name": "survive.v.02",
+        "definition": "continue in existence after (an adversity, etc.)"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      },
+      {
+        "name": "consistent.a.01",
+        "definition": "(sometimes followed by `with') in agreement or consistent or reliable; ; - FDR"
+      },
+      {
+        "name": "powerful.a.01",
+        "definition": "having great power or force or potency or effect"
+      },
+      {
+        "name": "affinity.n.01",
+        "definition": "(immunology) the attraction between an antigen and an antibody"
+      },
+      {
+        "name": "protein.n.01",
+        "definition": "any of a large group of nitrogenous organic compounds that are essential constituents of living cells; consist of polymers of amino acids; essential in the diet of animals for growth and for repair of tissues; can be obtained from meat and eggs and milk and legumes"
+      },
+      {
+        "name": "however.r.01",
+        "definition": "despite anything to the contrary (usually following a concession)"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      },
+      {
+        "name": "protein.n.01",
+        "definition": "any of a large group of nitrogenous organic compounds that are essential constituents of living cells; consist of polymers of amino acids; essential in the diet of animals for growth and for repair of tissues; can be obtained from meat and eggs and milk and legumes"
+      },
+      {
+        "name": "thymine.n.01",
+        "definition": "a base found in DNA (but not in RNA) and derived from pyrimidine; pairs with adenine"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      },
+      {
+        "name": "strength.n.01",
+        "definition": "the property of being physically or mentally strong"
+      },
+      {
+        "name": "general.n.01",
+        "definition": "a general officer of the highest rank"
+      },
+      {
+        "name": "some.a.01",
+        "definition": "quantifier; used with either mass nouns or plural count nouns to indicate an unspecified number or quantity"
+      },
+      {
+        "name": "rewrite.v.01",
+        "definition": "write differently; alter the writing of"
+      },
+      {
+        "name": "choice.n.02",
+        "definition": "the act of choosing or selecting"
+      },
+      {
+        "name": "sentence.n.01",
+        "definition": "a string of words satisfying the grammatical rules of a language"
+      },
+      {
+        "name": "protein.n.01",
+        "definition": "any of a large group of nitrogenous organic compounds that are essential constituents of living cells; consist of polymers of amino acids; essential in the diet of animals for growth and for repair of tissues; can be obtained from meat and eggs and milk and legumes"
+      },
+      {
+        "name": "general.n.01",
+        "definition": "a general officer of the highest rank"
+      },
+      {
+        "name": "crucial.a.01",
+        "definition": "of extreme importance; vital to the resolution of a crisis"
+      },
+      {
+        "name": "current.n.01",
+        "definition": "a flow of electricity through a conductor"
+      },
+      {
+        "name": "protein.n.01",
+        "definition": "any of a large group of nitrogenous organic compounds that are essential constituents of living cells; consist of polymers of amino acids; essential in the diet of animals for growth and for repair of tissues; can be obtained from meat and eggs and milk and legumes"
+      },
+      {
+        "name": "homo.n.02",
+        "definition": "any living or extinct member of the family Hominidae characterized by superior intelligence, articulate speech, and erect carriage"
+      },
+      {
+        "name": "undertaking.n.01",
+        "definition": "any piece of work that is undertaken or attempted"
+      },
+      {
+        "name": "are.n.01",
+        "definition": "a unit of surface area equal to 100 square meters"
+      },
+      {
+        "name": "field_day.n.04",
+        "definition": "a day devoted to an outdoor social gathering"
+      },
+      {
+        "name": "ability.n.01",
+        "definition": "the quality of being able to perform; a quality that permits or facilitates achievement or accomplishment"
+      },
+      {
+        "name": "position.n.01",
+        "definition": "the particular portion of space occupied by something"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "are.n.01",
+        "definition": "a unit of surface area equal to 100 square meters"
+      },
+      {
+        "name": "audience.n.01",
+        "definition": "a gathering of spectators or listeners at a (usually public) performance"
+      },
+      {
+        "name": "manual_labor.n.01",
+        "definition": "labor done with the hands"
+      },
+      {
+        "name": "merely.r.01",
+        "definition": "and nothing more"
+      },
+      {
+        "name": "more.n.01",
+        "definition": "English statesman who opposed Henry VIII's divorce from Catherine of Aragon and was imprisoned and beheaded; recalled for his concept of Utopia, the ideal state"
+      },
+      {
+        "name": "critical.s.04",
+        "definition": "urgently needed; absolutely necessary"
+      },
+      {
+        "name": "amino_acid.n.01",
+        "definition": "organic compounds containing an amino group and a carboxylic acid group"
+      },
+      {
+        "name": "hydrogen.n.01",
+        "definition": "a nonmetallic univalent element that is normally a colorless and odorless highly flammable diatomic gas; the simplest and lightest and most abundant element in the universe"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "oregon.n.01",
+        "definition": "a state in northwestern United States on the Pacific"
+      },
+      {
+        "name": "are.n.01",
+        "definition": "a unit of surface area equal to 100 square meters"
+      },
+      {
+        "name": "paragraph.n.01",
+        "definition": "one of several distinct subdivisions of a text intended to separate ideas; the beginning is usually marked by a new indented line"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "get_the_better_of.v.01",
+        "definition": "win a victory over"
+      },
+      {
+        "name": "accessible.a.01",
+        "definition": "capable of being reached"
+      },
+      {
+        "name": "readership.n.01",
+        "definition": "the audience reached by written communications (books or magazines or newspapers etc.)"
+      },
+      {
+        "name": "prediction.n.01",
+        "definition": "the act of predicting (as by reasoning about the future)"
+      },
+      {
+        "name": "not.r.01",
+        "definition": "negation of a word or group of words"
+      },
+      {
+        "name": "connection.n.01",
+        "definition": "a relation between things or events (as in the case of one causing the other or sharing features with it)"
+      },
+      {
+        "name": "sequence.n.01",
+        "definition": "serial arrangement in which things follow in logical order or a recurrent pattern"
+      },
+      {
+        "name": "analysis.n.01",
+        "definition": "an investigation of the component parts of a whole and their relations in making up the whole"
+      }
+    ],
+    "level2": [
+      {
+        "name": "scholar.n.01",
+        "definition": "a learned person (especially in the humanities); someone who by long study has gained mastery in one or more disciplines"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "attraction.n.03",
+        "definition": "the quality of arousing interest; being attractive or something that attracts"
+      },
+      {
+        "name": "time.n.03",
+        "definition": "an indefinite period (usually marked by specific attributes or activities)"
+      },
+      {
+        "name": "digit.n.01",
+        "definition": "one of the elements that collectively form a system of numeration"
+      },
+      {
+        "name": "chemical_element.n.01",
+        "definition": "any of the more than 100 known substances (of which 92 occur naturally) that cannot be separated into simpler substances and that singly or in combination constitute all matter"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      },
+      {
+        "name": "mathematical_relation.n.01",
+        "definition": "a relation between mathematical expressions (such as equality or inequality)"
+      },
+      {
+        "name": "dramatic_composition.n.01",
+        "definition": "a play for performance on the stage or television or in a movie etc."
+      },
+      {
+        "name": "basic_cognitive_process.n.01",
+        "definition": "cognitive processes involved in obtaining and storing knowledge"
+      },
+      {
+        "name": "substance.n.07",
+        "definition": "a particular kind or species of matter with uniform properties"
+      },
+      {
+        "name": "implement.n.01",
+        "definition": "instrumentation (a piece of equipment or tool) used to effect an end"
+      },
+      {
+        "name": "macromolecule.n.01",
+        "definition": "any very large complex molecule; found only in plants and animals"
+      },
+      {
+        "name": "calculation.n.02",
+        "definition": "problem solving that involves numbers or quantities"
+      },
+      {
+        "name": "collection.n.01",
+        "definition": "several things grouped together or considered as a whole"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "write.v.02",
+        "definition": "communicate or express by writing"
+      },
+      {
+        "name": "series.n.01",
+        "definition": "similar things placed in order or happening one after another"
+      },
+      {
+        "name": "agent.n.03",
+        "definition": "a substance that exerts some force or effect"
+      },
+      {
+        "name": "product.n.02",
+        "definition": "an artifact that has been created by someone or some process"
+      },
+      {
+        "name": "engineering.n.02",
+        "definition": "the discipline dealing with the art or science of applying scientific knowledge to practical problems"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "production.n.01",
+        "definition": "the act or process of producing something"
+      },
+      {
+        "name": "group.n.02",
+        "definition": "(chemistry) two or more atoms bound together as a single unit and forming part of a molecule"
+      },
+      {
+        "name": "dramatic_composition.n.01",
+        "definition": "a play for performance on the stage or television or in a movie etc."
+      },
+      {
+        "name": "statesman.n.01",
+        "definition": "a man who is a respected leader in national or international affairs"
+      },
+      {
+        "name": "chemical_element.n.01",
+        "definition": "any of the more than 100 known substances (of which 92 occur naturally) that cannot be separated into simpler substances and that singly or in combination constitute all matter"
+      },
+      {
+        "name": "guess.v.02",
+        "definition": "put forward, of a guess, in spite of possible refutation"
+      },
+      {
+        "name": "hymenopterous_insect.n.01",
+        "definition": "insects having two pairs of membranous wings and an ovipositor specialized for stinging or piercing"
+      },
+      {
+        "name": "gathering.n.01",
+        "definition": "a group of persons together in one place"
+      },
+      {
+        "name": "engineering.n.02",
+        "definition": "the discipline dealing with the art or science of applying scientific knowledge to practical problems"
+      },
+      {
+        "name": "epoch.n.03",
+        "definition": "a unit of geological time that is a subdivision of a period and is itself divided into ages"
+      },
+      {
+        "name": "duty.n.02",
+        "definition": "work that you are obliged to perform for moral or legal reasons"
+      },
+      {
+        "name": "living_thing.n.01",
+        "definition": "a living (or once living) entity"
+      },
+      {
+        "name": "care.n.01",
+        "definition": "the work of providing treatment for or attending to someone or something"
+      },
+      {
+        "name": "matter.n.06",
+        "definition": "written works (especially in books or magazines)"
+      },
+      {
+        "name": "stimulation.n.03",
+        "definition": "(physiology) the effect of a stimulus (on nerves or organs etc.)"
+      },
+      {
+        "name": "use.n.01",
+        "definition": "the act of using"
+      },
+      {
+        "name": "area_unit.n.01",
+        "definition": "a system of units used to measure areas"
+      },
+      {
+        "name": "get_the_better_of.v.01",
+        "definition": "win a victory over"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      },
+      {
+        "name": "attraction.n.01",
+        "definition": "the force by which one object attracts another"
+      },
+      {
+        "name": "macromolecule.n.01",
+        "definition": "any very large complex molecule; found only in plants and animals"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      },
+      {
+        "name": "macromolecule.n.01",
+        "definition": "any very large complex molecule; found only in plants and animals"
+      },
+      {
+        "name": "pyrimidine.n.01",
+        "definition": "any of several basic compounds derived from pyrimidine"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      },
+      {
+        "name": "property.n.02",
+        "definition": "a basic or essential attribute shared by all members of a class"
+      },
+      {
+        "name": "general_officer.n.01",
+        "definition": "officers in the Army or Air Force or Marines above the rank of colonel"
+      },
+      {
+        "name": "write.v.02",
+        "definition": "communicate or express by writing"
+      },
+      {
+        "name": "action.n.01",
+        "definition": "something done (usually as opposed to something said)"
+      },
+      {
+        "name": "string_of_words.n.01",
+        "definition": "a linear sequence of words as spoken or written"
+      },
+      {
+        "name": "macromolecule.n.01",
+        "definition": "any very large complex molecule; found only in plants and animals"
+      },
+      {
+        "name": "general_officer.n.01",
+        "definition": "officers in the Army or Air Force or Marines above the rank of colonel"
+      },
+      {
+        "name": "electrical_phenomenon.n.01",
+        "definition": "a physical phenomenon involving electricity"
+      },
+      {
+        "name": "macromolecule.n.01",
+        "definition": "any very large complex molecule; found only in plants and animals"
+      },
+      {
+        "name": "hominid.n.01",
+        "definition": "a primate of the family Hominidae"
+      },
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      },
+      {
+        "name": "area_unit.n.01",
+        "definition": "a system of units used to measure areas"
+      },
+      {
+        "name": "vacation.n.01",
+        "definition": "leisure time away from work devoted to rest or pleasure"
+      },
+      {
+        "name": "quality.n.01",
+        "definition": "an essential and distinguishing attribute of something or someone; --Shakespeare"
+      },
+      {
+        "name": "point.n.02",
+        "definition": "the precise location of something; a spatially limited location"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "area_unit.n.01",
+        "definition": "a system of units used to measure areas"
+      },
+      {
+        "name": "gathering.n.01",
+        "definition": "a group of persons together in one place"
+      },
+      {
+        "name": "labor.n.02",
+        "definition": "productive work (especially physical work done for wages)"
+      },
+      {
+        "name": "statesman.n.01",
+        "definition": "a man who is a respected leader in national or international affairs"
+      },
+      {
+        "name": "organic_compound.n.01",
+        "definition": "any compound of carbon and another element or a radical"
+      },
+      {
+        "name": "chemical_element.n.01",
+        "definition": "any of the more than 100 known substances (of which 92 occur naturally) that cannot be separated into simpler substances and that singly or in combination constitute all matter"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "american_state.n.01",
+        "definition": "one of the 50 states of the United States"
+      },
+      {
+        "name": "area_unit.n.01",
+        "definition": "a system of units used to measure areas"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "audience.n.02",
+        "definition": "the part of the general public interested in a source of information or entertainment"
+      },
+      {
+        "name": "reasoning.n.01",
+        "definition": "thinking that is coherent and logical"
+      },
+      {
+        "name": "series.n.01",
+        "definition": "similar things placed in order or happening one after another"
+      },
+      {
+        "name": "investigation.n.02",
+        "definition": "the work of inquiring into something thoroughly and systematically"
+      }
+    ],
+    "level3": [
+      {
+        "name": "intellectual.n.01",
+        "definition": "a person who uses the mind creatively"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "quality.n.01",
+        "definition": "an essential and distinguishing attribute of something or someone; --Shakespeare"
+      },
+      {
+        "name": "time_period.n.01",
+        "definition": "an amount of time"
+      },
+      {
+        "name": "integer.n.01",
+        "definition": "any of the natural numbers (positive or negative) or zero"
+      },
+      {
+        "name": "substance.n.01",
+        "definition": "the real physical matter of which a person or thing consists"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "process.n.02",
+        "definition": "(psychology) the performance of some composite cognitive activity; an operation that affects mental contents"
+      },
+      {
+        "name": "matter.n.03",
+        "definition": "that which has mass and occupies space"
+      },
+      {
+        "name": "instrumentality.n.03",
+        "definition": "an artifact (or system of artifacts) that is instrumental in accomplishing some end"
+      },
+      {
+        "name": "organic_compound.n.01",
+        "definition": "any compound of carbon and another element or a radical"
+      },
+      {
+        "name": "problem_solving.n.02",
+        "definition": "the thought processes involved in solving a problem"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "communicate.v.02",
+        "definition": "transmit thoughts or feelings"
+      },
+      {
+        "name": "ordering.n.01",
+        "definition": "logical or comprehensible arrangement of separate elements"
+      },
+      {
+        "name": "substance.n.07",
+        "definition": "a particular kind or species of matter with uniform properties"
+      },
+      {
+        "name": "creation.n.02",
+        "definition": "an artifact that has been brought into existence by someone"
+      },
+      {
+        "name": "discipline.n.01",
+        "definition": "a branch of knowledge"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "unit.n.05",
+        "definition": "a single undivided natural thing occurring in the composition of something else"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "politician.n.02",
+        "definition": "a person active in party politics"
+      },
+      {
+        "name": "substance.n.01",
+        "definition": "the real physical matter of which a person or thing consists"
+      },
+      {
+        "name": "speculate.v.02",
+        "definition": "talk over conjecturally, or review in an idle or casual way and with an element of doubt or without sufficient reason to reach a conclusion"
+      },
+      {
+        "name": "insect.n.01",
+        "definition": "small air-breathing arthropod"
+      },
+      {
+        "name": "social_group.n.01",
+        "definition": "people sharing some social relation"
+      },
+      {
+        "name": "discipline.n.01",
+        "definition": "a branch of knowledge"
+      },
+      {
+        "name": "geological_time.n.01",
+        "definition": "the time of the physical formation and development of the earth (especially prior to human history)"
+      },
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      },
+      {
+        "name": "whole.n.02",
+        "definition": "an assemblage of parts that is regarded as a single entity"
+      },
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "natural_process.n.01",
+        "definition": "a process existing in or produced by nature (rather than by the intent of human beings)"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "force.n.02",
+        "definition": "(physics) the influence that produces a change in a physical quantity"
+      },
+      {
+        "name": "organic_compound.n.01",
+        "definition": "any compound of carbon and another element or a radical"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "organic_compound.n.01",
+        "definition": "any compound of carbon and another element or a radical"
+      },
+      {
+        "name": "base.n.10",
+        "definition": "any of various water-soluble compounds capable of turning litmus blue and reacting with an acid to form a salt and water"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "commissioned_military_officer.n.01",
+        "definition": "a commissioned officer in the Army or Air Force or Marine Corps"
+      },
+      {
+        "name": "communicate.v.02",
+        "definition": "transmit thoughts or feelings"
+      },
+      {
+        "name": "string.n.05",
+        "definition": "a linear sequence of symbols (characters or words or phrases)"
+      },
+      {
+        "name": "organic_compound.n.01",
+        "definition": "any compound of carbon and another element or a radical"
+      },
+      {
+        "name": "commissioned_military_officer.n.01",
+        "definition": "a commissioned officer in the Army or Air Force or Marine Corps"
+      },
+      {
+        "name": "physical_phenomenon.n.01",
+        "definition": "a natural phenomenon involving the physical properties of matter and energy"
+      },
+      {
+        "name": "organic_compound.n.01",
+        "definition": "any compound of carbon and another element or a radical"
+      },
+      {
+        "name": "primate.n.02",
+        "definition": "any placental mammal of the order Primates; has good eyesight and flexible hands and feet"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "leisure.n.01",
+        "definition": "time available for ease and relaxation"
+      },
+      {
+        "name": "location.n.01",
+        "definition": "a point or extent in space"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "social_group.n.01",
+        "definition": "people sharing some social relation"
+      },
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      },
+      {
+        "name": "politician.n.02",
+        "definition": "a person active in party politics"
+      },
+      {
+        "name": "compound.n.02",
+        "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+      },
+      {
+        "name": "substance.n.01",
+        "definition": "the real physical matter of which a person or thing consists"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "state.n.01",
+        "definition": "the territory occupied by one of the constituent administrative districts of a nation"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "multitude.n.03",
+        "definition": "the common people generally"
+      },
+      {
+        "name": "thinking.n.01",
+        "definition": "the process of using your mind to consider something carefully"
+      },
+      {
+        "name": "ordering.n.01",
+        "definition": "logical or comprehensible arrangement of separate elements"
+      },
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      }
+    ],
+    "level4": [
+      {
+        "name": "person.n.01",
+        "definition": "a human being"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "fundamental_quantity.n.01",
+        "definition": "one of the four quantities that are the basis of systems of measurement"
+      },
+      {
+        "name": "number.n.02",
+        "definition": "a concept of quantity involving zero and units"
+      },
+      {
+        "name": "part.n.01",
+        "definition": "something determined in relation to something that includes it"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "cognition.n.01",
+        "definition": "the psychological result of perception and learning and reasoning"
+      },
+      {
+        "name": "artifact.n.01",
+        "definition": "a man-made object taken as a whole"
+      },
+      {
+        "name": "compound.n.02",
+        "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+      },
+      {
+        "name": "thinking.n.01",
+        "definition": "the process of using your mind to consider something carefully"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "interact.v.01",
+        "definition": "act together or towards others or with others"
+      },
+      {
+        "name": "arrangement.n.02",
+        "definition": "an orderly grouping (of things or persons) considered as a unit; the result of arranging"
+      },
+      {
+        "name": "matter.n.03",
+        "definition": "that which has mass and occupies space"
+      },
+      {
+        "name": "artifact.n.01",
+        "definition": "a man-made object taken as a whole"
+      },
+      {
+        "name": "knowledge_domain.n.01",
+        "definition": "the content of a particular field of knowledge"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "leader.n.01",
+        "definition": "a person who rules or guides or inspires others"
+      },
+      {
+        "name": "part.n.01",
+        "definition": "something determined in relation to something that includes it"
+      },
+      {
+        "name": "reason.v.03",
+        "definition": "think logically"
+      },
+      {
+        "name": "arthropod.n.01",
+        "definition": "invertebrate having jointed limbs and a segmented body with an exoskeleton made of chitin"
+      },
+      {
+        "name": "knowledge_domain.n.01",
+        "definition": "the content of a particular field of knowledge"
+      },
+      {
+        "name": "time.n.05",
+        "definition": "the continuum of experience in which events pass from the future through the present to the past"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "physical_phenomenon.n.01",
+        "definition": "a natural phenomenon involving the physical properties of matter and energy"
+      },
+      {
+        "name": "compound.n.02",
+        "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "compound.n.02",
+        "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+      },
+      {
+        "name": "compound.n.02",
+        "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "commissioned_officer.n.01",
+        "definition": "a military officer holding a commission"
+      },
+      {
+        "name": "interact.v.01",
+        "definition": "act together or towards others or with others"
+      },
+      {
+        "name": "sequence.n.01",
+        "definition": "serial arrangement in which things follow in logical order or a recurrent pattern"
+      },
+      {
+        "name": "compound.n.02",
+        "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+      },
+      {
+        "name": "commissioned_officer.n.01",
+        "definition": "a military officer holding a commission"
+      },
+      {
+        "name": "natural_phenomenon.n.01",
+        "definition": "all phenomena that are not artificial"
+      },
+      {
+        "name": "compound.n.02",
+        "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+      },
+      {
+        "name": "placental.n.01",
+        "definition": "mammals having a placenta; all mammals except monotremes and marsupials"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "time_off.n.01",
+        "definition": "a time period when you are not required to work"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "leader.n.01",
+        "definition": "a person who rules or guides or inspires others"
+      },
+      {
+        "name": "chemical.n.01",
+        "definition": "material produced by or used in a reaction involving changes in atoms or molecules"
+      },
+      {
+        "name": "part.n.01",
+        "definition": "something determined in relation to something that includes it"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "administrative_district.n.01",
+        "definition": "a district defined for administrative purposes"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "communication.n.02",
+        "definition": "something that is communicated by or to or between people or groups"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "higher_cognitive_process.n.01",
+        "definition": "cognitive processes that presuppose the availability of knowledge and put it to use"
+      },
+      {
+        "name": "arrangement.n.02",
+        "definition": "an orderly grouping (of things or persons) considered as a unit; the result of arranging"
+      }
+    ]
+  },
+  "concept_counts": {
+    "reader.n.01": 1,
+    "scholar.n.01": 1,
+    "intellectual.n.01": 1,
+    "person.n.01": 1,
+    "angstrom.n.01": 6,
+    "metric_linear_unit.n.01": 6,
+    "metric_unit.n.01": 6,
+    "unit_of_measurement.n.01": 14,
+    "binding.n.01": 1,
+    "attraction.n.03": 1,
+    "quality.n.01": 2,
+    "while.n.01": 1,
+    "time.n.03": 1,
+    "time_period.n.01": 1,
+    "fundamental_quantity.n.01": 1,
+    "furthermore.r.01": 1,
+    "learn.v.01": 1,
+    "two.n.01": 1,
+    "digit.n.01": 1,
+    "integer.n.01": 1,
+    "number.n.02": 1,
+    "astatine.n.01": 2,
+    "chemical_element.n.01": 3,
+    "substance.n.01": 3,
+    "part.n.01": 3,
+    "inch.n.01": 4,
+    "linear_unit.n.01": 4,
+    "definite_quantity.n.01": 8,
+    "function.n.01": 1,
+    "mathematical_relation.n.01": 1,
+    "play.n.01": 2,
+    "dramatic_composition.n.01": 2,
+    "writing.n.02": 4,
+    "written_communication.n.01": 4,
+    "necessity.n.02": 1,
+    "learning.n.01": 1,
+    "basic_cognitive_process.n.01": 1,
+    "process.n.02": 1,
+    "cognition.n.01": 1,
+    "antigen.n.01": 1,
+    "substance.n.07": 2,
+    "matter.n.03": 2,
+    "tool.n.01": 1,
+    "implement.n.01": 1,
+    "instrumentality.n.03": 1,
+    "artifact.n.01": 2,
+    "easy.a.01": 1,
+    "protein.n.01": 5,
+    "macromolecule.n.01": 5,
+    "organic_compound.n.01": 6,
+    "compound.n.02": 7,
+    "estimate.n.01": 1,
+    "calculation.n.02": 1,
+    "problem_solving.n.02": 1,
+    "thinking.n.01": 2,
+    "smaller.s.01": 1,
+    "data.n.01": 1,
+    "collection.n.01": 1,
+    "rewrite.v.01": 2,
+    "write.v.02": 2,
+    "communicate.v.02": 2,
+    "interact.v.01": 2,
+    "wide.a.01": 1,
+    "sequence.n.01": 3,
+    "series.n.01": 2,
+    "ordering.n.01": 2,
+    "arrangement.n.02": 2,
+    "drug.n.01": 1,
+    "agent.n.03": 1,
+    "movie.n.01": 1,
+    "product.n.02": 1,
+    "creation.n.02": 1,
+    "computer_science.n.01": 1,
+    "engineering.n.02": 2,
+    "discipline.n.01": 2,
+    "knowledge_domain.n.01": 2,
+    "organic_process.n.01": 1,
+    "devising.n.01": 1,
+    "production.n.01": 1,
+    "amino.n.01": 1,
+    "group.n.02": 1,
+    "unit.n.05": 1,
+    "make.v.01": 1,
+    "more.n.01": 2,
+    "statesman.n.01": 2,
+    "politician.n.02": 2,
+    "leader.n.01": 2,
+    "predict.v.01": 1,
+    "guess.v.02": 1,
+    "speculate.v.02": 1,
+    "reason.v.03": 1,
+    "ant.n.01": 1,
+    "hymenopterous_insect.n.01": 1,
+    "insect.n.01": 1,
+    "arthropod.n.01": 1,
+    "audience.n.01": 2,
+    "gathering.n.01": 2,
+    "social_group.n.01": 2,
+    "information_technology.n.01": 1,
+    "between.r.01": 1,
+    "holocene.n.01": 1,
+    "epoch.n.03": 1,
+    "geological_time.n.01": 1,
+    "time.n.05": 1,
+    "function.n.03": 1,
+    "duty.n.02": 1,
+    "work.n.01": 5,
+    "organism.n.01": 1,
+    "living_thing.n.01": 1,
+    "whole.n.02": 1,
+    "directly.r.01": 1,
+    "treatment.n.01": 1,
+    "care.n.01": 1,
+    "text.n.01": 1,
+    "matter.n.06": 1,
+    "activation.n.01": 1,
+    "stimulation.n.03": 1,
+    "natural_process.n.01": 1,
+    "application.n.01": 1,
+    "use.n.01": 1,
+    "are.n.01": 4,
+    "area_unit.n.01": 4,
+    "survive.v.02": 1,
+    "get_the_better_of.v.01": 2,
+    "consistent.a.01": 1,
+    "powerful.a.01": 1,
+    "affinity.n.01": 1,
+    "attraction.n.01": 1,
+    "force.n.02": 1,
+    "physical_phenomenon.n.01": 2,
+    "however.r.01": 1,
+    "thymine.n.01": 1,
+    "pyrimidine.n.01": 1,
+    "base.n.10": 1,
+    "strength.n.01": 1,
+    "property.n.02": 1,
+    "general.n.01": 2,
+    "general_officer.n.01": 2,
+    "commissioned_military_officer.n.01": 2,
+    "commissioned_officer.n.01": 2,
+    "some.a.01": 1,
+    "choice.n.02": 1,
+    "action.n.01": 1,
+    "sentence.n.01": 1,
+    "string_of_words.n.01": 1,
+    "string.n.05": 1,
+    "crucial.a.01": 1,
+    "current.n.01": 1,
+    "electrical_phenomenon.n.01": 1,
+    "natural_phenomenon.n.01": 1,
+    "homo.n.02": 1,
+    "hominid.n.01": 1,
+    "primate.n.02": 1,
+    "placental.n.01": 1,
+    "undertaking.n.01": 1,
+    "field_day.n.04": 1,
+    "vacation.n.01": 1,
+    "leisure.n.01": 1,
+    "time_off.n.01": 1,
+    "ability.n.01": 1,
+    "position.n.01": 1,
+    "point.n.02": 1,
+    "location.n.01": 1,
+    "manual_labor.n.01": 1,
+    "labor.n.02": 1,
+    "merely.r.01": 1,
+    "critical.s.04": 1,
+    "amino_acid.n.01": 1,
+    "chemical.n.01": 1,
+    "hydrogen.n.01": 1,
+    "oregon.n.01": 1,
+    "american_state.n.01": 1,
+    "state.n.01": 1,
+    "administrative_district.n.01": 1,
+    "paragraph.n.01": 1,
+    "communication.n.02": 1,
+    "accessible.a.01": 1,
+    "readership.n.01": 1,
+    "audience.n.02": 1,
+    "multitude.n.03": 1,
+    "prediction.n.01": 1,
+    "reasoning.n.01": 1,
+    "higher_cognitive_process.n.01": 1,
+    "not.r.01": 1,
+    "connection.n.01": 1,
+    "analysis.n.01": 1,
+    "investigation.n.02": 1
+  },
+  "top_concepts": [
+    {
+      "name": "unit_of_measurement.n.01",
+      "count": 14,
+      "definition": "any division of quantity accepted as a standard of measurement or exchange"
+    },
+    {
+      "name": "definite_quantity.n.01",
+      "count": 8,
+      "definition": "a specific measure of amount"
+    },
+    {
+      "name": "compound.n.02",
+      "count": 7,
+      "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+    }
+  ]
+}

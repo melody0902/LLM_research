@@ -1,0 +1,112 @@
+{
+  "file": "sweet_med_sig_n4.json",
+  "decoded_phrases": [
+    "developed the mold",
+    "self-reported experiences.",
+    "-reported experiences.\n\nnote",
+    "have developed the m",
+    "a mobile health app"
+  ],
+  "decoded_words": [
+    "developed",
+    "the",
+    "mold",
+    "self-reported",
+    "experiences.",
+    "-reported",
+    "experiences.",
+    "note",
+    "have",
+    "developed",
+    "the",
+    "m",
+    "a",
+    "mobile",
+    "health",
+    "app"
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "cast.n.03",
+        "definition": "the distinctive form in which a thing is made"
+      },
+      {
+        "name": "note.n.01",
+        "definition": "a brief written record"
+      },
+      {
+        "name": "meter.n.01",
+        "definition": "the basic unit of length adopted under the Systeme International d'Unites (approximately 1.094 yards)"
+      }
+    ],
+    "level2": [
+      {
+        "name": "solid.n.03",
+        "definition": "a three-dimensional shape"
+      },
+      {
+        "name": "written_record.n.01",
+        "definition": "a written document preserving knowledge of facts or events"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      }
+    ],
+    "level3": [
+      {
+        "name": "shape.n.02",
+        "definition": "the spatial arrangement of something as distinct from its substance"
+      },
+      {
+        "name": "record.n.01",
+        "definition": "anything (such as a document or a phonograph record or a photograph) providing permanent evidence of or information about past events"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      }
+    ],
+    "level4": [
+      {
+        "name": "evidence.n.02",
+        "definition": "an indication that makes something evident"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      }
+    ]
+  },
+  "concept_counts": {
+    "cast.n.03": 1,
+    "solid.n.03": 1,
+    "shape.n.02": 1,
+    "note.n.01": 1,
+    "written_record.n.01": 1,
+    "record.n.01": 1,
+    "evidence.n.02": 1,
+    "meter.n.01": 1,
+    "metric_linear_unit.n.01": 1,
+    "metric_unit.n.01": 1,
+    "unit_of_measurement.n.01": 1
+  },
+  "top_concepts": [
+    {
+      "name": "cast.n.03",
+      "count": 1,
+      "definition": "the distinctive form in which a thing is made"
+    },
+    {
+      "name": "solid.n.03",
+      "count": 1,
+      "definition": "a three-dimensional shape"
+    },
+    {
+      "name": "shape.n.02",
+      "count": 1,
+      "definition": "the spatial arrangement of something as distinct from its substance"
+    }
+  ]
+}

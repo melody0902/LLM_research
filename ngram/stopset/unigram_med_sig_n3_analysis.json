@@ -1,0 +1,681 @@
+{
+  "file": "unigram_med_sig_n3.json",
+  "decoded_phrases": [
+    "real-world medical",
+    "and perceive the",
+    "these tools.",
+    "intact.",
+    "text intact.",
+    "referrals, and",
+    "as smart insulin",
+    "producing a substantial",
+    "in ehr",
+    ", and adherence",
+    "-world medical data",
+    "make it more",
+    "2021).",
+    "times), and",
+    "platforms and online",
+    "online surveys and",
+    "ehealth interventions",
+    "health interventions as",
+    "by ehealth",
+    "rewrite a paragraph",
+    "this platform involved",
+    "at the university",
+    "such as smart",
+    "crucial, and",
+    "ehealth technologies",
+    "use these tools",
+    "users and the",
+    ", and this",
+    "1). we",
+    ".g. \"",
+    "it more accessible",
+    ", using a",
+    "rephrasing",
+    "smart insulin pens",
+    "the rewritten text",
+    ". this paper",
+    "rasing it in",
+    "tool, the",
+    "insulin pens,",
+    "tools. this",
+    "don't know",
+    "clarity and sentence",
+    "specialist referrals,",
+    "audience. the",
+    "it in your",
+    "in the rewritten",
+    "in ehealth",
+    "health technologies and",
+    "scenario. we",
+    "and online data",
+    "platform involved",
+    "phrasing it",
+    "interventions as a",
+    "preserved."
+  ],
+  "decoded_words": [
+    "real-world",
+    "medical",
+    "and",
+    "perceive",
+    "the",
+    "these",
+    "tools.",
+    "intact.",
+    "text",
+    "intact.",
+    "referrals,",
+    "and",
+    "as",
+    "smart",
+    "insulin",
+    "producing",
+    "a",
+    "substantial",
+    "in",
+    "ehr",
+    ",",
+    "and",
+    "adherence",
+    "-world",
+    "medical",
+    "data",
+    "make",
+    "it",
+    "more",
+    "2021).",
+    "times),",
+    "and",
+    "platforms",
+    "and",
+    "online",
+    "online",
+    "surveys",
+    "and",
+    "ehealth",
+    "interventions",
+    "health",
+    "interventions",
+    "as",
+    "by",
+    "ehealth",
+    "rewrite",
+    "a",
+    "paragraph",
+    "this",
+    "platform",
+    "involved",
+    "at",
+    "the",
+    "university",
+    "such",
+    "as",
+    "smart",
+    "crucial,",
+    "and",
+    "ehealth",
+    "technologies",
+    "use",
+    "these",
+    "tools",
+    "users",
+    "and",
+    "the",
+    ",",
+    "and",
+    "this",
+    "1).",
+    "we",
+    ".g.",
+    "\"",
+    "it",
+    "more",
+    "accessible",
+    ",",
+    "using",
+    "a",
+    "rephrasing",
+    "smart",
+    "insulin",
+    "pens",
+    "the",
+    "rewritten",
+    "text",
+    ".",
+    "this",
+    "paper",
+    "rasing",
+    "it",
+    "in",
+    "tool,",
+    "the",
+    "insulin",
+    "pens,",
+    "tools.",
+    "this",
+    "don't",
+    "know",
+    "clarity",
+    "and",
+    "sentence",
+    "specialist",
+    "referrals,",
+    "audience.",
+    "the",
+    "it",
+    "in",
+    "your",
+    "in",
+    "the",
+    "rewritten",
+    "in",
+    "ehealth",
+    "health",
+    "technologies",
+    "and",
+    "scenario.",
+    "we",
+    "and",
+    "online",
+    "data",
+    "platform",
+    "involved",
+    "phrasing",
+    "it",
+    "interventions",
+    "as",
+    "a",
+    "preserved."
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "checkup.n.01",
+        "definition": "a thorough physical examination; includes a variety of tests depending on the age and sex and health of the person"
+      },
+      {
+        "name": "insulin.n.01",
+        "definition": "hormone secreted by the isles of Langerhans in the pancreas; regulates storage of glycogen in the liver and accelerates oxidation of sugar in cells"
+      },
+      {
+        "name": "significant.s.02",
+        "definition": "fairly large"
+      },
+      {
+        "name": "attachment.n.05",
+        "definition": "faithful support for a cause or political party or religion"
+      },
+      {
+        "name": "data.n.01",
+        "definition": "a collection of facts from which conclusions may be drawn"
+      },
+      {
+        "name": "more.n.01",
+        "definition": "English statesman who opposed Henry VIII's divorce from Catherine of Aragon and was imprisoned and beheaded; recalled for his concept of Utopia, the ideal state"
+      },
+      {
+        "name": "on-line.a.01",
+        "definition": "on a regular route of a railroad or bus or airline system"
+      },
+      {
+        "name": "intervention.n.01",
+        "definition": "the act of intervening (as to mediate a dispute, etc.)"
+      },
+      {
+        "name": "arsenic.n.02",
+        "definition": "a very poisonous metallic element that has three allotropic forms; arsenic and arsenic compounds are used as herbicides and insecticides and various alloys; found in arsenopyrite and orpiment and realgar"
+      },
+      {
+        "name": "paragraph.n.01",
+        "definition": "one of several distinct subdivisions of a text intended to separate ideas; the beginning is usually marked by a new indented line"
+      },
+      {
+        "name": "involve.v.01",
+        "definition": "connect closely and often incriminatingly"
+      },
+      {
+        "name": "university.n.01",
+        "definition": "the body of faculty and students at a university"
+      },
+      {
+        "name": "smart.n.01",
+        "definition": "a kind of pain such as that caused by a wound or a burn or a sore"
+      },
+      {
+        "name": "technology.n.01",
+        "definition": "the practical application of science to commerce or industry"
+      },
+      {
+        "name": "tool.n.01",
+        "definition": "an implement used in the practice of a vocation"
+      },
+      {
+        "name": "accessible.a.01",
+        "definition": "capable of being reached"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "rewording.n.01",
+        "definition": "changing a particular word or phrase"
+      },
+      {
+        "name": "pen.n.01",
+        "definition": "a writing implement with a point from which ink flows"
+      },
+      {
+        "name": "text.n.01",
+        "definition": "the words of something written"
+      },
+      {
+        "name": "paper.n.01",
+        "definition": "a material made of cellulose pulp derived mainly from wood or rags or certain grasses"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      },
+      {
+        "name": "know.n.01",
+        "definition": "the fact of being aware of information that is known to few people"
+      },
+      {
+        "name": "sentence.n.01",
+        "definition": "a string of words satisfying the grammatical rules of a language"
+      },
+      {
+        "name": "rewrite.v.01",
+        "definition": "write differently; alter the writing of"
+      },
+      {
+        "name": "data.n.01",
+        "definition": "a collection of facts from which conclusions may be drawn"
+      },
+      {
+        "name": "involve.v.01",
+        "definition": "connect closely and often incriminatingly"
+      },
+      {
+        "name": "information_technology.n.01",
+        "definition": "the branch of engineering that deals with the use of computers and telecommunications to retrieve and store and transmit information"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      }
+    ],
+    "level2": [
+      {
+        "name": "examination.n.01",
+        "definition": "the act of examining something closely (as for mistakes)"
+      },
+      {
+        "name": "hormone.n.01",
+        "definition": "the secretion of an endocrine gland that is transmitted by the blood to the tissue on which it has a specific effect"
+      },
+      {
+        "name": "support.n.02",
+        "definition": "aiding the cause or policy or interests of"
+      },
+      {
+        "name": "collection.n.01",
+        "definition": "several things grouped together or considered as a whole"
+      },
+      {
+        "name": "statesman.n.01",
+        "definition": "a man who is a respected leader in national or international affairs"
+      },
+      {
+        "name": "engagement.n.07",
+        "definition": "the act of sharing in the activities of a group"
+      },
+      {
+        "name": "chemical_element.n.01",
+        "definition": "any of the more than 100 known substances (of which 92 occur naturally) that cannot be separated into simpler substances and that singly or in combination constitute all matter"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "refer.v.02",
+        "definition": "be relevant to"
+      },
+      {
+        "name": "body.n.02",
+        "definition": "a group of persons associated by some common tie or occupation and regarded as an entity"
+      },
+      {
+        "name": "pain.n.01",
+        "definition": "a symptom of some physical hurt or disorder"
+      },
+      {
+        "name": "profession.n.02",
+        "definition": "an occupation requiring special education (especially in the liberal arts or sciences)"
+      },
+      {
+        "name": "implement.n.01",
+        "definition": "instrumentation (a piece of equipment or tool) used to effect an end"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "rewriting.n.01",
+        "definition": "editing that involves writing something again"
+      },
+      {
+        "name": "writing_implement.n.01",
+        "definition": "an implement that is used to write"
+      },
+      {
+        "name": "matter.n.06",
+        "definition": "written works (especially in books or magazines)"
+      },
+      {
+        "name": "material.n.01",
+        "definition": "the tangible substance that goes into the makeup of a physical object"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      },
+      {
+        "name": "knowing.n.01",
+        "definition": "a clear and certain mental apprehension"
+      },
+      {
+        "name": "string_of_words.n.01",
+        "definition": "a linear sequence of words as spoken or written"
+      },
+      {
+        "name": "write.v.02",
+        "definition": "communicate or express by writing"
+      },
+      {
+        "name": "collection.n.01",
+        "definition": "several things grouped together or considered as a whole"
+      },
+      {
+        "name": "refer.v.02",
+        "definition": "be relevant to"
+      },
+      {
+        "name": "engineering.n.02",
+        "definition": "the discipline dealing with the art or science of applying scientific knowledge to practical problems"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      }
+    ],
+    "level3": [
+      {
+        "name": "investigation.n.02",
+        "definition": "the work of inquiring into something thoroughly and systematically"
+      },
+      {
+        "name": "secretion.n.02",
+        "definition": "a functionally specialized substance (especially one that is not a waste) released from a gland or cell"
+      },
+      {
+        "name": "aid.n.02",
+        "definition": "the activity of contributing to the fulfillment of a need or furtherance of an effort or purpose"
+      },
+      {
+        "name": "politician.n.02",
+        "definition": "a person active in party politics"
+      },
+      {
+        "name": "group_action.n.01",
+        "definition": "action taken by a group of people"
+      },
+      {
+        "name": "substance.n.01",
+        "definition": "the real physical matter of which a person or thing consists"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "social_group.n.01",
+        "definition": "people sharing some social relation"
+      },
+      {
+        "name": "symptom.n.01",
+        "definition": "(medicine) any sensation or change in bodily function that is experienced by a patient and is associated with a particular disease"
+      },
+      {
+        "name": "occupation.n.01",
+        "definition": "the principal activity in your life that you do to earn money"
+      },
+      {
+        "name": "instrumentality.n.03",
+        "definition": "an artifact (or system of artifacts) that is instrumental in accomplishing some end"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "editing.n.01",
+        "definition": "putting something (as a literary work or a legislative bill) into acceptable form"
+      },
+      {
+        "name": "implement.n.01",
+        "definition": "instrumentation (a piece of equipment or tool) used to effect an end"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "substance.n.01",
+        "definition": "the real physical matter of which a person or thing consists"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "higher_cognitive_process.n.01",
+        "definition": "cognitive processes that presuppose the availability of knowledge and put it to use"
+      },
+      {
+        "name": "string.n.05",
+        "definition": "a linear sequence of symbols (characters or words or phrases)"
+      },
+      {
+        "name": "communicate.v.02",
+        "definition": "transmit thoughts or feelings"
+      },
+      {
+        "name": "discipline.n.01",
+        "definition": "a branch of knowledge"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      }
+    ],
+    "level4": [
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      },
+      {
+        "name": "liquid_body_substance.n.01",
+        "definition": "the liquid parts of the body"
+      },
+      {
+        "name": "leader.n.01",
+        "definition": "a person who rules or guides or inspires others"
+      },
+      {
+        "name": "part.n.01",
+        "definition": "something determined in relation to something that includes it"
+      },
+      {
+        "name": "communication.n.02",
+        "definition": "something that is communicated by or to or between people or groups"
+      },
+      {
+        "name": "evidence.n.01",
+        "definition": "your basis for belief or disbelief; knowledge on which to base belief"
+      },
+      {
+        "name": "artifact.n.01",
+        "definition": "a man-made object taken as a whole"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "instrumentality.n.03",
+        "definition": "an artifact (or system of artifacts) that is instrumental in accomplishing some end"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "part.n.01",
+        "definition": "something determined in relation to something that includes it"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "process.n.02",
+        "definition": "(psychology) the performance of some composite cognitive activity; an operation that affects mental contents"
+      },
+      {
+        "name": "sequence.n.01",
+        "definition": "serial arrangement in which things follow in logical order or a recurrent pattern"
+      },
+      {
+        "name": "interact.v.01",
+        "definition": "act together or towards others or with others"
+      },
+      {
+        "name": "knowledge_domain.n.01",
+        "definition": "the content of a particular field of knowledge"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      }
+    ]
+  },
+  "concept_counts": {
+    "checkup.n.01": 1,
+    "examination.n.01": 1,
+    "investigation.n.02": 1,
+    "work.n.01": 1,
+    "insulin.n.01": 1,
+    "hormone.n.01": 1,
+    "secretion.n.02": 1,
+    "liquid_body_substance.n.01": 1,
+    "significant.s.02": 1,
+    "attachment.n.05": 1,
+    "support.n.02": 1,
+    "aid.n.02": 1,
+    "data.n.01": 2,
+    "collection.n.01": 2,
+    "more.n.01": 1,
+    "statesman.n.01": 1,
+    "politician.n.02": 1,
+    "leader.n.01": 1,
+    "on-line.a.01": 1,
+    "intervention.n.01": 1,
+    "engagement.n.07": 1,
+    "group_action.n.01": 1,
+    "arsenic.n.02": 1,
+    "chemical_element.n.01": 1,
+    "substance.n.01": 2,
+    "part.n.01": 2,
+    "paragraph.n.01": 1,
+    "writing.n.02": 3,
+    "written_communication.n.01": 2,
+    "communication.n.02": 1,
+    "involve.v.01": 2,
+    "refer.v.02": 2,
+    "university.n.01": 1,
+    "body.n.02": 1,
+    "social_group.n.01": 1,
+    "smart.n.01": 1,
+    "pain.n.01": 1,
+    "symptom.n.01": 1,
+    "evidence.n.01": 1,
+    "technology.n.01": 1,
+    "profession.n.02": 1,
+    "occupation.n.01": 1,
+    "tool.n.01": 1,
+    "implement.n.01": 2,
+    "instrumentality.n.03": 2,
+    "artifact.n.01": 1,
+    "accessible.a.01": 1,
+    "angstrom.n.01": 2,
+    "metric_linear_unit.n.01": 2,
+    "metric_unit.n.01": 2,
+    "unit_of_measurement.n.01": 3,
+    "rewording.n.01": 1,
+    "rewriting.n.01": 1,
+    "editing.n.01": 1,
+    "pen.n.01": 1,
+    "writing_implement.n.01": 1,
+    "text.n.01": 1,
+    "matter.n.06": 1,
+    "paper.n.01": 1,
+    "material.n.01": 1,
+    "inch.n.01": 1,
+    "linear_unit.n.01": 1,
+    "definite_quantity.n.01": 1,
+    "know.n.01": 1,
+    "knowing.n.01": 1,
+    "higher_cognitive_process.n.01": 1,
+    "process.n.02": 1,
+    "sentence.n.01": 1,
+    "string_of_words.n.01": 1,
+    "string.n.05": 1,
+    "sequence.n.01": 1,
+    "rewrite.v.01": 1,
+    "write.v.02": 1,
+    "communicate.v.02": 1,
+    "interact.v.01": 1,
+    "information_technology.n.01": 1,
+    "engineering.n.02": 1,
+    "discipline.n.01": 1,
+    "knowledge_domain.n.01": 1
+  },
+  "top_concepts": [
+    {
+      "name": "writing.n.02",
+      "count": 3,
+      "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+    },
+    {
+      "name": "unit_of_measurement.n.01",
+      "count": 3,
+      "definition": "any division of quantity accepted as a standard of measurement or exchange"
+    },
+    {
+      "name": "data.n.01",
+      "count": 2,
+      "definition": "a collection of facts from which conclusions may be drawn"
+    }
+  ]
+}

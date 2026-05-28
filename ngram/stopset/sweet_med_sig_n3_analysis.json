@@ -1,0 +1,210 @@
+{
+  "file": "sweet_med_sig_n3.json",
+  "decoded_phrases": [
+    "available, which",
+    "developed the m",
+    "mobile health app",
+    "study with",
+    "a mobile health",
+    "have developed the",
+    "its use in",
+    "experiences.\n\nnote",
+    "-reported experiences.",
+    "self-reported experiences",
+    "the mold",
+    "generally well-re",
+    "a substantial amount"
+  ],
+  "decoded_words": [
+    "available,",
+    "which",
+    "developed",
+    "the",
+    "m",
+    "mobile",
+    "health",
+    "app",
+    "study",
+    "with",
+    "a",
+    "mobile",
+    "health",
+    "have",
+    "developed",
+    "the",
+    "its",
+    "use",
+    "in",
+    "experiences.",
+    "note",
+    "-reported",
+    "experiences.",
+    "self-reported",
+    "experiences",
+    "the",
+    "mold",
+    "generally",
+    "well-re",
+    "a",
+    "substantial",
+    "amount"
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "meter.n.01",
+        "definition": "the basic unit of length adopted under the Systeme International d'Unites (approximately 1.094 yards)"
+      },
+      {
+        "name": "health.n.01",
+        "definition": "a healthy state of wellbeing free from disease"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      },
+      {
+        "name": "note.n.01",
+        "definition": "a brief written record"
+      },
+      {
+        "name": "experience.n.01",
+        "definition": "the accumulation of knowledge or skill that results from direct participation in events or activities"
+      },
+      {
+        "name": "cast.n.03",
+        "definition": "the distinctive form in which a thing is made"
+      },
+      {
+        "name": "sum.n.01",
+        "definition": "a quantity of money"
+      }
+    ],
+    "level2": [
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "wellbeing.n.01",
+        "definition": "a contented state of being happy and healthy and prosperous"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      },
+      {
+        "name": "written_record.n.01",
+        "definition": "a written document preserving knowledge of facts or events"
+      },
+      {
+        "name": "education.n.02",
+        "definition": "knowledge acquired by learning and instruction"
+      },
+      {
+        "name": "solid.n.03",
+        "definition": "a three-dimensional shape"
+      },
+      {
+        "name": "assets.n.01",
+        "definition": "anything of material value or usefulness that is owned by a person or company"
+      }
+    ],
+    "level3": [
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "prosperity.n.02",
+        "definition": "the condition of prospering; having good fortune"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "record.n.01",
+        "definition": "anything (such as a document or a phonograph record or a photograph) providing permanent evidence of or information about past events"
+      },
+      {
+        "name": "content.n.05",
+        "definition": "the sum or range of what has been perceived, discovered, or learned"
+      },
+      {
+        "name": "shape.n.02",
+        "definition": "the spatial arrangement of something as distinct from its substance"
+      },
+      {
+        "name": "possession.n.02",
+        "definition": "anything owned or possessed"
+      }
+    ],
+    "level4": [
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "good_fortune.n.01",
+        "definition": "an auspicious state resulting from favorable outcomes"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "evidence.n.02",
+        "definition": "an indication that makes something evident"
+      },
+      {
+        "name": "cognition.n.01",
+        "definition": "the psychological result of perception and learning and reasoning"
+      }
+    ]
+  },
+  "concept_counts": {
+    "meter.n.01": 1,
+    "metric_linear_unit.n.01": 1,
+    "metric_unit.n.01": 1,
+    "unit_of_measurement.n.01": 2,
+    "health.n.01": 1,
+    "wellbeing.n.01": 1,
+    "prosperity.n.02": 1,
+    "good_fortune.n.01": 1,
+    "inch.n.01": 1,
+    "linear_unit.n.01": 1,
+    "definite_quantity.n.01": 1,
+    "note.n.01": 1,
+    "written_record.n.01": 1,
+    "record.n.01": 1,
+    "evidence.n.02": 1,
+    "experience.n.01": 1,
+    "education.n.02": 1,
+    "content.n.05": 1,
+    "cognition.n.01": 1,
+    "cast.n.03": 1,
+    "solid.n.03": 1,
+    "shape.n.02": 1,
+    "sum.n.01": 1,
+    "assets.n.01": 1,
+    "possession.n.02": 1
+  },
+  "top_concepts": [
+    {
+      "name": "unit_of_measurement.n.01",
+      "count": 2,
+      "definition": "any division of quantity accepted as a standard of measurement or exchange"
+    },
+    {
+      "name": "meter.n.01",
+      "count": 1,
+      "definition": "the basic unit of length adopted under the Systeme International d'Unites (approximately 1.094 yards)"
+    },
+    {
+      "name": "metric_linear_unit.n.01",
+      "count": 1,
+      "definition": "a linear unit of distance in metric terms"
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "file": "sweet_bio_sig_n3.json",
+  "decoded_phrases": [
+    "acteria produce a",
+    "settings with different",
+    "with different acquisition",
+    "vaccines and immun",
+    "protein length and",
+    "in protein structure",
+    "and the precise",
+    "directly map d",
+    "species.\n\nnote",
+    "in understanding\"",
+    "biological data in",
+    "specific microstructure",
+    "codons is",
+    ", which restrict",
+    "length and the",
+    "creating proteins with"
+  ],
+  "decoded_words": [
+    "acteria",
+    "produce",
+    "a",
+    "settings",
+    "with",
+    "different",
+    "with",
+    "different",
+    "acquisition",
+    "vaccines",
+    "and",
+    "immun",
+    "protein",
+    "length",
+    "and",
+    "in",
+    "protein",
+    "structure",
+    "and",
+    "the",
+    "precise",
+    "directly",
+    "map",
+    "d",
+    "species.",
+    "note",
+    "in",
+    "understanding\"",
+    "biological",
+    "data",
+    "in",
+    "specific",
+    "microstructure",
+    "codons",
+    "is",
+    ",",
+    "which",
+    "restrict",
+    "length",
+    "and",
+    "the",
+    "creating",
+    "proteins",
+    "with"
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "different.a.01",
+        "definition": "unlike in nature or quality or form or degree"
+      },
+      {
+        "name": "acquisition.n.01",
+        "definition": "the act of contracting or assuming or acquiring possession of something"
+      },
+      {
+        "name": "structure.n.01",
+        "definition": "a thing constructed; a complex entity constructed of many parts"
+      },
+      {
+        "name": "precise.a.01",
+        "definition": "sharply exact or accurate or delimited"
+      },
+      {
+        "name": "vitamin_d.n.01",
+        "definition": "a fat-soluble vitamin that prevents rickets"
+      },
+      {
+        "name": "note.n.01",
+        "definition": "a brief written record"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      },
+      {
+        "name": "be.v.01",
+        "definition": "have the quality of being; (copula, used with an adjective or a predicate noun)"
+      },
+      {
+        "name": "restrict.v.01",
+        "definition": "place restrictions on"
+      }
+    ],
+    "level2": [
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "acquiring.n.01",
+        "definition": "the act of acquiring something"
+      },
+      {
+        "name": "artifact.n.01",
+        "definition": "a man-made object taken as a whole"
+      },
+      {
+        "name": "fat-soluble_vitamin.n.01",
+        "definition": "any vitamin that is soluble in fats"
+      },
+      {
+        "name": "written_record.n.01",
+        "definition": "a written document preserving knowledge of facts or events"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      },
+      {
+        "name": "limit.v.02",
+        "definition": "restrict or confine,"
+      }
+    ],
+    "level3": [
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "whole.n.02",
+        "definition": "an assemblage of parts that is regarded as a single entity"
+      },
+      {
+        "name": "vitamin.n.01",
+        "definition": "any of a group of organic substances essential in small quantities to normal metabolism"
+      },
+      {
+        "name": "record.n.01",
+        "definition": "anything (such as a document or a phonograph record or a photograph) providing permanent evidence of or information about past events"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "decrease.v.02",
+        "definition": "make smaller"
+      }
+    ],
+    "level4": [
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "nutriment.n.01",
+        "definition": "a source of materials to nourish the body"
+      },
+      {
+        "name": "evidence.n.02",
+        "definition": "an indication that makes something evident"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "change.v.01",
+        "definition": "cause to change; make different; cause a transformation"
+      }
+    ]
+  },
+  "concept_counts": {
+    "angstrom.n.01": 1,
+    "metric_linear_unit.n.01": 1,
+    "metric_unit.n.01": 1,
+    "unit_of_measurement.n.01": 2,
+    "different.a.01": 1,
+    "acquisition.n.01": 1,
+    "acquiring.n.01": 1,
+    "structure.n.01": 1,
+    "artifact.n.01": 1,
+    "whole.n.02": 1,
+    "precise.a.01": 1,
+    "vitamin_d.n.01": 1,
+    "fat-soluble_vitamin.n.01": 1,
+    "vitamin.n.01": 1,
+    "nutriment.n.01": 1,
+    "note.n.01": 1,
+    "written_record.n.01": 1,
+    "record.n.01": 1,
+    "evidence.n.02": 1,
+    "inch.n.01": 1,
+    "linear_unit.n.01": 1,
+    "definite_quantity.n.01": 1,
+    "be.v.01": 1,
+    "restrict.v.01": 1,
+    "limit.v.02": 1,
+    "decrease.v.02": 1,
+    "change.v.01": 1
+  },
+  "top_concepts": [
+    {
+      "name": "unit_of_measurement.n.01",
+      "count": 2,
+      "definition": "any division of quantity accepted as a standard of measurement or exchange"
+    },
+    {
+      "name": "angstrom.n.01",
+      "count": 1,
+      "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+    },
+    {
+      "name": "metric_linear_unit.n.01",
+      "count": 1,
+      "definition": "a linear unit of distance in metric terms"
+    }
+  ]
+}

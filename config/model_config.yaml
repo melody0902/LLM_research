@@ -1,0 +1,23 @@
+# 模型設定
+model:
+  name: "taide/Llama3-TAIDE-LX-8B-Chat-Alpha1"
+  cache_dir: "/media/soslab/TRANSCEND/cache"
+  load_params:
+    device_map: "auto"
+    torch_dtype: "bfloat16"
+    low_cpu_mem_usage: true
+  tokenizer_params:
+    use_fast: false
+  quantization:
+    enabled: true
+    load_in_4bit: true
+    bnb_4bit_quant_type: "nf4"
+    bnb_4bit_use_double_quant: true
+    bnb_4bit_compute_dtype: "bfloat16"
+
+# TransformersConfig 設定
+transformers:
+  max_new_tokens: 200
+  min_length: 230
+  no_repeat_ngram_size: 4
+  do_sample: true

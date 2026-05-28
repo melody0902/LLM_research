@@ -1,0 +1,841 @@
+{
+  "file": "sweet_ai_sig_n2.json",
+  "decoded_phrases": [
+    "bile",
+    "the tree",
+    ".\n\nnote",
+    "subset selection",
+    "refine the",
+    "needs,",
+    "at the",
+    "clarity and",
+    "a new",
+    "previously learned",
+    ", which",
+    "auto-j",
+    "optimization framework",
+    "minimize the",
+    "concepts in",
+    "the sup",
+    "models.",
+    "neural networks",
+    "self-ass",
+    "between g",
+    "is it",
+    "tree of",
+    "ing memor",
+    "an optimization",
+    "reweigh",
+    "text.",
+    "personal attributes",
+    "and gain",
+    "highlighted the",
+    "the importance",
+    "new method",
+    "are simultaneously",
+    "generality",
+    ". this",
+    "linear transformation",
+    "new hierarchical",
+    "network to",
+    "of thoughts",
+    "presents vl",
+    "provide clear",
+    "privacy by",
+    "be unfamiliar",
+    "!",
+    "called **",
+    "following paragraph",
+    "\"b",
+    "new type",
+    "to refine",
+    "research\"",
+    "prompting that",
+    "exploration and",
+    "to tackle",
+    "simple linear",
+    "attributes from",
+    "the rewritten",
+    "graph neural",
+    "here",
+    "thoughts project",
+    "retraining",
+    "word embeddings",
+    "privacy research",
+    "unclear.",
+    "perspective on",
+    "framework.",
+    "as an",
+    "ality),",
+    "behind the",
+    "and self",
+    "(flex",
+    "original meaning",
+    "**auto",
+    "tasks.",
+    "step generation",
+    "data collected"
+  ],
+  "decoded_words": [
+    "bile",
+    "the",
+    "tree",
+    ".",
+    "note",
+    "subset",
+    "selection",
+    "refine",
+    "the",
+    "needs,",
+    "at",
+    "the",
+    "clarity",
+    "and",
+    "a",
+    "new",
+    "previously",
+    "learned",
+    ",",
+    "which",
+    "auto-j",
+    "optimization",
+    "framework",
+    "minimize",
+    "the",
+    "concepts",
+    "in",
+    "the",
+    "sup",
+    "models.",
+    "neural",
+    "networks",
+    "self-ass",
+    "between",
+    "g",
+    "is",
+    "it",
+    "tree",
+    "of",
+    "ing",
+    "memor",
+    "an",
+    "optimization",
+    "reweigh",
+    "text.",
+    "personal",
+    "attributes",
+    "and",
+    "gain",
+    "highlighted",
+    "the",
+    "the",
+    "importance",
+    "new",
+    "method",
+    "are",
+    "simultaneously",
+    "generality",
+    ".",
+    "this",
+    "linear",
+    "transformation",
+    "new",
+    "hierarchical",
+    "network",
+    "to",
+    "of",
+    "thoughts",
+    "presents",
+    "vl",
+    "provide",
+    "clear",
+    "privacy",
+    "by",
+    "be",
+    "unfamiliar",
+    "!",
+    "called",
+    "**",
+    "following",
+    "paragraph",
+    "\"b",
+    "new",
+    "type",
+    "to",
+    "refine",
+    "research\"",
+    "prompting",
+    "that",
+    "exploration",
+    "and",
+    "to",
+    "tackle",
+    "simple",
+    "linear",
+    "attributes",
+    "from",
+    "the",
+    "rewritten",
+    "graph",
+    "neural",
+    "here",
+    "thoughts",
+    "project",
+    "retraining",
+    "word",
+    "embeddings",
+    "privacy",
+    "research",
+    "unclear.",
+    "perspective",
+    "on",
+    "framework.",
+    "as",
+    "an",
+    "ality),",
+    "behind",
+    "the",
+    "and",
+    "self",
+    "(flex",
+    "original",
+    "meaning",
+    "**auto",
+    "tasks.",
+    "step",
+    "generation",
+    "data",
+    "collected"
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "bile.n.01",
+        "definition": "a digestive juice secreted by the liver and stored in the gallbladder; aids in the digestion of fats"
+      },
+      {
+        "name": "tree.n.01",
+        "definition": "a tall perennial woody plant having a main trunk and branches forming a distinct elevated crown; includes both gymnosperms and angiosperms"
+      },
+      {
+        "name": "note.n.01",
+        "definition": "a brief written record"
+      },
+      {
+        "name": "choice.n.02",
+        "definition": "the act of choosing or selecting"
+      },
+      {
+        "name": "new.a.01",
+        "definition": "not of long duration; having just (or relatively recently) come into being or been made or acquired or discovered"
+      },
+      {
+        "name": "learn.v.01",
+        "definition": "gain knowledge or skills"
+      },
+      {
+        "name": "model.n.01",
+        "definition": "a hypothetical description of a complex entity or process"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      },
+      {
+        "name": "swallow.n.01",
+        "definition": "a small amount of liquid food"
+      },
+      {
+        "name": "neural_network.n.01",
+        "definition": "computer architecture in which processors are connected in a manner suggestive of connections between neurons; can learn by trial and error"
+      },
+      {
+        "name": "gram.n.01",
+        "definition": "a metric unit of weight equal to one thousandth of a kilogram"
+      },
+      {
+        "name": "information_technology.n.01",
+        "definition": "the branch of engineering that deals with the use of computers and telecommunications to retrieve and store and transmit information"
+      },
+      {
+        "name": "optimization.n.01",
+        "definition": "the act of rendering optimal"
+      },
+      {
+        "name": "property.n.04",
+        "definition": "a construct whereby objects or individuals can be distinguished"
+      },
+      {
+        "name": "addition.n.03",
+        "definition": "a quantity that is added"
+      },
+      {
+        "name": "importance.n.01",
+        "definition": "the quality of being important and worthy of note"
+      },
+      {
+        "name": "method.n.01",
+        "definition": "a way of doing something, especially a systematic way; implies an orderly logical arrangement (usually in steps)"
+      },
+      {
+        "name": "simultaneously.r.01",
+        "definition": "at the same instant"
+      },
+      {
+        "name": "generalization.n.02",
+        "definition": "an idea or conclusion having general application"
+      },
+      {
+        "name": "transformation.n.01",
+        "definition": "a qualitative change"
+      },
+      {
+        "name": "hierarchical.a.01",
+        "definition": "classified according to various criteria into successive levels or layers"
+      },
+      {
+        "name": "idea.n.01",
+        "definition": "the content of cognition; the main thing you are thinking about"
+      },
+      {
+        "name": "clear.n.01",
+        "definition": "the state of being free of suspicion"
+      },
+      {
+        "name": "by.r.01",
+        "definition": "so as to pass a given point"
+      },
+      {
+        "name": "unfamiliar.a.01",
+        "definition": "not known or well known"
+      },
+      {
+        "name": "paragraph.n.01",
+        "definition": "one of several distinct subdivisions of a text intended to separate ideas; the beginning is usually marked by a new indented line"
+      },
+      {
+        "name": "type.n.01",
+        "definition": "a subdivision of a particular kind of thing"
+      },
+      {
+        "name": "polish.v.02",
+        "definition": "improve or perfect by pruning or polishing"
+      },
+      {
+        "name": "tackle.n.01",
+        "definition": "the person who plays that position on a football team"
+      },
+      {
+        "name": "linear.a.01",
+        "definition": "designating or involving an equation whose terms are of the first degree"
+      },
+      {
+        "name": "rewrite.v.01",
+        "definition": "write differently; alter the writing of"
+      },
+      {
+        "name": "nervous.a.03",
+        "definition": "of or relating to the nervous system"
+      },
+      {
+        "name": "here.n.01",
+        "definition": "the present location; this place"
+      },
+      {
+        "name": "undertaking.n.01",
+        "definition": "any piece of work that is undertaken or attempted"
+      },
+      {
+        "name": "retraining.n.01",
+        "definition": "training for a new occupation"
+      },
+      {
+        "name": "research.n.01",
+        "definition": "systematic investigation to establish facts"
+      },
+      {
+        "name": "on.a.01",
+        "definition": "in operation or operational"
+      },
+      {
+        "name": "associate_in_nursing.n.01",
+        "definition": "an associate degree in nursing"
+      },
+      {
+        "name": "self.n.01",
+        "definition": "your consciousness of your own identity"
+      },
+      {
+        "name": "meaning.n.01",
+        "definition": "the message that is intended or expressed or signified"
+      },
+      {
+        "name": "coevals.n.01",
+        "definition": "all the people living at the same time or of approximately the same age"
+      },
+      {
+        "name": "roll_up.v.02",
+        "definition": "get or gather together"
+      }
+    ],
+    "level2": [
+      {
+        "name": "digestive_juice.n.01",
+        "definition": "secretions that aid digestion"
+      },
+      {
+        "name": "woody_plant.n.01",
+        "definition": "a plant having hard lignified tissues or woody parts especially stems"
+      },
+      {
+        "name": "written_record.n.01",
+        "definition": "a written document preserving knowledge of facts or events"
+      },
+      {
+        "name": "action.n.01",
+        "definition": "something done (usually as opposed to something said)"
+      },
+      {
+        "name": "hypothesis.n.02",
+        "definition": "a tentative insight into the natural world; a concept that is not yet verified but that if true would explain certain facts or phenomena"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      },
+      {
+        "name": "taste.n.05",
+        "definition": "a small amount eaten or drunk"
+      },
+      {
+        "name": "computer_architecture.n.01",
+        "definition": "the art of assembling logical elements into a computing device; the specification of the relation between parts of a computer system"
+      },
+      {
+        "name": "metric_weight_unit.n.01",
+        "definition": "a decimal unit of weight based on the gram"
+      },
+      {
+        "name": "engineering.n.02",
+        "definition": "the discipline dealing with the art or science of applying scientific knowledge to practical problems"
+      },
+      {
+        "name": "improvement.n.02",
+        "definition": "the act of improving something"
+      },
+      {
+        "name": "concept.n.01",
+        "definition": "an abstract or general idea inferred or derived from specific instances"
+      },
+      {
+        "name": "indefinite_quantity.n.01",
+        "definition": "an estimated quantity"
+      },
+      {
+        "name": "value.n.02",
+        "definition": "the quality (positive or negative) that renders something desirable or valuable"
+      },
+      {
+        "name": "know-how.n.01",
+        "definition": "the (technical) knowledge and skill required to do something"
+      },
+      {
+        "name": "idea.n.01",
+        "definition": "the content of cognition; the main thing you are thinking about"
+      },
+      {
+        "name": "change.n.01",
+        "definition": "an event that occurs when something passes from one state or phase to another"
+      },
+      {
+        "name": "content.n.05",
+        "definition": "the sum or range of what has been perceived, discovered, or learned"
+      },
+      {
+        "name": "innocence.n.03",
+        "definition": "a state or condition of being innocent of a specific crime or offense"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "kind.n.01",
+        "definition": "a category of things distinguished by some common characteristic or quality"
+      },
+      {
+        "name": "better.v.02",
+        "definition": "to make better"
+      },
+      {
+        "name": "lineman.n.01",
+        "definition": "one of the players on the line of scrimmage"
+      },
+      {
+        "name": "write.v.02",
+        "definition": "communicate or express by writing"
+      },
+      {
+        "name": "location.n.01",
+        "definition": "a point or extent in space"
+      },
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      },
+      {
+        "name": "training.n.01",
+        "definition": "activity leading to skilled behavior"
+      },
+      {
+        "name": "investigation.n.02",
+        "definition": "the work of inquiring into something thoroughly and systematically"
+      },
+      {
+        "name": "associate_degree.n.01",
+        "definition": "a degree granted by a two-year college on successful completion of the undergraduates course of studies"
+      },
+      {
+        "name": "consciousness.n.01",
+        "definition": "an alert cognitive state in which you are aware of yourself and your situation"
+      },
+      {
+        "name": "message.n.02",
+        "definition": "what a communication that is about something is about"
+      },
+      {
+        "name": "people.n.01",
+        "definition": "(plural) any group of human beings (men or women or children) collectively"
+      },
+      {
+        "name": "store.v.01",
+        "definition": "keep or lay aside for future use"
+      }
+    ],
+    "level3": [
+      {
+        "name": "juice.n.04",
+        "definition": "any of several liquids of the body"
+      },
+      {
+        "name": "vascular_plant.n.01",
+        "definition": "green plant having a vascular system: ferns, gymnosperms, angiosperms"
+      },
+      {
+        "name": "record.n.01",
+        "definition": "anything (such as a document or a phonograph record or a photograph) providing permanent evidence of or information about past events"
+      },
+      {
+        "name": "concept.n.01",
+        "definition": "an abstract or general idea inferred or derived from specific instances"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "small_indefinite_quantity.n.01",
+        "definition": "an indefinite quantity that is below average size or magnitude"
+      },
+      {
+        "name": "specification.n.01",
+        "definition": "a detailed description of design criteria for a piece of work"
+      },
+      {
+        "name": "mass_unit.n.01",
+        "definition": "a unit of measurement for mass"
+      },
+      {
+        "name": "discipline.n.01",
+        "definition": "a branch of knowledge"
+      },
+      {
+        "name": "change_of_state.n.01",
+        "definition": "the act of changing something into something different in essential characteristics"
+      },
+      {
+        "name": "idea.n.01",
+        "definition": "the content of cognition; the main thing you are thinking about"
+      },
+      {
+        "name": "measure.n.02",
+        "definition": "how much there is or how many there are of something that you can quantify"
+      },
+      {
+        "name": "worth.n.02",
+        "definition": "the quality that renders something desirable or valuable or useful"
+      },
+      {
+        "name": "ability.n.02",
+        "definition": "possession of the qualities (especially mental qualities) required to do something or get something done"
+      },
+      {
+        "name": "content.n.05",
+        "definition": "the sum or range of what has been perceived, discovered, or learned"
+      },
+      {
+        "name": "happening.n.01",
+        "definition": "an event that happens"
+      },
+      {
+        "name": "cognition.n.01",
+        "definition": "the psychological result of perception and learning and reasoning"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "category.n.02",
+        "definition": "a general concept that marks divisions or coordinations in a conceptual scheme"
+      },
+      {
+        "name": "change.v.01",
+        "definition": "cause to change; make different; cause a transformation"
+      },
+      {
+        "name": "football_player.n.01",
+        "definition": "an athlete who plays American football"
+      },
+      {
+        "name": "communicate.v.02",
+        "definition": "transmit thoughts or feelings"
+      },
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      },
+      {
+        "name": "academic_degree.n.01",
+        "definition": "an award conferred by a college or university signifying that the recipient has satisfactorily completed a course of study"
+      },
+      {
+        "name": "cognitive_state.n.01",
+        "definition": "the state of a person's cognitive processes"
+      },
+      {
+        "name": "communication.n.02",
+        "definition": "something that is communicated by or to or between people or groups"
+      },
+      {
+        "name": "keep.v.03",
+        "definition": "retain possession of"
+      }
+    ],
+    "level4": [
+      {
+        "name": "liquid_body_substance.n.01",
+        "definition": "the liquid parts of the body"
+      },
+      {
+        "name": "plant.n.02",
+        "definition": "(botany) a living organism lacking the power of locomotion"
+      },
+      {
+        "name": "evidence.n.02",
+        "definition": "an indication that makes something evident"
+      },
+      {
+        "name": "idea.n.01",
+        "definition": "the content of cognition; the main thing you are thinking about"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "indefinite_quantity.n.01",
+        "definition": "an estimated quantity"
+      },
+      {
+        "name": "description.n.01",
+        "definition": "a statement that represents something in words"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "knowledge_domain.n.01",
+        "definition": "the content of a particular field of knowledge"
+      },
+      {
+        "name": "change.n.03",
+        "definition": "the action of changing something"
+      },
+      {
+        "name": "content.n.05",
+        "definition": "the sum or range of what has been perceived, discovered, or learned"
+      },
+      {
+        "name": "quality.n.01",
+        "definition": "an essential and distinguishing attribute of something or someone; --Shakespeare"
+      },
+      {
+        "name": "cognition.n.01",
+        "definition": "the psychological result of perception and learning and reasoning"
+      },
+      {
+        "name": "cognition.n.01",
+        "definition": "the psychological result of perception and learning and reasoning"
+      },
+      {
+        "name": "communication.n.02",
+        "definition": "something that is communicated by or to or between people or groups"
+      },
+      {
+        "name": "concept.n.01",
+        "definition": "an abstract or general idea inferred or derived from specific instances"
+      },
+      {
+        "name": "player.n.01",
+        "definition": "a person who participates in or is skilled at some game"
+      },
+      {
+        "name": "interact.v.01",
+        "definition": "act together or towards others or with others"
+      },
+      {
+        "name": "award.n.02",
+        "definition": "a tangible symbol signifying approval or distinction"
+      },
+      {
+        "name": "psychological_state.n.01",
+        "definition": "(psychology) a mental condition in which the qualities of a state are relatively constant even though the state itself may be dynamic"
+      },
+      {
+        "name": "have.v.01",
+        "definition": "have or possess, either in a concrete or an abstract sense"
+      }
+    ]
+  },
+  "concept_counts": {
+    "bile.n.01": 1,
+    "digestive_juice.n.01": 1,
+    "juice.n.04": 1,
+    "liquid_body_substance.n.01": 1,
+    "tree.n.01": 1,
+    "woody_plant.n.01": 1,
+    "vascular_plant.n.01": 1,
+    "plant.n.02": 1,
+    "note.n.01": 1,
+    "written_record.n.01": 1,
+    "record.n.01": 1,
+    "evidence.n.02": 1,
+    "choice.n.02": 1,
+    "action.n.01": 1,
+    "new.a.01": 1,
+    "learn.v.01": 1,
+    "model.n.01": 1,
+    "hypothesis.n.02": 1,
+    "concept.n.01": 3,
+    "idea.n.01": 4,
+    "inch.n.01": 1,
+    "linear_unit.n.01": 1,
+    "unit_of_measurement.n.01": 2,
+    "definite_quantity.n.01": 1,
+    "swallow.n.01": 1,
+    "taste.n.05": 1,
+    "small_indefinite_quantity.n.01": 1,
+    "indefinite_quantity.n.01": 2,
+    "neural_network.n.01": 1,
+    "computer_architecture.n.01": 1,
+    "specification.n.01": 1,
+    "description.n.01": 1,
+    "gram.n.01": 1,
+    "metric_weight_unit.n.01": 1,
+    "mass_unit.n.01": 1,
+    "information_technology.n.01": 1,
+    "engineering.n.02": 1,
+    "discipline.n.01": 1,
+    "knowledge_domain.n.01": 1,
+    "optimization.n.01": 1,
+    "improvement.n.02": 1,
+    "change_of_state.n.01": 1,
+    "change.n.03": 1,
+    "property.n.04": 1,
+    "content.n.05": 3,
+    "addition.n.03": 1,
+    "measure.n.02": 1,
+    "importance.n.01": 1,
+    "value.n.02": 1,
+    "worth.n.02": 1,
+    "quality.n.01": 1,
+    "method.n.01": 1,
+    "know-how.n.01": 1,
+    "ability.n.02": 1,
+    "cognition.n.01": 3,
+    "simultaneously.r.01": 1,
+    "generalization.n.02": 1,
+    "transformation.n.01": 1,
+    "change.n.01": 1,
+    "happening.n.01": 1,
+    "hierarchical.a.01": 1,
+    "clear.n.01": 1,
+    "innocence.n.03": 1,
+    "by.r.01": 1,
+    "unfamiliar.a.01": 1,
+    "paragraph.n.01": 1,
+    "writing.n.02": 1,
+    "written_communication.n.01": 1,
+    "communication.n.02": 2,
+    "type.n.01": 1,
+    "kind.n.01": 1,
+    "category.n.02": 1,
+    "polish.v.02": 1,
+    "better.v.02": 1,
+    "change.v.01": 1,
+    "tackle.n.01": 1,
+    "lineman.n.01": 1,
+    "football_player.n.01": 1,
+    "player.n.01": 1,
+    "linear.a.01": 1,
+    "rewrite.v.01": 1,
+    "write.v.02": 1,
+    "communicate.v.02": 1,
+    "interact.v.01": 1,
+    "nervous.a.03": 1,
+    "here.n.01": 1,
+    "location.n.01": 1,
+    "undertaking.n.01": 1,
+    "work.n.01": 2,
+    "retraining.n.01": 1,
+    "training.n.01": 1,
+    "research.n.01": 1,
+    "investigation.n.02": 1,
+    "on.a.01": 1,
+    "associate_in_nursing.n.01": 1,
+    "associate_degree.n.01": 1,
+    "academic_degree.n.01": 1,
+    "award.n.02": 1,
+    "self.n.01": 1,
+    "consciousness.n.01": 1,
+    "cognitive_state.n.01": 1,
+    "psychological_state.n.01": 1,
+    "meaning.n.01": 1,
+    "message.n.02": 1,
+    "coevals.n.01": 1,
+    "people.n.01": 1,
+    "roll_up.v.02": 1,
+    "store.v.01": 1,
+    "keep.v.03": 1,
+    "have.v.01": 1
+  },
+  "top_concepts": [
+    {
+      "name": "idea.n.01",
+      "count": 4,
+      "definition": "the content of cognition; the main thing you are thinking about"
+    },
+    {
+      "name": "concept.n.01",
+      "count": 3,
+      "definition": "an abstract or general idea inferred or derived from specific instances"
+    },
+    {
+      "name": "content.n.05",
+      "count": 3,
+      "definition": "the sum or range of what has been perceived, discovered, or learned"
+    }
+  ]
+}

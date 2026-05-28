@@ -1,0 +1,390 @@
+{
+  "file": "kgw_med_sig_n3.json",
+  "decoded_phrases": [
+    "as \"re",
+    "th\" to",
+    "design approaches,",
+    "we found that",
+    "like me to",
+    "\" to \"",
+    "understanding of loneliness",
+    "rote the text",
+    "mental healthcare.",
+    "of the data",
+    "take-a-",
+    "of its target",
+    "injectors by",
+    "me know if",
+    "recombin",
+    "health interventions as",
+    "by ehealth",
+    "be adjusted,",
+    "ors by individuals",
+    "\"take-a",
+    "prehensive interdisciplinary approaches",
+    "the data throughout",
+    "right specialists,",
+    "to \"take",
+    "\"recom",
+    "take-a-b",
+    "of children with",
+    "improve mental healthcare",
+    "needs of its",
+    "children with these",
+    "name of the",
+    "our understanding of",
+    "the text remains",
+    "easier to understand",
+    "in the rewritten",
+    "to recombin",
+    "to understand.",
+    "as \"biased",
+    "interventions as a"
+  ],
+  "decoded_words": [
+    "as",
+    "\"re",
+    "th\"",
+    "to",
+    "design",
+    "approaches,",
+    "we",
+    "found",
+    "that",
+    "like",
+    "me",
+    "to",
+    "\"",
+    "to",
+    "\"",
+    "understanding",
+    "of",
+    "loneliness",
+    "rote",
+    "the",
+    "text",
+    "mental",
+    "healthcare.",
+    "of",
+    "the",
+    "data",
+    "take-a-",
+    "of",
+    "its",
+    "target",
+    "injectors",
+    "by",
+    "me",
+    "know",
+    "if",
+    "recombin",
+    "health",
+    "interventions",
+    "as",
+    "by",
+    "ehealth",
+    "be",
+    "adjusted,",
+    "ors",
+    "by",
+    "individuals",
+    "\"take-a",
+    "prehensive",
+    "interdisciplinary",
+    "approaches",
+    "the",
+    "data",
+    "throughout",
+    "right",
+    "specialists,",
+    "to",
+    "\"take",
+    "\"recom",
+    "take-a-b",
+    "of",
+    "children",
+    "with",
+    "improve",
+    "mental",
+    "healthcare",
+    "needs",
+    "of",
+    "its",
+    "children",
+    "with",
+    "these",
+    "name",
+    "of",
+    "the",
+    "our",
+    "understanding",
+    "of",
+    "the",
+    "text",
+    "remains",
+    "easier",
+    "to",
+    "understand",
+    "in",
+    "the",
+    "rewritten",
+    "to",
+    "recombin",
+    "to",
+    "understand.",
+    "as",
+    "\"biased",
+    "interventions",
+    "as",
+    "a"
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "loneliness.n.01",
+        "definition": "the state of being alone in solitary isolation"
+      },
+      {
+        "name": "text.n.01",
+        "definition": "the words of something written"
+      },
+      {
+        "name": "data.n.01",
+        "definition": "a collection of facts from which conclusions may be drawn"
+      },
+      {
+        "name": "target.n.01",
+        "definition": "a reference point to shoot at"
+      },
+      {
+        "name": "by.r.01",
+        "definition": "so as to pass a given point"
+      },
+      {
+        "name": "arsenic.n.02",
+        "definition": "a very poisonous metallic element that has three allotropic forms; arsenic and arsenic compounds are used as herbicides and insecticides and various alloys; found in arsenopyrite and orpiment and realgar"
+      },
+      {
+        "name": "person.n.01",
+        "definition": "a human being"
+      },
+      {
+        "name": "approach.n.01",
+        "definition": "ideas or actions intended to deal with a problem or situation"
+      },
+      {
+        "name": "throughout.r.01",
+        "definition": "from first to last"
+      },
+      {
+        "name": "healthcare.n.01",
+        "definition": "the preservation of mental and physical health by preventing or treating illness through services offered by the health profession"
+      },
+      {
+        "name": "information_technology.n.01",
+        "definition": "the branch of engineering that deals with the use of computers and telecommunications to retrieve and store and transmit information"
+      },
+      {
+        "name": "remains.n.01",
+        "definition": "any object that is left unused or still extant"
+      },
+      {
+        "name": "understand.v.01",
+        "definition": "know and comprehend the nature or meaning of"
+      },
+      {
+        "name": "rewrite.v.01",
+        "definition": "write differently; alter the writing of"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      }
+    ],
+    "level2": [
+      {
+        "name": "isolation.n.01",
+        "definition": "a state of separation between persons or groups"
+      },
+      {
+        "name": "matter.n.06",
+        "definition": "written works (especially in books or magazines)"
+      },
+      {
+        "name": "collection.n.01",
+        "definition": "several things grouped together or considered as a whole"
+      },
+      {
+        "name": "reference_point.n.01",
+        "definition": "an indicator that orients you generally"
+      },
+      {
+        "name": "chemical_element.n.01",
+        "definition": "any of the more than 100 known substances (of which 92 occur naturally) that cannot be separated into simpler substances and that singly or in combination constitute all matter"
+      },
+      {
+        "name": "organism.n.01",
+        "definition": "a living thing that has (or can develop) the ability to act or function independently"
+      },
+      {
+        "name": "conceptualization.n.01",
+        "definition": "inventing or contriving an idea or explanation and formulating it mentally"
+      },
+      {
+        "name": "care.n.01",
+        "definition": "the work of providing treatment for or attending to someone or something"
+      },
+      {
+        "name": "engineering.n.02",
+        "definition": "the discipline dealing with the art or science of applying scientific knowledge to practical problems"
+      },
+      {
+        "name": "write.v.02",
+        "definition": "communicate or express by writing"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      }
+    ],
+    "level3": [
+      {
+        "name": "separation.n.01",
+        "definition": "the state of lacking unity"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "indicator.n.02",
+        "definition": "a signal for attracting attention"
+      },
+      {
+        "name": "substance.n.01",
+        "definition": "the real physical matter of which a person or thing consists"
+      },
+      {
+        "name": "living_thing.n.01",
+        "definition": "a living (or once living) entity"
+      },
+      {
+        "name": "creating_by_mental_acts.n.01",
+        "definition": "the act of creating something by thinking"
+      },
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      },
+      {
+        "name": "discipline.n.01",
+        "definition": "a branch of knowledge"
+      },
+      {
+        "name": "communicate.v.02",
+        "definition": "transmit thoughts or feelings"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      }
+    ],
+    "level4": [
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "signal.n.01",
+        "definition": "any nonverbal action or gesture that encodes a message"
+      },
+      {
+        "name": "part.n.01",
+        "definition": "something determined in relation to something that includes it"
+      },
+      {
+        "name": "whole.n.02",
+        "definition": "an assemblage of parts that is regarded as a single entity"
+      },
+      {
+        "name": "creation.n.01",
+        "definition": "the human act of creating"
+      },
+      {
+        "name": "knowledge_domain.n.01",
+        "definition": "the content of a particular field of knowledge"
+      },
+      {
+        "name": "interact.v.01",
+        "definition": "act together or towards others or with others"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      }
+    ]
+  },
+  "concept_counts": {
+    "loneliness.n.01": 1,
+    "isolation.n.01": 1,
+    "separation.n.01": 1,
+    "text.n.01": 1,
+    "matter.n.06": 1,
+    "writing.n.02": 1,
+    "written_communication.n.01": 1,
+    "data.n.01": 1,
+    "collection.n.01": 1,
+    "target.n.01": 1,
+    "reference_point.n.01": 1,
+    "indicator.n.02": 1,
+    "signal.n.01": 1,
+    "by.r.01": 1,
+    "arsenic.n.02": 1,
+    "chemical_element.n.01": 1,
+    "substance.n.01": 1,
+    "part.n.01": 1,
+    "person.n.01": 1,
+    "organism.n.01": 1,
+    "living_thing.n.01": 1,
+    "whole.n.02": 1,
+    "approach.n.01": 1,
+    "conceptualization.n.01": 1,
+    "creating_by_mental_acts.n.01": 1,
+    "creation.n.01": 1,
+    "throughout.r.01": 1,
+    "healthcare.n.01": 1,
+    "care.n.01": 1,
+    "work.n.01": 1,
+    "information_technology.n.01": 1,
+    "engineering.n.02": 1,
+    "discipline.n.01": 1,
+    "knowledge_domain.n.01": 1,
+    "remains.n.01": 1,
+    "understand.v.01": 1,
+    "rewrite.v.01": 1,
+    "write.v.02": 1,
+    "communicate.v.02": 1,
+    "interact.v.01": 1,
+    "angstrom.n.01": 1,
+    "metric_linear_unit.n.01": 1,
+    "metric_unit.n.01": 1,
+    "unit_of_measurement.n.01": 1
+  },
+  "top_concepts": [
+    {
+      "name": "loneliness.n.01",
+      "count": 1,
+      "definition": "the state of being alone in solitary isolation"
+    },
+    {
+      "name": "isolation.n.01",
+      "count": 1,
+      "definition": "a state of separation between persons or groups"
+    },
+    {
+      "name": "separation.n.01",
+      "count": 1,
+      "definition": "the state of lacking unity"
+    }
+  ]
+}

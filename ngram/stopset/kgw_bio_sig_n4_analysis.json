@@ -1,0 +1,160 @@
+{
+  "file": "kgw_bio_sig_n4.json",
+  "decoded_phrases": [
+    "ins from the same",
+    "from the same...",
+    "to hla is",
+    "transformer-based and protein",
+    "same protein family may",
+    "increase\" has been",
+    "the same protein family",
+    "binding to hla"
+  ],
+  "decoded_words": [
+    "ins",
+    "from",
+    "the",
+    "same",
+    "from",
+    "the",
+    "same...",
+    "to",
+    "hla",
+    "is",
+    "transformer-based",
+    "and",
+    "protein",
+    "same",
+    "protein",
+    "family",
+    "may",
+    "increase\"",
+    "has",
+    "been",
+    "the",
+    "same",
+    "protein",
+    "family",
+    "binding",
+    "to",
+    "hla"
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "lapp.n.01",
+        "definition": "a member of an indigenous nomadic people living in northern Scandinavia and herding reindeer"
+      },
+      {
+        "name": "be.v.01",
+        "definition": "have the quality of being; (copula, used with an adjective or a predicate noun)"
+      },
+      {
+        "name": "protein.n.01",
+        "definition": "any of a large group of nitrogenous organic compounds that are essential constituents of living cells; consist of polymers of amino acids; essential in the diet of animals for growth and for repair of tissues; can be obtained from meat and eggs and milk and legumes"
+      },
+      {
+        "name": "may.n.01",
+        "definition": "the month following April and preceding June"
+      },
+      {
+        "name": "be.v.01",
+        "definition": "have the quality of being; (copula, used with an adjective or a predicate noun)"
+      },
+      {
+        "name": "family.n.01",
+        "definition": "a social unit living together"
+      }
+    ],
+    "level2": [
+      {
+        "name": "european.n.01",
+        "definition": "a native or inhabitant of Europe"
+      },
+      {
+        "name": "macromolecule.n.01",
+        "definition": "any very large complex molecule; found only in plants and animals"
+      },
+      {
+        "name": "gregorian_calendar_month.n.01",
+        "definition": "a month in the Gregorian calendar"
+      },
+      {
+        "name": "unit.n.03",
+        "definition": "an organization regarded as part of a larger social group"
+      }
+    ],
+    "level3": [
+      {
+        "name": "inhabitant.n.01",
+        "definition": "a person who inhabits a particular place"
+      },
+      {
+        "name": "organic_compound.n.01",
+        "definition": "any compound of carbon and another element or a radical"
+      },
+      {
+        "name": "calendar_month.n.01",
+        "definition": "one of the twelve divisions of the calendar year"
+      },
+      {
+        "name": "organization.n.01",
+        "definition": "a group of people who work together"
+      }
+    ],
+    "level4": [
+      {
+        "name": "person.n.01",
+        "definition": "a human being"
+      },
+      {
+        "name": "compound.n.02",
+        "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+      },
+      {
+        "name": "time_period.n.01",
+        "definition": "an amount of time"
+      },
+      {
+        "name": "social_group.n.01",
+        "definition": "people sharing some social relation"
+      }
+    ]
+  },
+  "concept_counts": {
+    "lapp.n.01": 1,
+    "european.n.01": 1,
+    "inhabitant.n.01": 1,
+    "person.n.01": 1,
+    "be.v.01": 2,
+    "protein.n.01": 1,
+    "macromolecule.n.01": 1,
+    "organic_compound.n.01": 1,
+    "compound.n.02": 1,
+    "may.n.01": 1,
+    "gregorian_calendar_month.n.01": 1,
+    "calendar_month.n.01": 1,
+    "time_period.n.01": 1,
+    "family.n.01": 1,
+    "unit.n.03": 1,
+    "organization.n.01": 1,
+    "social_group.n.01": 1
+  },
+  "top_concepts": [
+    {
+      "name": "be.v.01",
+      "count": 2,
+      "definition": "have the quality of being; (copula, used with an adjective or a predicate noun)"
+    },
+    {
+      "name": "lapp.n.01",
+      "count": 1,
+      "definition": "a member of an indigenous nomadic people living in northern Scandinavia and herding reindeer"
+    },
+    {
+      "name": "european.n.01",
+      "count": 1,
+      "definition": "a native or inhabitant of Europe"
+    }
+  ]
+}

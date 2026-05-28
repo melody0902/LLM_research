@@ -1,0 +1,999 @@
+{
+  "file": "unigram_bio_sig_n3.json",
+  "decoded_phrases": [
+    "maps, our",
+    "manual labor,",
+    "rewriting the paragraph",
+    "the drug itself",
+    "make it easier",
+    "picnic",
+    "make it more",
+    "general audience.",
+    ", picnic",
+    "a more general",
+    "furthermore, the",
+    "paper. the",
+    "la are essential",
+    "nic 2",
+    "hla are",
+    "the rewritten text",
+    ", but the",
+    "ocyte antigen",
+    "human organism,",
+    ", making it",
+    "apeutic treatments.",
+    "labor, and",
+    "and amino acid",
+    "as hla",
+    "ins play a",
+    "readership.",
+    ". to overcome",
+    "teins play",
+    "biological processes are",
+    "it in a",
+    "in the human",
+    "the connections between",
+    "for a broader",
+    "the human organism",
+    "at a more",
+    "behavior. while",
+    "or tasks.",
+    "a broader audience",
+    "the rewritten text",
+    "to overcome these",
+    "design. the",
+    "each protein at",
+    "and the connections",
+    "a general audience",
+    ", and proteins",
+    "play a vital",
+    "bioinformatics,",
+    "variable selection in",
+    "more general readers",
+    "with \"wide",
+    "clinical applications.",
+    "the paragraph.",
+    "antigen).",
+    "than directly mapping",
+    "it more accessible",
+    "sequences and the",
+    ". furthermore,",
+    "the data and",
+    "proteins or those",
+    ". however,",
+    "treatments. recent",
+    "crucial for the",
+    "amino acid positions",
+    ". the rewritten",
+    "important tool for",
+    "vital role in",
+    "protein at a",
+    "and proteins.",
+    "role in the",
+    "are essential for",
+    "a vital role",
+    "proteins play a",
+    "organism, and",
+    "general readership",
+    "audience. the",
+    ", a protein",
+    "or those with",
+    "former, a",
+    "general audience,"
+  ],
+  "decoded_words": [
+    "maps,",
+    "our",
+    "manual",
+    "labor,",
+    "rewriting",
+    "the",
+    "paragraph",
+    "the",
+    "drug",
+    "itself",
+    "make",
+    "it",
+    "easier",
+    "picnic",
+    "make",
+    "it",
+    "more",
+    "general",
+    "audience.",
+    ",",
+    "picnic",
+    "a",
+    "more",
+    "general",
+    "furthermore,",
+    "the",
+    "paper.",
+    "the",
+    "la",
+    "are",
+    "essential",
+    "nic",
+    "2",
+    "hla",
+    "are",
+    "the",
+    "rewritten",
+    "text",
+    ",",
+    "but",
+    "the",
+    "ocyte",
+    "antigen",
+    "human",
+    "organism,",
+    ",",
+    "making",
+    "it",
+    "apeutic",
+    "treatments.",
+    "labor,",
+    "and",
+    "and",
+    "amino",
+    "acid",
+    "as",
+    "hla",
+    "ins",
+    "play",
+    "a",
+    "readership.",
+    ".",
+    "to",
+    "overcome",
+    "teins",
+    "play",
+    "biological",
+    "processes",
+    "are",
+    "it",
+    "in",
+    "a",
+    "in",
+    "the",
+    "human",
+    "the",
+    "connections",
+    "between",
+    "for",
+    "a",
+    "broader",
+    "the",
+    "human",
+    "organism",
+    "at",
+    "a",
+    "more",
+    "behavior.",
+    "while",
+    "or",
+    "tasks.",
+    "a",
+    "broader",
+    "audience",
+    "the",
+    "rewritten",
+    "text",
+    "to",
+    "overcome",
+    "these",
+    "design.",
+    "the",
+    "each",
+    "protein",
+    "at",
+    "and",
+    "the",
+    "connections",
+    "a",
+    "general",
+    "audience",
+    ",",
+    "and",
+    "proteins",
+    "play",
+    "a",
+    "vital",
+    "bioinformatics,",
+    "variable",
+    "selection",
+    "in",
+    "more",
+    "general",
+    "readers",
+    "with",
+    "\"wide",
+    "clinical",
+    "applications.",
+    "the",
+    "paragraph.",
+    "antigen).",
+    "than",
+    "directly",
+    "mapping",
+    "it",
+    "more",
+    "accessible",
+    "sequences",
+    "and",
+    "the",
+    ".",
+    "furthermore,",
+    "the",
+    "data",
+    "and",
+    "proteins",
+    "or",
+    "those",
+    ".",
+    "however,",
+    "treatments.",
+    "recent",
+    "crucial",
+    "for",
+    "the",
+    "amino",
+    "acid",
+    "positions",
+    ".",
+    "the",
+    "rewritten",
+    "important",
+    "tool",
+    "for",
+    "vital",
+    "role",
+    "in",
+    "protein",
+    "at",
+    "a",
+    "and",
+    "proteins.",
+    "role",
+    "in",
+    "the",
+    "are",
+    "essential",
+    "for",
+    "a",
+    "vital",
+    "role",
+    "proteins",
+    "play",
+    "a",
+    "organism,",
+    "and",
+    "general",
+    "readership",
+    "audience.",
+    "the",
+    ",",
+    "a",
+    "protein",
+    "or",
+    "those",
+    "with",
+    "former,",
+    "a",
+    "general",
+    "audience,"
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "paragraph.n.01",
+        "definition": "one of several distinct subdivisions of a text intended to separate ideas; the beginning is usually marked by a new indented line"
+      },
+      {
+        "name": "easy.a.01",
+        "definition": "posing no difficulty; requiring little effort"
+      },
+      {
+        "name": "field_day.n.04",
+        "definition": "a day devoted to an outdoor social gathering"
+      },
+      {
+        "name": "more.n.01",
+        "definition": "English statesman who opposed Henry VIII's divorce from Catherine of Aragon and was imprisoned and beheaded; recalled for his concept of Utopia, the ideal state"
+      },
+      {
+        "name": "field_day.n.04",
+        "definition": "a day devoted to an outdoor social gathering"
+      },
+      {
+        "name": "general.n.01",
+        "definition": "a general officer of the highest rank"
+      },
+      {
+        "name": "necessity.n.02",
+        "definition": "anything indispensable"
+      },
+      {
+        "name": "two.n.01",
+        "definition": "the cardinal number that is the sum of one and one or a numeral representing this number"
+      },
+      {
+        "name": "are.n.01",
+        "definition": "a unit of surface area equal to 100 square meters"
+      },
+      {
+        "name": "text.n.01",
+        "definition": "the words of something written"
+      },
+      {
+        "name": "antigen.n.01",
+        "definition": "any substance (as a toxin or enzyme) that stimulates an immune response in the body (especially the production of antibodies)"
+      },
+      {
+        "name": "information_technology.n.01",
+        "definition": "the branch of engineering that deals with the use of computers and telecommunications to retrieve and store and transmit information"
+      },
+      {
+        "name": "acid.n.01",
+        "definition": "any of various water-soluble compounds having a sour taste and capable of turning litmus red and reacting with a base to form a salt"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "get_the_better_of.v.01",
+        "definition": "win a victory over"
+      },
+      {
+        "name": "play.n.01",
+        "definition": "a dramatic work intended for performance by actors on a stage"
+      },
+      {
+        "name": "are.n.01",
+        "definition": "a unit of surface area equal to 100 square meters"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "homo.n.02",
+        "definition": "any living or extinct member of the family Hominidae characterized by superior intelligence, articulate speech, and erect carriage"
+      },
+      {
+        "name": "between.r.01",
+        "definition": "in the interval"
+      },
+      {
+        "name": "wide.a.01",
+        "definition": "having great (or a certain) extent from one side to the other"
+      },
+      {
+        "name": "organism.n.01",
+        "definition": "a living thing that has (or can develop) the ability to act or function independently"
+      },
+      {
+        "name": "more.n.01",
+        "definition": "English statesman who opposed Henry VIII's divorce from Catherine of Aragon and was imprisoned and beheaded; recalled for his concept of Utopia, the ideal state"
+      },
+      {
+        "name": "while.n.01",
+        "definition": "a period of indeterminate length (usually short) marked by some action or condition"
+      },
+      {
+        "name": "audience.n.01",
+        "definition": "a gathering of spectators or listeners at a (usually public) performance"
+      },
+      {
+        "name": "text.n.01",
+        "definition": "the words of something written"
+      },
+      {
+        "name": "astatine.n.01",
+        "definition": "a highly unstable radioactive element (the heaviest of the halogen series); a decay product of uranium and thorium"
+      },
+      {
+        "name": "connection.n.01",
+        "definition": "a relation between things or events (as in the case of one causing the other or sharing features with it)"
+      },
+      {
+        "name": "audience.n.01",
+        "definition": "a gathering of spectators or listeners at a (usually public) performance"
+      },
+      {
+        "name": "protein.n.01",
+        "definition": "any of a large group of nitrogenous organic compounds that are essential constituents of living cells; consist of polymers of amino acids; essential in the diet of animals for growth and for repair of tissues; can be obtained from meat and eggs and milk and legumes"
+      },
+      {
+        "name": "critical.s.04",
+        "definition": "urgently needed; absolutely necessary"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      },
+      {
+        "name": "reader.n.01",
+        "definition": "a person who enjoys reading"
+      },
+      {
+        "name": "function.n.01",
+        "definition": "(mathematics) a mathematical relation such that each element of a given set (the domain of the function) is associated with an element of another set (the range of the function)"
+      },
+      {
+        "name": "accessible.a.01",
+        "definition": "capable of being reached"
+      },
+      {
+        "name": "holocene.n.01",
+        "definition": "approximately the last 10,000 years"
+      },
+      {
+        "name": "position.n.01",
+        "definition": "the particular portion of space occupied by something"
+      },
+      {
+        "name": "rewrite.v.01",
+        "definition": "write differently; alter the writing of"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "function.n.03",
+        "definition": "the actions and activities assigned to or required or expected of a person or group"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "readership.n.01",
+        "definition": "the audience reached by written communications (books or magazines or newspapers etc.)"
+      },
+      {
+        "name": "protein.n.01",
+        "definition": "any of a large group of nitrogenous organic compounds that are essential constituents of living cells; consist of polymers of amino acids; essential in the diet of animals for growth and for repair of tissues; can be obtained from meat and eggs and milk and legumes"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      }
+    ],
+    "level2": [
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "vacation.n.01",
+        "definition": "leisure time away from work devoted to rest or pleasure"
+      },
+      {
+        "name": "statesman.n.01",
+        "definition": "a man who is a respected leader in national or international affairs"
+      },
+      {
+        "name": "vacation.n.01",
+        "definition": "leisure time away from work devoted to rest or pleasure"
+      },
+      {
+        "name": "general_officer.n.01",
+        "definition": "officers in the Army or Air Force or Marines above the rank of colonel"
+      },
+      {
+        "name": "digit.n.01",
+        "definition": "one of the elements that collectively form a system of numeration"
+      },
+      {
+        "name": "area_unit.n.01",
+        "definition": "a system of units used to measure areas"
+      },
+      {
+        "name": "matter.n.06",
+        "definition": "written works (especially in books or magazines)"
+      },
+      {
+        "name": "substance.n.07",
+        "definition": "a particular kind or species of matter with uniform properties"
+      },
+      {
+        "name": "engineering.n.02",
+        "definition": "the discipline dealing with the art or science of applying scientific knowledge to practical problems"
+      },
+      {
+        "name": "compound.n.02",
+        "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "dramatic_composition.n.01",
+        "definition": "a play for performance on the stage or television or in a movie etc."
+      },
+      {
+        "name": "area_unit.n.01",
+        "definition": "a system of units used to measure areas"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "hominid.n.01",
+        "definition": "a primate of the family Hominidae"
+      },
+      {
+        "name": "living_thing.n.01",
+        "definition": "a living (or once living) entity"
+      },
+      {
+        "name": "statesman.n.01",
+        "definition": "a man who is a respected leader in national or international affairs"
+      },
+      {
+        "name": "time.n.03",
+        "definition": "an indefinite period (usually marked by specific attributes or activities)"
+      },
+      {
+        "name": "gathering.n.01",
+        "definition": "a group of persons together in one place"
+      },
+      {
+        "name": "matter.n.06",
+        "definition": "written works (especially in books or magazines)"
+      },
+      {
+        "name": "chemical_element.n.01",
+        "definition": "any of the more than 100 known substances (of which 92 occur naturally) that cannot be separated into simpler substances and that singly or in combination constitute all matter"
+      },
+      {
+        "name": "gathering.n.01",
+        "definition": "a group of persons together in one place"
+      },
+      {
+        "name": "macromolecule.n.01",
+        "definition": "any very large complex molecule; found only in plants and animals"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      },
+      {
+        "name": "scholar.n.01",
+        "definition": "a learned person (especially in the humanities); someone who by long study has gained mastery in one or more disciplines"
+      },
+      {
+        "name": "mathematical_relation.n.01",
+        "definition": "a relation between mathematical expressions (such as equality or inequality)"
+      },
+      {
+        "name": "epoch.n.03",
+        "definition": "a unit of geological time that is a subdivision of a period and is itself divided into ages"
+      },
+      {
+        "name": "point.n.02",
+        "definition": "the precise location of something; a spatially limited location"
+      },
+      {
+        "name": "write.v.02",
+        "definition": "communicate or express by writing"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "duty.n.02",
+        "definition": "work that you are obliged to perform for moral or legal reasons"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "audience.n.02",
+        "definition": "the part of the general public interested in a source of information or entertainment"
+      },
+      {
+        "name": "macromolecule.n.01",
+        "definition": "any very large complex molecule; found only in plants and animals"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      }
+    ],
+    "level3": [
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "leisure.n.01",
+        "definition": "time available for ease and relaxation"
+      },
+      {
+        "name": "politician.n.02",
+        "definition": "a person active in party politics"
+      },
+      {
+        "name": "leisure.n.01",
+        "definition": "time available for ease and relaxation"
+      },
+      {
+        "name": "commissioned_military_officer.n.01",
+        "definition": "a commissioned officer in the Army or Air Force or Marine Corps"
+      },
+      {
+        "name": "integer.n.01",
+        "definition": "any of the natural numbers (positive or negative) or zero"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "matter.n.03",
+        "definition": "that which has mass and occupies space"
+      },
+      {
+        "name": "discipline.n.01",
+        "definition": "a branch of knowledge"
+      },
+      {
+        "name": "chemical.n.01",
+        "definition": "material produced by or used in a reaction involving changes in atoms or molecules"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "primate.n.02",
+        "definition": "any placental mammal of the order Primates; has good eyesight and flexible hands and feet"
+      },
+      {
+        "name": "whole.n.02",
+        "definition": "an assemblage of parts that is regarded as a single entity"
+      },
+      {
+        "name": "politician.n.02",
+        "definition": "a person active in party politics"
+      },
+      {
+        "name": "time_period.n.01",
+        "definition": "an amount of time"
+      },
+      {
+        "name": "social_group.n.01",
+        "definition": "people sharing some social relation"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "substance.n.01",
+        "definition": "the real physical matter of which a person or thing consists"
+      },
+      {
+        "name": "social_group.n.01",
+        "definition": "people sharing some social relation"
+      },
+      {
+        "name": "organic_compound.n.01",
+        "definition": "any compound of carbon and another element or a radical"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "intellectual.n.01",
+        "definition": "a person who uses the mind creatively"
+      },
+      {
+        "name": "geological_time.n.01",
+        "definition": "the time of the physical formation and development of the earth (especially prior to human history)"
+      },
+      {
+        "name": "location.n.01",
+        "definition": "a point or extent in space"
+      },
+      {
+        "name": "communicate.v.02",
+        "definition": "transmit thoughts or feelings"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "multitude.n.03",
+        "definition": "the common people generally"
+      },
+      {
+        "name": "organic_compound.n.01",
+        "definition": "any compound of carbon and another element or a radical"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      }
+    ],
+    "level4": [
+      {
+        "name": "communication.n.02",
+        "definition": "something that is communicated by or to or between people or groups"
+      },
+      {
+        "name": "time_off.n.01",
+        "definition": "a time period when you are not required to work"
+      },
+      {
+        "name": "leader.n.01",
+        "definition": "a person who rules or guides or inspires others"
+      },
+      {
+        "name": "time_off.n.01",
+        "definition": "a time period when you are not required to work"
+      },
+      {
+        "name": "commissioned_officer.n.01",
+        "definition": "a military officer holding a commission"
+      },
+      {
+        "name": "number.n.02",
+        "definition": "a concept of quantity involving zero and units"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "knowledge_domain.n.01",
+        "definition": "the content of a particular field of knowledge"
+      },
+      {
+        "name": "material.n.01",
+        "definition": "the tangible substance that goes into the makeup of a physical object"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "placental.n.01",
+        "definition": "mammals having a placenta; all mammals except monotremes and marsupials"
+      },
+      {
+        "name": "leader.n.01",
+        "definition": "a person who rules or guides or inspires others"
+      },
+      {
+        "name": "fundamental_quantity.n.01",
+        "definition": "one of the four quantities that are the basis of systems of measurement"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "part.n.01",
+        "definition": "something determined in relation to something that includes it"
+      },
+      {
+        "name": "compound.n.02",
+        "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "person.n.01",
+        "definition": "a human being"
+      },
+      {
+        "name": "time.n.05",
+        "definition": "the continuum of experience in which events pass from the future through the present to the past"
+      },
+      {
+        "name": "interact.v.01",
+        "definition": "act together or towards others or with others"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "compound.n.02",
+        "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      }
+    ]
+  },
+  "concept_counts": {
+    "paragraph.n.01": 1,
+    "writing.n.02": 4,
+    "written_communication.n.01": 4,
+    "communication.n.02": 1,
+    "easy.a.01": 1,
+    "field_day.n.04": 2,
+    "vacation.n.01": 2,
+    "leisure.n.01": 2,
+    "time_off.n.01": 2,
+    "more.n.01": 2,
+    "statesman.n.01": 2,
+    "politician.n.02": 2,
+    "leader.n.01": 2,
+    "general.n.01": 1,
+    "general_officer.n.01": 1,
+    "commissioned_military_officer.n.01": 1,
+    "commissioned_officer.n.01": 1,
+    "necessity.n.02": 1,
+    "two.n.01": 1,
+    "digit.n.01": 1,
+    "integer.n.01": 1,
+    "number.n.02": 1,
+    "are.n.01": 2,
+    "area_unit.n.01": 2,
+    "unit_of_measurement.n.01": 9,
+    "definite_quantity.n.01": 4,
+    "text.n.01": 2,
+    "matter.n.06": 2,
+    "antigen.n.01": 1,
+    "substance.n.07": 1,
+    "matter.n.03": 1,
+    "information_technology.n.01": 1,
+    "engineering.n.02": 1,
+    "discipline.n.01": 1,
+    "knowledge_domain.n.01": 1,
+    "acid.n.01": 1,
+    "compound.n.02": 3,
+    "chemical.n.01": 1,
+    "material.n.01": 1,
+    "angstrom.n.01": 5,
+    "metric_linear_unit.n.01": 5,
+    "metric_unit.n.01": 5,
+    "get_the_better_of.v.01": 1,
+    "play.n.01": 1,
+    "dramatic_composition.n.01": 1,
+    "homo.n.02": 1,
+    "hominid.n.01": 1,
+    "primate.n.02": 1,
+    "placental.n.01": 1,
+    "between.r.01": 1,
+    "wide.a.01": 1,
+    "organism.n.01": 1,
+    "living_thing.n.01": 1,
+    "whole.n.02": 1,
+    "while.n.01": 1,
+    "time.n.03": 1,
+    "time_period.n.01": 1,
+    "fundamental_quantity.n.01": 1,
+    "audience.n.01": 2,
+    "gathering.n.01": 2,
+    "social_group.n.01": 2,
+    "astatine.n.01": 1,
+    "chemical_element.n.01": 1,
+    "substance.n.01": 1,
+    "part.n.01": 1,
+    "connection.n.01": 1,
+    "protein.n.01": 2,
+    "macromolecule.n.01": 2,
+    "organic_compound.n.01": 2,
+    "critical.s.04": 1,
+    "inch.n.01": 2,
+    "linear_unit.n.01": 2,
+    "reader.n.01": 1,
+    "scholar.n.01": 1,
+    "intellectual.n.01": 1,
+    "person.n.01": 1,
+    "function.n.01": 1,
+    "mathematical_relation.n.01": 1,
+    "accessible.a.01": 1,
+    "holocene.n.01": 1,
+    "epoch.n.03": 1,
+    "geological_time.n.01": 1,
+    "time.n.05": 1,
+    "position.n.01": 1,
+    "point.n.02": 1,
+    "location.n.01": 1,
+    "rewrite.v.01": 1,
+    "write.v.02": 1,
+    "communicate.v.02": 1,
+    "interact.v.01": 1,
+    "function.n.03": 1,
+    "duty.n.02": 1,
+    "work.n.01": 1,
+    "readership.n.01": 1,
+    "audience.n.02": 1,
+    "multitude.n.03": 1
+  },
+  "top_concepts": [
+    {
+      "name": "unit_of_measurement.n.01",
+      "count": 9,
+      "definition": "any division of quantity accepted as a standard of measurement or exchange"
+    },
+    {
+      "name": "angstrom.n.01",
+      "count": 5,
+      "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+    },
+    {
+      "name": "metric_linear_unit.n.01",
+      "count": 5,
+      "definition": "a linear unit of distance in metric terms"
+    }
+  ]
+}

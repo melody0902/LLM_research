@@ -1,0 +1,1668 @@
+{
+  "file": "unigram_ai_sig_n2.json",
+  "decoded_phrases": [
+    "at a",
+    "discovery.",
+    "such as",
+    "clarity and",
+    "a set",
+    "implic",
+    "in the",
+    "uncertainty.",
+    "paragraph.",
+    "). this",
+    ", the",
+    "though prompting",
+    "machine learning",
+    "rewriting it",
+    "linear transformation",
+    "as chain",
+    "with g",
+    "uncertainty'",
+    "bayesian predictive",
+    "and interpret",
+    "preserved in",
+    "the rewritten",
+    "-assisted",
+    "language models",
+    "from traditional",
+    "as a",
+    "how they",
+    "ating features",
+    "the term",
+    "performance across",
+    "ards the",
+    ", vl",
+    "dl),",
+    "increasingly crucial",
+    "inferring",
+    "using we",
+    "crucial in",
+    "term \"",
+    "the text",
+    "a meta",
+    "at every",
+    "inference problems",
+    "tone,",
+    "isted drug",
+    "deep learning",
+    "learning.",
+    "training,",
+    "and a",
+    "been made",
+    "tone.",
+    "however,",
+    "existing g",
+    "intelligence-ass",
+    "for solving",
+    "uncertainty and",
+    "it more",
+    ", lower",
+    "exploration and",
+    "ucial",
+    "the extraction",
+    "when using",
+    "and \"",
+    "making it",
+    "-level information",
+    "set functions",
+    "and cannot",
+    "taking a",
+    "training information",
+    "variance,",
+    "explore a",
+    "technical audience",
+    "and for",
+    "istant drug",
+    "and regression",
+    "applications'",
+    "being too",
+    "-assistant",
+    "using neural",
+    "ial for",
+    "problems.",
+    ", this",
+    "optimization and",
+    "between g",
+    "learned.",
+    "), flexibility",
+    "with a",
+    "by other",
+    "from text",
+    "prompting.",
+    "-evaluate",
+    "steps for",
+    "predictions and",
+    ". this",
+    "clarity,",
+    ". the",
+    "in large",
+    "a non",
+    "learned information",
+    "lp tasks",
+    "information.",
+    "in terms",
+    "solve complex",
+    "minimize dropout",
+    ". however",
+    "with \"",
+    "functions.",
+    "doesn't",
+    "selection in",
+    "them under",
+    "in inf",
+    "the rewritten",
+    "explanations).",
+    "address the",
+    "by taking",
+    "errors and",
+    "tasks.",
+    ".g.",
+    "predictive uncertainty",
+    "training and",
+    "subset selection",
+    "features from",
+    "audience,",
+    "in a",
+    "data at",
+    "dropout variance",
+    "-leh",
+    "intact.",
+    "optimal transportation",
+    "inference time",
+    "this paper",
+    "simplify the",
+    "reweigh",
+    "drug discovery",
+    "this shift",
+    "time.",
+    "are exploring",
+    "representation learning",
+    "valuate numerous",
+    "phases.",
+    "weis",
+    "error analysis",
+    "in various",
+    "ural subset",
+    "neural subset",
+    ". i",
+    "simp",
+    "' error",
+    ".",
+    "rewritten paragraph",
+    "more accessible",
+    "explore and",
+    "crucial for",
+    "large language",
+    "it.",
+    "meta-object",
+    "called vl",
+    "uncertainty,",
+    "make the",
+    "upper,",
+    "learning neural",
+    "and text",
+    ", and"
+  ],
+  "decoded_words": [
+    "at",
+    "a",
+    "discovery.",
+    "such",
+    "as",
+    "clarity",
+    "and",
+    "a",
+    "set",
+    "implic",
+    "in",
+    "the",
+    "uncertainty.",
+    "paragraph.",
+    ").",
+    "this",
+    ",",
+    "the",
+    "though",
+    "prompting",
+    "machine",
+    "learning",
+    "rewriting",
+    "it",
+    "linear",
+    "transformation",
+    "as",
+    "chain",
+    "with",
+    "g",
+    "uncertainty'",
+    "bayesian",
+    "predictive",
+    "and",
+    "interpret",
+    "preserved",
+    "in",
+    "the",
+    "rewritten",
+    "-assisted",
+    "language",
+    "models",
+    "from",
+    "traditional",
+    "as",
+    "a",
+    "how",
+    "they",
+    "ating",
+    "features",
+    "the",
+    "term",
+    "performance",
+    "across",
+    "ards",
+    "the",
+    ",",
+    "vl",
+    "dl),",
+    "increasingly",
+    "crucial",
+    "inferring",
+    "using",
+    "we",
+    "crucial",
+    "in",
+    "term",
+    "\"",
+    "the",
+    "text",
+    "a",
+    "meta",
+    "at",
+    "every",
+    "inference",
+    "problems",
+    "tone,",
+    "isted",
+    "drug",
+    "deep",
+    "learning",
+    "learning.",
+    "training,",
+    "and",
+    "a",
+    "been",
+    "made",
+    "tone.",
+    "however,",
+    "existing",
+    "g",
+    "intelligence-ass",
+    "for",
+    "solving",
+    "uncertainty",
+    "and",
+    "it",
+    "more",
+    ",",
+    "lower",
+    "exploration",
+    "and",
+    "ucial",
+    "the",
+    "extraction",
+    "when",
+    "using",
+    "and",
+    "\"",
+    "making",
+    "it",
+    "-level",
+    "information",
+    "set",
+    "functions",
+    "and",
+    "cannot",
+    "taking",
+    "a",
+    "training",
+    "information",
+    "variance,",
+    "explore",
+    "a",
+    "technical",
+    "audience",
+    "and",
+    "for",
+    "istant",
+    "drug",
+    "and",
+    "regression",
+    "applications'",
+    "being",
+    "too",
+    "-assistant",
+    "using",
+    "neural",
+    "ial",
+    "for",
+    "problems.",
+    ",",
+    "this",
+    "optimization",
+    "and",
+    "between",
+    "g",
+    "learned.",
+    "),",
+    "flexibility",
+    "with",
+    "a",
+    "by",
+    "other",
+    "from",
+    "text",
+    "prompting.",
+    "-evaluate",
+    "steps",
+    "for",
+    "predictions",
+    "and",
+    ".",
+    "this",
+    "clarity,",
+    ".",
+    "the",
+    "in",
+    "large",
+    "a",
+    "non",
+    "learned",
+    "information",
+    "lp",
+    "tasks",
+    "information.",
+    "in",
+    "terms",
+    "solve",
+    "complex",
+    "minimize",
+    "dropout",
+    ".",
+    "however",
+    "with",
+    "\"",
+    "functions.",
+    "doesn't",
+    "selection",
+    "in",
+    "them",
+    "under",
+    "in",
+    "inf",
+    "the",
+    "rewritten",
+    "explanations).",
+    "address",
+    "the",
+    "by",
+    "taking",
+    "errors",
+    "and",
+    "tasks.",
+    ".g.",
+    "predictive",
+    "uncertainty",
+    "training",
+    "and",
+    "subset",
+    "selection",
+    "features",
+    "from",
+    "audience,",
+    "in",
+    "a",
+    "data",
+    "at",
+    "dropout",
+    "variance",
+    "-leh",
+    "intact.",
+    "optimal",
+    "transportation",
+    "inference",
+    "time",
+    "this",
+    "paper",
+    "simplify",
+    "the",
+    "reweigh",
+    "drug",
+    "discovery",
+    "this",
+    "shift",
+    "time.",
+    "are",
+    "exploring",
+    "representation",
+    "learning",
+    "valuate",
+    "numerous",
+    "phases.",
+    "weis",
+    "error",
+    "analysis",
+    "in",
+    "various",
+    "ural",
+    "subset",
+    "neural",
+    "subset",
+    ".",
+    "i",
+    "simp",
+    "'",
+    "error",
+    ".",
+    "rewritten",
+    "paragraph",
+    "more",
+    "accessible",
+    "explore",
+    "and",
+    "crucial",
+    "for",
+    "large",
+    "language",
+    "it.",
+    "meta-object",
+    "called",
+    "vl",
+    "uncertainty,",
+    "make",
+    "the",
+    "upper,",
+    "learning",
+    "neural",
+    "and",
+    "text",
+    ",",
+    "and"
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "arsenic.n.02",
+        "definition": "a very poisonous metallic element that has three allotropic forms; arsenic and arsenic compounds are used as herbicides and insecticides and various alloys; found in arsenopyrite and orpiment and realgar"
+      },
+      {
+        "name": "set.n.01",
+        "definition": "a group of things of the same kind that belong together and are so used"
+      },
+      {
+        "name": "suggestion.n.04",
+        "definition": "persuasion formulated as a suggestion"
+      },
+      {
+        "name": "learning.n.01",
+        "definition": "the cognitive process of acquiring skill or knowledge"
+      },
+      {
+        "name": "information_technology.n.01",
+        "definition": "the branch of engineering that deals with the use of computers and telecommunications to retrieve and store and transmit information"
+      },
+      {
+        "name": "transformation.n.01",
+        "definition": "a qualitative change"
+      },
+      {
+        "name": "chain.n.01",
+        "definition": "a series of things depending on each other as if linked together"
+      },
+      {
+        "name": "gram.n.01",
+        "definition": "a metric unit of weight equal to one thousandth of a kilogram"
+      },
+      {
+        "name": "predictive.s.01",
+        "definition": "of or relating to prediction; having value for making predictions"
+      },
+      {
+        "name": "interpret.v.01",
+        "definition": "make sense of; assign a meaning to"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      },
+      {
+        "name": "rewrite.v.01",
+        "definition": "write differently; alter the writing of"
+      },
+      {
+        "name": "model.n.01",
+        "definition": "a hypothetical description of a complex entity or process"
+      },
+      {
+        "name": "traditional.a.01",
+        "definition": "consisting of or derived from tradition"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "feature.n.01",
+        "definition": "a prominent attribute or aspect of something"
+      },
+      {
+        "name": "term.n.01",
+        "definition": "a word or expression used for some particular thing"
+      },
+      {
+        "name": "across.r.01",
+        "definition": "to the opposite side"
+      },
+      {
+        "name": "crucial.a.01",
+        "definition": "of extreme importance; vital to the resolution of a crisis"
+      },
+      {
+        "name": "deduce.v.01",
+        "definition": "reason by deduction; establish by deduction"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      },
+      {
+        "name": "text.n.01",
+        "definition": "the words of something written"
+      },
+      {
+        "name": "every.s.01",
+        "definition": "(used of count nouns) each and all of the members of a group considered singly and without exception"
+      },
+      {
+        "name": "problem.n.01",
+        "definition": "a state of difficulty that needs to be resolved"
+      },
+      {
+        "name": "drug.n.01",
+        "definition": "a substance that is used as a medicine or narcotic"
+      },
+      {
+        "name": "learning.n.01",
+        "definition": "the cognitive process of acquiring skill or knowledge"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "make.v.01",
+        "definition": "engage in"
+      },
+      {
+        "name": "gram.n.01",
+        "definition": "a metric unit of weight equal to one thousandth of a kilogram"
+      },
+      {
+        "name": "resolution.n.04",
+        "definition": "finding a solution to a problem"
+      },
+      {
+        "name": "more.n.01",
+        "definition": "English statesman who opposed Henry VIII's divorce from Catherine of Aragon and was imprisoned and beheaded; recalled for his concept of Utopia, the ideal state"
+      },
+      {
+        "name": "lower_berth.n.01",
+        "definition": "the lower of two berths"
+      },
+      {
+        "name": "extraction.n.01",
+        "definition": "the process of obtaining something from a mixture or compound by chemical or physical or mechanical means"
+      },
+      {
+        "name": "exploitation.n.02",
+        "definition": "an act that exploits or victimizes someone (treats them unfairly)"
+      },
+      {
+        "name": "information_technology.n.01",
+        "definition": "the branch of engineering that deals with the use of computers and telecommunications to retrieve and store and transmit information"
+      },
+      {
+        "name": "information.n.01",
+        "definition": "a message received and understood"
+      },
+      {
+        "name": "function.n.01",
+        "definition": "(mathematics) a mathematical relation such that each element of a given set (the domain of the function) is associated with an element of another set (the range of the function)"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "information.n.01",
+        "definition": "a message received and understood"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "audience.n.01",
+        "definition": "a gathering of spectators or listeners at a (usually public) performance"
+      },
+      {
+        "name": "drug.n.01",
+        "definition": "a substance that is used as a medicine or narcotic"
+      },
+      {
+        "name": "arrested_development.n.01",
+        "definition": "an abnormal state in which development has stopped prematurely"
+      },
+      {
+        "name": "excessively.r.01",
+        "definition": "to a degree exceeding normal or proper limits"
+      },
+      {
+        "name": "nervous.a.03",
+        "definition": "of or relating to the nervous system"
+      },
+      {
+        "name": "gram.n.01",
+        "definition": "a metric unit of weight equal to one thousandth of a kilogram"
+      },
+      {
+        "name": "flexibility.n.01",
+        "definition": "the property of being flexible; easily bent or shaped"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "other.a.01",
+        "definition": "not the same one or ones already mentioned or implied; - the White Queen"
+      },
+      {
+        "name": "text.n.01",
+        "definition": "the words of something written"
+      },
+      {
+        "name": "large.n.01",
+        "definition": "a garment size for a large person"
+      },
+      {
+        "name": "not.r.01",
+        "definition": "negation of a word or group of words"
+      },
+      {
+        "name": "information.n.01",
+        "definition": "a message received and understood"
+      },
+      {
+        "name": "undertaking.n.01",
+        "definition": "any piece of work that is undertaken or attempted"
+      },
+      {
+        "name": "footing.n.01",
+        "definition": "status with respect to the relations between people or groups"
+      },
+      {
+        "name": "complex.n.01",
+        "definition": "a conceptual whole made up of complicated and related parts"
+      },
+      {
+        "name": "dropout.n.01",
+        "definition": "someone who quits school before graduation"
+      },
+      {
+        "name": "however.r.01",
+        "definition": "despite anything to the contrary (usually following a concession)"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      },
+      {
+        "name": "nether.s.03",
+        "definition": "located below or beneath something else"
+      },
+      {
+        "name": "rewrite.v.01",
+        "definition": "write differently; alter the writing of"
+      },
+      {
+        "name": "pickings.n.01",
+        "definition": "the act of someone who picks up or takes something"
+      },
+      {
+        "name": "uncertainty.n.01",
+        "definition": "being unsettled or in doubt or dependent on chance"
+      },
+      {
+        "name": "choice.n.02",
+        "definition": "the act of choosing or selecting"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "astatine.n.01",
+        "definition": "a highly unstable radioactive element (the heaviest of the halogen series); a decay product of uranium and thorium"
+      },
+      {
+        "name": "discrepancy.n.02",
+        "definition": "an event that departs from expectations"
+      },
+      {
+        "name": "transportation_system.n.01",
+        "definition": "a facility consisting of the means and equipment necessary for the movement of passengers or goods"
+      },
+      {
+        "name": "time.n.01",
+        "definition": "an instance or single occasion for some event"
+      },
+      {
+        "name": "paper.n.01",
+        "definition": "a material made of cellulose pulp derived mainly from wood or rags or certain grasses"
+      },
+      {
+        "name": "discovery.n.01",
+        "definition": "the act of discovering something"
+      },
+      {
+        "name": "shift.n.01",
+        "definition": "an event in which something is displaced without rotation"
+      },
+      {
+        "name": "research.v.02",
+        "definition": "inquire into"
+      },
+      {
+        "name": "learning.n.01",
+        "definition": "the cognitive process of acquiring skill or knowledge"
+      },
+      {
+        "name": "numerous.s.01",
+        "definition": "amounting to a large indefinite number"
+      },
+      {
+        "name": "wei.n.01",
+        "definition": "any of several imperial dynasties of China ruling from 220 to 265 and from 386 to 556"
+      },
+      {
+        "name": "analysis.n.01",
+        "definition": "an investigation of the component parts of a whole and their relations in making up the whole"
+      },
+      {
+        "name": "assorted.s.02",
+        "definition": "of many different kinds purposefully arranged but lacking any uniformity"
+      },
+      {
+        "name": "subset.n.01",
+        "definition": "a set whose members are members of another set; a set contained within another set"
+      },
+      {
+        "name": "subset.n.01",
+        "definition": "a set whose members are members of another set; a set contained within another set"
+      },
+      {
+        "name": "iodine.n.01",
+        "definition": "a nonmetallic element belonging to the halogens; used especially in medicine and photography and in dyes; occurs naturally only in combination in small quantities (as in sea water or rocks)"
+      },
+      {
+        "name": "mistake.n.01",
+        "definition": "a wrong action attributable to bad judgment or ignorance or inattention"
+      },
+      {
+        "name": "paragraph.n.01",
+        "definition": "one of several distinct subdivisions of a text intended to separate ideas; the beginning is usually marked by a new indented line"
+      },
+      {
+        "name": "accessible.a.01",
+        "definition": "capable of being reached"
+      },
+      {
+        "name": "language.n.01",
+        "definition": "a systematic means of communicating by the use of sounds or conventional symbols"
+      },
+      {
+        "name": "nervous.a.03",
+        "definition": "of or relating to the nervous system"
+      },
+      {
+        "name": "text.n.01",
+        "definition": "the words of something written"
+      }
+    ],
+    "level2": [
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "chemical_element.n.01",
+        "definition": "any of the more than 100 known substances (of which 92 occur naturally) that cannot be separated into simpler substances and that singly or in combination constitute all matter"
+      },
+      {
+        "name": "collection.n.01",
+        "definition": "several things grouped together or considered as a whole"
+      },
+      {
+        "name": "persuasion.n.01",
+        "definition": "the act of persuading (or attempting to persuade); communication intended to induce belief or action"
+      },
+      {
+        "name": "basic_cognitive_process.n.01",
+        "definition": "cognitive processes involved in obtaining and storing knowledge"
+      },
+      {
+        "name": "engineering.n.02",
+        "definition": "the discipline dealing with the art or science of applying scientific knowledge to practical problems"
+      },
+      {
+        "name": "change.n.01",
+        "definition": "an event that occurs when something passes from one state or phase to another"
+      },
+      {
+        "name": "series.n.01",
+        "definition": "similar things placed in order or happening one after another"
+      },
+      {
+        "name": "metric_weight_unit.n.01",
+        "definition": "a decimal unit of weight based on the gram"
+      },
+      {
+        "name": "understand.v.01",
+        "definition": "know and comprehend the nature or meaning of"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      },
+      {
+        "name": "write.v.02",
+        "definition": "communicate or express by writing"
+      },
+      {
+        "name": "hypothesis.n.02",
+        "definition": "a tentative insight into the natural world; a concept that is not yet verified but that if true would explain certain facts or phenomena"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "property.n.04",
+        "definition": "a construct whereby objects or individuals can be distinguished"
+      },
+      {
+        "name": "word.n.01",
+        "definition": "a unit of language that native speakers can identify"
+      },
+      {
+        "name": "reason.v.01",
+        "definition": "decide by reasoning; draw or come to a conclusion"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      },
+      {
+        "name": "matter.n.06",
+        "definition": "written works (especially in books or magazines)"
+      },
+      {
+        "name": "difficulty.n.03",
+        "definition": "a condition or state of affairs almost beyond one's ability to deal with and requiring great effort to bear or overcome"
+      },
+      {
+        "name": "agent.n.03",
+        "definition": "a substance that exerts some force or effect"
+      },
+      {
+        "name": "basic_cognitive_process.n.01",
+        "definition": "cognitive processes involved in obtaining and storing knowledge"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "metric_weight_unit.n.01",
+        "definition": "a decimal unit of weight based on the gram"
+      },
+      {
+        "name": "determination.n.01",
+        "definition": "the act of determining the properties of something, usually by research or calculation"
+      },
+      {
+        "name": "statesman.n.01",
+        "definition": "a man who is a respected leader in national or international affairs"
+      },
+      {
+        "name": "berth.n.03",
+        "definition": "a bed on a ship or train; usually in tiers"
+      },
+      {
+        "name": "natural_process.n.01",
+        "definition": "a process existing in or produced by nature (rather than by the intent of human beings)"
+      },
+      {
+        "name": "mistreatment.n.01",
+        "definition": "the practice of treating (someone or something) badly"
+      },
+      {
+        "name": "engineering.n.02",
+        "definition": "the discipline dealing with the art or science of applying scientific knowledge to practical problems"
+      },
+      {
+        "name": "message.n.02",
+        "definition": "what a communication that is about something is about"
+      },
+      {
+        "name": "mathematical_relation.n.01",
+        "definition": "a relation between mathematical expressions (such as equality or inequality)"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "message.n.02",
+        "definition": "what a communication that is about something is about"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "gathering.n.01",
+        "definition": "a group of persons together in one place"
+      },
+      {
+        "name": "agent.n.03",
+        "definition": "a substance that exerts some force or effect"
+      },
+      {
+        "name": "abnormality.n.01",
+        "definition": "an abnormal physical condition resulting from defective genes or developmental deficiencies"
+      },
+      {
+        "name": "metric_weight_unit.n.01",
+        "definition": "a decimal unit of weight based on the gram"
+      },
+      {
+        "name": "malleability.n.01",
+        "definition": "the property of being physically malleable; the property of something that can be worked or hammered or shaped without breaking"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "matter.n.06",
+        "definition": "written works (especially in books or magazines)"
+      },
+      {
+        "name": "size.n.02",
+        "definition": "the property resulting from being one of a series of graduated measurements (as of clothing)"
+      },
+      {
+        "name": "message.n.02",
+        "definition": "what a communication that is about something is about"
+      },
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      },
+      {
+        "name": "status.n.01",
+        "definition": "the relative position or standing of things or especially persons in a society"
+      },
+      {
+        "name": "whole.n.01",
+        "definition": "all of something including all its component elements or parts"
+      },
+      {
+        "name": "quitter.n.01",
+        "definition": "a person who gives up too easily"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      },
+      {
+        "name": "write.v.02",
+        "definition": "communicate or express by writing"
+      },
+      {
+        "name": "action.n.01",
+        "definition": "something done (usually as opposed to something said)"
+      },
+      {
+        "name": "quality.n.01",
+        "definition": "an essential and distinguishing attribute of something or someone; --Shakespeare"
+      },
+      {
+        "name": "action.n.01",
+        "definition": "something done (usually as opposed to something said)"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "chemical_element.n.01",
+        "definition": "any of the more than 100 known substances (of which 92 occur naturally) that cannot be separated into simpler substances and that singly or in combination constitute all matter"
+      },
+      {
+        "name": "deviation.n.01",
+        "definition": "a variation that deviates from the standard or norm"
+      },
+      {
+        "name": "facility.n.01",
+        "definition": "a building or place that provides a particular service or is used for a particular industry"
+      },
+      {
+        "name": "happening.n.01",
+        "definition": "an event that happens"
+      },
+      {
+        "name": "material.n.01",
+        "definition": "the tangible substance that goes into the makeup of a physical object"
+      },
+      {
+        "name": "translation.n.02",
+        "definition": "a uniform movement without rotation"
+      },
+      {
+        "name": "investigate.v.01",
+        "definition": "investigate scientifically"
+      },
+      {
+        "name": "basic_cognitive_process.n.01",
+        "definition": "cognitive processes involved in obtaining and storing knowledge"
+      },
+      {
+        "name": "dynasty.n.01",
+        "definition": "a sequence of powerful leaders in the same family"
+      },
+      {
+        "name": "investigation.n.02",
+        "definition": "the work of inquiring into something thoroughly and systematically"
+      },
+      {
+        "name": "set.n.02",
+        "definition": "(mathematics) an abstract collection of numbers or symbols"
+      },
+      {
+        "name": "set.n.02",
+        "definition": "(mathematics) an abstract collection of numbers or symbols"
+      },
+      {
+        "name": "chemical_element.n.01",
+        "definition": "any of the more than 100 known substances (of which 92 occur naturally) that cannot be separated into simpler substances and that singly or in combination constitute all matter"
+      },
+      {
+        "name": "nonaccomplishment.n.01",
+        "definition": "an act that does not achieve its intended goal"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "communication.n.02",
+        "definition": "something that is communicated by or to or between people or groups"
+      },
+      {
+        "name": "matter.n.06",
+        "definition": "written works (especially in books or magazines)"
+      }
+    ],
+    "level3": [
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "substance.n.01",
+        "definition": "the real physical matter of which a person or thing consists"
+      },
+      {
+        "name": "communication.n.01",
+        "definition": "the activity of communicating; the activity of conveying information"
+      },
+      {
+        "name": "process.n.02",
+        "definition": "(psychology) the performance of some composite cognitive activity; an operation that affects mental contents"
+      },
+      {
+        "name": "discipline.n.01",
+        "definition": "a branch of knowledge"
+      },
+      {
+        "name": "happening.n.01",
+        "definition": "an event that happens"
+      },
+      {
+        "name": "ordering.n.01",
+        "definition": "logical or comprehensible arrangement of separate elements"
+      },
+      {
+        "name": "mass_unit.n.01",
+        "definition": "a unit of measurement for mass"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "communicate.v.02",
+        "definition": "transmit thoughts or feelings"
+      },
+      {
+        "name": "concept.n.01",
+        "definition": "an abstract or general idea inferred or derived from specific instances"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "concept.n.01",
+        "definition": "an abstract or general idea inferred or derived from specific instances"
+      },
+      {
+        "name": "language_unit.n.01",
+        "definition": "one of the natural units into which linguistic messages can be analyzed"
+      },
+      {
+        "name": "think.v.03",
+        "definition": "use or exercise the mind or one's power of reason in order to make inferences, decisions, or arrive at a solution or judgments"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "substance.n.07",
+        "definition": "a particular kind or species of matter with uniform properties"
+      },
+      {
+        "name": "process.n.02",
+        "definition": "(psychology) the performance of some composite cognitive activity; an operation that affects mental contents"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "mass_unit.n.01",
+        "definition": "a unit of measurement for mass"
+      },
+      {
+        "name": "discovery.n.01",
+        "definition": "the act of discovering something"
+      },
+      {
+        "name": "politician.n.02",
+        "definition": "a person active in party politics"
+      },
+      {
+        "name": "bed.n.01",
+        "definition": "a piece of furniture that provides a place to sleep"
+      },
+      {
+        "name": "practice.n.01",
+        "definition": "a customary way of operation or behavior"
+      },
+      {
+        "name": "discipline.n.01",
+        "definition": "a branch of knowledge"
+      },
+      {
+        "name": "communication.n.02",
+        "definition": "something that is communicated by or to or between people or groups"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "communication.n.02",
+        "definition": "something that is communicated by or to or between people or groups"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "social_group.n.01",
+        "definition": "people sharing some social relation"
+      },
+      {
+        "name": "substance.n.07",
+        "definition": "a particular kind or species of matter with uniform properties"
+      },
+      {
+        "name": "physical_condition.n.01",
+        "definition": "the condition or state of the body or bodily functions"
+      },
+      {
+        "name": "mass_unit.n.01",
+        "definition": "a unit of measurement for mass"
+      },
+      {
+        "name": "physical_property.n.01",
+        "definition": "any property used to characterize matter and energy and their interactions"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "property.n.02",
+        "definition": "a basic or essential attribute shared by all members of a class"
+      },
+      {
+        "name": "communication.n.02",
+        "definition": "something that is communicated by or to or between people or groups"
+      },
+      {
+        "name": "concept.n.01",
+        "definition": "an abstract or general idea inferred or derived from specific instances"
+      },
+      {
+        "name": "person.n.01",
+        "definition": "a human being"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "communicate.v.02",
+        "definition": "transmit thoughts or feelings"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "substance.n.01",
+        "definition": "the real physical matter of which a person or thing consists"
+      },
+      {
+        "name": "variation.n.01",
+        "definition": "an instance of change; the rate or magnitude of change"
+      },
+      {
+        "name": "artifact.n.01",
+        "definition": "a man-made object taken as a whole"
+      },
+      {
+        "name": "substance.n.01",
+        "definition": "the real physical matter of which a person or thing consists"
+      },
+      {
+        "name": "change_of_location.n.01",
+        "definition": "a movement through space that changes the location of something"
+      },
+      {
+        "name": "analyze.v.01",
+        "definition": "consider in detail and subject to an analysis in order to discover essential features or meaning"
+      },
+      {
+        "name": "process.n.02",
+        "definition": "(psychology) the performance of some composite cognitive activity; an operation that affects mental contents"
+      },
+      {
+        "name": "family.n.04",
+        "definition": "people descended from a common ancestor"
+      },
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      },
+      {
+        "name": "substance.n.01",
+        "definition": "the real physical matter of which a person or thing consists"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      }
+    ],
+    "level4": [
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "part.n.01",
+        "definition": "something determined in relation to something that includes it"
+      },
+      {
+        "name": "cognition.n.01",
+        "definition": "the psychological result of perception and learning and reasoning"
+      },
+      {
+        "name": "knowledge_domain.n.01",
+        "definition": "the content of a particular field of knowledge"
+      },
+      {
+        "name": "arrangement.n.02",
+        "definition": "an orderly grouping (of things or persons) considered as a unit; the result of arranging"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "interact.v.01",
+        "definition": "act together or towards others or with others"
+      },
+      {
+        "name": "idea.n.01",
+        "definition": "the content of cognition; the main thing you are thinking about"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "idea.n.01",
+        "definition": "the content of cognition; the main thing you are thinking about"
+      },
+      {
+        "name": "part.n.01",
+        "definition": "something determined in relation to something that includes it"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "matter.n.03",
+        "definition": "that which has mass and occupies space"
+      },
+      {
+        "name": "cognition.n.01",
+        "definition": "the psychological result of perception and learning and reasoning"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "leader.n.01",
+        "definition": "a person who rules or guides or inspires others"
+      },
+      {
+        "name": "bedroom_furniture.n.01",
+        "definition": "furniture intended for use in a bedroom"
+      },
+      {
+        "name": "knowledge_domain.n.01",
+        "definition": "the content of a particular field of knowledge"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "matter.n.03",
+        "definition": "that which has mass and occupies space"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "property.n.02",
+        "definition": "a basic or essential attribute shared by all members of a class"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "idea.n.01",
+        "definition": "the content of cognition; the main thing you are thinking about"
+      },
+      {
+        "name": "organism.n.01",
+        "definition": "a living thing that has (or can develop) the ability to act or function independently"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "interact.v.01",
+        "definition": "act together or towards others or with others"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "part.n.01",
+        "definition": "something determined in relation to something that includes it"
+      },
+      {
+        "name": "change.n.01",
+        "definition": "an event that occurs when something passes from one state or phase to another"
+      },
+      {
+        "name": "whole.n.02",
+        "definition": "an assemblage of parts that is regarded as a single entity"
+      },
+      {
+        "name": "part.n.01",
+        "definition": "something determined in relation to something that includes it"
+      },
+      {
+        "name": "movement.n.03",
+        "definition": "a natural event that involves a change in the position or location of something"
+      },
+      {
+        "name": "cognition.n.01",
+        "definition": "the psychological result of perception and learning and reasoning"
+      },
+      {
+        "name": "lineage.n.01",
+        "definition": "the descendants of one individual"
+      },
+      {
+        "name": "part.n.01",
+        "definition": "something determined in relation to something that includes it"
+      },
+      {
+        "name": "communication.n.02",
+        "definition": "something that is communicated by or to or between people or groups"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      }
+    ]
+  },
+  "concept_counts": {
+    "angstrom.n.01": 7,
+    "metric_linear_unit.n.01": 7,
+    "metric_unit.n.01": 7,
+    "unit_of_measurement.n.01": 13,
+    "arsenic.n.02": 1,
+    "chemical_element.n.01": 3,
+    "substance.n.01": 4,
+    "part.n.01": 5,
+    "set.n.01": 1,
+    "collection.n.01": 1,
+    "suggestion.n.04": 1,
+    "persuasion.n.01": 1,
+    "communication.n.01": 1,
+    "learning.n.01": 3,
+    "basic_cognitive_process.n.01": 3,
+    "process.n.02": 3,
+    "cognition.n.01": 3,
+    "information_technology.n.01": 2,
+    "engineering.n.02": 2,
+    "discipline.n.01": 2,
+    "knowledge_domain.n.01": 2,
+    "transformation.n.01": 1,
+    "change.n.01": 2,
+    "happening.n.01": 2,
+    "chain.n.01": 1,
+    "series.n.01": 1,
+    "ordering.n.01": 1,
+    "arrangement.n.02": 1,
+    "gram.n.01": 3,
+    "metric_weight_unit.n.01": 3,
+    "mass_unit.n.01": 3,
+    "predictive.s.01": 1,
+    "interpret.v.01": 1,
+    "understand.v.01": 1,
+    "inch.n.01": 3,
+    "linear_unit.n.01": 3,
+    "definite_quantity.n.01": 3,
+    "rewrite.v.01": 2,
+    "write.v.02": 2,
+    "communicate.v.02": 2,
+    "interact.v.01": 2,
+    "model.n.01": 1,
+    "hypothesis.n.02": 1,
+    "concept.n.01": 3,
+    "idea.n.01": 3,
+    "traditional.a.01": 1,
+    "feature.n.01": 1,
+    "property.n.04": 1,
+    "term.n.01": 1,
+    "word.n.01": 1,
+    "language_unit.n.01": 1,
+    "across.r.01": 1,
+    "crucial.a.01": 1,
+    "deduce.v.01": 1,
+    "reason.v.01": 1,
+    "think.v.03": 1,
+    "text.n.01": 3,
+    "matter.n.06": 3,
+    "writing.n.02": 4,
+    "written_communication.n.01": 4,
+    "every.s.01": 1,
+    "problem.n.01": 1,
+    "difficulty.n.03": 1,
+    "drug.n.01": 2,
+    "agent.n.03": 2,
+    "substance.n.07": 2,
+    "matter.n.03": 2,
+    "make.v.01": 1,
+    "resolution.n.04": 1,
+    "determination.n.01": 1,
+    "discovery.n.01": 2,
+    "more.n.01": 1,
+    "statesman.n.01": 1,
+    "politician.n.02": 1,
+    "leader.n.01": 1,
+    "lower_berth.n.01": 1,
+    "berth.n.03": 1,
+    "bed.n.01": 1,
+    "bedroom_furniture.n.01": 1,
+    "extraction.n.01": 1,
+    "natural_process.n.01": 1,
+    "exploitation.n.02": 1,
+    "mistreatment.n.01": 1,
+    "practice.n.01": 1,
+    "information.n.01": 3,
+    "message.n.02": 3,
+    "communication.n.02": 5,
+    "function.n.01": 1,
+    "mathematical_relation.n.01": 1,
+    "audience.n.01": 1,
+    "gathering.n.01": 1,
+    "social_group.n.01": 1,
+    "arrested_development.n.01": 1,
+    "abnormality.n.01": 1,
+    "physical_condition.n.01": 1,
+    "excessively.r.01": 1,
+    "nervous.a.03": 2,
+    "flexibility.n.01": 1,
+    "malleability.n.01": 1,
+    "physical_property.n.01": 1,
+    "property.n.02": 2,
+    "other.a.01": 1,
+    "large.n.01": 1,
+    "size.n.02": 1,
+    "not.r.01": 1,
+    "undertaking.n.01": 1,
+    "work.n.01": 2,
+    "footing.n.01": 1,
+    "status.n.01": 1,
+    "complex.n.01": 1,
+    "whole.n.01": 1,
+    "dropout.n.01": 1,
+    "quitter.n.01": 1,
+    "person.n.01": 1,
+    "organism.n.01": 1,
+    "however.r.01": 1,
+    "nether.s.03": 1,
+    "pickings.n.01": 1,
+    "action.n.01": 2,
+    "uncertainty.n.01": 1,
+    "quality.n.01": 1,
+    "choice.n.02": 1,
+    "astatine.n.01": 1,
+    "discrepancy.n.02": 1,
+    "deviation.n.01": 1,
+    "variation.n.01": 1,
+    "transportation_system.n.01": 1,
+    "facility.n.01": 1,
+    "artifact.n.01": 1,
+    "whole.n.02": 1,
+    "time.n.01": 1,
+    "paper.n.01": 1,
+    "material.n.01": 1,
+    "shift.n.01": 1,
+    "translation.n.02": 1,
+    "change_of_location.n.01": 1,
+    "movement.n.03": 1,
+    "research.v.02": 1,
+    "investigate.v.01": 1,
+    "analyze.v.01": 1,
+    "numerous.s.01": 1,
+    "wei.n.01": 1,
+    "dynasty.n.01": 1,
+    "family.n.04": 1,
+    "lineage.n.01": 1,
+    "analysis.n.01": 1,
+    "investigation.n.02": 1,
+    "assorted.s.02": 1,
+    "subset.n.01": 2,
+    "set.n.02": 2,
+    "iodine.n.01": 1,
+    "mistake.n.01": 1,
+    "nonaccomplishment.n.01": 1,
+    "paragraph.n.01": 1,
+    "accessible.a.01": 1,
+    "language.n.01": 1
+  },
+  "top_concepts": [
+    {
+      "name": "unit_of_measurement.n.01",
+      "count": 13,
+      "definition": "any division of quantity accepted as a standard of measurement or exchange"
+    },
+    {
+      "name": "angstrom.n.01",
+      "count": 7,
+      "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+    },
+    {
+      "name": "metric_linear_unit.n.01",
+      "count": 7,
+      "definition": "a linear unit of distance in metric terms"
+    }
+  ]
+}

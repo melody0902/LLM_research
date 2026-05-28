@@ -1,0 +1,307 @@
+{
+  "file": "kgw_ai_sig_n3.json",
+  "decoded_phrases": [
+    "and provide a",
+    "ing of thoughts",
+    "their mistakes and",
+    "of thoughts\"",
+    "\" to \"",
+    "like me to",
+    "to preserve the",
+    "rote the text",
+    "to'simp",
+    "me know if",
+    "-dimensional' and",
+    ", snn",
+    "called vlap",
+    "vlap,",
+    "is to preserve",
+    "-dl algorithms",
+    "algorithms\" to",
+    "a lack of",
+    "graphical modeling,",
+    "models to comprehend",
+    "to \"traditional",
+    "chain-of-th",
+    "with human needs",
+    ", these models",
+    "training, s",
+    "this process,",
+    "l algorithms\"",
+    "from their mistakes",
+    "thoughts\" study",
+    "boosting of",
+    "to \"ai",
+    "to understand."
+  ],
+  "decoded_words": [
+    "and",
+    "provide",
+    "a",
+    "ing",
+    "of",
+    "thoughts",
+    "their",
+    "mistakes",
+    "and",
+    "of",
+    "thoughts\"",
+    "\"",
+    "to",
+    "\"",
+    "like",
+    "me",
+    "to",
+    "to",
+    "preserve",
+    "the",
+    "rote",
+    "the",
+    "text",
+    "to'simp",
+    "me",
+    "know",
+    "if",
+    "-dimensional'",
+    "and",
+    ",",
+    "snn",
+    "called",
+    "vlap",
+    "vlap,",
+    "is",
+    "to",
+    "preserve",
+    "-dl",
+    "algorithms",
+    "algorithms\"",
+    "to",
+    "a",
+    "lack",
+    "of",
+    "graphical",
+    "modeling,",
+    "models",
+    "to",
+    "comprehend",
+    "to",
+    "\"traditional",
+    "chain-of-th",
+    "with",
+    "human",
+    "needs",
+    ",",
+    "these",
+    "models",
+    "training,",
+    "s",
+    "this",
+    "process,",
+    "l",
+    "algorithms\"",
+    "from",
+    "their",
+    "mistakes",
+    "thoughts\"",
+    "study",
+    "boosting",
+    "of",
+    "to",
+    "\"ai",
+    "to",
+    "understand."
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "idea.n.01",
+        "definition": "the content of cognition; the main thing you are thinking about"
+      },
+      {
+        "name": "text.n.01",
+        "definition": "the words of something written"
+      },
+      {
+        "name": "preserve.n.01",
+        "definition": "a domain that seems to be specially reserved for someone"
+      },
+      {
+        "name": "algorithm.n.01",
+        "definition": "a precise rule (or set of rules) specifying how to solve some problem"
+      },
+      {
+        "name": "grok.v.01",
+        "definition": "get the meaning of something"
+      },
+      {
+        "name": "need.n.01",
+        "definition": "a condition requiring relief"
+      },
+      {
+        "name": "model.n.01",
+        "definition": "a hypothetical description of a complex entity or process"
+      },
+      {
+        "name": "second.n.01",
+        "definition": "1/60 of a minute; the basic unit of time adopted under the Systeme International d'Unites"
+      },
+      {
+        "name": "mistake.n.01",
+        "definition": "a wrong action attributable to bad judgment or ignorance or inattention"
+      },
+      {
+        "name": "survey.n.01",
+        "definition": "a detailed critical inspection"
+      }
+    ],
+    "level2": [
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "content.n.05",
+        "definition": "the sum or range of what has been perceived, discovered, or learned"
+      },
+      {
+        "name": "matter.n.06",
+        "definition": "written works (especially in books or magazines)"
+      },
+      {
+        "name": "sphere.n.01",
+        "definition": "a particular environment or walk of life"
+      },
+      {
+        "name": "rule.n.11",
+        "definition": "(mathematics) a standard procedure for solving a class of mathematical problems"
+      },
+      {
+        "name": "understand.v.01",
+        "definition": "know and comprehend the nature or meaning of"
+      },
+      {
+        "name": "hypothesis.n.02",
+        "definition": "a tentative insight into the natural world; a concept that is not yet verified but that if true would explain certain facts or phenomena"
+      },
+      {
+        "name": "time_unit.n.01",
+        "definition": "a unit for measuring time periods"
+      },
+      {
+        "name": "nonaccomplishment.n.01",
+        "definition": "an act that does not achieve its intended goal"
+      },
+      {
+        "name": "examination.n.01",
+        "definition": "the act of examining something closely (as for mistakes)"
+      }
+    ],
+    "level3": [
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "cognition.n.01",
+        "definition": "the psychological result of perception and learning and reasoning"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "environment.n.01",
+        "definition": "the totality of surrounding conditions"
+      },
+      {
+        "name": "procedure.n.01",
+        "definition": "a particular course of action intended to achieve a result"
+      },
+      {
+        "name": "concept.n.01",
+        "definition": "an abstract or general idea inferred or derived from specific instances"
+      },
+      {
+        "name": "measure.n.02",
+        "definition": "how much there is or how many there are of something that you can quantify"
+      },
+      {
+        "name": "investigation.n.02",
+        "definition": "the work of inquiring into something thoroughly and systematically"
+      }
+    ],
+    "level4": [
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "idea.n.01",
+        "definition": "the content of cognition; the main thing you are thinking about"
+      },
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      }
+    ]
+  },
+  "concept_counts": {
+    "angstrom.n.01": 1,
+    "metric_linear_unit.n.01": 1,
+    "metric_unit.n.01": 1,
+    "unit_of_measurement.n.01": 1,
+    "idea.n.01": 2,
+    "content.n.05": 1,
+    "cognition.n.01": 1,
+    "text.n.01": 1,
+    "matter.n.06": 1,
+    "writing.n.02": 1,
+    "written_communication.n.01": 1,
+    "preserve.n.01": 1,
+    "sphere.n.01": 1,
+    "environment.n.01": 1,
+    "algorithm.n.01": 1,
+    "rule.n.11": 1,
+    "procedure.n.01": 1,
+    "grok.v.01": 1,
+    "understand.v.01": 1,
+    "need.n.01": 1,
+    "model.n.01": 1,
+    "hypothesis.n.02": 1,
+    "concept.n.01": 1,
+    "second.n.01": 1,
+    "time_unit.n.01": 1,
+    "measure.n.02": 1,
+    "mistake.n.01": 1,
+    "nonaccomplishment.n.01": 1,
+    "survey.n.01": 1,
+    "examination.n.01": 1,
+    "investigation.n.02": 1,
+    "work.n.01": 1
+  },
+  "top_concepts": [
+    {
+      "name": "idea.n.01",
+      "count": 2,
+      "definition": "the content of cognition; the main thing you are thinking about"
+    },
+    {
+      "name": "angstrom.n.01",
+      "count": 1,
+      "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+    },
+    {
+      "name": "metric_linear_unit.n.01",
+      "count": 1,
+      "definition": "a linear unit of distance in metric terms"
+    }
+  ]
+}

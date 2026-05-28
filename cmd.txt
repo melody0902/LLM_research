@@ -1,0 +1,50 @@
+python script/paraphraser.py --algorithm KGW --dataset dataset\zhtw\mydatasets\ai\output_data_combined_iclr_abstracts.json --max_samples 100 --generate_signature
+python script/paraphraser.py --algorithm KGW --dataset dataset\zhtw\mydatasets\bio\combined_BIO2_abstracts.json --max_samples 100 --generate_signature
+python script/paraphraser.py --algorithm KGW --dataset dataset\zhtw\mydatasets\Security\combined_SP_abstracts.json --max_samples 100 --generate_signature
+python script/paraphraser.py --algorithm KGW --dataset dataset\zhtw\mydatasets\med\combined_MIE_abstracts.json --max_samples 100 --generate_signature
+python script/paraphraser.py --algorithm KGW --dataset dataset\zhtw\mydatasets\law\combined_ai_law_abstracts.json --max_samples 30 --generate_signature
+python script/paraphraser.py --algorithm KGW --dataset dataset\zhtw\mydatasets\mis\combined_icis.json --max_samples 100 --generate_signature
+python script/paraphraser.py --algorithm KGW --dataset dataset\zhtw\mydatasets\edu\acm_abstracts.json --max_samples 100 --generate_signature
+
+
+python script/paraphraser.py --algorithm SWEET --dataset dataset\zhtw\mydatasets\ai\output_data_combined_iclr_abstracts.json --max_samples 100 --generate_signature
+python script/paraphraser.py --algorithm SWEET --dataset dataset\zhtw\mydatasets\bio\combined_BIO2_abstracts.json --max_samples 100 --generate_signature
+python script/paraphraser.py --algorithm SWEET --dataset dataset\zhtw\mydatasets\Security\combined_SP_abstracts.json --max_samples 100 --generate_signature
+python script/paraphraser.py --algorithm SWEET --dataset dataset\zhtw\mydatasets\med\combined_MIE_abstracts.json --max_samples 100 --generate_signature
+python script/paraphraser.py --algorithm SWEET --dataset dataset\zhtw\mydatasets\law\combined_ai_law_abstracts.json --max_samples 30 --generate_signature
+python script/paraphraser.py --algorithm SWEET --dataset dataset\zhtw\mydatasets\mis\combined_icis.json --max_samples 100 --generate_signature
+python script/paraphraser.py --algorithm SWEET --dataset dataset\zhtw\mydatasets\edu\acm_abstracts.json --max_samples 100 --generate_signature
+
+
+python script/paraphraser.py --algorithm Unigram --dataset dataset\zhtw\mydatasets\ai\output_data_combined_iclr_abstracts.json --max_samples 100 --generate_signature
+python script/paraphraser.py --algorithm Unigram --dataset dataset\zhtw\mydatasets\bio\combined_BIO2_abstracts.json --max_samples 100 --generate_signature
+python script/paraphraser.py --algorithm Unigram --dataset dataset\zhtw\mydatasets\Security\combined_SP_abstracts.json --max_samples 100 --generate_signature
+python script/paraphraser.py --algorithm Unigram --dataset dataset\zhtw\mydatasets\med\combined_MIE_abstracts.json --max_samples 100 --generate_signature
+python script/paraphraser.py --algorithm Unigram --dataset dataset\zhtw\mydatasets\law\combined_ai_law_abstracts.json --max_samples 30 --generate_signature
+python script/paraphraser.py --algorithm Unigram --dataset dataset\zhtw\mydatasets\mis\combined_icis.json --max_samples 100 --generate_signature
+python script/paraphraser.py --algorithm Unigram --dataset dataset\zhtw\mydatasets\edu\acm_abstracts.json --max_samples 100 --generate_signature
+
+啟用環境相關
+conda activate watermark-env
+
+cd /mnt/c/Users/user/Desktop/signature/llm-watermark-research
+source myenv/bin/activate
+
+ngram:
+python script/paraphraser_ngram.py --generate_signature --algorithm KGW --dataset dataset/zhtw/mydatasets/ai/output_data_combined_iclr_abstracts.json --max_samples 10 --signature_output meta-llama/signature_sets/ngram_sig_n3.json --n 3
+
+python script/paraphraser_ngram.py --generate_signature --algorithm KGW --dataset dataset/zhtw/mydatasets/ai/output_data_combined_iclr_abstracts.json --max_samples 100 --signature_output ngram/signature_sets/kgw_ai_sig_n2.json --n 2
+python script/paraphraser_ngram.py --generate_signature --algorithm KGW --dataset dataset/zhtw/mydatasets/bio/combined_BIO2_abstracts.json --max_samples 100 --signature_output ngram/signature_sets/kgw_bio_sig_n2.json --n 2
+python script/paraphraser_ngram.py --generate_signature --algorithm KGW --dataset dataset/zhtw/mydatasets/Security/combined_SP_abstracts.json --max_samples 100 --signature_output ngram/signature_sets/kgw_security_sig_n2.json --n 2
+python script/paraphraser_ngram.py --generate_signature --algorithm KGW --dataset dataset/zhtw/mydatasets/med/combined_MIE_abstracts.json --max_samples 100 --signature_output ngram/signature_sets/kgw_med_sig_n2.json --n 2
+python script/paraphraser_ngram.py --generate_signature --algorithm KGW --dataset dataset/zhtw/mydatasets/law/combined_ai_law_abstracts.json --max_samples 30 --signature_output ngram/signature_sets/kgw_law_sig_n2.json --n 2
+python script/paraphraser_ngram.py --generate_signature --algorithm KGW --dataset dataset/zhtw/mydatasets/mis/combined_icis.json --max_samples 100 --signature_output ngram/signature_sets/kgw_mis_sig_n2.json --n 2
+python script/paraphraser_ngram.py --generate_signature --algorithm KGW --dataset dataset/zhtw/mydatasets/edu/acm_abstracts.json --max_samples 100 --signature_output ngram/signature_sets/kgw_edu_sig_n2.json --n 2
+
+python script/paraphraser_ngram.py --generate_signature --algorithm SWEET --dataset dataset/zhtw/mydatasets/ai/output_data_combined_iclr_abstracts.json --max_samples 100 --signature_output ngram/signature_sets/sweet_ai_sig_n2.json --n 2
+python script/paraphraser_ngram.py --generate_signature --algorithm SWEET --dataset dataset/zhtw/mydatasets/bio/combined_BIO2_abstracts.json --max_samples 100 --signature_output ngram/signature_sets/sweet_bio_sig_n2.json --n 2
+python script/paraphraser_ngram.py --generate_signature --algorithm SWEET --dataset dataset/zhtw/mydatasets/Security/combined_SP_abstracts.json --max_samples 100 --signature_output ngram/signature_sets/sweet_security_sig_n2.json --n 2
+python script/paraphraser_ngram.py --generate_signature --algorithm SWEET --dataset dataset/zhtw/mydatasets/med/combined_MIE_abstracts.json --max_samples 100 --signature_output ngram/signature_sets/sweet_med_sig_n2.json --n 2
+python script/paraphraser_ngram.py --generate_signature --algorithm SWEET --dataset dataset/zhtw/mydatasets/law/combined_ai_law_abstracts.json --max_samples 30 --signature_output ngram/signature_sets/sweet_law_sig_n2.json --n 2
+python script/paraphraser_ngram.py --generate_signature --algorithm SWEET --dataset dataset/zhtw/mydatasets/mis/combined_icis.json --max_samples 100 --signature_output ngram/signature_sets/sweet_mis_sig_n2.json --n 2
+python script/paraphraser_ngram.py --generate_signature --algorithm SWEET --dataset dataset/zhtw/mydatasets/edu/acm_abstracts.json --max_samples 100 --signature_output ngram/signature_sets/sweet_edu_sig_n2.json --n 2

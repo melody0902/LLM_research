@@ -1,0 +1,238 @@
+{
+  "file": "unigram_ai_sig_n4.json",
+  "decoded_phrases": [
+    "minimize dropout variance,",
+    "-assistant drug discovery",
+    "intelligence-assisted drug",
+    "bayesian predictive uncertainty.",
+    "making it more accessible",
+    "isted drug discovery.",
+    "-assisted drug discovery",
+    "intelligence-assistant drug",
+    "learning neural subset selection",
+    "explanations). this paper",
+    "preserved in the rewritten",
+    ". however, this",
+    "though prompting. this",
+    "tone, the rewritten",
+    "in large language models",
+    "istant drug discovery."
+  ],
+  "decoded_words": [
+    "minimize",
+    "dropout",
+    "variance,",
+    "-assistant",
+    "drug",
+    "discovery",
+    "intelligence-assisted",
+    "drug",
+    "bayesian",
+    "predictive",
+    "uncertainty.",
+    "making",
+    "it",
+    "more",
+    "accessible",
+    "isted",
+    "drug",
+    "discovery.",
+    "-assisted",
+    "drug",
+    "discovery",
+    "intelligence-assistant",
+    "drug",
+    "learning",
+    "neural",
+    "subset",
+    "selection",
+    "explanations).",
+    "this",
+    "paper",
+    "preserved",
+    "in",
+    "the",
+    "rewritten",
+    ".",
+    "however,",
+    "this",
+    "though",
+    "prompting.",
+    "this",
+    "tone,",
+    "the",
+    "rewritten",
+    "in",
+    "large",
+    "language",
+    "models",
+    "istant",
+    "drug",
+    "discovery."
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "discovery.n.01",
+        "definition": "the act of discovering something"
+      },
+      {
+        "name": "drug.n.01",
+        "definition": "a substance that is used as a medicine or narcotic"
+      },
+      {
+        "name": "accessible.a.01",
+        "definition": "capable of being reached"
+      },
+      {
+        "name": "discovery.n.01",
+        "definition": "the act of discovering something"
+      },
+      {
+        "name": "drug.n.01",
+        "definition": "a substance that is used as a medicine or narcotic"
+      },
+      {
+        "name": "choice.n.02",
+        "definition": "the act of choosing or selecting"
+      },
+      {
+        "name": "paper.n.01",
+        "definition": "a material made of cellulose pulp derived mainly from wood or rags or certain grasses"
+      },
+      {
+        "name": "rewrite.v.01",
+        "definition": "write differently; alter the writing of"
+      },
+      {
+        "name": "rewrite.v.01",
+        "definition": "write differently; alter the writing of"
+      },
+      {
+        "name": "model.n.01",
+        "definition": "a hypothetical description of a complex entity or process"
+      }
+    ],
+    "level2": [
+      {
+        "name": "agent.n.03",
+        "definition": "a substance that exerts some force or effect"
+      },
+      {
+        "name": "agent.n.03",
+        "definition": "a substance that exerts some force or effect"
+      },
+      {
+        "name": "action.n.01",
+        "definition": "something done (usually as opposed to something said)"
+      },
+      {
+        "name": "material.n.01",
+        "definition": "the tangible substance that goes into the makeup of a physical object"
+      },
+      {
+        "name": "write.v.02",
+        "definition": "communicate or express by writing"
+      },
+      {
+        "name": "write.v.02",
+        "definition": "communicate or express by writing"
+      },
+      {
+        "name": "hypothesis.n.02",
+        "definition": "a tentative insight into the natural world; a concept that is not yet verified but that if true would explain certain facts or phenomena"
+      }
+    ],
+    "level3": [
+      {
+        "name": "substance.n.07",
+        "definition": "a particular kind or species of matter with uniform properties"
+      },
+      {
+        "name": "substance.n.07",
+        "definition": "a particular kind or species of matter with uniform properties"
+      },
+      {
+        "name": "substance.n.01",
+        "definition": "the real physical matter of which a person or thing consists"
+      },
+      {
+        "name": "communicate.v.02",
+        "definition": "transmit thoughts or feelings"
+      },
+      {
+        "name": "communicate.v.02",
+        "definition": "transmit thoughts or feelings"
+      },
+      {
+        "name": "concept.n.01",
+        "definition": "an abstract or general idea inferred or derived from specific instances"
+      }
+    ],
+    "level4": [
+      {
+        "name": "matter.n.03",
+        "definition": "that which has mass and occupies space"
+      },
+      {
+        "name": "matter.n.03",
+        "definition": "that which has mass and occupies space"
+      },
+      {
+        "name": "part.n.01",
+        "definition": "something determined in relation to something that includes it"
+      },
+      {
+        "name": "interact.v.01",
+        "definition": "act together or towards others or with others"
+      },
+      {
+        "name": "interact.v.01",
+        "definition": "act together or towards others or with others"
+      },
+      {
+        "name": "idea.n.01",
+        "definition": "the content of cognition; the main thing you are thinking about"
+      }
+    ]
+  },
+  "concept_counts": {
+    "discovery.n.01": 2,
+    "drug.n.01": 2,
+    "agent.n.03": 2,
+    "substance.n.07": 2,
+    "matter.n.03": 2,
+    "accessible.a.01": 1,
+    "choice.n.02": 1,
+    "action.n.01": 1,
+    "paper.n.01": 1,
+    "material.n.01": 1,
+    "substance.n.01": 1,
+    "part.n.01": 1,
+    "rewrite.v.01": 2,
+    "write.v.02": 2,
+    "communicate.v.02": 2,
+    "interact.v.01": 2,
+    "model.n.01": 1,
+    "hypothesis.n.02": 1,
+    "concept.n.01": 1,
+    "idea.n.01": 1
+  },
+  "top_concepts": [
+    {
+      "name": "discovery.n.01",
+      "count": 2,
+      "definition": "the act of discovering something"
+    },
+    {
+      "name": "drug.n.01",
+      "count": 2,
+      "definition": "a substance that is used as a medicine or narcotic"
+    },
+    {
+      "name": "agent.n.03",
+      "count": 2,
+      "definition": "a substance that exerts some force or effect"
+    }
+  ]
+}

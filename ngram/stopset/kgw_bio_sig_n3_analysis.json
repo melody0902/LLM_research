@@ -1,0 +1,542 @@
+{
+  "file": "kgw_bio_sig_n3.json",
+  "decoded_phrases": [
+    "of amino acids",
+    "-based and protein",
+    "like me to",
+    "rote the text",
+    "\" has been",
+    "protein sequences.",
+    "increase\" has",
+    "binding sites for",
+    "me know if",
+    "known as drug",
+    "the development of",
+    "the same protein",
+    "from the same",
+    "the role of",
+    "sites on complete",
+    "a) are",
+    "ed by the",
+    "parts of the",
+    "rote the paragraph",
+    "concepts.",
+    "amount of biological",
+    "-trained models to",
+    "binding to h",
+    "a general audience",
+    "hla is",
+    "protein family may",
+    "ins from the",
+    "to hla",
+    "easier to understand",
+    "the same...",
+    "know if this",
+    "conveying the same",
+    "between the original",
+    "transformer-based and",
+    "many years,",
+    "same protein family",
+    "\"effective prediction",
+    "designing protein",
+    "has been simplified"
+  ],
+  "decoded_words": [
+    "of",
+    "amino",
+    "acids",
+    "-based",
+    "and",
+    "protein",
+    "like",
+    "me",
+    "to",
+    "rote",
+    "the",
+    "text",
+    "\"",
+    "has",
+    "been",
+    "protein",
+    "sequences.",
+    "increase\"",
+    "has",
+    "binding",
+    "sites",
+    "for",
+    "me",
+    "know",
+    "if",
+    "known",
+    "as",
+    "drug",
+    "the",
+    "development",
+    "of",
+    "the",
+    "same",
+    "protein",
+    "from",
+    "the",
+    "same",
+    "the",
+    "role",
+    "of",
+    "sites",
+    "on",
+    "complete",
+    "a)",
+    "are",
+    "ed",
+    "by",
+    "the",
+    "parts",
+    "of",
+    "the",
+    "rote",
+    "the",
+    "paragraph",
+    "concepts.",
+    "amount",
+    "of",
+    "biological",
+    "-trained",
+    "models",
+    "to",
+    "binding",
+    "to",
+    "h",
+    "a",
+    "general",
+    "audience",
+    "hla",
+    "is",
+    "protein",
+    "family",
+    "may",
+    "ins",
+    "from",
+    "the",
+    "to",
+    "hla",
+    "easier",
+    "to",
+    "understand",
+    "the",
+    "same...",
+    "know",
+    "if",
+    "this",
+    "conveying",
+    "the",
+    "same",
+    "between",
+    "the",
+    "original",
+    "transformer-based",
+    "and",
+    "many",
+    "years,",
+    "same",
+    "protein",
+    "family",
+    "\"effective",
+    "prediction",
+    "designing",
+    "protein",
+    "has",
+    "been",
+    "simplified"
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "acid.n.01",
+        "definition": "any of various water-soluble compounds having a sour taste and capable of turning litmus red and reacting with a base to form a salt"
+      },
+      {
+        "name": "protein.n.01",
+        "definition": "any of a large group of nitrogenous organic compounds that are essential constituents of living cells; consist of polymers of amino acids; essential in the diet of animals for growth and for repair of tissues; can be obtained from meat and eggs and milk and legumes"
+      },
+      {
+        "name": "text.n.01",
+        "definition": "the words of something written"
+      },
+      {
+        "name": "be.v.01",
+        "definition": "have the quality of being; (copula, used with an adjective or a predicate noun)"
+      },
+      {
+        "name": "hour_angle.n.02",
+        "definition": "(astronomy) the angular distance of a celestial point measured westward along the celestial equator from the zenith crossing; the right ascension for an observer at a particular location and time of day"
+      },
+      {
+        "name": "drug.n.01",
+        "definition": "a substance that is used as a medicine or narcotic"
+      },
+      {
+        "name": "protein.n.01",
+        "definition": "any of a large group of nitrogenous organic compounds that are essential constituents of living cells; consist of polymers of amino acids; essential in the diet of animals for growth and for repair of tissues; can be obtained from meat and eggs and milk and legumes"
+      },
+      {
+        "name": "lapp.n.01",
+        "definition": "a member of an indigenous nomadic people living in northern Scandinavia and herding reindeer"
+      },
+      {
+        "name": "complete.v.01",
+        "definition": "come or bring to a finish or an end"
+      },
+      {
+        "name": "are.n.01",
+        "definition": "a unit of surface area equal to 100 square meters"
+      },
+      {
+        "name": "paragraph.n.01",
+        "definition": "one of several distinct subdivisions of a text intended to separate ideas; the beginning is usually marked by a new indented line"
+      },
+      {
+        "name": "biological.a.01",
+        "definition": "pertaining to biology or to life and living things"
+      },
+      {
+        "name": "hydrogen.n.01",
+        "definition": "a nonmetallic univalent element that is normally a colorless and odorless highly flammable diatomic gas; the simplest and lightest and most abundant element in the universe"
+      },
+      {
+        "name": "audience.n.01",
+        "definition": "a gathering of spectators or listeners at a (usually public) performance"
+      },
+      {
+        "name": "be.v.01",
+        "definition": "have the quality of being; (copula, used with an adjective or a predicate noun)"
+      },
+      {
+        "name": "may.n.01",
+        "definition": "the month following April and preceding June"
+      },
+      {
+        "name": "understand.v.01",
+        "definition": "know and comprehend the nature or meaning of"
+      },
+      {
+        "name": "lapp.n.01",
+        "definition": "a member of an indigenous nomadic people living in northern Scandinavia and herding reindeer"
+      },
+      {
+        "name": "master.n.06",
+        "definition": "an original creation (i.e., an audio recording) from which copies can be made"
+      },
+      {
+        "name": "family.n.01",
+        "definition": "a social unit living together"
+      },
+      {
+        "name": "prediction.n.01",
+        "definition": "the act of predicting (as by reasoning about the future)"
+      },
+      {
+        "name": "protein.n.01",
+        "definition": "any of a large group of nitrogenous organic compounds that are essential constituents of living cells; consist of polymers of amino acids; essential in the diet of animals for growth and for repair of tissues; can be obtained from meat and eggs and milk and legumes"
+      },
+      {
+        "name": "simplify.v.01",
+        "definition": "make simpler or easier or reduce in complexity or extent"
+      }
+    ],
+    "level2": [
+      {
+        "name": "compound.n.02",
+        "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+      },
+      {
+        "name": "macromolecule.n.01",
+        "definition": "any very large complex molecule; found only in plants and animals"
+      },
+      {
+        "name": "matter.n.06",
+        "definition": "written works (especially in books or magazines)"
+      },
+      {
+        "name": "angular_distance.n.01",
+        "definition": "the angular separation between two objects as perceived by an observer"
+      },
+      {
+        "name": "agent.n.03",
+        "definition": "a substance that exerts some force or effect"
+      },
+      {
+        "name": "macromolecule.n.01",
+        "definition": "any very large complex molecule; found only in plants and animals"
+      },
+      {
+        "name": "european.n.01",
+        "definition": "a native or inhabitant of Europe"
+      },
+      {
+        "name": "end.v.02",
+        "definition": "bring to an end or halt"
+      },
+      {
+        "name": "area_unit.n.01",
+        "definition": "a system of units used to measure areas"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "chemical_element.n.01",
+        "definition": "any of the more than 100 known substances (of which 92 occur naturally) that cannot be separated into simpler substances and that singly or in combination constitute all matter"
+      },
+      {
+        "name": "gathering.n.01",
+        "definition": "a group of persons together in one place"
+      },
+      {
+        "name": "gregorian_calendar_month.n.01",
+        "definition": "a month in the Gregorian calendar"
+      },
+      {
+        "name": "european.n.01",
+        "definition": "a native or inhabitant of Europe"
+      },
+      {
+        "name": "creation.n.02",
+        "definition": "an artifact that has been brought into existence by someone"
+      },
+      {
+        "name": "unit.n.03",
+        "definition": "an organization regarded as part of a larger social group"
+      },
+      {
+        "name": "reasoning.n.01",
+        "definition": "thinking that is coherent and logical"
+      },
+      {
+        "name": "macromolecule.n.01",
+        "definition": "any very large complex molecule; found only in plants and animals"
+      },
+      {
+        "name": "change.v.01",
+        "definition": "cause to change; make different; cause a transformation"
+      }
+    ],
+    "level3": [
+      {
+        "name": "chemical.n.01",
+        "definition": "material produced by or used in a reaction involving changes in atoms or molecules"
+      },
+      {
+        "name": "organic_compound.n.01",
+        "definition": "any compound of carbon and another element or a radical"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "angle.n.01",
+        "definition": "the space between two lines or planes that intersect; the inclination of one line to another; measured in degrees or radians"
+      },
+      {
+        "name": "substance.n.07",
+        "definition": "a particular kind or species of matter with uniform properties"
+      },
+      {
+        "name": "organic_compound.n.01",
+        "definition": "any compound of carbon and another element or a radical"
+      },
+      {
+        "name": "inhabitant.n.01",
+        "definition": "a person who inhabits a particular place"
+      },
+      {
+        "name": "change.v.01",
+        "definition": "cause to change; make different; cause a transformation"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "substance.n.01",
+        "definition": "the real physical matter of which a person or thing consists"
+      },
+      {
+        "name": "social_group.n.01",
+        "definition": "people sharing some social relation"
+      },
+      {
+        "name": "calendar_month.n.01",
+        "definition": "one of the twelve divisions of the calendar year"
+      },
+      {
+        "name": "inhabitant.n.01",
+        "definition": "a person who inhabits a particular place"
+      },
+      {
+        "name": "artifact.n.01",
+        "definition": "a man-made object taken as a whole"
+      },
+      {
+        "name": "organization.n.01",
+        "definition": "a group of people who work together"
+      },
+      {
+        "name": "thinking.n.01",
+        "definition": "the process of using your mind to consider something carefully"
+      },
+      {
+        "name": "organic_compound.n.01",
+        "definition": "any compound of carbon and another element or a radical"
+      }
+    ],
+    "level4": [
+      {
+        "name": "material.n.01",
+        "definition": "the tangible substance that goes into the makeup of a physical object"
+      },
+      {
+        "name": "compound.n.02",
+        "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "space.n.02",
+        "definition": "an empty area (usually bounded in some way between things)"
+      },
+      {
+        "name": "matter.n.03",
+        "definition": "that which has mass and occupies space"
+      },
+      {
+        "name": "compound.n.02",
+        "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+      },
+      {
+        "name": "person.n.01",
+        "definition": "a human being"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "communication.n.02",
+        "definition": "something that is communicated by or to or between people or groups"
+      },
+      {
+        "name": "part.n.01",
+        "definition": "something determined in relation to something that includes it"
+      },
+      {
+        "name": "time_period.n.01",
+        "definition": "an amount of time"
+      },
+      {
+        "name": "person.n.01",
+        "definition": "a human being"
+      },
+      {
+        "name": "whole.n.02",
+        "definition": "an assemblage of parts that is regarded as a single entity"
+      },
+      {
+        "name": "social_group.n.01",
+        "definition": "people sharing some social relation"
+      },
+      {
+        "name": "higher_cognitive_process.n.01",
+        "definition": "cognitive processes that presuppose the availability of knowledge and put it to use"
+      },
+      {
+        "name": "compound.n.02",
+        "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+      }
+    ]
+  },
+  "concept_counts": {
+    "acid.n.01": 1,
+    "compound.n.02": 4,
+    "chemical.n.01": 1,
+    "material.n.01": 1,
+    "protein.n.01": 3,
+    "macromolecule.n.01": 3,
+    "organic_compound.n.01": 3,
+    "text.n.01": 1,
+    "matter.n.06": 1,
+    "writing.n.02": 2,
+    "written_communication.n.01": 2,
+    "be.v.01": 2,
+    "hour_angle.n.02": 1,
+    "angular_distance.n.01": 1,
+    "angle.n.01": 1,
+    "space.n.02": 1,
+    "drug.n.01": 1,
+    "agent.n.03": 1,
+    "substance.n.07": 1,
+    "matter.n.03": 1,
+    "lapp.n.01": 2,
+    "european.n.01": 2,
+    "inhabitant.n.01": 2,
+    "person.n.01": 2,
+    "complete.v.01": 1,
+    "end.v.02": 1,
+    "change.v.01": 2,
+    "are.n.01": 1,
+    "area_unit.n.01": 1,
+    "unit_of_measurement.n.01": 1,
+    "definite_quantity.n.01": 1,
+    "paragraph.n.01": 1,
+    "communication.n.02": 1,
+    "biological.a.01": 1,
+    "hydrogen.n.01": 1,
+    "chemical_element.n.01": 1,
+    "substance.n.01": 1,
+    "part.n.01": 1,
+    "audience.n.01": 1,
+    "gathering.n.01": 1,
+    "social_group.n.01": 2,
+    "may.n.01": 1,
+    "gregorian_calendar_month.n.01": 1,
+    "calendar_month.n.01": 1,
+    "time_period.n.01": 1,
+    "understand.v.01": 1,
+    "master.n.06": 1,
+    "creation.n.02": 1,
+    "artifact.n.01": 1,
+    "whole.n.02": 1,
+    "family.n.01": 1,
+    "unit.n.03": 1,
+    "organization.n.01": 1,
+    "prediction.n.01": 1,
+    "reasoning.n.01": 1,
+    "thinking.n.01": 1,
+    "higher_cognitive_process.n.01": 1,
+    "simplify.v.01": 1
+  },
+  "top_concepts": [
+    {
+      "name": "compound.n.02",
+      "count": 4,
+      "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+    },
+    {
+      "name": "protein.n.01",
+      "count": 3,
+      "definition": "any of a large group of nitrogenous organic compounds that are essential constituents of living cells; consist of polymers of amino acids; essential in the diet of animals for growth and for repair of tissues; can be obtained from meat and eggs and milk and legumes"
+    },
+    {
+      "name": "macromolecule.n.01",
+      "count": 3,
+      "definition": "any very large complex molecule; found only in plants and animals"
+    }
+  ]
+}

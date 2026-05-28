@@ -1,0 +1,792 @@
+{
+  "file": "sweet_bio_sig_n2.json",
+  "decoded_phrases": [
+    "species.",
+    "directly map",
+    "our approach",
+    "about biological",
+    ".\n\nnote",
+    "which restrict",
+    "ons is",
+    "at the",
+    "clarity and",
+    "length and",
+    "the most",
+    ", which",
+    "lengthy acquisition",
+    "and can",
+    "peptide-h",
+    "approaches\"",
+    "acteria produce",
+    "different acquisition",
+    "text.",
+    "protein length",
+    "and immun",
+    "how drugs",
+    "this bond",
+    "map d",
+    "of growing",
+    "in understanding",
+    "vaccines and",
+    "simultaneously.",
+    "with different",
+    "microstructure",
+    "the precise",
+    "smaller grid",
+    "creating proteins",
+    "protein structure",
+    "and the",
+    "to provide",
+    "understanding\"",
+    "ed]\"",
+    "feature extraction",
+    "proteins with",
+    "in protein",
+    "between rna",
+    "codons",
+    ".) -",
+    "produce a",
+    "their ability",
+    "generated sequences",
+    "available.",
+    "settings with",
+    "memory attention",
+    "paragraph in",
+    "protein sequences",
+    "model training",
+    "from the",
+    "specific micro",
+    "study.",
+    "data in",
+    "backbone,",
+    "3",
+    "original meaning",
+    "used micro",
+    "flow and",
+    "biological data"
+  ],
+  "decoded_words": [
+    "species.",
+    "directly",
+    "map",
+    "our",
+    "approach",
+    "about",
+    "biological",
+    ".",
+    "note",
+    "which",
+    "restrict",
+    "ons",
+    "is",
+    "at",
+    "the",
+    "clarity",
+    "and",
+    "length",
+    "and",
+    "the",
+    "most",
+    ",",
+    "which",
+    "lengthy",
+    "acquisition",
+    "and",
+    "can",
+    "peptide-h",
+    "approaches\"",
+    "acteria",
+    "produce",
+    "different",
+    "acquisition",
+    "text.",
+    "protein",
+    "length",
+    "and",
+    "immun",
+    "how",
+    "drugs",
+    "this",
+    "bond",
+    "map",
+    "d",
+    "of",
+    "growing",
+    "in",
+    "understanding",
+    "vaccines",
+    "and",
+    "simultaneously.",
+    "with",
+    "different",
+    "microstructure",
+    "the",
+    "precise",
+    "smaller",
+    "grid",
+    "creating",
+    "proteins",
+    "protein",
+    "structure",
+    "and",
+    "the",
+    "to",
+    "provide",
+    "understanding\"",
+    "ed]\"",
+    "feature",
+    "extraction",
+    "proteins",
+    "with",
+    "in",
+    "protein",
+    "between",
+    "rna",
+    "codons",
+    ".)",
+    "-",
+    "produce",
+    "a",
+    "their",
+    "ability",
+    "generated",
+    "sequences",
+    "available.",
+    "settings",
+    "with",
+    "memory",
+    "attention",
+    "paragraph",
+    "in",
+    "protein",
+    "sequences",
+    "model",
+    "training",
+    "from",
+    "the",
+    "specific",
+    "micro",
+    "study.",
+    "data",
+    "in",
+    "backbone,",
+    "3",
+    "original",
+    "meaning",
+    "used",
+    "micro",
+    "flow",
+    "and",
+    "biological",
+    "data"
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "map.n.01",
+        "definition": "a diagrammatic representation of the earth's surface (or part of it)"
+      },
+      {
+        "name": "approach.n.01",
+        "definition": "ideas or actions intended to deal with a problem or situation"
+      },
+      {
+        "name": "biological.a.01",
+        "definition": "pertaining to biology or to life and living things"
+      },
+      {
+        "name": "note.n.01",
+        "definition": "a brief written record"
+      },
+      {
+        "name": "restrict.v.01",
+        "definition": "place restrictions on"
+      },
+      {
+        "name": "be.v.01",
+        "definition": "have the quality of being; (copula, used with an adjective or a predicate noun)"
+      },
+      {
+        "name": "most.a.01",
+        "definition": "(superlative of `many' used with count nouns and often preceded by `the') quantifier meaning the greatest in number"
+      },
+      {
+        "name": "acquisition.n.01",
+        "definition": "the act of contracting or assuming or acquiring possession of something"
+      },
+      {
+        "name": "can.n.01",
+        "definition": "airtight sealed metal container for food or drink or paint etc."
+      },
+      {
+        "name": "produce.n.01",
+        "definition": "fresh fruits and vegetable grown for the market"
+      },
+      {
+        "name": "acquisition.n.01",
+        "definition": "the act of contracting or assuming or acquiring possession of something"
+      },
+      {
+        "name": "length.n.01",
+        "definition": "the linear extent in space from one end to the other; the longest dimension of something that is fixed in place"
+      },
+      {
+        "name": "drug.n.01",
+        "definition": "a substance that is used as a medicine or narcotic"
+      },
+      {
+        "name": "chemical_bond.n.01",
+        "definition": "an electrical force linking atoms"
+      },
+      {
+        "name": "vitamin_d.n.01",
+        "definition": "a fat-soluble vitamin that prevents rickets"
+      },
+      {
+        "name": "growth.n.01",
+        "definition": "(biology) the process of an individual organism growing organically; a purely biological unfolding of events involved in an organism changing gradually from a simple to a more complex level"
+      },
+      {
+        "name": "understanding.n.01",
+        "definition": "the cognitive condition of someone who understands"
+      },
+      {
+        "name": "different.a.01",
+        "definition": "unlike in nature or quality or form or degree"
+      },
+      {
+        "name": "precise.a.01",
+        "definition": "sharply exact or accurate or delimited"
+      },
+      {
+        "name": "grid.n.01",
+        "definition": "a pattern of regularly spaced horizontal and vertical lines"
+      },
+      {
+        "name": "protein.n.01",
+        "definition": "any of a large group of nitrogenous organic compounds that are essential constituents of living cells; consist of polymers of amino acids; essential in the diet of animals for growth and for repair of tissues; can be obtained from meat and eggs and milk and legumes"
+      },
+      {
+        "name": "structure.n.01",
+        "definition": "a thing constructed; a complex entity constructed of many parts"
+      },
+      {
+        "name": "supply.v.01",
+        "definition": "give something useful or necessary to"
+      },
+      {
+        "name": "extraction.n.01",
+        "definition": "the process of obtaining something from a mixture or compound by chemical or physical or mechanical means"
+      },
+      {
+        "name": "protein.n.01",
+        "definition": "any of a large group of nitrogenous organic compounds that are essential constituents of living cells; consist of polymers of amino acids; essential in the diet of animals for growth and for repair of tissues; can be obtained from meat and eggs and milk and legumes"
+      },
+      {
+        "name": "ribonucleic_acid.n.01",
+        "definition": "(biochemistry) a long linear polymer of nucleotides found in the nucleus but mainly in the cytoplasm of a cell where it is associated with microsomes; it transmits genetic information from DNA to the cytoplasm and controls certain chemical processes in the cell"
+      },
+      {
+        "name": "codon.n.01",
+        "definition": "a specific sequence of three adjacent nucleotides on a strand of DNA or RNA that specifies the genetic code information for synthesizing a particular amino acid"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "ability.n.01",
+        "definition": "the quality of being able to perform; a quality that permits or facilitates achievement or accomplishment"
+      },
+      {
+        "name": "sequence.n.01",
+        "definition": "serial arrangement in which things follow in logical order or a recurrent pattern"
+      },
+      {
+        "name": "attention.n.01",
+        "definition": "the process whereby a person concentrates on some features of the environment to the (relative) exclusion of others"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      },
+      {
+        "name": "sequence.n.01",
+        "definition": "serial arrangement in which things follow in logical order or a recurrent pattern"
+      },
+      {
+        "name": "training.n.01",
+        "definition": "activity leading to skilled behavior"
+      },
+      {
+        "name": "micro.s.01",
+        "definition": "extremely small in scale or scope or capability"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      },
+      {
+        "name": "three.n.01",
+        "definition": "the cardinal number that is the sum of one and one and one"
+      },
+      {
+        "name": "meaning.n.01",
+        "definition": "the message that is intended or expressed or signified"
+      },
+      {
+        "name": "micro.s.01",
+        "definition": "extremely small in scale or scope or capability"
+      },
+      {
+        "name": "data.n.01",
+        "definition": "a collection of facts from which conclusions may be drawn"
+      }
+    ],
+    "level2": [
+      {
+        "name": "representation.n.02",
+        "definition": "a creation that is a visual or tangible rendering of someone or something"
+      },
+      {
+        "name": "conceptualization.n.01",
+        "definition": "inventing or contriving an idea or explanation and formulating it mentally"
+      },
+      {
+        "name": "written_record.n.01",
+        "definition": "a written document preserving knowledge of facts or events"
+      },
+      {
+        "name": "limit.v.02",
+        "definition": "restrict or confine,"
+      },
+      {
+        "name": "acquiring.n.01",
+        "definition": "the act of acquiring something"
+      },
+      {
+        "name": "container.n.01",
+        "definition": "any object that can be used to hold things (especially a large metal boxlike object of standardized dimensions that can be loaded from one form of transport to another)"
+      },
+      {
+        "name": "food.n.02",
+        "definition": "any solid substance (as opposed to liquid) that is used as a source of nourishment"
+      },
+      {
+        "name": "acquiring.n.01",
+        "definition": "the act of acquiring something"
+      },
+      {
+        "name": "dimension.n.01",
+        "definition": "the magnitude of something in a particular direction (especially length or width or height)"
+      },
+      {
+        "name": "agent.n.03",
+        "definition": "a substance that exerts some force or effect"
+      },
+      {
+        "name": "attraction.n.01",
+        "definition": "the force by which one object attracts another"
+      },
+      {
+        "name": "fat-soluble_vitamin.n.01",
+        "definition": "any vitamin that is soluble in fats"
+      },
+      {
+        "name": "organic_process.n.01",
+        "definition": "a process occurring in living organisms"
+      },
+      {
+        "name": "knowing.n.01",
+        "definition": "a clear and certain mental apprehension"
+      },
+      {
+        "name": "form.n.03",
+        "definition": "a perceptual structure"
+      },
+      {
+        "name": "macromolecule.n.01",
+        "definition": "any very large complex molecule; found only in plants and animals"
+      },
+      {
+        "name": "artifact.n.01",
+        "definition": "a man-made object taken as a whole"
+      },
+      {
+        "name": "give.v.03",
+        "definition": "transfer possession of something concrete or abstract to somebody"
+      },
+      {
+        "name": "natural_process.n.01",
+        "definition": "a process existing in or produced by nature (rather than by the intent of human beings)"
+      },
+      {
+        "name": "macromolecule.n.01",
+        "definition": "any very large complex molecule; found only in plants and animals"
+      },
+      {
+        "name": "polymer.n.01",
+        "definition": "a naturally occurring or synthetic compound consisting of large molecules made up of a linked series of repeated simple monomers"
+      },
+      {
+        "name": "sequence.n.01",
+        "definition": "serial arrangement in which things follow in logical order or a recurrent pattern"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "quality.n.01",
+        "definition": "an essential and distinguishing attribute of something or someone; --Shakespeare"
+      },
+      {
+        "name": "series.n.01",
+        "definition": "similar things placed in order or happening one after another"
+      },
+      {
+        "name": "basic_cognitive_process.n.01",
+        "definition": "cognitive processes involved in obtaining and storing knowledge"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      },
+      {
+        "name": "series.n.01",
+        "definition": "similar things placed in order or happening one after another"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      },
+      {
+        "name": "digit.n.01",
+        "definition": "one of the elements that collectively form a system of numeration"
+      },
+      {
+        "name": "message.n.02",
+        "definition": "what a communication that is about something is about"
+      },
+      {
+        "name": "collection.n.01",
+        "definition": "several things grouped together or considered as a whole"
+      }
+    ],
+    "level3": [
+      {
+        "name": "creation.n.02",
+        "definition": "an artifact that has been brought into existence by someone"
+      },
+      {
+        "name": "creating_by_mental_acts.n.01",
+        "definition": "the act of creating something by thinking"
+      },
+      {
+        "name": "record.n.01",
+        "definition": "anything (such as a document or a phonograph record or a photograph) providing permanent evidence of or information about past events"
+      },
+      {
+        "name": "decrease.v.02",
+        "definition": "make smaller"
+      },
+      {
+        "name": "instrumentality.n.03",
+        "definition": "an artifact (or system of artifacts) that is instrumental in accomplishing some end"
+      },
+      {
+        "name": "solid.n.01",
+        "definition": "matter that is solid at room temperature and pressure"
+      },
+      {
+        "name": "magnitude.n.01",
+        "definition": "the property of relative size or extent (whether large or small)"
+      },
+      {
+        "name": "substance.n.07",
+        "definition": "a particular kind or species of matter with uniform properties"
+      },
+      {
+        "name": "force.n.02",
+        "definition": "(physics) the influence that produces a change in a physical quantity"
+      },
+      {
+        "name": "vitamin.n.01",
+        "definition": "any of a group of organic substances essential in small quantities to normal metabolism"
+      },
+      {
+        "name": "higher_cognitive_process.n.01",
+        "definition": "cognitive processes that presuppose the availability of knowledge and put it to use"
+      },
+      {
+        "name": "structure.n.03",
+        "definition": "the complex composition of knowledge as elements and their combinations"
+      },
+      {
+        "name": "organic_compound.n.01",
+        "definition": "any compound of carbon and another element or a radical"
+      },
+      {
+        "name": "whole.n.02",
+        "definition": "an assemblage of parts that is regarded as a single entity"
+      },
+      {
+        "name": "transfer.v.05",
+        "definition": "cause to change ownership"
+      },
+      {
+        "name": "organic_compound.n.01",
+        "definition": "any compound of carbon and another element or a radical"
+      },
+      {
+        "name": "compound.n.02",
+        "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+      },
+      {
+        "name": "series.n.01",
+        "definition": "similar things placed in order or happening one after another"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "ordering.n.01",
+        "definition": "logical or comprehensible arrangement of separate elements"
+      },
+      {
+        "name": "process.n.02",
+        "definition": "(psychology) the performance of some composite cognitive activity; an operation that affects mental contents"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "ordering.n.01",
+        "definition": "logical or comprehensible arrangement of separate elements"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "integer.n.01",
+        "definition": "any of the natural numbers (positive or negative) or zero"
+      },
+      {
+        "name": "communication.n.02",
+        "definition": "something that is communicated by or to or between people or groups"
+      }
+    ],
+    "level4": [
+      {
+        "name": "artifact.n.01",
+        "definition": "a man-made object taken as a whole"
+      },
+      {
+        "name": "creation.n.01",
+        "definition": "the human act of creating"
+      },
+      {
+        "name": "evidence.n.02",
+        "definition": "an indication that makes something evident"
+      },
+      {
+        "name": "change.v.01",
+        "definition": "cause to change; make different; cause a transformation"
+      },
+      {
+        "name": "artifact.n.01",
+        "definition": "a man-made object taken as a whole"
+      },
+      {
+        "name": "matter.n.03",
+        "definition": "that which has mass and occupies space"
+      },
+      {
+        "name": "property.n.02",
+        "definition": "a basic or essential attribute shared by all members of a class"
+      },
+      {
+        "name": "matter.n.03",
+        "definition": "that which has mass and occupies space"
+      },
+      {
+        "name": "physical_phenomenon.n.01",
+        "definition": "a natural phenomenon involving the physical properties of matter and energy"
+      },
+      {
+        "name": "nutriment.n.01",
+        "definition": "a source of materials to nourish the body"
+      },
+      {
+        "name": "process.n.02",
+        "definition": "(psychology) the performance of some composite cognitive activity; an operation that affects mental contents"
+      },
+      {
+        "name": "cognition.n.01",
+        "definition": "the psychological result of perception and learning and reasoning"
+      },
+      {
+        "name": "compound.n.02",
+        "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+      },
+      {
+        "name": "compound.n.02",
+        "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+      },
+      {
+        "name": "chemical.n.01",
+        "definition": "material produced by or used in a reaction involving changes in atoms or molecules"
+      },
+      {
+        "name": "ordering.n.01",
+        "definition": "logical or comprehensible arrangement of separate elements"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "arrangement.n.02",
+        "definition": "an orderly grouping (of things or persons) considered as a unit; the result of arranging"
+      },
+      {
+        "name": "cognition.n.01",
+        "definition": "the psychological result of perception and learning and reasoning"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "arrangement.n.02",
+        "definition": "an orderly grouping (of things or persons) considered as a unit; the result of arranging"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "number.n.02",
+        "definition": "a concept of quantity involving zero and units"
+      }
+    ]
+  },
+  "concept_counts": {
+    "map.n.01": 1,
+    "representation.n.02": 1,
+    "creation.n.02": 1,
+    "artifact.n.01": 3,
+    "approach.n.01": 1,
+    "conceptualization.n.01": 1,
+    "creating_by_mental_acts.n.01": 1,
+    "creation.n.01": 1,
+    "biological.a.01": 1,
+    "note.n.01": 1,
+    "written_record.n.01": 1,
+    "record.n.01": 1,
+    "evidence.n.02": 1,
+    "restrict.v.01": 1,
+    "limit.v.02": 1,
+    "decrease.v.02": 1,
+    "change.v.01": 1,
+    "be.v.01": 1,
+    "most.a.01": 1,
+    "acquisition.n.01": 2,
+    "acquiring.n.01": 2,
+    "can.n.01": 1,
+    "container.n.01": 1,
+    "instrumentality.n.03": 1,
+    "produce.n.01": 1,
+    "food.n.02": 1,
+    "solid.n.01": 1,
+    "matter.n.03": 2,
+    "length.n.01": 1,
+    "dimension.n.01": 1,
+    "magnitude.n.01": 1,
+    "property.n.02": 1,
+    "drug.n.01": 1,
+    "agent.n.03": 1,
+    "substance.n.07": 1,
+    "chemical_bond.n.01": 1,
+    "attraction.n.01": 1,
+    "force.n.02": 1,
+    "physical_phenomenon.n.01": 1,
+    "vitamin_d.n.01": 1,
+    "fat-soluble_vitamin.n.01": 1,
+    "vitamin.n.01": 1,
+    "nutriment.n.01": 1,
+    "growth.n.01": 1,
+    "organic_process.n.01": 1,
+    "understanding.n.01": 1,
+    "knowing.n.01": 1,
+    "higher_cognitive_process.n.01": 1,
+    "process.n.02": 2,
+    "different.a.01": 1,
+    "precise.a.01": 1,
+    "grid.n.01": 1,
+    "form.n.03": 1,
+    "structure.n.03": 1,
+    "cognition.n.01": 2,
+    "protein.n.01": 2,
+    "macromolecule.n.01": 2,
+    "organic_compound.n.01": 2,
+    "compound.n.02": 3,
+    "structure.n.01": 1,
+    "whole.n.02": 1,
+    "supply.v.01": 1,
+    "give.v.03": 1,
+    "transfer.v.05": 1,
+    "extraction.n.01": 1,
+    "natural_process.n.01": 1,
+    "ribonucleic_acid.n.01": 1,
+    "polymer.n.01": 1,
+    "chemical.n.01": 1,
+    "codon.n.01": 1,
+    "sequence.n.01": 3,
+    "series.n.01": 3,
+    "ordering.n.01": 3,
+    "angstrom.n.01": 1,
+    "metric_linear_unit.n.01": 1,
+    "metric_unit.n.01": 1,
+    "unit_of_measurement.n.01": 3,
+    "ability.n.01": 1,
+    "quality.n.01": 1,
+    "arrangement.n.02": 2,
+    "attention.n.01": 1,
+    "basic_cognitive_process.n.01": 1,
+    "inch.n.01": 2,
+    "linear_unit.n.01": 2,
+    "definite_quantity.n.01": 2,
+    "training.n.01": 1,
+    "micro.s.01": 2,
+    "three.n.01": 1,
+    "digit.n.01": 1,
+    "integer.n.01": 1,
+    "number.n.02": 1,
+    "meaning.n.01": 1,
+    "message.n.02": 1,
+    "communication.n.02": 1,
+    "data.n.01": 1,
+    "collection.n.01": 1
+  },
+  "top_concepts": [
+    {
+      "name": "artifact.n.01",
+      "count": 3,
+      "definition": "a man-made object taken as a whole"
+    },
+    {
+      "name": "compound.n.02",
+      "count": 3,
+      "definition": "(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight"
+    },
+    {
+      "name": "sequence.n.01",
+      "count": 3,
+      "definition": "serial arrangement in which things follow in logical order or a recurrent pattern"
+    }
+  ]
+}

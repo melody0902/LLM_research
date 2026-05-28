@@ -1,0 +1,674 @@
+{
+  "file": "unigram_ai_sig_n3.json",
+  "decoded_phrases": [
+    "intelligence-assistant",
+    "explanations). this",
+    "minimize dropout variance",
+    "though prompting.",
+    "isted drug discovery",
+    "learned information.",
+    "however, this",
+    "the rewritten paragraph",
+    "). this paper",
+    "in inferring",
+    "ucial for",
+    "istant drug discovery",
+    "predictive uncertainty and",
+    "drug discovery.",
+    "optimization and a",
+    "dropout variance,",
+    ". the rewritten",
+    "the term \"",
+    "ating features from",
+    "upper, lower",
+    "data at every",
+    "a meta-object",
+    "steps for solving",
+    "rewriting it.",
+    "bayesian predictive uncertainty",
+    ". however,",
+    "making it more",
+    "learning neural subset",
+    "it more accessible",
+    "-evaluate numerous",
+    "tone, the",
+    "preserved in the",
+    "set functions.",
+    "large language models",
+    "simplic",
+    "when using neural",
+    "representation learning.",
+    "-assistant drug",
+    "intelligence-assisted",
+    "machine learning.",
+    ". this paper",
+    ". this shift",
+    "inference time.",
+    "using weis",
+    "predictive uncertainty.",
+    "by taking a",
+    ", the rewritten",
+    "' error analysis",
+    "training information.",
+    "-assisted drug",
+    "in the rewritten",
+    "ural subset selection",
+    "neural subset selection",
+    "in large language",
+    "technical audience,",
+    "paragraph.",
+    "increasingly crucial in",
+    "prompting. this"
+  ],
+  "decoded_words": [
+    "intelligence-assistant",
+    "explanations).",
+    "this",
+    "minimize",
+    "dropout",
+    "variance",
+    "though",
+    "prompting.",
+    "isted",
+    "drug",
+    "discovery",
+    "learned",
+    "information.",
+    "however,",
+    "this",
+    "the",
+    "rewritten",
+    "paragraph",
+    ").",
+    "this",
+    "paper",
+    "in",
+    "inferring",
+    "ucial",
+    "for",
+    "istant",
+    "drug",
+    "discovery",
+    "predictive",
+    "uncertainty",
+    "and",
+    "drug",
+    "discovery.",
+    "optimization",
+    "and",
+    "a",
+    "dropout",
+    "variance,",
+    ".",
+    "the",
+    "rewritten",
+    "the",
+    "term",
+    "\"",
+    "ating",
+    "features",
+    "from",
+    "upper,",
+    "lower",
+    "data",
+    "at",
+    "every",
+    "a",
+    "meta-object",
+    "steps",
+    "for",
+    "solving",
+    "rewriting",
+    "it.",
+    "bayesian",
+    "predictive",
+    "uncertainty",
+    ".",
+    "however,",
+    "making",
+    "it",
+    "more",
+    "learning",
+    "neural",
+    "subset",
+    "it",
+    "more",
+    "accessible",
+    "-evaluate",
+    "numerous",
+    "tone,",
+    "the",
+    "preserved",
+    "in",
+    "the",
+    "set",
+    "functions.",
+    "large",
+    "language",
+    "models",
+    "simplic",
+    "when",
+    "using",
+    "neural",
+    "representation",
+    "learning.",
+    "-assistant",
+    "drug",
+    "intelligence-assisted",
+    "machine",
+    "learning.",
+    ".",
+    "this",
+    "paper",
+    ".",
+    "this",
+    "shift",
+    "inference",
+    "time.",
+    "using",
+    "weis",
+    "predictive",
+    "uncertainty.",
+    "by",
+    "taking",
+    "a",
+    ",",
+    "the",
+    "rewritten",
+    "'",
+    "error",
+    "analysis",
+    "training",
+    "information.",
+    "-assisted",
+    "drug",
+    "in",
+    "the",
+    "rewritten",
+    "ural",
+    "subset",
+    "selection",
+    "neural",
+    "subset",
+    "selection",
+    "in",
+    "large",
+    "language",
+    "technical",
+    "audience,",
+    "paragraph.",
+    "increasingly",
+    "crucial",
+    "in",
+    "prompting.",
+    "this"
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "discrepancy.n.02",
+        "definition": "an event that departs from expectations"
+      },
+      {
+        "name": "discovery.n.01",
+        "definition": "the act of discovering something"
+      },
+      {
+        "name": "paragraph.n.01",
+        "definition": "one of several distinct subdivisions of a text intended to separate ideas; the beginning is usually marked by a new indented line"
+      },
+      {
+        "name": "paper.n.01",
+        "definition": "a material made of cellulose pulp derived mainly from wood or rags or certain grasses"
+      },
+      {
+        "name": "deduce.v.01",
+        "definition": "reason by deduction; establish by deduction"
+      },
+      {
+        "name": "discovery.n.01",
+        "definition": "the act of discovering something"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "rewrite.v.01",
+        "definition": "write differently; alter the writing of"
+      },
+      {
+        "name": "lower_berth.n.01",
+        "definition": "the lower of two berths"
+      },
+      {
+        "name": "every.s.01",
+        "definition": "(used of count nouns) each and all of the members of a group considered singly and without exception"
+      },
+      {
+        "name": "resolution.n.04",
+        "definition": "finding a solution to a problem"
+      },
+      {
+        "name": "uncertainty.n.01",
+        "definition": "being unsettled or in doubt or dependent on chance"
+      },
+      {
+        "name": "more.n.01",
+        "definition": "English statesman who opposed Henry VIII's divorce from Catherine of Aragon and was imprisoned and beheaded; recalled for his concept of Utopia, the ideal state"
+      },
+      {
+        "name": "subset.n.01",
+        "definition": "a set whose members are members of another set; a set contained within another set"
+      },
+      {
+        "name": "accessible.a.01",
+        "definition": "capable of being reached"
+      },
+      {
+        "name": "numerous.s.01",
+        "definition": "amounting to a large indefinite number"
+      },
+      {
+        "name": "model.n.01",
+        "definition": "a hypothetical description of a complex entity or process"
+      },
+      {
+        "name": "nervous.a.03",
+        "definition": "of or relating to the nervous system"
+      },
+      {
+        "name": "drug.n.01",
+        "definition": "a substance that is used as a medicine or narcotic"
+      },
+      {
+        "name": "paper.n.01",
+        "definition": "a material made of cellulose pulp derived mainly from wood or rags or certain grasses"
+      },
+      {
+        "name": "shift.n.01",
+        "definition": "an event in which something is displaced without rotation"
+      },
+      {
+        "name": "wei.n.01",
+        "definition": "any of several imperial dynasties of China ruling from 220 to 265 and from 386 to 556"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "rewrite.v.01",
+        "definition": "write differently; alter the writing of"
+      },
+      {
+        "name": "analysis.n.01",
+        "definition": "an investigation of the component parts of a whole and their relations in making up the whole"
+      },
+      {
+        "name": "drug.n.01",
+        "definition": "a substance that is used as a medicine or narcotic"
+      },
+      {
+        "name": "rewrite.v.01",
+        "definition": "write differently; alter the writing of"
+      },
+      {
+        "name": "choice.n.02",
+        "definition": "the act of choosing or selecting"
+      },
+      {
+        "name": "choice.n.02",
+        "definition": "the act of choosing or selecting"
+      },
+      {
+        "name": "language.n.01",
+        "definition": "a systematic means of communicating by the use of sounds or conventional symbols"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      }
+    ],
+    "level2": [
+      {
+        "name": "deviation.n.01",
+        "definition": "a variation that deviates from the standard or norm"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "material.n.01",
+        "definition": "the tangible substance that goes into the makeup of a physical object"
+      },
+      {
+        "name": "reason.v.01",
+        "definition": "decide by reasoning; draw or come to a conclusion"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "write.v.02",
+        "definition": "communicate or express by writing"
+      },
+      {
+        "name": "berth.n.03",
+        "definition": "a bed on a ship or train; usually in tiers"
+      },
+      {
+        "name": "determination.n.01",
+        "definition": "the act of determining the properties of something, usually by research or calculation"
+      },
+      {
+        "name": "quality.n.01",
+        "definition": "an essential and distinguishing attribute of something or someone; --Shakespeare"
+      },
+      {
+        "name": "statesman.n.01",
+        "definition": "a man who is a respected leader in national or international affairs"
+      },
+      {
+        "name": "set.n.02",
+        "definition": "(mathematics) an abstract collection of numbers or symbols"
+      },
+      {
+        "name": "hypothesis.n.02",
+        "definition": "a tentative insight into the natural world; a concept that is not yet verified but that if true would explain certain facts or phenomena"
+      },
+      {
+        "name": "agent.n.03",
+        "definition": "a substance that exerts some force or effect"
+      },
+      {
+        "name": "material.n.01",
+        "definition": "the tangible substance that goes into the makeup of a physical object"
+      },
+      {
+        "name": "translation.n.02",
+        "definition": "a uniform movement without rotation"
+      },
+      {
+        "name": "dynasty.n.01",
+        "definition": "a sequence of powerful leaders in the same family"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "write.v.02",
+        "definition": "communicate or express by writing"
+      },
+      {
+        "name": "investigation.n.02",
+        "definition": "the work of inquiring into something thoroughly and systematically"
+      },
+      {
+        "name": "agent.n.03",
+        "definition": "a substance that exerts some force or effect"
+      },
+      {
+        "name": "write.v.02",
+        "definition": "communicate or express by writing"
+      },
+      {
+        "name": "action.n.01",
+        "definition": "something done (usually as opposed to something said)"
+      },
+      {
+        "name": "action.n.01",
+        "definition": "something done (usually as opposed to something said)"
+      },
+      {
+        "name": "communication.n.02",
+        "definition": "something that is communicated by or to or between people or groups"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      }
+    ],
+    "level3": [
+      {
+        "name": "variation.n.01",
+        "definition": "an instance of change; the rate or magnitude of change"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "substance.n.01",
+        "definition": "the real physical matter of which a person or thing consists"
+      },
+      {
+        "name": "think.v.03",
+        "definition": "use or exercise the mind or one's power of reason in order to make inferences, decisions, or arrive at a solution or judgments"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "communicate.v.02",
+        "definition": "transmit thoughts or feelings"
+      },
+      {
+        "name": "bed.n.01",
+        "definition": "a piece of furniture that provides a place to sleep"
+      },
+      {
+        "name": "discovery.n.01",
+        "definition": "the act of discovering something"
+      },
+      {
+        "name": "politician.n.02",
+        "definition": "a person active in party politics"
+      },
+      {
+        "name": "concept.n.01",
+        "definition": "an abstract or general idea inferred or derived from specific instances"
+      },
+      {
+        "name": "substance.n.07",
+        "definition": "a particular kind or species of matter with uniform properties"
+      },
+      {
+        "name": "substance.n.01",
+        "definition": "the real physical matter of which a person or thing consists"
+      },
+      {
+        "name": "change_of_location.n.01",
+        "definition": "a movement through space that changes the location of something"
+      },
+      {
+        "name": "family.n.04",
+        "definition": "people descended from a common ancestor"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "communicate.v.02",
+        "definition": "transmit thoughts or feelings"
+      },
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      },
+      {
+        "name": "substance.n.07",
+        "definition": "a particular kind or species of matter with uniform properties"
+      },
+      {
+        "name": "communicate.v.02",
+        "definition": "transmit thoughts or feelings"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      }
+    ],
+    "level4": [
+      {
+        "name": "change.n.01",
+        "definition": "an event that occurs when something passes from one state or phase to another"
+      },
+      {
+        "name": "communication.n.02",
+        "definition": "something that is communicated by or to or between people or groups"
+      },
+      {
+        "name": "part.n.01",
+        "definition": "something determined in relation to something that includes it"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "interact.v.01",
+        "definition": "act together or towards others or with others"
+      },
+      {
+        "name": "bedroom_furniture.n.01",
+        "definition": "furniture intended for use in a bedroom"
+      },
+      {
+        "name": "leader.n.01",
+        "definition": "a person who rules or guides or inspires others"
+      },
+      {
+        "name": "idea.n.01",
+        "definition": "the content of cognition; the main thing you are thinking about"
+      },
+      {
+        "name": "matter.n.03",
+        "definition": "that which has mass and occupies space"
+      },
+      {
+        "name": "part.n.01",
+        "definition": "something determined in relation to something that includes it"
+      },
+      {
+        "name": "movement.n.03",
+        "definition": "a natural event that involves a change in the position or location of something"
+      },
+      {
+        "name": "lineage.n.01",
+        "definition": "the descendants of one individual"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "interact.v.01",
+        "definition": "act together or towards others or with others"
+      },
+      {
+        "name": "matter.n.03",
+        "definition": "that which has mass and occupies space"
+      },
+      {
+        "name": "interact.v.01",
+        "definition": "act together or towards others or with others"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      }
+    ]
+  },
+  "concept_counts": {
+    "discrepancy.n.02": 1,
+    "deviation.n.01": 1,
+    "variation.n.01": 1,
+    "change.n.01": 1,
+    "discovery.n.01": 3,
+    "paragraph.n.01": 1,
+    "writing.n.02": 1,
+    "written_communication.n.01": 1,
+    "communication.n.02": 2,
+    "paper.n.01": 2,
+    "material.n.01": 2,
+    "substance.n.01": 2,
+    "part.n.01": 2,
+    "deduce.v.01": 1,
+    "reason.v.01": 1,
+    "think.v.03": 1,
+    "angstrom.n.01": 2,
+    "metric_linear_unit.n.01": 2,
+    "metric_unit.n.01": 2,
+    "unit_of_measurement.n.01": 3,
+    "rewrite.v.01": 3,
+    "write.v.02": 3,
+    "communicate.v.02": 3,
+    "interact.v.01": 3,
+    "lower_berth.n.01": 1,
+    "berth.n.03": 1,
+    "bed.n.01": 1,
+    "bedroom_furniture.n.01": 1,
+    "every.s.01": 1,
+    "resolution.n.04": 1,
+    "determination.n.01": 1,
+    "uncertainty.n.01": 1,
+    "quality.n.01": 1,
+    "more.n.01": 1,
+    "statesman.n.01": 1,
+    "politician.n.02": 1,
+    "leader.n.01": 1,
+    "subset.n.01": 1,
+    "set.n.02": 1,
+    "accessible.a.01": 1,
+    "numerous.s.01": 1,
+    "model.n.01": 1,
+    "hypothesis.n.02": 1,
+    "concept.n.01": 1,
+    "idea.n.01": 1,
+    "nervous.a.03": 1,
+    "drug.n.01": 2,
+    "agent.n.03": 2,
+    "substance.n.07": 2,
+    "matter.n.03": 2,
+    "shift.n.01": 1,
+    "translation.n.02": 1,
+    "change_of_location.n.01": 1,
+    "movement.n.03": 1,
+    "wei.n.01": 1,
+    "dynasty.n.01": 1,
+    "family.n.04": 1,
+    "lineage.n.01": 1,
+    "analysis.n.01": 1,
+    "investigation.n.02": 1,
+    "work.n.01": 1,
+    "choice.n.02": 2,
+    "action.n.01": 2,
+    "language.n.01": 1,
+    "inch.n.01": 1,
+    "linear_unit.n.01": 1,
+    "definite_quantity.n.01": 1
+  },
+  "top_concepts": [
+    {
+      "name": "discovery.n.01",
+      "count": 3,
+      "definition": "the act of discovering something"
+    },
+    {
+      "name": "unit_of_measurement.n.01",
+      "count": 3,
+      "definition": "any division of quantity accepted as a standard of measurement or exchange"
+    },
+    {
+      "name": "rewrite.v.01",
+      "count": 3,
+      "definition": "write differently; alter the writing of"
+    }
+  ]
+}

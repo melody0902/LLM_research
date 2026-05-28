@@ -1,0 +1,82 @@
+{
+  "file": "sweet_ai_sig_n4.json",
+  "decoded_phrases": [
+    "tree of thoughts project",
+    "behind the tree of",
+    "called **auto-j",
+    "exploration and self-ass",
+    "the tree of thoughts"
+  ],
+  "decoded_words": [
+    "tree",
+    "of",
+    "thoughts",
+    "project",
+    "behind",
+    "the",
+    "tree",
+    "of",
+    "called",
+    "**auto-j",
+    "exploration",
+    "and",
+    "self-ass",
+    "the",
+    "tree",
+    "of",
+    "thoughts"
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "undertaking.n.01",
+        "definition": "any piece of work that is undertaken or attempted"
+      },
+      {
+        "name": "idea.n.01",
+        "definition": "the content of cognition; the main thing you are thinking about"
+      }
+    ],
+    "level2": [
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      },
+      {
+        "name": "content.n.05",
+        "definition": "the sum or range of what has been perceived, discovered, or learned"
+      }
+    ],
+    "level3": [
+      {
+        "name": "cognition.n.01",
+        "definition": "the psychological result of perception and learning and reasoning"
+      }
+    ],
+    "level4": []
+  },
+  "concept_counts": {
+    "undertaking.n.01": 1,
+    "work.n.01": 1,
+    "idea.n.01": 1,
+    "content.n.05": 1,
+    "cognition.n.01": 1
+  },
+  "top_concepts": [
+    {
+      "name": "undertaking.n.01",
+      "count": 1,
+      "definition": "any piece of work that is undertaken or attempted"
+    },
+    {
+      "name": "work.n.01",
+      "count": 1,
+      "definition": "activity directed toward making or doing something"
+    },
+    {
+      "name": "idea.n.01",
+      "count": 1,
+      "definition": "the content of cognition; the main thing you are thinking about"
+    }
+  ]
+}

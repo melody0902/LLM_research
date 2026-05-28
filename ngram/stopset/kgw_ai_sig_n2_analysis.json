@@ -1,0 +1,974 @@
+{
+  "file": "kgw_ai_sig_n2.json",
+  "decoded_phrases": [
+    "algorithms\"",
+    "model that",
+    "the main",
+    "to '",
+    "by the",
+    "made by",
+    "in the",
+    "to understand",
+    "ap,",
+    "frozen large",
+    "to privacy",
+    "to \"",
+    "form of",
+    "ized the",
+    "a few",
+    "from their",
+    "to preserve",
+    "the rewritten",
+    "as classification",
+    "human needs",
+    "approximating",
+    "lack of",
+    "variability,",
+    "their mistakes",
+    "are preserved",
+    "-of-th",
+    "as\"",
+    "emphasis on",
+    "the text",
+    "chain-of",
+    "ing of",
+    "tone,",
+    "\"ai",
+    "13 billion",
+    "deep learning",
+    "l algorithms",
+    "training,",
+    "of potential",
+    "boosting",
+    "of thoughts",
+    "'simp",
+    "however,",
+    "ideas and",
+    "thoughts\"",
+    "the same",
+    "a lack",
+    "memorized",
+    "\" study",
+    "gradient-",
+    "to comprehend",
+    "\"traditional",
+    "modeling,",
+    "selective classification",
+    "to's",
+    "hrased",
+    "ferences have",
+    "rote the",
+    "provide a",
+    "know if",
+    "\" to",
+    "models to",
+    "models that",
+    "this process",
+    "-dl",
+    "functions.",
+    "the idea",
+    "llms",
+    "with human",
+    "me know",
+    "like any",
+    "to a",
+    "vlap",
+    "is to",
+    "me to",
+    "mistakes and",
+    "(ll",
+    "original meaning",
+    "emails.",
+    "can and",
+    "and provide",
+    "' and",
+    "graphical modeling",
+    "understand.",
+    "to \"(",
+    "snn",
+    ". changed",
+    "problem.",
+    ", these",
+    ", s",
+    "these models",
+    "preserve the",
+    "standard term",
+    ", we",
+    "but the",
+    "reinforcement learners",
+    "collections.",
+    "-dimensional'",
+    "called vl",
+    "process,",
+    "learning neural",
+    "the original",
+    ", they",
+    "like me"
+  ],
+  "decoded_words": [
+    "algorithms\"",
+    "model",
+    "that",
+    "the",
+    "main",
+    "to",
+    "'",
+    "by",
+    "the",
+    "made",
+    "by",
+    "in",
+    "the",
+    "to",
+    "understand",
+    "ap,",
+    "frozen",
+    "large",
+    "to",
+    "privacy",
+    "to",
+    "\"",
+    "form",
+    "of",
+    "ized",
+    "the",
+    "a",
+    "few",
+    "from",
+    "their",
+    "to",
+    "preserve",
+    "the",
+    "rewritten",
+    "as",
+    "classification",
+    "human",
+    "needs",
+    "approximating",
+    "lack",
+    "of",
+    "variability,",
+    "their",
+    "mistakes",
+    "are",
+    "preserved",
+    "-of-th",
+    "as\"",
+    "emphasis",
+    "on",
+    "the",
+    "text",
+    "chain-of",
+    "ing",
+    "of",
+    "tone,",
+    "\"ai",
+    "13",
+    "billion",
+    "deep",
+    "learning",
+    "l",
+    "algorithms",
+    "training,",
+    "of",
+    "potential",
+    "boosting",
+    "of",
+    "thoughts",
+    "'simp",
+    "however,",
+    "ideas",
+    "and",
+    "thoughts\"",
+    "the",
+    "same",
+    "a",
+    "lack",
+    "memorized",
+    "\"",
+    "study",
+    "gradient-",
+    "to",
+    "comprehend",
+    "\"traditional",
+    "modeling,",
+    "selective",
+    "classification",
+    "to's",
+    "hrased",
+    "ferences",
+    "have",
+    "rote",
+    "the",
+    "provide",
+    "a",
+    "know",
+    "if",
+    "\"",
+    "to",
+    "models",
+    "to",
+    "models",
+    "that",
+    "this",
+    "process",
+    "-dl",
+    "functions.",
+    "the",
+    "idea",
+    "llms",
+    "with",
+    "human",
+    "me",
+    "know",
+    "like",
+    "any",
+    "to",
+    "a",
+    "vlap",
+    "is",
+    "to",
+    "me",
+    "to",
+    "mistakes",
+    "and",
+    "(ll",
+    "original",
+    "meaning",
+    "emails.",
+    "can",
+    "and",
+    "and",
+    "provide",
+    "'",
+    "and",
+    "graphical",
+    "modeling",
+    "understand.",
+    "to",
+    "\"(",
+    "snn",
+    ".",
+    "changed",
+    "problem.",
+    ",",
+    "these",
+    ",",
+    "s",
+    "these",
+    "models",
+    "preserve",
+    "the",
+    "standard",
+    "term",
+    ",",
+    "we",
+    "but",
+    "the",
+    "reinforcement",
+    "learners",
+    "collections.",
+    "-dimensional'",
+    "called",
+    "vl",
+    "process,",
+    "learning",
+    "neural",
+    "the",
+    "original",
+    ",",
+    "they",
+    "like",
+    "me"
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "main.n.01",
+        "definition": "any very large body of (salt) water"
+      },
+      {
+        "name": "by.r.01",
+        "definition": "so as to pass a given point"
+      },
+      {
+        "name": "understand.v.01",
+        "definition": "know and comprehend the nature or meaning of"
+      },
+      {
+        "name": "large.n.01",
+        "definition": "a garment size for a large person"
+      },
+      {
+        "name": "privacy.n.01",
+        "definition": "the quality of being secluded from the presence or view of others"
+      },
+      {
+        "name": "a_few.s.01",
+        "definition": "more than one but indefinitely small in number"
+      },
+      {
+        "name": "preserve.n.01",
+        "definition": "a domain that seems to be specially reserved for someone"
+      },
+      {
+        "name": "rewrite.v.01",
+        "definition": "write differently; alter the writing of"
+      },
+      {
+        "name": "categorization.n.03",
+        "definition": "the act of distributing things into classes or categories of the same type"
+      },
+      {
+        "name": "need.n.01",
+        "definition": "a condition requiring relief"
+      },
+      {
+        "name": "approximate.v.01",
+        "definition": "be close or similar"
+      },
+      {
+        "name": "mistake.n.01",
+        "definition": "a wrong action attributable to bad judgment or ignorance or inattention"
+      },
+      {
+        "name": "continue.v.03",
+        "definition": "keep or maintain in unaltered condition; cause to remain or last"
+      },
+      {
+        "name": "on.a.01",
+        "definition": "in operation or operational"
+      },
+      {
+        "name": "text.n.01",
+        "definition": "the words of something written"
+      },
+      {
+        "name": "billion.n.01",
+        "definition": "the number that is represented as a one followed by 12 zeros; in the United Kingdom the usage followed in the United States is frequently seen"
+      },
+      {
+        "name": "learning.n.01",
+        "definition": "the cognitive process of acquiring skill or knowledge"
+      },
+      {
+        "name": "algorithm.n.01",
+        "definition": "a precise rule (or set of rules) specifying how to solve some problem"
+      },
+      {
+        "name": "potential.n.01",
+        "definition": "the inherent capacity for coming into being"
+      },
+      {
+        "name": "hike.v.01",
+        "definition": "increase"
+      },
+      {
+        "name": "idea.n.01",
+        "definition": "the content of cognition; the main thing you are thinking about"
+      },
+      {
+        "name": "lapp.n.01",
+        "definition": "a member of an indigenous nomadic people living in northern Scandinavia and herding reindeer"
+      },
+      {
+        "name": "lack.n.01",
+        "definition": "the state of needing something that is absent or unavailable"
+      },
+      {
+        "name": "memorize.v.01",
+        "definition": "commit to memory; learn by heart"
+      },
+      {
+        "name": "survey.n.01",
+        "definition": "a detailed critical inspection"
+      },
+      {
+        "name": "grok.v.01",
+        "definition": "get the meaning of something"
+      },
+      {
+        "name": "categorization.n.03",
+        "definition": "the act of distributing things into classes or categories of the same type"
+      },
+      {
+        "name": "rich_person.n.01",
+        "definition": "a person who possesses great material wealth"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "procedure.n.01",
+        "definition": "a particular course of action intended to achieve a result"
+      },
+      {
+        "name": "idea.n.01",
+        "definition": "the content of cognition; the main thing you are thinking about"
+      },
+      {
+        "name": "master_of_laws.n.01",
+        "definition": "an advanced law degree"
+      },
+      {
+        "name": "homo.n.02",
+        "definition": "any living or extinct member of the family Hominidae characterized by superior intelligence, articulate speech, and erect carriage"
+      },
+      {
+        "name": "know.n.01",
+        "definition": "the fact of being aware of information that is known to few people"
+      },
+      {
+        "name": "any.s.01",
+        "definition": "one or some or every or all without specification"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "meaning.n.01",
+        "definition": "the message that is intended or expressed or signified"
+      },
+      {
+        "name": "supply.v.01",
+        "definition": "give something useful or necessary to"
+      },
+      {
+        "name": "mold.n.08",
+        "definition": "sculpture produced by molding"
+      },
+      {
+        "name": "change.v.01",
+        "definition": "cause to change; make different; cause a transformation"
+      },
+      {
+        "name": "second.n.01",
+        "definition": "1/60 of a minute; the basic unit of time adopted under the Systeme International d'Unites"
+      },
+      {
+        "name": "model.n.01",
+        "definition": "a hypothetical description of a complex entity or process"
+      },
+      {
+        "name": "term.n.01",
+        "definition": "a word or expression used for some particular thing"
+      },
+      {
+        "name": "learner.n.01",
+        "definition": "someone (especially a child) who learns (as from a teacher) or takes up knowledge or beliefs"
+      },
+      {
+        "name": "nervous.a.03",
+        "definition": "of or relating to the nervous system"
+      },
+      {
+        "name": "master.n.06",
+        "definition": "an original creation (i.e., an audio recording) from which copies can be made"
+      },
+      {
+        "name": "maine.n.01",
+        "definition": "a state in New England"
+      }
+    ],
+    "level2": [
+      {
+        "name": "body_of_water.n.01",
+        "definition": "the part of the earth's surface covered with water (such as a river or lake or ocean)"
+      },
+      {
+        "name": "size.n.02",
+        "definition": "the property resulting from being one of a series of graduated measurements (as of clothing)"
+      },
+      {
+        "name": "reclusiveness.n.01",
+        "definition": "a disposition to prefer seclusion or isolation"
+      },
+      {
+        "name": "sphere.n.01",
+        "definition": "a particular environment or walk of life"
+      },
+      {
+        "name": "write.v.02",
+        "definition": "communicate or express by writing"
+      },
+      {
+        "name": "grouping.n.02",
+        "definition": "the activity of putting things together in groups"
+      },
+      {
+        "name": "resemble.v.01",
+        "definition": "appear like; be similar or bear a likeness to"
+      },
+      {
+        "name": "nonaccomplishment.n.01",
+        "definition": "an act that does not achieve its intended goal"
+      },
+      {
+        "name": "keep.v.01",
+        "definition": "keep in a certain state, position, or activity; e.g.,"
+      },
+      {
+        "name": "matter.n.06",
+        "definition": "written works (especially in books or magazines)"
+      },
+      {
+        "name": "large_integer.n.01",
+        "definition": "an integer equal to or greater than ten"
+      },
+      {
+        "name": "basic_cognitive_process.n.01",
+        "definition": "cognitive processes involved in obtaining and storing knowledge"
+      },
+      {
+        "name": "rule.n.11",
+        "definition": "(mathematics) a standard procedure for solving a class of mathematical problems"
+      },
+      {
+        "name": "possibility.n.02",
+        "definition": "capability of existing or happening or being true"
+      },
+      {
+        "name": "raise.v.02",
+        "definition": "raise from a lower to a higher position"
+      },
+      {
+        "name": "content.n.05",
+        "definition": "the sum or range of what has been perceived, discovered, or learned"
+      },
+      {
+        "name": "european.n.01",
+        "definition": "a native or inhabitant of Europe"
+      },
+      {
+        "name": "need.n.01",
+        "definition": "a condition requiring relief"
+      },
+      {
+        "name": "study.v.05",
+        "definition": "learn by reading books"
+      },
+      {
+        "name": "examination.n.01",
+        "definition": "the act of examining something closely (as for mistakes)"
+      },
+      {
+        "name": "understand.v.01",
+        "definition": "know and comprehend the nature or meaning of"
+      },
+      {
+        "name": "grouping.n.02",
+        "definition": "the activity of putting things together in groups"
+      },
+      {
+        "name": "person.n.01",
+        "definition": "a human being"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "content.n.05",
+        "definition": "the sum or range of what has been perceived, discovered, or learned"
+      },
+      {
+        "name": "law_degree.n.01",
+        "definition": "degree conferred on someone who successfully completes law school"
+      },
+      {
+        "name": "hominid.n.01",
+        "definition": "a primate of the family Hominidae"
+      },
+      {
+        "name": "knowing.n.01",
+        "definition": "a clear and certain mental apprehension"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "message.n.02",
+        "definition": "what a communication that is about something is about"
+      },
+      {
+        "name": "give.v.03",
+        "definition": "transfer possession of something concrete or abstract to somebody"
+      },
+      {
+        "name": "sculpture.n.01",
+        "definition": "a three-dimensional work of plastic art"
+      },
+      {
+        "name": "time_unit.n.01",
+        "definition": "a unit for measuring time periods"
+      },
+      {
+        "name": "hypothesis.n.02",
+        "definition": "a tentative insight into the natural world; a concept that is not yet verified but that if true would explain certain facts or phenomena"
+      },
+      {
+        "name": "word.n.01",
+        "definition": "a unit of language that native speakers can identify"
+      },
+      {
+        "name": "person.n.01",
+        "definition": "a human being"
+      },
+      {
+        "name": "creation.n.02",
+        "definition": "an artifact that has been brought into existence by someone"
+      },
+      {
+        "name": "american_state.n.01",
+        "definition": "one of the 50 states of the United States"
+      }
+    ],
+    "level3": [
+      {
+        "name": "property.n.02",
+        "definition": "a basic or essential attribute shared by all members of a class"
+      },
+      {
+        "name": "aloneness.n.01",
+        "definition": "a disposition toward being alone"
+      },
+      {
+        "name": "environment.n.01",
+        "definition": "the totality of surrounding conditions"
+      },
+      {
+        "name": "communicate.v.02",
+        "definition": "transmit thoughts or feelings"
+      },
+      {
+        "name": "match.v.01",
+        "definition": "be compatible, similar or consistent; coincide in their characteristics"
+      },
+      {
+        "name": "writing.n.02",
+        "definition": "the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)"
+      },
+      {
+        "name": "integer.n.01",
+        "definition": "any of the natural numbers (positive or negative) or zero"
+      },
+      {
+        "name": "process.n.02",
+        "definition": "(psychology) the performance of some composite cognitive activity; an operation that affects mental contents"
+      },
+      {
+        "name": "procedure.n.01",
+        "definition": "a particular course of action intended to achieve a result"
+      },
+      {
+        "name": "being.n.01",
+        "definition": "the state or fact of existing"
+      },
+      {
+        "name": "move.v.02",
+        "definition": "cause to move or shift into a new position or place, both in a concrete and in an abstract sense"
+      },
+      {
+        "name": "cognition.n.01",
+        "definition": "the psychological result of perception and learning and reasoning"
+      },
+      {
+        "name": "inhabitant.n.01",
+        "definition": "a person who inhabits a particular place"
+      },
+      {
+        "name": "learn.v.01",
+        "definition": "gain knowledge or skills"
+      },
+      {
+        "name": "investigation.n.02",
+        "definition": "the work of inquiring into something thoroughly and systematically"
+      },
+      {
+        "name": "organism.n.01",
+        "definition": "a living thing that has (or can develop) the ability to act or function independently"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "cognition.n.01",
+        "definition": "the psychological result of perception and learning and reasoning"
+      },
+      {
+        "name": "academic_degree.n.01",
+        "definition": "an award conferred by a college or university signifying that the recipient has satisfactorily completed a course of study"
+      },
+      {
+        "name": "primate.n.02",
+        "definition": "any placental mammal of the order Primates; has good eyesight and flexible hands and feet"
+      },
+      {
+        "name": "higher_cognitive_process.n.01",
+        "definition": "cognitive processes that presuppose the availability of knowledge and put it to use"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "communication.n.02",
+        "definition": "something that is communicated by or to or between people or groups"
+      },
+      {
+        "name": "transfer.v.05",
+        "definition": "cause to change ownership"
+      },
+      {
+        "name": "plastic_art.n.01",
+        "definition": "the arts of shaping or modeling; carving and sculpture"
+      },
+      {
+        "name": "measure.n.02",
+        "definition": "how much there is or how many there are of something that you can quantify"
+      },
+      {
+        "name": "concept.n.01",
+        "definition": "an abstract or general idea inferred or derived from specific instances"
+      },
+      {
+        "name": "language_unit.n.01",
+        "definition": "one of the natural units into which linguistic messages can be analyzed"
+      },
+      {
+        "name": "organism.n.01",
+        "definition": "a living thing that has (or can develop) the ability to act or function independently"
+      },
+      {
+        "name": "artifact.n.01",
+        "definition": "a man-made object taken as a whole"
+      },
+      {
+        "name": "state.n.01",
+        "definition": "the territory occupied by one of the constituent administrative districts of a nation"
+      }
+    ],
+    "level4": [
+      {
+        "name": "disposition.n.01",
+        "definition": "your usual mood"
+      },
+      {
+        "name": "interact.v.01",
+        "definition": "act together or towards others or with others"
+      },
+      {
+        "name": "equal.v.01",
+        "definition": "be identical or equivalent to"
+      },
+      {
+        "name": "written_communication.n.01",
+        "definition": "communication by means of written symbols (either printed or handwritten)"
+      },
+      {
+        "name": "number.n.02",
+        "definition": "a concept of quantity involving zero and units"
+      },
+      {
+        "name": "cognition.n.01",
+        "definition": "the psychological result of perception and learning and reasoning"
+      },
+      {
+        "name": "person.n.01",
+        "definition": "a human being"
+      },
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      },
+      {
+        "name": "living_thing.n.01",
+        "definition": "a living (or once living) entity"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "award.n.02",
+        "definition": "a tangible symbol signifying approval or distinction"
+      },
+      {
+        "name": "placental.n.01",
+        "definition": "mammals having a placenta; all mammals except monotremes and marsupials"
+      },
+      {
+        "name": "process.n.02",
+        "definition": "(psychology) the performance of some composite cognitive activity; an operation that affects mental contents"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "art.n.01",
+        "definition": "the products of human creativity; works of art collectively"
+      },
+      {
+        "name": "idea.n.01",
+        "definition": "the content of cognition; the main thing you are thinking about"
+      },
+      {
+        "name": "part.n.01",
+        "definition": "something determined in relation to something that includes it"
+      },
+      {
+        "name": "living_thing.n.01",
+        "definition": "a living (or once living) entity"
+      },
+      {
+        "name": "whole.n.02",
+        "definition": "an assemblage of parts that is regarded as a single entity"
+      },
+      {
+        "name": "administrative_district.n.01",
+        "definition": "a district defined for administrative purposes"
+      }
+    ]
+  },
+  "concept_counts": {
+    "main.n.01": 1,
+    "body_of_water.n.01": 1,
+    "by.r.01": 1,
+    "understand.v.01": 2,
+    "large.n.01": 1,
+    "size.n.02": 1,
+    "property.n.02": 1,
+    "privacy.n.01": 1,
+    "reclusiveness.n.01": 1,
+    "aloneness.n.01": 1,
+    "disposition.n.01": 1,
+    "a_few.s.01": 1,
+    "preserve.n.01": 1,
+    "sphere.n.01": 1,
+    "environment.n.01": 1,
+    "rewrite.v.01": 1,
+    "write.v.02": 1,
+    "communicate.v.02": 1,
+    "interact.v.01": 1,
+    "categorization.n.03": 2,
+    "grouping.n.02": 2,
+    "need.n.01": 2,
+    "approximate.v.01": 1,
+    "resemble.v.01": 1,
+    "match.v.01": 1,
+    "equal.v.01": 1,
+    "mistake.n.01": 1,
+    "nonaccomplishment.n.01": 1,
+    "continue.v.03": 1,
+    "keep.v.01": 1,
+    "on.a.01": 1,
+    "text.n.01": 1,
+    "matter.n.06": 1,
+    "writing.n.02": 1,
+    "written_communication.n.01": 1,
+    "billion.n.01": 1,
+    "large_integer.n.01": 1,
+    "integer.n.01": 1,
+    "number.n.02": 1,
+    "learning.n.01": 1,
+    "basic_cognitive_process.n.01": 1,
+    "process.n.02": 2,
+    "cognition.n.01": 3,
+    "algorithm.n.01": 1,
+    "rule.n.11": 1,
+    "procedure.n.01": 2,
+    "potential.n.01": 1,
+    "possibility.n.02": 1,
+    "being.n.01": 1,
+    "hike.v.01": 1,
+    "raise.v.02": 1,
+    "move.v.02": 1,
+    "idea.n.01": 3,
+    "content.n.05": 2,
+    "lapp.n.01": 1,
+    "european.n.01": 1,
+    "inhabitant.n.01": 1,
+    "person.n.01": 3,
+    "lack.n.01": 1,
+    "memorize.v.01": 1,
+    "study.v.05": 1,
+    "learn.v.01": 1,
+    "survey.n.01": 1,
+    "examination.n.01": 1,
+    "investigation.n.02": 1,
+    "work.n.01": 1,
+    "grok.v.01": 1,
+    "rich_person.n.01": 1,
+    "organism.n.01": 2,
+    "living_thing.n.01": 2,
+    "angstrom.n.01": 2,
+    "metric_linear_unit.n.01": 2,
+    "metric_unit.n.01": 2,
+    "unit_of_measurement.n.01": 2,
+    "master_of_laws.n.01": 1,
+    "law_degree.n.01": 1,
+    "academic_degree.n.01": 1,
+    "award.n.02": 1,
+    "homo.n.02": 1,
+    "hominid.n.01": 1,
+    "primate.n.02": 1,
+    "placental.n.01": 1,
+    "know.n.01": 1,
+    "knowing.n.01": 1,
+    "higher_cognitive_process.n.01": 1,
+    "any.s.01": 1,
+    "meaning.n.01": 1,
+    "message.n.02": 1,
+    "communication.n.02": 1,
+    "supply.v.01": 1,
+    "give.v.03": 1,
+    "transfer.v.05": 1,
+    "mold.n.08": 1,
+    "sculpture.n.01": 1,
+    "plastic_art.n.01": 1,
+    "art.n.01": 1,
+    "change.v.01": 1,
+    "second.n.01": 1,
+    "time_unit.n.01": 1,
+    "measure.n.02": 1,
+    "model.n.01": 1,
+    "hypothesis.n.02": 1,
+    "concept.n.01": 1,
+    "term.n.01": 1,
+    "word.n.01": 1,
+    "language_unit.n.01": 1,
+    "part.n.01": 1,
+    "learner.n.01": 1,
+    "nervous.a.03": 1,
+    "master.n.06": 1,
+    "creation.n.02": 1,
+    "artifact.n.01": 1,
+    "whole.n.02": 1,
+    "maine.n.01": 1,
+    "american_state.n.01": 1,
+    "state.n.01": 1,
+    "administrative_district.n.01": 1
+  },
+  "top_concepts": [
+    {
+      "name": "cognition.n.01",
+      "count": 3,
+      "definition": "the psychological result of perception and learning and reasoning"
+    },
+    {
+      "name": "idea.n.01",
+      "count": 3,
+      "definition": "the content of cognition; the main thing you are thinking about"
+    },
+    {
+      "name": "person.n.01",
+      "count": 3,
+      "definition": "a human being"
+    }
+  ]
+}

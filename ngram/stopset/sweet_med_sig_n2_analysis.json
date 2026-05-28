@@ -1,0 +1,763 @@
+{
+  "file": "sweet_med_sig_n2.json",
+  "decoded_phrases": [
+    "approaches,",
+    "3 months",
+    "have developed",
+    "study with",
+    "paragraph flow",
+    "different.",
+    ".\n\nnote",
+    "to make",
+    "a substantial",
+    "-world medical",
+    "generally well",
+    "clarity and",
+    ", technical",
+    ", which",
+    "health app",
+    "of cancer",
+    "developed the",
+    "healthcare system",
+    "its use",
+    "use continuous",
+    "that relies",
+    "mental heath",
+    "self-reported",
+    "mold",
+    "meaning remains",
+    "loneliness,",
+    "well-re",
+    "platforms and",
+    "main obstacles",
+    "surveys and",
+    "respiratory disease",
+    "use in",
+    "substantial amount",
+    "available,",
+    "applications of",
+    "a mobile",
+    "results by",
+    "proposed framework",
+    "the m",
+    "\"the",
+    "to preserve",
+    "an example",
+    "text.)",
+    "study on",
+    ", three",
+    "the rewritten",
+    "with",
+    "experiences.",
+    "trends in",
+    "greece.",
+    "mobile health",
+    "this study",
+    "in electronic",
+    "-reported experiences",
+    "also",
+    "original meaning"
+  ],
+  "decoded_words": [
+    "approaches,",
+    "3",
+    "months",
+    "have",
+    "developed",
+    "study",
+    "with",
+    "paragraph",
+    "flow",
+    "different.",
+    ".",
+    "note",
+    "to",
+    "make",
+    "a",
+    "substantial",
+    "-world",
+    "medical",
+    "generally",
+    "well",
+    "clarity",
+    "and",
+    ",",
+    "technical",
+    ",",
+    "which",
+    "health",
+    "app",
+    "of",
+    "cancer",
+    "developed",
+    "the",
+    "healthcare",
+    "system",
+    "its",
+    "use",
+    "use",
+    "continuous",
+    "that",
+    "relies",
+    "mental",
+    "heath",
+    "self-reported",
+    "mold",
+    "meaning",
+    "remains",
+    "loneliness,",
+    "well-re",
+    "platforms",
+    "and",
+    "main",
+    "obstacles",
+    "surveys",
+    "and",
+    "respiratory",
+    "disease",
+    "use",
+    "in",
+    "substantial",
+    "amount",
+    "available,",
+    "applications",
+    "of",
+    "a",
+    "mobile",
+    "results",
+    "by",
+    "proposed",
+    "framework",
+    "the",
+    "m",
+    "\"the",
+    "to",
+    "preserve",
+    "an",
+    "example",
+    "text.)",
+    "study",
+    "on",
+    ",",
+    "three",
+    "the",
+    "rewritten",
+    "with",
+    "experiences.",
+    "trends",
+    "in",
+    "greece.",
+    "mobile",
+    "health",
+    "this",
+    "study",
+    "in",
+    "electronic",
+    "-reported",
+    "experiences",
+    "also",
+    "original",
+    "meaning"
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "calendar_month.n.01",
+        "definition": "one of the twelve divisions of the calendar year"
+      },
+      {
+        "name": "develop.v.01",
+        "definition": "make something new, such as a product or a mental or artistic creation"
+      },
+      {
+        "name": "flow.n.01",
+        "definition": "the motion characteristic of fluids (liquids or gases)"
+      },
+      {
+        "name": "note.n.01",
+        "definition": "a brief written record"
+      },
+      {
+        "name": "brand.n.02",
+        "definition": "a recognizable kind"
+      },
+      {
+        "name": "significant.s.02",
+        "definition": "fairly large"
+      },
+      {
+        "name": "checkup.n.01",
+        "definition": "a thorough physical examination; includes a variety of tests depending on the age and sex and health of the person"
+      },
+      {
+        "name": "well.n.01",
+        "definition": "a deep hole or shaft dug or drilled to obtain water or oil or gas or brine"
+      },
+      {
+        "name": "technical.n.01",
+        "definition": "a pickup truck with a gun mounted on it"
+      },
+      {
+        "name": "cancer.n.01",
+        "definition": "any malignant growth or tumor caused by abnormal and uncontrolled cell division; it may spread to other parts of the body through the lymphatic system or the blood stream"
+      },
+      {
+        "name": "system.n.01",
+        "definition": "instrumentality that combines interrelated interacting artifacts designed to work as a coherent entity"
+      },
+      {
+        "name": "use.n.01",
+        "definition": "the act of using"
+      },
+      {
+        "name": "continuous.a.01",
+        "definition": "continuing in time or space without interruption; - James Jeans"
+      },
+      {
+        "name": "trust.v.01",
+        "definition": "have confidence or faith in"
+      },
+      {
+        "name": "heath.n.01",
+        "definition": "a low evergreen shrub of the family Ericaceae; has small bell-shaped pink or purple flowers"
+      },
+      {
+        "name": "cast.n.03",
+        "definition": "the distinctive form in which a thing is made"
+      },
+      {
+        "name": "remains.n.01",
+        "definition": "any object that is left unused or still extant"
+      },
+      {
+        "name": "obstacle.n.01",
+        "definition": "something immaterial that stands in the way and must be circumvented or surmounted"
+      },
+      {
+        "name": "respiratory_disease.n.01",
+        "definition": "a disease affecting the respiratory system"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      },
+      {
+        "name": "sum.n.01",
+        "definition": "a quantity of money"
+      },
+      {
+        "name": "mobile.n.01",
+        "definition": "a river in southwestern Alabama; flows into Mobile Bay"
+      },
+      {
+        "name": "by.r.01",
+        "definition": "so as to pass a given point"
+      },
+      {
+        "name": "model.n.01",
+        "definition": "a hypothetical description of a complex entity or process"
+      },
+      {
+        "name": "meter.n.01",
+        "definition": "the basic unit of length adopted under the Systeme International d'Unites (approximately 1.094 yards)"
+      },
+      {
+        "name": "preserve.n.01",
+        "definition": "a domain that seems to be specially reserved for someone"
+      },
+      {
+        "name": "example.n.01",
+        "definition": "an item of information that is typical of a class or group"
+      },
+      {
+        "name": "on.a.01",
+        "definition": "in operation or operational"
+      },
+      {
+        "name": "three.n.01",
+        "definition": "the cardinal number that is the sum of one and one and one"
+      },
+      {
+        "name": "rewrite.v.01",
+        "definition": "write differently; alter the writing of"
+      },
+      {
+        "name": "inch.n.01",
+        "definition": "a unit of length equal to one twelfth of a foot"
+      },
+      {
+        "name": "health.n.01",
+        "definition": "a healthy state of wellbeing free from disease"
+      },
+      {
+        "name": "survey.n.01",
+        "definition": "a detailed critical inspection"
+      },
+      {
+        "name": "electronic.a.01",
+        "definition": "of or relating to electronics; concerned with or using devices that operate on principles governing the behavior of electrons"
+      },
+      {
+        "name": "experience.n.01",
+        "definition": "the accumulation of knowledge or skill that results from direct participation in events or activities"
+      },
+      {
+        "name": "besides.r.02",
+        "definition": "in addition"
+      },
+      {
+        "name": "meaning.n.01",
+        "definition": "the message that is intended or expressed or signified"
+      }
+    ],
+    "level2": [
+      {
+        "name": "time_period.n.01",
+        "definition": "an amount of time"
+      },
+      {
+        "name": "create.v.02",
+        "definition": "bring into existence"
+      },
+      {
+        "name": "change_of_location.n.01",
+        "definition": "a movement through space that changes the location of something"
+      },
+      {
+        "name": "written_record.n.01",
+        "definition": "a written document preserving knowledge of facts or events"
+      },
+      {
+        "name": "kind.n.01",
+        "definition": "a category of things distinguished by some common characteristic or quality"
+      },
+      {
+        "name": "examination.n.01",
+        "definition": "the act of examining something closely (as for mistakes)"
+      },
+      {
+        "name": "excavation.n.03",
+        "definition": "a hole in the ground made by excavating"
+      },
+      {
+        "name": "pickup.n.01",
+        "definition": "a light truck with an open body and low sides and a tailboard"
+      },
+      {
+        "name": "malignant_tumor.n.01",
+        "definition": "a tumor that is malignant and tends to spread to other parts of the body"
+      },
+      {
+        "name": "instrumentality.n.03",
+        "definition": "an artifact (or system of artifacts) that is instrumental in accomplishing some end"
+      },
+      {
+        "name": "believe.v.01",
+        "definition": "accept as true; take to be true"
+      },
+      {
+        "name": "shrub.n.01",
+        "definition": "a low woody perennial plant usually having several major stems"
+      },
+      {
+        "name": "solid.n.03",
+        "definition": "a three-dimensional shape"
+      },
+      {
+        "name": "hindrance.n.01",
+        "definition": "something immaterial that interferes with or delays action or progress"
+      },
+      {
+        "name": "disease.n.01",
+        "definition": "an impairment of health or a condition of abnormal functioning"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      },
+      {
+        "name": "assets.n.01",
+        "definition": "anything of material value or usefulness that is owned by a person or company"
+      },
+      {
+        "name": "river.n.01",
+        "definition": "a large natural stream of water (larger than a creek)"
+      },
+      {
+        "name": "hypothesis.n.02",
+        "definition": "a tentative insight into the natural world; a concept that is not yet verified but that if true would explain certain facts or phenomena"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "sphere.n.01",
+        "definition": "a particular environment or walk of life"
+      },
+      {
+        "name": "information.n.02",
+        "definition": "knowledge acquired through study or experience or instruction"
+      },
+      {
+        "name": "digit.n.01",
+        "definition": "one of the elements that collectively form a system of numeration"
+      },
+      {
+        "name": "write.v.02",
+        "definition": "communicate or express by writing"
+      },
+      {
+        "name": "linear_unit.n.01",
+        "definition": "a unit of measurement of length"
+      },
+      {
+        "name": "wellbeing.n.01",
+        "definition": "a contented state of being happy and healthy and prosperous"
+      },
+      {
+        "name": "examination.n.01",
+        "definition": "the act of examining something closely (as for mistakes)"
+      },
+      {
+        "name": "education.n.02",
+        "definition": "knowledge acquired by learning and instruction"
+      },
+      {
+        "name": "message.n.02",
+        "definition": "what a communication that is about something is about"
+      }
+    ],
+    "level3": [
+      {
+        "name": "fundamental_quantity.n.01",
+        "definition": "one of the four quantities that are the basis of systems of measurement"
+      },
+      {
+        "name": "movement.n.03",
+        "definition": "a natural event that involves a change in the position or location of something"
+      },
+      {
+        "name": "record.n.01",
+        "definition": "anything (such as a document or a phonograph record or a photograph) providing permanent evidence of or information about past events"
+      },
+      {
+        "name": "category.n.02",
+        "definition": "a general concept that marks divisions or coordinations in a conceptual scheme"
+      },
+      {
+        "name": "investigation.n.02",
+        "definition": "the work of inquiring into something thoroughly and systematically"
+      },
+      {
+        "name": "artifact.n.01",
+        "definition": "a man-made object taken as a whole"
+      },
+      {
+        "name": "truck.n.01",
+        "definition": "an automotive vehicle suitable for hauling"
+      },
+      {
+        "name": "malignancy.n.01",
+        "definition": "(medicine) a malignant state; progressive and resistant to treatment and tending to cause death"
+      },
+      {
+        "name": "artifact.n.01",
+        "definition": "a man-made object taken as a whole"
+      },
+      {
+        "name": "accept.v.01",
+        "definition": "consider or hold as true"
+      },
+      {
+        "name": "woody_plant.n.01",
+        "definition": "a plant having hard lignified tissues or woody parts especially stems"
+      },
+      {
+        "name": "shape.n.02",
+        "definition": "the spatial arrangement of something as distinct from its substance"
+      },
+      {
+        "name": "difficulty.n.02",
+        "definition": "a factor causing trouble in achieving a positive result or tending to produce a negative result"
+      },
+      {
+        "name": "illness.n.01",
+        "definition": "impairment of normal physiological function affecting part or all of an organism"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "possession.n.02",
+        "definition": "anything owned or possessed"
+      },
+      {
+        "name": "stream.n.01",
+        "definition": "a natural body of running water flowing on or under the earth"
+      },
+      {
+        "name": "concept.n.01",
+        "definition": "an abstract or general idea inferred or derived from specific instances"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "environment.n.01",
+        "definition": "the totality of surrounding conditions"
+      },
+      {
+        "name": "cognition.n.01",
+        "definition": "the psychological result of perception and learning and reasoning"
+      },
+      {
+        "name": "integer.n.01",
+        "definition": "any of the natural numbers (positive or negative) or zero"
+      },
+      {
+        "name": "communicate.v.02",
+        "definition": "transmit thoughts or feelings"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "prosperity.n.02",
+        "definition": "the condition of prospering; having good fortune"
+      },
+      {
+        "name": "investigation.n.02",
+        "definition": "the work of inquiring into something thoroughly and systematically"
+      },
+      {
+        "name": "content.n.05",
+        "definition": "the sum or range of what has been perceived, discovered, or learned"
+      },
+      {
+        "name": "communication.n.02",
+        "definition": "something that is communicated by or to or between people or groups"
+      }
+    ],
+    "level4": [
+      {
+        "name": "measure.n.02",
+        "definition": "how much there is or how many there are of something that you can quantify"
+      },
+      {
+        "name": "happening.n.01",
+        "definition": "an event that happens"
+      },
+      {
+        "name": "evidence.n.02",
+        "definition": "an indication that makes something evident"
+      },
+      {
+        "name": "concept.n.01",
+        "definition": "an abstract or general idea inferred or derived from specific instances"
+      },
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      },
+      {
+        "name": "whole.n.02",
+        "definition": "an assemblage of parts that is regarded as a single entity"
+      },
+      {
+        "name": "motor_vehicle.n.01",
+        "definition": "a self-propelled wheeled vehicle that does not run on rails"
+      },
+      {
+        "name": "disease.n.01",
+        "definition": "an impairment of health or a condition of abnormal functioning"
+      },
+      {
+        "name": "whole.n.02",
+        "definition": "an assemblage of parts that is regarded as a single entity"
+      },
+      {
+        "name": "evaluate.v.02",
+        "definition": "form a critical opinion of"
+      },
+      {
+        "name": "vascular_plant.n.01",
+        "definition": "green plant having a vascular system: ferns, gymnosperms, angiosperms"
+      },
+      {
+        "name": "cognitive_factor.n.01",
+        "definition": "something immaterial (as a circumstance or influence) that contributes to producing a result"
+      },
+      {
+        "name": "ill_health.n.01",
+        "definition": "a state in which you are unable to function normally and without pain"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "body_of_water.n.01",
+        "definition": "the part of the earth's surface covered with water (such as a river or lake or ocean)"
+      },
+      {
+        "name": "idea.n.01",
+        "definition": "the content of cognition; the main thing you are thinking about"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "number.n.02",
+        "definition": "a concept of quantity involving zero and units"
+      },
+      {
+        "name": "interact.v.01",
+        "definition": "act together or towards others or with others"
+      },
+      {
+        "name": "definite_quantity.n.01",
+        "definition": "a specific measure of amount"
+      },
+      {
+        "name": "good_fortune.n.01",
+        "definition": "an auspicious state resulting from favorable outcomes"
+      },
+      {
+        "name": "work.n.01",
+        "definition": "activity directed toward making or doing something"
+      },
+      {
+        "name": "cognition.n.01",
+        "definition": "the psychological result of perception and learning and reasoning"
+      }
+    ]
+  },
+  "concept_counts": {
+    "calendar_month.n.01": 1,
+    "time_period.n.01": 1,
+    "fundamental_quantity.n.01": 1,
+    "measure.n.02": 1,
+    "develop.v.01": 1,
+    "create.v.02": 1,
+    "flow.n.01": 1,
+    "change_of_location.n.01": 1,
+    "movement.n.03": 1,
+    "happening.n.01": 1,
+    "note.n.01": 1,
+    "written_record.n.01": 1,
+    "record.n.01": 1,
+    "evidence.n.02": 1,
+    "brand.n.02": 1,
+    "kind.n.01": 1,
+    "category.n.02": 1,
+    "concept.n.01": 2,
+    "significant.s.02": 1,
+    "checkup.n.01": 1,
+    "examination.n.01": 2,
+    "investigation.n.02": 2,
+    "work.n.01": 2,
+    "well.n.01": 1,
+    "excavation.n.03": 1,
+    "artifact.n.01": 2,
+    "whole.n.02": 2,
+    "technical.n.01": 1,
+    "pickup.n.01": 1,
+    "truck.n.01": 1,
+    "motor_vehicle.n.01": 1,
+    "cancer.n.01": 1,
+    "malignant_tumor.n.01": 1,
+    "malignancy.n.01": 1,
+    "disease.n.01": 2,
+    "system.n.01": 1,
+    "instrumentality.n.03": 1,
+    "use.n.01": 1,
+    "continuous.a.01": 1,
+    "trust.v.01": 1,
+    "believe.v.01": 1,
+    "accept.v.01": 1,
+    "evaluate.v.02": 1,
+    "heath.n.01": 1,
+    "shrub.n.01": 1,
+    "woody_plant.n.01": 1,
+    "vascular_plant.n.01": 1,
+    "cast.n.03": 1,
+    "solid.n.03": 1,
+    "shape.n.02": 1,
+    "remains.n.01": 1,
+    "obstacle.n.01": 1,
+    "hindrance.n.01": 1,
+    "difficulty.n.02": 1,
+    "cognitive_factor.n.01": 1,
+    "respiratory_disease.n.01": 1,
+    "illness.n.01": 1,
+    "ill_health.n.01": 1,
+    "inch.n.01": 2,
+    "linear_unit.n.01": 2,
+    "unit_of_measurement.n.01": 3,
+    "definite_quantity.n.01": 2,
+    "sum.n.01": 1,
+    "assets.n.01": 1,
+    "possession.n.02": 1,
+    "mobile.n.01": 1,
+    "river.n.01": 1,
+    "stream.n.01": 1,
+    "body_of_water.n.01": 1,
+    "by.r.01": 1,
+    "model.n.01": 1,
+    "hypothesis.n.02": 1,
+    "idea.n.01": 1,
+    "meter.n.01": 1,
+    "metric_linear_unit.n.01": 1,
+    "metric_unit.n.01": 1,
+    "preserve.n.01": 1,
+    "sphere.n.01": 1,
+    "environment.n.01": 1,
+    "example.n.01": 1,
+    "information.n.02": 1,
+    "cognition.n.01": 2,
+    "on.a.01": 1,
+    "three.n.01": 1,
+    "digit.n.01": 1,
+    "integer.n.01": 1,
+    "number.n.02": 1,
+    "rewrite.v.01": 1,
+    "write.v.02": 1,
+    "communicate.v.02": 1,
+    "interact.v.01": 1,
+    "health.n.01": 1,
+    "wellbeing.n.01": 1,
+    "prosperity.n.02": 1,
+    "good_fortune.n.01": 1,
+    "survey.n.01": 1,
+    "electronic.a.01": 1,
+    "experience.n.01": 1,
+    "education.n.02": 1,
+    "content.n.05": 1,
+    "besides.r.02": 1,
+    "meaning.n.01": 1,
+    "message.n.02": 1,
+    "communication.n.02": 1
+  },
+  "top_concepts": [
+    {
+      "name": "unit_of_measurement.n.01",
+      "count": 3,
+      "definition": "any division of quantity accepted as a standard of measurement or exchange"
+    },
+    {
+      "name": "concept.n.01",
+      "count": 2,
+      "definition": "an abstract or general idea inferred or derived from specific instances"
+    },
+    {
+      "name": "examination.n.01",
+      "count": 2,
+      "definition": "the act of examining something closely (as for mistakes)"
+    }
+  ]
+}

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>RWMD Three-Level Divergence Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+  /* ── reset & base ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #ffffff; --bg2: #f5f4f0; --bg3: #eeede9;
+    --text: #1a1a18; --text2: #5f5e5a; --text3: #9a9994;
+    --border: rgba(0,0,0,0.12); --border2: rgba(0,0,0,0.20);
+    --radius: 8px; --radius-lg: 12px;
+    --c-syn: #378ADD; --c-lca: #1D9E75; --c-total: #BA7517; --c-token: #D4537E;
+    --font: 'Courier New', 'Menlo', monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1a1a18; --bg2: #242422; --bg3: #2e2e2b;
+      --text: #f0ede6; --text2: #9a9994; --text3: #5f5e5a;
+      --border: rgba(255,255,255,0.10); --border2: rgba(255,255,255,0.18);
+    }
+  }
+  body { font-family: var(--font); background: var(--bg3); color: var(--text); font-size: 13px; line-height: 1.6; min-height: 100vh; }
+
+  /* ── layout ── */
+  header { background: var(--bg); border-bottom: 0.5px solid var(--border2); padding: 18px 28px; display: flex; align-items: baseline; gap: 12px; }
+  header h1 { font-size: 15px; font-weight: 500; letter-spacing: 0.04em; color: var(--text); }
+  header span { font-size: 11px; color: var(--text3); }
+  .shell { display: grid; grid-template-columns: 220px 1fr; min-height: calc(100vh - 54px); }
+
+  /* ── sidebar ── */
+  aside { background: var(--bg); border-right: 0.5px solid var(--border); padding: 20px 16px; display: flex; flex-direction: column; gap: 20px; }
+  .side-section { display: flex; flex-direction: column; gap: 8px; }
+  .side-label { font-size: 10px; letter-spacing: 0.08em; color: var(--text3); text-transform: uppercase; }
+
+  /* segmented control */
+  .seg-group { display: flex; border: 0.5px solid var(--border2); border-radius: var(--radius); overflow: hidden; }
+  .seg { flex: 1; padding: 6px 8px; font-size: 12px; font-family: var(--font); cursor: pointer; background: transparent; border: none; color: var(--text2); transition: background 0.12s, color 0.12s; }
+  .seg.active { background: var(--bg3); color: var(--text); font-weight: 500; }
+  .seg:not(:last-child) { border-right: 0.5px solid var(--border2); }
+
+  /* checkbox list */
+  .chk-list { display: flex; flex-direction: column; gap: 5px; }
+  .chk-row { display: flex; align-items: center; gap: 7px; cursor: pointer; padding: 3px 0; }
+  .chk-row input[type=checkbox] { accent-color: var(--text); width: 12px; height: 12px; cursor: pointer; }
+  .chk-row span { font-size: 12px; color: var(--text2); }
+  .chk-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+
+  /* metric pills */
+  .metric-pills { display: flex; flex-direction: column; gap: 5px; }
+  .mpill { display: flex; align-items: center; gap: 7px; padding: 5px 8px; border-radius: var(--radius); border: 0.5px solid var(--border); cursor: pointer; transition: background 0.12s; }
+  .mpill.active { background: var(--bg3); border-color: var(--border2); }
+  .mpill-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+  .mpill span { font-size: 11px; color: var(--text2); }
+  .mpill.active span { color: var(--text); font-weight: 500; }
+
+  /* status */
+  #loadStatus { font-size: 11px; color: var(--text3); padding: 4px 0; line-height: 1.5; }
+  .ok { color: #1D9E75; } .err { color: #D4537E; } .warn { color: #BA7517; }
+
+  /* ── main ── */
+  main { padding: 24px 28px; display: flex; flex-direction: column; gap: 24px; }
+
+  /* summary cards */
+  .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+  .card { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 14px 16px; }
+  .card-label { font-size: 10px; letter-spacing: 0.06em; color: var(--text3); text-transform: uppercase; margin-bottom: 6px; }
+  .card-value { font-size: 22px; font-weight: 500; color: var(--text); }
+  .card-sub { font-size: 11px; color: var(--text3); margin-top: 2px; }
+
+  /* chart panel */
+  .panel { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 20px 20px 16px; }
+  .panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+  .panel-title { font-size: 12px; letter-spacing: 0.06em; color: var(--text3); text-transform: uppercase; }
+  .view-toggle { display: flex; border: 0.5px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .vtog { padding: 4px 10px; font-size: 11px; font-family: var(--font); cursor: pointer; background: transparent; border: none; color: var(--text3); }
+  .vtog.active { background: var(--bg2); color: var(--text); }
+  .vtog:not(:last-child) { border-right: 0.5px solid var(--border); }
+
+  .chart-wrap { position: relative; width: 100%; }
+  .no-data { text-align: center; padding: 60px 0; color: var(--text3); font-size: 12px; }
+
+  /* gamma bar */
+  .gamma-row { display: flex; align-items: center; gap: 10px; }
+  .gamma-row label { font-size: 11px; color: var(--text3); white-space: nowrap; }
+  .gamma-row input[type=range] { flex: 1; }
+  .gamma-val { font-size: 12px; font-weight: 500; color: var(--text); min-width: 28px; }
+
+  /* scrollable chart area */
+  .chart-scroll { overflow-y: auto; max-height: 520px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>RWMD divergence dashboard</h1>
+  <span>token · synset · lca · total</span>
+</header>
+
+<div class="shell">
+<aside>
+
+  <div class="side-section">
+    <div class="side-label">Mode</div>
+    <div class="seg-group">
+      <button class="seg active" onclick="setMode('cross')">cross-domain</button>
+      <button class="seg" onclick="setMode('indomain')">in-domain</button>
+    </div>
+  </div>
+
+  <div class="side-section">
+    <div class="side-label">Metrics</div>
+    <div class="metric-pills">
+      <div class="mpill active" data-m="avg_d_token" onclick="toggleMetric('avg_d_token',this)">
+        <span class="mpill-dot" style="background:var(--c-token)"></span><span>avg_d_token</span>
+      </div>
+      <div class="mpill active" data-m="avg_d_synset" onclick="toggleMetric('avg_d_synset',this)">
+        <span class="mpill-dot" style="background:var(--c-syn)"></span><span>avg_d_synset</span>
+      </div>
+      <div class="mpill active" data-m="avg_d_lca" onclick="toggleMetric('avg_d_lca',this)">
+        <span class="mpill-dot" style="background:var(--c-lca)"></span><span>avg_d_lca</span>
+      </div>
+      <div class="mpill active" data-m="avg_rwmd_total" onclick="toggleMetric('avg_rwmd_total',this)">
+        <span class="mpill-dot" style="background:var(--c-total)"></span><span>avg_rwmd_total</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="side-section" id="algoSection">
+    <div class="side-label">Algorithms</div>
+    <div class="chk-list" id="algoChks"></div>
+  </div>
+
+  <div class="side-section" id="domainSection">
+    <div class="side-label">Domains</div>
+    <div class="chk-list" id="domainChks"></div>
+  </div>
+
+  <div class="side-section">
+    <div class="side-label">Sym mode</div>
+    <div class="seg-group" style="flex-direction:column;border-radius:var(--radius);">
+      <button class="seg active" onclick="setSymMode('symmetric')">symmetric</button>
+      <button class="seg" onclick="setSymMode('a2b')">a → b</button>
+      <button class="seg" onclick="setSymMode('b2a')">b → a</button>
+    </div>
+  </div>
+
+  <div class="side-section">
+    <div class="side-label">Data status</div>
+    <div id="loadStatus">loading…</div>
+  </div>
+
+</aside>
+
+<main>
+  <div class="cards" id="summaryCards">
+    <div class="card"><div class="card-label">avg d_token</div><div class="card-value" id="cv-token">—</div><div class="card-sub">across filtered rows</div></div>
+    <div class="card"><div class="card-label">avg d_synset</div><div class="card-value" id="cv-syn">—</div><div class="card-sub">across filtered rows</div></div>
+    <div class="card"><div class="card-label">avg d_lca</div><div class="card-value" id="cv-lca">—</div><div class="card-sub">across filtered rows</div></div>
+    <div class="card"><div class="card-label">avg rwmd_total</div><div class="card-value" id="cv-tot">—</div><div class="card-sub">across filtered rows</div></div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-header">
+      <div class="panel-title" id="chartTitle">cross-domain comparison</div>
+      <div class="view-toggle">
+        <button class="vtog active" onclick="setView('bar')">bar</button>
+        <button class="vtog" onclick="setView('line')">line</button>
+      </div>
+    </div>
+    <div class="chart-scroll">
+      <div class="chart-wrap" id="chartWrap" style="height:400px;">
+        <canvas id="mainChart"></canvas>
+      </div>
+    </div>
+    <div class="no-data" id="noData" style="display:none;">No data matches current filters.</div>
+  </div>
+</main>
+</div>
+
+<script>
+/* ══════════════════════════════════════════
+   CONFIG — edit these paths to match your output dir
+   ══════════════════════════════════════════ */
+const BASE = "outputs/0123_200green_synset_flat";
+const ALGOS = ["KGW","SWEET","Unigram","EXP","SynthID"];
+const DOMAINS = ["ai","bio","med","mis","security"];
+const PREFIXES = ["nostop"]; // add "full" if you also want full-stopword results
+
+/* ══════════════════════════════════════════
+   STATE
+   ══════════════════════════════════════════ */
+let mode = "cross";
+let symMode = "symmetric";
+let viewType = "bar";
+let activeMetrics = new Set(["avg_d_token","avg_d_synset","avg_d_lca","avg_rwmd_total"]);
+let activeAlgos = new Set(ALGOS);
+let activeDomains = new Set(DOMAINS);
+
+const METRIC_COLOR = {
+  avg_d_token: "#D4537E",
+  avg_d_synset: "#378ADD",
+  avg_d_lca: "#1D9E75",
+  avg_rwmd_total: "#BA7517"
+};
+const METRIC_LABEL = {
+  avg_d_token: "d_token",
+  avg_d_synset: "d_synset",
+  avg_d_lca: "d_lca",
+  avg_rwmd_total: "rwmd_total"
+};
+
+/* raw data store: { cross: [...], indomain: [...] } */
+const DATA = { cross: [], indomain: [] };
+let chart = null;
+
+/* ══════════════════════════════════════════
+   DATA LOADING
+   ══════════════════════════════════════════ */
+function domainPairs(){
+  const p=[];
+  for(let i=0;i<DOMAINS.length;i++)
+    for(let j=i+1;j<DOMAINS.length;j++)
+      p.push([DOMAINS[i],DOMAINS[j]]);
+  return p;
+}
+function algoPairs(){
+  const p=[];
+  for(let i=0;i<ALGOS.length;i++)
+    for(let j=i+1;j<ALGOS.length;j++)
+      p.push([ALGOS[i],ALGOS[j]]);
+  return p;
+}
+
+function extractMetrics(report, symKey){
+  const res = report.results;
+  const block = res[symKey] || res.symmetric || {};
+  return {
+    avg_d_token:    block.avg_d_token    ?? null,
+    avg_d_synset:   block.avg_d_synset   ?? null,
+    avg_d_lca:      block.avg_d_lca      ?? null,
+    avg_rwmd_total: block.avg_rwmd_total ?? null,
+    direction_gap:  res.direction_gap    ?? null,
+    gamma:          report.gamma         ?? null,
+    mode:           report.mode          ?? null,
+  };
+}
+
+async function loadAll(){
+  const status = document.getElementById('loadStatus');
+  let ok=0, fail=0, total=0;
+  const fetchQ = [];
+
+  // cross-domain files
+  for(const prefix of PREFIXES){
+    for(const algo of ALGOS){
+      for(const [da,db] of domainPairs()){
+        const path = `${BASE}/crossdomain/${prefix}_${algo}_${da}_vs_${db}.json`;
+        fetchQ.push({ path, type:'cross', algo, da, db, prefix });
+      }
+    }
+  }
+
+  // in-domain files
+  for(const prefix of PREFIXES){
+    for(const domain of DOMAINS){
+      for(const [a1,a2] of algoPairs()){
+        const path = `${BASE}/algo/${prefix}_${domain}_${a1}_vs_${a2}.json`;
+        fetchQ.push({ path, type:'indomain', domain, a1, a2, prefix });
+      }
+    }
+  }
+
+  total = fetchQ.length;
+  status.innerHTML = `fetching 0 / ${total}…`;
+
+  const results = await Promise.allSettled(
+    fetchQ.map(async (meta) => {
+      const r = await fetch(meta.path);
+      if(!r.ok) throw new Error(`${r.status}`);
+      const json = await r.json();
+      return { meta, json };
+    })
+  );
+
+  for(const res of results){
+    if(res.status==='fulfilled'){
+      const { meta, json } = res.value;
+      const m = extractMetrics(json, 'symmetric');
+      if(meta.type==='cross'){
+        DATA.cross.push({ algo:meta.algo, da:meta.da, db:meta.db, prefix:meta.prefix,
+          file_A:json.file_A, file_B:json.file_B,
+          symmetric: extractMetrics(json,'symmetric'),
+          a2b: extractMetrics(json,'a2b'),
+          b2a: extractMetrics(json,'b2a'),
+        });
+      } else {
+        DATA.indomain.push({ domain:meta.domain, a1:meta.a1, a2:meta.a2, prefix:meta.prefix,
+          symmetric: extractMetrics(json,'symmetric'),
+          a2b: extractMetrics(json,'a2b'),
+          b2a: extractMetrics(json,'b2a'),
+        });
+      }
+      ok++;
+    } else {
+      fail++;
+    }
+    if((ok+fail) % 10 === 0 || (ok+fail) === total){
+      status.innerHTML = `fetching ${ok+fail} / ${total}… <span class="${fail>0?'warn':'ok'}">${ok} ok${fail>0?`, ${fail} missing`:''}`;
+    }
+  }
+
+  status.innerHTML = `<span class="${fail===total?'err':ok>0?'ok':'warn'}">${ok} loaded</span>${fail>0?` · <span class="warn">${fail} not found</span>`:''}`;
+  if(ok===0){
+    status.innerHTML += `<br><span style="color:var(--text3)">→ run python3 -m http.server 8080<br>→ check BASE path in script</span>`;
+  }
+  render();
+}
+
+/* ══════════════════════════════════════════
+   UI BUILDERS
+   ══════════════════════════════════════════ */
+function buildChkList(containerId, items, activeSet, onChange){
+  const el = document.getElementById(containerId);
+  el.innerHTML = '';
+  for(const item of items){
+    const row = document.createElement('label');
+    row.className = 'chk-row';
+    const chk = document.createElement('input');
+    chk.type = 'checkbox';
+    chk.checked = activeSet.has(item);
+    chk.addEventListener('change', ()=>{ chk.checked ? activeSet.add(item) : activeSet.delete(item); onChange(); });
+    const dot = document.createElement('span');
+    dot.className = 'chk-dot';
+    dot.style.background = 'var(--text3)';
+    const lbl = document.createElement('span');
+    lbl.textContent = item;
+    row.append(chk, dot, lbl);
+    el.appendChild(row);
+  }
+}
+
+function init(){
+  buildChkList('algoChks', ALGOS, activeAlgos, render);
+  buildChkList('domainChks', DOMAINS, activeDomains, render);
+}
+
+/* ══════════════════════════════════════════
+   CONTROL HANDLERS
+   ══════════════════════════════════════════ */
+function setMode(m){
+  mode = m;
+  document.querySelectorAll('.seg-group:first-of-type .seg').forEach(b=>{
+    b.classList.toggle('active', b.textContent.trim().startsWith(m==='cross'?'cross':'in'));
+  });
+  document.getElementById('chartTitle').textContent = m==='cross' ? 'cross-domain comparison' : 'in-domain comparison';
+  render();
+}
+
+function setSymMode(s){
+  symMode = s;
+  document.querySelectorAll('aside .seg-group:nth-of-type(3) .seg').forEach(b=>{
+    const map = {'symmetric':'symmetric','a2b':'a → b','b2a':'b → a'};
+    b.classList.toggle('active', b.textContent.trim()===map[s]);
+  });
+  render();
+}
+
+function setView(v){
+  viewType = v;
+  document.querySelectorAll('.vtog').forEach(b=>b.classList.toggle('active', b.textContent===v));
+  render();
+}
+
+function toggleMetric(m, el){
+  if(activeMetrics.has(m)){ if(activeMetrics.size===1) return; activeMetrics.delete(m); el.classList.remove('active'); }
+  else { activeMetrics.add(m); el.classList.add('active'); }
+  render();
+}
+
+/* ══════════════════════════════════════════
+   RENDER
+   ══════════════════════════════════════════ */
+function getRows(){
+  const pool = mode==='cross' ? DATA.cross : DATA.indomain;
+  if(mode==='cross'){
+    return pool.filter(r=>
+      activeAlgos.has(r.algo) &&
+      (activeDomains.has(r.da) || activeDomains.has(r.db))
+    );
+  } else {
+    return pool.filter(r=>
+      activeDomains.has(r.domain) &&
+      (activeAlgos.has(r.a1) || activeAlgos.has(r.a2))
+    );
+  }
+}
+
+function getMetricVal(row, metric){
+  const block = row[symMode] || row.symmetric || {};
+  return block[metric] ?? null;
+}
+
+function render(){
+  const rows = getRows();
+  const noData = document.getElementById('noData');
+  const wrap = document.getElementById('chartWrap');
+
+  // summary cards
+  const fields = ["avg_d_token","avg_d_synset","avg_d_lca","avg_rwmd_total"];
+  const ids = ["cv-token","cv-syn","cv-lca","cv-tot"];
+  fields.forEach((f,i)=>{
+    const vals = rows.map(r=>getMetricVal(r,f)).filter(v=>v!==null);
+    const avg = vals.length ? vals.reduce((a,b)=>a+b,0)/vals.length : null;
+    document.getElementById(ids[i]).textContent = avg!==null ? avg.toFixed(4) : '—';
+  });
+
+  if(!rows.length){
+    noData.style.display='block'; wrap.style.display='none';
+    if(chart){ chart.destroy(); chart=null; }
+    return;
+  }
+  noData.style.display='none'; wrap.style.display='block';
+
+  // labels
+  const labels = rows.map(r=>{
+    if(mode==='cross') return `${r.da}/${r.db} · ${r.algo}`;
+    return `${r.a1}/${r.a2} · ${r.domain}`;
+  });
+
+  const metrics = [...activeMetrics];
+  const datasets = metrics.map(m=>({
+    label: METRIC_LABEL[m],
+    data: rows.map(r=>{ const v=getMetricVal(r,m); return v!==null ? parseFloat(v.toFixed(4)) : null; }),
+    backgroundColor: METRIC_COLOR[m]+'bb',
+    borderColor: METRIC_COLOR[m],
+    borderWidth: viewType==='line' ? 2 : 1,
+    borderRadius: viewType==='bar' ? 3 : 0,
+    pointRadius: viewType==='line' ? 3 : 0,
+    fill: false,
+    tension: 0.3,
+  }));
+
+  // dynamic height for horizontal bars
+  const h = viewType==='bar' ? Math.max(300, rows.length * (metrics.length<=2?18:26) + 80) : 360;
+  wrap.style.height = h+'px';
+
+  const isHBar = viewType==='bar';
+
+  if(chart) chart.destroy();
+  chart = new Chart(document.getElementById('mainChart'),{
+    type: isHBar ? 'bar' : 'line',
+    data: { labels, datasets },
+    options:{
+      indexAxis: isHBar ? 'y' : 'x',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins:{
+        legend:{ display:false },
+        tooltip:{
+          callbacks:{
+            label: ctx=>`${ctx.dataset.label}: ${ctx.parsed[isHBar?'x':'y']?.toFixed(4) ?? '—'}`
+          }
+        }
+      },
+      scales:{
+        x:{
+          min: isHBar ? 0 : undefined,
+          max: isHBar ? 1.0 : undefined,
+          grid:{ color:'rgba(128,128,128,0.08)' },
+          ticks:{ font:{size:10,family:'Courier New'}, color:'#888', maxRotation: isHBar?0:35, autoSkip:true, maxTicksLimit:12 }
+        },
+        y:{
+          min: isHBar ? undefined : 0,
+          max: isHBar ? undefined : 1.0,
+          grid:{ color: isHBar?'none':'rgba(128,128,128,0.08)' },
+          ticks:{ font:{size:10,family:'Courier New'}, color:'#888' }
+        }
+      }
+    }
+  });
+}
+
+/* ══════════════════════════════════════════
+   BOOT
+   ══════════════════════════════════════════ */
+init();
+loadAll();
+</script>
+</body>
+</html>
+
+
+# 在 your_project/ 目錄下執行
+<!-- python3 -m http.server 8080 -->
+# 然後開瀏覽器到 http://localhost:8080/dashboard.html

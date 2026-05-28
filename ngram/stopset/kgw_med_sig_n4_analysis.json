@@ -1,0 +1,173 @@
+{
+  "file": "kgw_med_sig_n4.json",
+  "decoded_phrases": [
+    "needs of its target",
+    "our understanding of loneliness",
+    "improve mental healthcare.",
+    "of children with these",
+    "health interventions as a",
+    "to \"take-a",
+    "as \"recom",
+    "\" to \"take",
+    "easier to understand.",
+    "injectors by individuals",
+    "\"take-a-b",
+    "of the data throughout",
+    "th\" to \"",
+    "\"recombin",
+    "\"take-a-"
+  ],
+  "decoded_words": [
+    "needs",
+    "of",
+    "its",
+    "target",
+    "our",
+    "understanding",
+    "of",
+    "loneliness",
+    "improve",
+    "mental",
+    "healthcare.",
+    "of",
+    "children",
+    "with",
+    "these",
+    "health",
+    "interventions",
+    "as",
+    "a",
+    "to",
+    "\"take-a",
+    "as",
+    "\"recom",
+    "\"",
+    "to",
+    "\"take",
+    "easier",
+    "to",
+    "understand.",
+    "injectors",
+    "by",
+    "individuals",
+    "\"take-a-b",
+    "of",
+    "the",
+    "data",
+    "throughout",
+    "th\"",
+    "to",
+    "\"",
+    "\"recombin",
+    "\"take-a-"
+  ],
+  "concept_levels": {
+    "level1": [
+      {
+        "name": "target.n.01",
+        "definition": "a reference point to shoot at"
+      },
+      {
+        "name": "loneliness.n.01",
+        "definition": "the state of being alone in solitary isolation"
+      },
+      {
+        "name": "angstrom.n.01",
+        "definition": "a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation"
+      },
+      {
+        "name": "person.n.01",
+        "definition": "a human being"
+      },
+      {
+        "name": "throughout.r.01",
+        "definition": "from first to last"
+      }
+    ],
+    "level2": [
+      {
+        "name": "reference_point.n.01",
+        "definition": "an indicator that orients you generally"
+      },
+      {
+        "name": "isolation.n.01",
+        "definition": "a state of separation between persons or groups"
+      },
+      {
+        "name": "metric_linear_unit.n.01",
+        "definition": "a linear unit of distance in metric terms"
+      },
+      {
+        "name": "organism.n.01",
+        "definition": "a living thing that has (or can develop) the ability to act or function independently"
+      }
+    ],
+    "level3": [
+      {
+        "name": "indicator.n.02",
+        "definition": "a signal for attracting attention"
+      },
+      {
+        "name": "separation.n.01",
+        "definition": "the state of lacking unity"
+      },
+      {
+        "name": "metric_unit.n.01",
+        "definition": "a decimal unit of measurement of the metric system (based on meters and kilograms and seconds)"
+      },
+      {
+        "name": "living_thing.n.01",
+        "definition": "a living (or once living) entity"
+      }
+    ],
+    "level4": [
+      {
+        "name": "signal.n.01",
+        "definition": "any nonverbal action or gesture that encodes a message"
+      },
+      {
+        "name": "unit_of_measurement.n.01",
+        "definition": "any division of quantity accepted as a standard of measurement or exchange"
+      },
+      {
+        "name": "whole.n.02",
+        "definition": "an assemblage of parts that is regarded as a single entity"
+      }
+    ]
+  },
+  "concept_counts": {
+    "target.n.01": 1,
+    "reference_point.n.01": 1,
+    "indicator.n.02": 1,
+    "signal.n.01": 1,
+    "loneliness.n.01": 1,
+    "isolation.n.01": 1,
+    "separation.n.01": 1,
+    "angstrom.n.01": 1,
+    "metric_linear_unit.n.01": 1,
+    "metric_unit.n.01": 1,
+    "unit_of_measurement.n.01": 1,
+    "person.n.01": 1,
+    "organism.n.01": 1,
+    "living_thing.n.01": 1,
+    "whole.n.02": 1,
+    "throughout.r.01": 1
+  },
+  "top_concepts": [
+    {
+      "name": "target.n.01",
+      "count": 1,
+      "definition": "a reference point to shoot at"
+    },
+    {
+      "name": "reference_point.n.01",
+      "count": 1,
+      "definition": "an indicator that orients you generally"
+    },
+    {
+      "name": "indicator.n.02",
+      "count": 1,
+      "definition": "a signal for attracting attention"
+    }
+  ]
+}
