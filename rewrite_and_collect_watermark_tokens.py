@@ -223,7 +223,7 @@ def get_transformers_config(model_name):
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
         device_map="auto",
-        torch_dtype=torch.bfloat16,
+        dtype=torch.bfloat16,
         quantization_config=nf4,
         low_cpu_mem_usage=True,
         trust_remote_code=True,
