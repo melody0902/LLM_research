@@ -220,19 +220,28 @@ def get_transformers_config(model_name):
     # tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        device_map="auto",
-        dtype=torch.bfloat16,
-        quantization_config=nf4,
-        low_cpu_mem_usage=True,
-        trust_remote_code=True,
-    )
-
-    tokenizer = AutoTokenizer.from_pretrained(
-        model_name,
-        trust_remote_code=True,
-    )
+    if "gpt-oss" in model_name.lower():
+        model = AutoModelForCausalLM.from_pretrained(
+            model_name,
+            device_map="auto",
+            dtype=torch.bfloat16,
+            low_cpu_mem_usage=True,
+            trust_remote_code=True,
+        )
+    else:
+        model = AutoModelForCausalLM.from_pretrained(
+            model_name,
+            device_map="auto",
+            dtype=torch.bfloat16,
+            quantization_config=nf4,
+            low_cpu_mem_usage=True,
+            trust_remote_code=True,
+        )
+    
+        tokenizer = AutoTokenizer.from_pretrained(
+            model_name,
+            trust_remote_code=True,
+        )
 
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
