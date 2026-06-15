@@ -209,15 +209,30 @@ def get_transformers_config(model_name):
         bnb_4bit_compute_dtype=torch.bfloat16,
     )
 
+    # model = AutoModelForCausalLM.from_pretrained(
+    #     model_name,
+    #     device_map={"": 0},
+    #     torch_dtype=torch.bfloat16,
+    #     quantization_config=nf4,
+    #     low_cpu_mem_usage=True,
+    # )
+
+    # tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
-        device_map={"": 0},
+        device_map="auto",
         torch_dtype=torch.bfloat16,
         quantization_config=nf4,
         low_cpu_mem_usage=True,
+        trust_remote_code=True,
     )
 
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    tokenizer = AutoTokenizer.from_pretrained(
+        model_name,
+        trust_remote_code=True,
+    )
 
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
@@ -483,6 +498,39 @@ def load_prompt_jsonl(dataset_path, max_samples=None):
 
     return data
 
+def get_plain_cache_path(output_dir, domain, model_name, start_index, max_samples):
+    safe_model_name = sanitize_model_name(model_name)
+
+    cache_dir = os.path.join(output_dir, "plain_cache")
+    os.makedirs(cache_dir, exist_ok=True)
+
+    return os.path.join(
+        cache_dir,
+        f"plain_cache_{domain}_{safe_model_name}_start{start_index}_n{max_samples}.json"
+    )
+
+
+def load_plain_cache(cache_path):
+    if not os.path.exists(cache_path):
+        return {}
+
+    with open(cache_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    return {
+        int(k): v
+        for k, v in data.items()
+    }
+
+
+def save_plain_cache(cache, cache_path):
+    data = {
+        str(k): v
+        for k, v in cache.items()
+    }
+
+    with open(cache_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
 # ============================================================
 # Main pipeline
@@ -495,9 +543,15 @@ def rewrite_and_collect(
     model_name,
     output_dir="outputs/wm_tokens",
     start_index=0,
+    cfg=None,
+    wm=None,
+    use_plain_cache=True,
 ):
-    cfg = get_transformers_config(model_name)
-    wm = AutoWatermark.load(algorithm, f"config/{algorithm}.json", cfg)
+    if cfg is None:
+        cfg = get_transformers_config(model_name)
+
+    if wm is None:
+        wm = AutoWatermark.load(algorithm, f"config/{algorithm}.json", cfg)
 
     if dataset_path.endswith(".jsonl"):
         dataset = load_prompt_jsonl(
@@ -521,6 +575,20 @@ def rewrite_and_collect(
     results = []
     token_counter = Counter()
     safe_model_name = sanitize_model_name(model_name)
+
+    plain_cache_path = get_plain_cache_path(
+        output_dir=output_dir,
+        domain=domain,
+        model_name=model_name,
+        start_index=start_index,
+        max_samples=max_samples,
+    )
+
+    plain_cache = load_plain_cache(plain_cache_path) if use_plain_cache else {}
+
+    if use_plain_cache:
+        print(f"Plain cache path: {plain_cache_path}")
+        print(f"Loaded plain cache entries: {len(plain_cache)}")
 
     total = len(dataset)
     start = min(start_index, total)
@@ -572,16 +640,27 @@ def rewrite_and_collect(
                 max_new_tokens=max_new_tokens,
             )
 
-        # 2. Generate non-watermarked rewrite.
-        plain = generate_completion(
-            model=model,
-            tokenizer=tokenizer,
-            encoded_prompt=encoded,
-            prompt_len=prompt_len,
-            logits_processor=None,
-            gen_kwargs=cfg.gen_kwargs,
-            max_new_tokens=max_new_tokens,
-        )
+        # 2. Generate or reuse non-watermarked rewrite.
+        if use_plain_cache and i in plain_cache:
+            plain = plain_cache[i]
+            print(f"[plain cache hit] dataset_index={i}")
+        else:
+            plain = generate_completion(
+                model=model,
+                tokenizer=tokenizer,
+                encoded_prompt=encoded,
+                prompt_len=prompt_len,
+                logits_processor=None,
+                gen_kwargs=cfg.gen_kwargs,
+                max_new_tokens=max_new_tokens,
+            )
+
+            plain = clean_rewritten_text(plain)
+
+            if use_plain_cache:
+                plain_cache[i] = plain
+                save_plain_cache(plain_cache, plain_cache_path)
+                print(f"[plain cache saved] dataset_index={i}")
 
         # 3. Final cleanup.
         rewritten = clean_rewritten_text(rewritten)

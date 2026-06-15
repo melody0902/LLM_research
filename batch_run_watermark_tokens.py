@@ -11,36 +11,37 @@ def run_command(cmd):
 
 
 def batch_rewrite_and_collect():
-    algorithms = ["KGW", "SWEET","Unigram", "EXP", "SynthID"] 
+    # algorithms = ["KGW", "SWEET","Unigram", "EXP", "SynthID"] 
+    algorithms = ["SynthID"]
 
 
     # models = [
     # "meta-llama/Llama-3.1-8B-Instruct"
     # ]
+    # models = [
+    #     "Qwen/Qwen2.5-7B-Instruct",
+    #     "01-ai/Yi-1.5-9B-Chat"
+    # ] 
+    
+    # models = [
+    # "openai/gpt-oss-120b"
+    # ]
     models = [
-        "Qwen/Qwen2.5-7B-Instruct",
-        "01-ai/Yi-1.5-9B-Chat"
-    ] 
+        "openai/gpt-oss-20b"
+    ]
 
     output_dir = "outputs/0517_200green/new_model"
 
-    # datasets = [
-    #     ("dataset/zhtw/mydatasets/ai/output_data_combined_iclr_abstracts_merged_prompt.jsonl", "ai"),
-    #     ("dataset/zhtw/mydatasets/bio/output_data_combined_BIO2_abstracts_merged_prompt.jsonl", "bio"),
-    #     ("dataset/zhtw/mydatasets/med/output_data_combined_MIE_abstracts_merged_prompt.jsonl", "med"),
-    #     ("dataset/zhtw/mydatasets/mis/combined_icis_merged_prompt.jsonl", "mis"),
-    #     ("dataset/zhtw/mydatasets/Security/output_data_combined_SP_abstracts_merged_prompt.jsonl", "security")
-    # ]
-
-    # datasets = [
-    #      ("dataset/zhtw/mydatasets/ai/output_data_combined_iclr_abstracts_merged_prompt.jsonl", "ai"),
-    # ]
     datasets = [
+        ("dataset/zhtw/mydatasets/ai/output_data_combined_iclr_abstracts_merged_prompt.jsonl", "ai"),
         ("dataset/zhtw/mydatasets/bio/output_data_combined_BIO2_abstracts_merged_prompt.jsonl", "bio"),
         ("dataset/zhtw/mydatasets/med/output_data_combined_MIE_abstracts_merged_prompt.jsonl", "med"),
         ("dataset/zhtw/mydatasets/mis/combined_icis_merged_prompt.jsonl", "mis"),
         ("dataset/zhtw/mydatasets/Security/output_data_combined_SP_abstracts_merged_prompt.jsonl", "security")
     ]
+
+    
+    
 
    
 
