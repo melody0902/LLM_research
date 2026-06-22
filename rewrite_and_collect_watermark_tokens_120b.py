@@ -277,7 +277,7 @@ def get_transformers_config(
 
     model_kwargs = dict(
         device_map="auto",
-        torch_dtype=dtype,
+        dtype=dtype,
         low_cpu_mem_usage=True,
         trust_remote_code=True,
     )
@@ -372,6 +372,39 @@ def build_rewrite_prompt(tokenizer, text: str, use_chat_template: bool = True) -
 
     return system_instruction + "\n\n" + user_instruction + "\n\nRewritten paragraph:"
 
+
+def reset_synthid_state(wm):
+    """
+    Reset SynthID logits_processor state safely.
+
+    Some SynthID state tensors may be created inside torch.inference_mode().
+    In-place ops like fill_() / zero_() on those tensors outside inference mode
+    can trigger:
+
+    RuntimeError: Inplace update to inference tensor outside InferenceMode is not allowed.
+    """
+    if not hasattr(wm, "logits_processor"):
+        return
+
+    lp = wm.logits_processor
+
+    if not hasattr(lp, "state") or lp.state is None:
+        return
+
+    state = lp.state
+
+    if "num_calls" in state:
+        state["num_calls"] = 0
+
+    for key in ("context", "context_history"):
+        if key in state and torch.is_tensor(state[key]):
+            old = state[key]
+            state[key] = torch.zeros(
+                old.shape,
+                dtype=old.dtype,
+                device=old.device,
+            )
+            
 def generate_completion(
     model,
     tokenizer,
@@ -469,12 +502,7 @@ def collect_watermark_injected_tokens(wm, prompt_text, max_steps=300):
     prompt_len = prefix_ids.shape[1]
 
     if algo == "SynthID":
-        if hasattr(wm.logits_processor, "state") and wm.logits_processor.state is not None:
-            wm.logits_processor.state["num_calls"] = 0
-            wm.logits_processor.state["context"].fill_(0)
-            wm.logits_processor.state["context_history"].fill_(0)
-        else:
-            wm.logits_processor.state = None
+        reset_synthid_state(wm)
 
     generated_len = 0
 
@@ -498,7 +526,8 @@ def collect_watermark_injected_tokens(wm, prompt_text, max_steps=300):
             token = wm.utils.exp_sampling(probs, u).to(device)
             wm_next = int(token.item())
         else:
-            wm_logits = wm.logits_processor(prefix_ids, base_logits.clone())
+            with torch.inference_mode():
+                wm_logits = wm.logits_processor(prefix_ids, base_logits.clone())
             wm_next = torch.argmax(wm_logits, dim=-1).item()
 
         if wm_next != base_next:
@@ -725,6 +754,9 @@ def rewrite_and_collect_120b(
                 max_new_tokens=max_new_tokens,
             )
         else:
+            if algorithm == "SynthID":
+                reset_synthid_state(wm)
+        
             rewritten = generate_completion(
                 model=model,
                 tokenizer=tokenizer,
