@@ -1,7 +1,13 @@
 # ============================================================
 # run_120b_subset_batch_inprocess.py
-# In-process batch runner for 120B random-subset watermark experiments
+# In-process batch runner for 120B sequential watermark experiments
 # Loads the 120B model only once.
+#
+# This version:
+# - does NOT random select samples
+# - uses start_index=0 and max_samples=200
+# - runs samples 0~199 for each dataset
+# - reloads watermark per algorithm/domain job for safer state isolation
 # ============================================================
 
 import os
@@ -18,6 +24,7 @@ from watermark.auto_watermark import AutoWatermark
 
 
 algorithms = ["KGW", "SWEET", "Unigram", "EXP", "SynthID"]
+# algorithms = ["SynthID"]
 
 datasets = [
     ("dataset/zhtw/mydatasets/ai/output_data_combined_iclr_abstracts_merged_prompt.jsonl", "ai"),
@@ -29,15 +36,23 @@ datasets = [
 
 MODEL_NAME = "openai/gpt-oss-120b"
 
-MAX_SAMPLES = 30
-SAMPLE_SEED = 30
+START_INDEX = 0
+MAX_SAMPLES = 200
+
+# 之前 smoke test 200 會截斷，所以建議 260。
+# 如果你想更保守可以改回 230。
 MAX_NEW_TOKENS_CAP = 260
-OUTPUT_DIR = "outputs/wm_tokens_120b_subset"
+
+OUTPUT_DIR = "outputs/wm_tokens_120b_0_200"
 
 TORCH_DTYPE = "bfloat16"
 MAX_MEMORY = "0:76GiB,cpu:200GiB"
 
-RANDOM_SAMPLE = True
+# Important:
+# False = sequential 0~199
+# True = random subset
+RANDOM_SAMPLE = False
+
 SKIP_PLAIN = True
 USE_PLAIN_CACHE = True
 
@@ -50,15 +65,19 @@ def check_paths():
     print("Current working directory:", os.getcwd())
 
     missing = []
+
+    if not os.path.exists("rewrite_and_collect_watermark_tokens_120b.py"):
+        missing.append(("script", "rewrite_and_collect_watermark_tokens_120b.py"))
+
     for dataset_path, domain in datasets:
         if not os.path.exists(dataset_path):
             missing.append((domain, dataset_path))
 
     if missing:
-        print("\nMissing dataset files:")
-        for domain, path in missing:
-            print(f"  domain={domain}: {path}")
-        raise FileNotFoundError("One or more dataset paths do not exist.")
+        print("\nMissing files:")
+        for name, path in missing:
+            print(f"  {name}: {path}")
+        raise FileNotFoundError("One or more required paths do not exist.")
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -73,6 +92,7 @@ def main():
     print("=" * 80)
     print("Loading model once")
     print("START:", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+    print(f"MODEL: {MODEL_NAME}")
     print("=" * 80)
 
     cfg = get_transformers_config(
@@ -86,26 +106,32 @@ def main():
     print("=" * 80)
     print("Model loaded")
     print("Total jobs:", total_jobs)
+    print(f"Sequential samples: start_index={START_INDEX}, max_samples={MAX_SAMPLES}")
     print("=" * 80)
 
     for algorithm in algorithms:
-        print("\n" + "#" * 80)
-        print(f"Loading watermark: {algorithm}")
-        print("#" * 80)
-
-        wm = AutoWatermark.load(
-            algorithm,
-            f"config/{algorithm}.json",
-            cfg,
-        )
-
         for dataset_path, domain in datasets:
+            print("\n" + "#" * 80)
+            print(f"Loading watermark: {algorithm} / {domain}")
+            print("#" * 80)
+
+            # Reload watermark for every algorithm/domain job.
+            # This is safer than reusing one wm across datasets.
+            wm = AutoWatermark.load(
+                algorithm,
+                f"config/{algorithm}.json",
+                cfg,
+            )
+
             print("\n" + "=" * 80)
             print("START:", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
             print(f"MODEL: {MODEL_NAME}")
             print(f"ALGORITHM: {algorithm}")
             print(f"DOMAIN: {domain}")
             print(f"DATASET: {dataset_path}")
+            print(f"START_INDEX: {START_INDEX}")
+            print(f"MAX_SAMPLES: {MAX_SAMPLES}")
+            print(f"RANDOM_SAMPLE: {RANDOM_SAMPLE}")
             print("=" * 80)
 
             try:
@@ -116,7 +142,8 @@ def main():
                     domain=domain,
                     model_name=MODEL_NAME,
                     output_dir=OUTPUT_DIR,
-                    sample_seed=SAMPLE_SEED,
+                    start_index=START_INDEX,
+                    sample_seed=30,
                     random_sample=RANDOM_SAMPLE,
                     cfg=cfg,
                     wm=wm,
@@ -143,6 +170,9 @@ def main():
                     "algorithm": algorithm,
                     "domain": domain,
                     "dataset_path": dataset_path,
+                    "start_index": START_INDEX,
+                    "max_samples": MAX_SAMPLES,
+                    "random_sample": RANDOM_SAMPLE,
                     "error": repr(e),
                 })
 
