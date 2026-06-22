@@ -61,17 +61,6 @@ STOP_MARKERS = [
 ]
 
 
-FINAL_MARKERS = [
-    "assistantfinal",
-    "assistant final",
-    "<|channel|>final<|message|>",
-    "<|channel|>final",
-    "<|final|>",
-    "final\n",
-    "final:",
-    "Final:",
-]
-
 
 def set_seed(seed: int):
     torch.manual_seed(seed)
@@ -122,14 +111,17 @@ def remove_repeated_sentences(text: str) -> str:
     return " ".join(cleaned).strip()
 
 
-def extract_final_answer(text: str) -> str:
+
+
+def strip_gpt_oss_meta_prefix(text: str) -> str:
     """
-    Fix gpt-oss / harmony-style output such as:
-
+    gpt-oss may output harmony-style visible text like:
     analysisWe need to rewrite...
-    assistantfinalWe performed...
+    assistantfinalActual answer...
 
-    This function keeps only the final answer if final markers exist.
+    Keep only the content after assistantfinal / assistant final / final marker.
+    Do NOT use this as a stopping condition during generation.
+    Only clean after generation is complete.
     """
     if text is None:
         return ""
@@ -138,48 +130,52 @@ def extract_final_answer(text: str) -> str:
     if not text:
         return ""
 
+    patterns = [
+        r"assistantfinal",
+        r"assistant\s+final",
+        r"<\|channel\|>\s*final\s*<\|message\|>",
+        r"<\|channel\|>\s*final",
+        r"<\|final\|>",
+    ]
+
     lowered = text.lower()
 
-    # If final markers exist, keep content after the last one.
-    for marker in FINAL_MARKERS:
-        idx = lowered.rfind(marker.lower())
-        if idx != -1:
-            text = text[idx + len(marker):].strip()
-            lowered = text.lower()
-            break
+    # Keep content after the last final marker.
+    best_idx = -1
+    best_pat = None
 
-    # Remove leading analysis block if it still exists.
+    for pat in patterns:
+        matches = list(re.finditer(pat, lowered, flags=re.IGNORECASE))
+        if matches:
+            m = matches[-1]
+            if m.start() > best_idx:
+                best_idx = m.start()
+                best_pat = m
+
+    if best_pat is not None:
+        text = text[best_pat.end():].strip()
+
+    # If there is still a leading "analysis..." block and no final marker was found,
+    # remove only short obvious leading meta text, not the whole generation.
     text = re.sub(
-        r"^analysis\s*.*?(assistantfinal|assistant final|final\s*:?)",
+        r"^analysis\s*(we need to|let'?s|we should|i need to).*?(?=[A-Z][a-z])",
         "",
         text,
         flags=re.IGNORECASE | re.DOTALL,
     ).strip()
 
-    # Remove common leading meta/channel labels.
-    leading_junk_patterns = [
-        r"^analysis\s*",
-        r"^assistantfinal\s*",
-        r"^assistant\s*final\s*",
-        r"^final\s*:?\s*",
-        r"^assistant\s*:?\s*",
-    ]
-
-    for pattern in leading_junk_patterns:
-        text = re.sub(pattern, "", text, flags=re.IGNORECASE | re.DOTALL).strip()
-
-    # Remove special tokens like <|channel|>, <|message|>, etc.
+    # Remove any remaining special tokens.
     text = re.sub(r"<\|.*?\|>", "", text).strip()
 
-    return text.strip()
-
+    return text
 
 def clean_rewritten_text(text: str) -> str:
     if text is None:
         return ""
 
-    text = extract_final_answer(text)
-    text = text.replace("\\n", "\n").strip()
+    text = strip_gpt_oss_meta_prefix(text)
+    text = text.replace("\\n", "\n")
+    text = text.strip()
 
     # Cut off note/explanation/meta parts.
     for marker in STOP_MARKERS:
