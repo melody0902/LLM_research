@@ -75,19 +75,13 @@ def sanitize_model_name(model_name: str) -> str:
     return model_name.replace("/", "__").replace(" ", "_")
 
 
-def get_dynamic_max_new_tokens(text: str, max_cap: int = 300) -> int:
-    """
-    Use a dynamic generation length.
-    For long abstracts, 120 tokens is usually too short and causes truncation.
-    """
+def get_dynamic_max_new_tokens(text: str, max_cap: int = 260) -> int:
     if not text:
         return min(120, max_cap)
 
     word_count = len(text.split())
 
-    # Abstract rewriting usually needs close to the original length.
-    # 1.25 gives the model enough space while max_cap controls cost.
-    return min(max_cap, max(120, int(word_count * 1.25)))
+    return min(max_cap, max(180, int(word_count * 1.45)))
 
 
 def remove_repeated_sentences(text: str) -> str:
