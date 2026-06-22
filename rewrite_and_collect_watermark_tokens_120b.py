@@ -1,6 +1,7 @@
 # ============================================================
 # rewrite_and_collect_watermark_tokens_120b.py
 # 120B subset version
+# Fixed version: remove gpt-oss analysis/final meta text
 # ============================================================
 
 import os
@@ -40,6 +41,14 @@ STOP_MARKERS = [
     "\nNotes:",
     "\nExplanation:",
     "\nOriginal:",
+    "\nRewritten:",
+    "\nRewritten paragraph:",
+    "\nanalysis",
+    "\nassistantfinal",
+    "\nassistant final",
+    "<|channel|>analysis",
+    "<|channel|>final",
+    "<|final|>",
     "Note that this",
     "Note: I made",
     "(Note: I made",
@@ -53,25 +62,44 @@ STOP_MARKERS = [
 ]
 
 
+FINAL_MARKERS = [
+    "assistantfinal",
+    "assistant final",
+    "<|channel|>final<|message|>",
+    "<|channel|>final",
+    "<|final|>",
+    "final\n",
+    "final:",
+    "Final:",
+]
+
+
 def set_seed(seed: int):
     torch.manual_seed(seed)
     np.random.seed(seed)
     random.seed(seed)
+
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
 
 
 def sanitize_model_name(model_name: str) -> str:
     return model_name.replace("/", "__").replace(" ", "_")
 
 
-def get_dynamic_max_new_tokens(text: str, max_cap: int = 120) -> int:
+def get_dynamic_max_new_tokens(text: str, max_cap: int = 300) -> int:
     """
-    120B cloud version: keep generation shorter to control cost.
+    Use a dynamic generation length.
+    For long abstracts, 120 tokens is usually too short and causes truncation.
     """
     if not text:
-        return min(80, max_cap)
+        return min(120, max_cap)
 
     word_count = len(text.split())
-    return min(max_cap, max(50, int(word_count * 1.00)))
+
+    # Abstract rewriting usually needs close to the original length.
+    # 1.25 gives the model enough space while max_cap controls cost.
+    return min(max_cap, max(120, int(word_count * 1.25)))
 
 
 def remove_repeated_sentences(text: str) -> str:
@@ -88,18 +116,73 @@ def remove_repeated_sentences(text: str) -> str:
             continue
         if normalized in seen:
             continue
+
         seen.add(normalized)
         cleaned.append(sent.strip())
 
     return " ".join(cleaned).strip()
 
 
-def clean_rewritten_text(text: str) -> str:
+def extract_final_answer(text: str) -> str:
+    """
+    Fix gpt-oss / harmony-style output such as:
+
+    analysisWe need to rewrite...
+    assistantfinalWe performed...
+
+    This function keeps only the final answer if final markers exist.
+    """
     if text is None:
         return ""
 
     text = text.replace("\\n", "\n").strip()
+    if not text:
+        return ""
 
+    lowered = text.lower()
+
+    # If final markers exist, keep content after the last one.
+    for marker in FINAL_MARKERS:
+        idx = lowered.rfind(marker.lower())
+        if idx != -1:
+            text = text[idx + len(marker):].strip()
+            lowered = text.lower()
+            break
+
+    # Remove leading analysis block if it still exists.
+    text = re.sub(
+        r"^analysis\s*.*?(assistantfinal|assistant final|final\s*:?)",
+        "",
+        text,
+        flags=re.IGNORECASE | re.DOTALL,
+    ).strip()
+
+    # Remove common leading meta/channel labels.
+    leading_junk_patterns = [
+        r"^analysis\s*",
+        r"^assistantfinal\s*",
+        r"^assistant\s*final\s*",
+        r"^final\s*:?\s*",
+        r"^assistant\s*:?\s*",
+    ]
+
+    for pattern in leading_junk_patterns:
+        text = re.sub(pattern, "", text, flags=re.IGNORECASE | re.DOTALL).strip()
+
+    # Remove special tokens like <|channel|>, <|message|>, etc.
+    text = re.sub(r"<\|.*?\|>", "", text).strip()
+
+    return text.strip()
+
+
+def clean_rewritten_text(text: str) -> str:
+    if text is None:
+        return ""
+
+    text = extract_final_answer(text)
+    text = text.replace("\\n", "\n").strip()
+
+    # Cut off note/explanation/meta parts.
     for marker in STOP_MARKERS:
         idx = text.find(marker)
         if idx != -1:
@@ -112,10 +195,21 @@ def clean_rewritten_text(text: str) -> str:
         r"\n?\(?\s*Rewritten\s*(paragraph)?\s*[:：-].*$",
         r"\n?\(?\s*I made some minor changes.*$",
         r"\n?\(?\s*I have made some minor changes.*$",
+        r"\n?\s*analysis\s+.*$",
+        r"\n?\s*assistantfinal\s+.*$",
+        r"\n?\s*assistant final\s+.*$",
     ]
 
     for pattern in note_patterns:
         text = re.sub(pattern, "", text, flags=re.IGNORECASE | re.DOTALL).strip()
+
+    # Remove remaining one-line labels at the beginning.
+    text = re.sub(
+        r"^(Rewritten paragraph|Rewritten|Answer|Output)\s*[:：-]\s*",
+        "",
+        text,
+        flags=re.IGNORECASE,
+    ).strip()
 
     while "\n\n\n" in text:
         text = text.replace("\n\n\n", "\n\n")
@@ -126,7 +220,31 @@ def clean_rewritten_text(text: str) -> str:
 def should_stop_generation(decoded_text: str) -> bool:
     if not decoded_text:
         return False
-    return any(marker in decoded_text for marker in STOP_MARKERS)
+
+    lowered = decoded_text.lower().lstrip()
+
+    dangerous_markers = [
+        "\nnote:",
+        "\nexplanation:",
+        "\noriginal:",
+        "\nrewritten:",
+        "\nanalysis",
+        "\nassistantfinal",
+        "\nassistant final",
+        "<|channel|>analysis",
+        "<|channel|>final",
+    ]
+
+    if lowered.startswith("analysis"):
+        return True
+    if lowered.startswith("assistantfinal"):
+        return True
+    if lowered.startswith("assistant final"):
+        return True
+    if lowered.startswith("final:"):
+        return True
+
+    return any(marker.lower() in lowered for marker in dangerous_markers)
 
 
 class StopOnMarkersCriteria(StoppingCriteria):
@@ -216,24 +334,33 @@ def get_transformers_config(
         tokenizer=tokenizer,
         vocab_size=real_vocab_size,
         device=device,
-        max_new_tokens=120,
+        max_new_tokens=300,
         do_sample=False,
     )
 
 
 def build_rewrite_prompt(tokenizer, text: str, use_chat_template: bool = True) -> str:
-    instruction = (
+    system_instruction = (
+        "Reasoning: low\n"
+        "You are a rewriting engine. "
+        "Return only the rewritten paragraph. "
+        "Do not reveal reasoning, analysis, hidden thoughts, channel names, labels, or notes."
+    )
+
+    user_instruction = (
         "Rewrite the following paragraph in your own words while preserving the meaning.\n"
-        "Output only one rewritten paragraph.\n"
-        "Do not add notes, explanations, labels, comments, parentheses, or meta text.\n"
-        "Do not mention what changes you made.\n"
+        "Output only the rewritten paragraph itself.\n"
+        "Do not add explanations, notes, labels, comments, or meta text.\n"
         "Do not repeat sentences.\n"
         "Stop immediately after the rewritten paragraph.\n\n"
         f"Text:\n{text}"
     )
 
     if use_chat_template and hasattr(tokenizer, "apply_chat_template"):
-        messages = [{"role": "user", "content": instruction}]
+        messages = [
+            {"role": "system", "content": system_instruction},
+            {"role": "user", "content": user_instruction},
+        ]
         try:
             return tokenizer.apply_chat_template(
                 messages,
@@ -243,8 +370,7 @@ def build_rewrite_prompt(tokenizer, text: str, use_chat_template: bool = True) -
         except Exception as e:
             print(f"[warning] chat template failed; using plain prompt. {e}")
 
-    return instruction + "\n\nRewritten paragraph:"
-
+    return system_instruction + "\n\n" + user_instruction + "\n\nRewritten paragraph:"
 
 def generate_completion(
     model,
@@ -256,13 +382,14 @@ def generate_completion(
     max_new_tokens=None,
 ):
     safe_gen_kwargs = dict(gen_kwargs or {})
-    safe_gen_kwargs["max_new_tokens"] = max_new_tokens or 100
+    safe_gen_kwargs["max_new_tokens"] = max_new_tokens or 300
     safe_gen_kwargs.setdefault("do_sample", False)
-    safe_gen_kwargs.setdefault("repetition_penalty", 1.05)
+    safe_gen_kwargs.setdefault("repetition_penalty", 1.08)
     safe_gen_kwargs.setdefault("no_repeat_ngram_size", 4)
 
     if tokenizer.eos_token_id is not None:
         safe_gen_kwargs.setdefault("eos_token_id", tokenizer.eos_token_id)
+
     if tokenizer.pad_token_id is not None:
         safe_gen_kwargs.setdefault("pad_token_id", tokenizer.pad_token_id)
 
@@ -283,7 +410,7 @@ def generate_completion(
     return clean_rewritten_text(decoded)
 
 
-def generate_with_exp_watermark(wm, prompt_text: str, max_new_tokens: int = 100):
+def generate_with_exp_watermark(wm, prompt_text: str, max_new_tokens: int = 300):
     tokenizer = wm.config.generation_tokenizer
     model = wm.config.generation_model
     device = wm.config.device
@@ -321,6 +448,7 @@ def generate_with_exp_watermark(wm, prompt_text: str, max_new_tokens: int = 100)
             break
 
         partial_text = tokenizer.decode(prefix_ids[0, prompt_len:], skip_special_tokens=True)
+
         if should_stop_generation(partial_text):
             break
 
@@ -328,7 +456,7 @@ def generate_with_exp_watermark(wm, prompt_text: str, max_new_tokens: int = 100)
     return clean_rewritten_text(decoded)
 
 
-def collect_watermark_injected_tokens(wm, prompt_text, max_steps=100):
+def collect_watermark_injected_tokens(wm, prompt_text, max_steps=300):
     tokenizer = wm.config.generation_tokenizer
     model = wm.config.generation_model
     device = wm.config.device
@@ -382,10 +510,12 @@ def collect_watermark_injected_tokens(wm, prompt_text, max_steps=100):
                 "wm_next_str": tokenizer.decode([wm_next]),
                 "algorithm": algo,
             }
+
             if algo == "SWEET":
                 probs = torch.softmax(base_logits, dim=-1)
                 entropy = -torch.sum(probs * torch.log(probs + 1e-12), dim=-1).item()
                 info["entropy"] = entropy
+
                 if entropy > wm.config.entropy_threshold:
                     injected.append(info)
             else:
@@ -404,6 +534,7 @@ def collect_watermark_injected_tokens(wm, prompt_text, max_steps=100):
             break
 
         partial_text = tokenizer.decode(prefix_ids[0, prompt_len:], skip_special_tokens=True)
+
         if should_stop_generation(partial_text):
             break
 
@@ -412,16 +543,22 @@ def collect_watermark_injected_tokens(wm, prompt_text, max_steps=100):
 
 def load_prompt_jsonl(dataset_path, max_samples=None):
     data = []
+
     with open(dataset_path, "r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
+
             if not line:
                 continue
+
             item = json.loads(line)
+
             if isinstance(item, dict) and "prompt" in item:
                 data.append({"prompt": item["prompt"]})
+
             if max_samples is not None and len(data) >= max_samples:
                 break
+
     return data
 
 
@@ -429,12 +566,20 @@ def load_dataset_all(dataset_path, tokenizer=None):
     # For random sampling, do not pre-truncate to start_index + max_samples.
     if dataset_path.endswith(".jsonl"):
         return load_prompt_jsonl(dataset_path, max_samples=None)
+
     if "zhtw" in dataset_path.lower():
         return ZHTWC4Dataset(dataset_path, tokenizer=tokenizer, max_samples=None)
+
     return C4Dataset(dataset_path, max_samples=None)
 
 
-def choose_indices(total: int, max_samples: int, sample_seed: int, start_index: int = 0, random_sample: bool = True):
+def choose_indices(
+    total: int,
+    max_samples: int,
+    sample_seed: int,
+    start_index: int = 0,
+    random_sample: bool = True,
+):
     if max_samples is None or max_samples >= total:
         return list(range(total))
 
@@ -451,7 +596,9 @@ def get_plain_cache_path(output_dir, domain, model_name, sample_seed, max_sample
     safe_model_name = sanitize_model_name(model_name)
     cache_dir = os.path.join(output_dir, "plain_cache")
     os.makedirs(cache_dir, exist_ok=True)
+
     mode = "random" if random_sample else "sequential"
+
     return os.path.join(
         cache_dir,
         f"plain_cache_{domain}_{safe_model_name}_{mode}_seed{sample_seed}_n{max_samples}.json",
@@ -461,8 +608,10 @@ def get_plain_cache_path(output_dir, domain, model_name, sample_seed, max_sample
 def load_plain_cache(cache_path):
     if not os.path.exists(cache_path):
         return {}
+
     with open(cache_path, "r", encoding="utf-8") as f:
         data = json.load(f)
+
     return {int(k): v for k, v in data.items()}
 
 
@@ -485,7 +634,7 @@ def rewrite_and_collect_120b(
     wm=None,
     use_plain_cache=True,
     skip_plain=False,
-    max_new_tokens_cap=120,
+    max_new_tokens_cap=300,
     use_chat_template=True,
     load_in_4bit=False,
     load_in_8bit=False,
@@ -508,6 +657,7 @@ def rewrite_and_collect_120b(
 
     dataset = load_dataset_all(dataset_path, tokenizer=cfg.tokenizer)
     total = len(dataset)
+
     selected_indices = choose_indices(
         total=total,
         max_samples=max_samples,
@@ -529,6 +679,7 @@ def rewrite_and_collect_120b(
         max_samples=max_samples,
         random_sample=random_sample,
     )
+
     plain_cache = load_plain_cache(plain_cache_path) if use_plain_cache and not skip_plain else {}
 
     print(f"Dataset total: {total}")
@@ -536,6 +687,7 @@ def rewrite_and_collect_120b(
     print(f"Sample seed: {sample_seed}")
     print(f"Random sample: {random_sample}")
     print(f"Selected indices preview: {selected_indices[:20]}")
+
     if use_plain_cache and not skip_plain:
         print(f"Plain cache path: {plain_cache_path}")
         print(f"Loaded plain cache entries: {len(plain_cache)}")
@@ -543,17 +695,35 @@ def rewrite_and_collect_120b(
     for local_idx, i in enumerate(selected_indices, start=1):
         s = dataset[i]
         text = s.get("prompt") if isinstance(s, dict) else str(s)
-        max_new_tokens = get_dynamic_max_new_tokens(text, max_cap=max_new_tokens_cap)
+
+        max_new_tokens = get_dynamic_max_new_tokens(
+            text,
+            max_cap=max_new_tokens_cap,
+        )
 
         tokenizer = cfg.tokenizer
         model = cfg.model
-        prompt = build_rewrite_prompt(tokenizer, text, use_chat_template=use_chat_template)
 
-        encoded = tokenizer(prompt, return_tensors="pt", add_special_tokens=True).to(device)
+        prompt = build_rewrite_prompt(
+            tokenizer,
+            text,
+            use_chat_template=use_chat_template,
+        )
+
+        encoded = tokenizer(
+            prompt,
+            return_tensors="pt",
+            add_special_tokens=True,
+        ).to(device)
+
         prompt_len = encoded["input_ids"].shape[1]
 
         if algorithm == "EXP":
-            rewritten = generate_with_exp_watermark(wm, prompt, max_new_tokens=max_new_tokens)
+            rewritten = generate_with_exp_watermark(
+                wm,
+                prompt,
+                max_new_tokens=max_new_tokens,
+            )
         else:
             rewritten = generate_completion(
                 model=model,
@@ -580,17 +750,24 @@ def rewrite_and_collect_120b(
                 gen_kwargs=cfg.gen_kwargs,
                 max_new_tokens=max_new_tokens,
             )
+
             plain = clean_rewritten_text(plain)
+
             if use_plain_cache:
                 plain_cache[i] = plain
                 save_plain_cache(plain_cache, plain_cache_path)
                 print(f"[plain cache saved] dataset_index={i}")
 
         rewritten = clean_rewritten_text(rewritten)
+
         if plain is not None:
             plain = clean_rewritten_text(plain)
 
-        injected, stats = collect_watermark_injected_tokens(wm, prompt, max_steps=max_new_tokens)
+        injected, stats = collect_watermark_injected_tokens(
+            wm,
+            prompt,
+            max_steps=max_new_tokens,
+        )
 
         for x in injected:
             token_counter[x["wm_next"]] += 1
@@ -615,6 +792,7 @@ def rewrite_and_collect_120b(
         )
 
     mode = "random" if random_sample else "sequential"
+
     out_base = (
         f"{output_dir}/rewritten_{domain}_{algorithm}_{safe_model_name}_"
         f"{mode}_seed{sample_seed}_n{max_samples}"
@@ -624,7 +802,11 @@ def rewrite_and_collect_120b(
         json.dump(results, f, ensure_ascii=False, indent=2)
 
     freq = [
-        {"token_id": k, "token": cfg.tokenizer.decode([k]), "count": v}
+        {
+            "token_id": k,
+            "token": cfg.tokenizer.decode([k]),
+            "count": v,
+        }
         for k, v in token_counter.most_common()
     ]
 
@@ -649,6 +831,7 @@ def rewrite_and_collect_120b(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+
     parser.add_argument("--algorithm", type=str, required=True)
     parser.add_argument("--dataset", type=str, required=True)
     parser.add_argument("--model_name", type=str, required=True)
@@ -661,11 +844,16 @@ if __name__ == "__main__":
     parser.add_argument("--sequential_sample", action="store_true")
     parser.add_argument("--skip_plain", action="store_true")
     parser.add_argument("--no_plain_cache", action="store_true")
-    parser.add_argument("--max_new_tokens_cap", type=int, default=120)
+    parser.add_argument("--max_new_tokens_cap", type=int, default=300)
     parser.add_argument("--no_chat_template", action="store_true")
     parser.add_argument("--load_in_4bit", action="store_true")
     parser.add_argument("--load_in_8bit", action="store_true")
-    parser.add_argument("--torch_dtype", type=str, default="bfloat16", choices=["bfloat16", "float16", "float32"])
+    parser.add_argument(
+        "--torch_dtype",
+        type=str,
+        default="bfloat16",
+        choices=["bfloat16", "float16", "float32"],
+    )
     parser.add_argument("--max_memory", type=str, default=None)
 
     args = parser.parse_args()

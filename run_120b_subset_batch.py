@@ -2,6 +2,10 @@
 # run_120b_subset_batch.py
 # Batch runner for 120B random-subset watermark experiments
 # ============================================================
+# tar -czf /workspace/results_output.tar.gz outputs/wm_tokens_120b_subset/
+# scp -P 12680 -i ~/.ssh/id_ed25519 root@205.196.17.138:/workspace/results_output.tar.gz ~/Downloads/
+
+
 
 import os
 import shlex
@@ -27,7 +31,7 @@ models = [
 # Recommended 120B subset size.
 MAX_SAMPLES = 30
 SAMPLE_SEED = 30
-MAX_NEW_TOKENS_CAP = 120
+MAX_NEW_TOKENS_CAP = 200
 OUTPUT_DIR = "outputs/wm_tokens_120b_subset"
 SCRIPT = "rewrite_and_collect_watermark_tokens_120b.py"
 
@@ -38,7 +42,7 @@ EXTRA_ARGS = [
     "--torch_dtype", "bfloat16",
     # "--load_in_4bit",
     # "--max_memory", "0:78GiB,cpu:200GiB",
-    # "--skip_plain",  # Optional: use only if plain baseline is too expensive.
+    "--skip_plain",  # Optional: use only if plain baseline is too expensive.
 ]
 
 
