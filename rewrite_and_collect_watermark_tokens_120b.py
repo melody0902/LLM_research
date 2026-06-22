@@ -34,6 +34,11 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 
 # ================== stop / clean config ==================
+# NOTE:
+# gpt-oss models can emit harmony/channel-looking text such as
+# "analysis" / "assistantfinal" early in the generation. Do NOT use those
+# as hard stopping markers, otherwise generation may stop after 1-2 tokens
+# and the cleaned rewritten text becomes empty.
 STOP_MARKERS = [
     "\nNote that",
     "\nNote:",
@@ -43,12 +48,6 @@ STOP_MARKERS = [
     "\nOriginal:",
     "\nRewritten:",
     "\nRewritten paragraph:",
-    "\nanalysis",
-    "\nassistantfinal",
-    "\nassistant final",
-    "<|channel|>analysis",
-    "<|channel|>final",
-    "<|final|>",
     "Note that this",
     "Note: I made",
     "(Note: I made",
@@ -223,28 +222,18 @@ def should_stop_generation(decoded_text: str) -> bool:
 
     lowered = decoded_text.lower().lstrip()
 
+    # Only stop on real post-answer add-ons.
+    # Do NOT stop on "analysis", "assistantfinal", or harmony channel markers here;
+    # gpt-oss may produce them at the beginning, and stopping immediately causes
+    # generated_len ~= 1-2 with rewritten == "".
     dangerous_markers = [
         "\nnote:",
         "\nexplanation:",
         "\noriginal:",
         "\nrewritten:",
-        "\nanalysis",
-        "\nassistantfinal",
-        "\nassistant final",
-        "<|channel|>analysis",
-        "<|channel|>final",
     ]
 
-    if lowered.startswith("analysis"):
-        return True
-    if lowered.startswith("assistantfinal"):
-        return True
-    if lowered.startswith("assistant final"):
-        return True
-    if lowered.startswith("final:"):
-        return True
-
-    return any(marker.lower() in lowered for marker in dangerous_markers)
+    return any(marker in lowered for marker in dangerous_markers)
 
 
 class StopOnMarkersCriteria(StoppingCriteria):
@@ -292,6 +281,16 @@ def get_transformers_config(
             else:
                 memory_map[int(k.strip())] = v.strip()
         model_kwargs["max_memory"] = memory_map
+
+    # openai/gpt-oss models already carry an MXFP4 quantization config.
+    # Passing BitsAndBytesConfig via --load_in_4bit / --load_in_8bit conflicts with it.
+    if "gpt-oss" in model_name.lower():
+        if load_in_4bit:
+            print("[warning] gpt-oss already uses MXFP4; ignoring --load_in_4bit")
+            load_in_4bit = False
+        if load_in_8bit:
+            print("[warning] gpt-oss already uses MXFP4; ignoring --load_in_8bit")
+            load_in_8bit = False
 
     if load_in_4bit and load_in_8bit:
         raise ValueError("Choose only one: load_in_4bit or load_in_8bit.")
@@ -439,8 +438,17 @@ def generate_completion(
         )[0]
 
     completion_ids = output_ids[prompt_len:]
+    decoded_raw = tokenizer.decode(completion_ids, skip_special_tokens=False)
     decoded = tokenizer.decode(completion_ids, skip_special_tokens=True)
-    return clean_rewritten_text(decoded)
+    cleaned = clean_rewritten_text(decoded)
+
+    if not cleaned:
+        print("\n[DEBUG empty generation]")
+        print("completion_token_count =", len(completion_ids))
+        print("decoded_raw[:1000] =", repr(decoded_raw[:1000]))
+        print("decoded_clean[:1000] =", repr(decoded[:1000]))
+
+    return cleaned
 
 
 def generate_with_exp_watermark(wm, prompt_text: str, max_new_tokens: int = 300):
@@ -485,8 +493,18 @@ def generate_with_exp_watermark(wm, prompt_text: str, max_new_tokens: int = 300)
         if should_stop_generation(partial_text):
             break
 
-    decoded = tokenizer.decode(prefix_ids[0, prompt_len:], skip_special_tokens=True)
-    return clean_rewritten_text(decoded)
+    completion_ids = prefix_ids[0, prompt_len:]
+    decoded_raw = tokenizer.decode(completion_ids, skip_special_tokens=False)
+    decoded = tokenizer.decode(completion_ids, skip_special_tokens=True)
+    cleaned = clean_rewritten_text(decoded)
+
+    if not cleaned:
+        print("\n[DEBUG empty EXP generation]")
+        print("completion_token_count =", len(completion_ids))
+        print("decoded_raw[:1000] =", repr(decoded_raw[:1000]))
+        print("decoded_clean[:1000] =", repr(decoded[:1000]))
+
+    return cleaned
 
 
 def collect_watermark_injected_tokens(wm, prompt_text, max_steps=300):
@@ -791,6 +809,9 @@ def rewrite_and_collect_120b(
                 print(f"[plain cache saved] dataset_index={i}")
 
         rewritten = clean_rewritten_text(rewritten)
+
+        if not rewritten:
+            print(f"[warning] empty rewritten output at dataset_index={i}")
 
         if plain is not None:
             plain = clean_rewritten_text(plain)
