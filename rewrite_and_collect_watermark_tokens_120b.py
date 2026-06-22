@@ -344,6 +344,7 @@ def build_rewrite_prompt(tokenizer, text: str, use_chat_template: bool = True) -
 
     user_instruction = (
         "Rewrite the following paragraph in your own words while preserving the meaning.\n"
+        "Preserve all numbers, percentages, dataset names, and technical terms exactly.\n"
         "Output only the rewritten paragraph itself.\n"
         "Do not add explanations, notes, labels, comments, or meta text.\n"
         "Do not repeat sentences.\n"
