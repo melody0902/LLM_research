@@ -1,0 +1,5137 @@
+[
+  {
+    "token_id": 1008,
+    "token": "...",
+    "count": 137
+  },
+  {
+    "token_id": 1202,
+    "token": " \n\n",
+    "count": 98
+  },
+  {
+    "token_id": 1131,
+    "token": "…",
+    "count": 96
+  },
+  {
+    "token_id": 5310,
+    "token": " ",
+    "count": 86
+  },
+  {
+    "token_id": 4707,
+    "token": "\n\n\n\n",
+    "count": 83
+  },
+  {
+    "token_id": 4369,
+    "token": "…\n\n",
+    "count": 83
+  },
+  {
+    "token_id": 976,
+    "token": "The",
+    "count": 79
+  },
+  {
+    "token_id": 279,
+    "token": "\n\n",
+    "count": 74
+  },
+  {
+    "token_id": 2167,
+    "token": "We",
+    "count": 73
+  },
+  {
+    "token_id": 4908,
+    "token": "...\n",
+    "count": 71
+  },
+  {
+    "token_id": 2161,
+    "token": "...\n\n",
+    "count": 70
+  },
+  {
+    "token_id": 13,
+    "token": ".",
+    "count": 62
+  },
+  {
+    "token_id": 793,
+    "token": " \n",
+    "count": 61
+  },
+  {
+    "token_id": 11,
+    "token": ",",
+    "count": 56
+  },
+  {
+    "token_id": 2550,
+    "token": " ...",
+    "count": 44
+  },
+  {
+    "token_id": 623,
+    "token": " The",
+    "count": 37
+  },
+  {
+    "token_id": 290,
+    "token": " the",
+    "count": 30
+  },
+  {
+    "token_id": 364,
+    "token": ".\n\n",
+    "count": 29
+  },
+  {
+    "token_id": 18315,
+    "token": " Output",
+    "count": 27
+  },
+  {
+    "token_id": 25,
+    "token": ":",
+    "count": 25
+  },
+  {
+    "token_id": 1844,
+    "token": "User",
+    "count": 25
+  },
+  {
+    "token_id": 15849,
+    "token": "…\n",
+    "count": 22
+  },
+  {
+    "token_id": 326,
+    "token": " and",
+    "count": 19
+  },
+  {
+    "token_id": 2358,
+    "token": "....",
+    "count": 19
+  },
+  {
+    "token_id": 2499,
+    "token": "\n\n\n",
+    "count": 18
+  },
+  {
+    "token_id": 261,
+    "token": " a",
+    "count": 17
+  },
+  {
+    "token_id": 20953,
+    "token": " Must",
+    "count": 16
+  },
+  {
+    "token_id": 553,
+    "token": " are",
+    "count": 16
+  },
+  {
+    "token_id": 306,
+    "token": " in",
+    "count": 16
+  },
+  {
+    "token_id": 5178,
+    "token": " etc",
+    "count": 15
+  },
+  {
+    "token_id": 50005,
+    "token": "‑",
+    "count": 13
+  },
+  {
+    "token_id": 30,
+    "token": "?",
+    "count": 12
+  },
+  {
+    "token_id": 1402,
+    "token": ":\n\n",
+    "count": 12
+  },
+  {
+    "token_id": 6240,
+    "token": " **",
+    "count": 12
+  },
+  {
+    "token_id": 13709,
+    "token": " craft",
+    "count": 11
+  },
+  {
+    "token_id": 4662,
+    "token": " None",
+    "count": 11
+  },
+  {
+    "token_id": 50059,
+    "token": " rewrite",
+    "count": 11
+  },
+  {
+    "token_id": 483,
+    "token": " with",
+    "count": 11
+  },
+  {
+    "token_id": 484,
+    "token": " that",
+    "count": 10
+  },
+  {
+    "token_id": 43595,
+    "token": " besides",
+    "count": 10
+  },
+  {
+    "token_id": 889,
+    "token": " but",
+    "count": 10
+  },
+  {
+    "token_id": 316,
+    "token": " to",
+    "count": 9
+  },
+  {
+    "token_id": 5012,
+    "token": " study",
+    "count": 9
+  },
+  {
+    "token_id": 370,
+    "token": "\r\n",
+    "count": 9
+  },
+  {
+    "token_id": 2360,
+    "token": " using",
+    "count": 9
+  },
+  {
+    "token_id": 1879,
+    "token": " these",
+    "count": 9
+  },
+  {
+    "token_id": 730,
+    "token": " In",
+    "count": 8
+  },
+  {
+    "token_id": 41021,
+    "token": " Let's",
+    "count": 8
+  },
+  {
+    "token_id": 2804,
+    "token": " must",
+    "count": 8
+  },
+  {
+    "token_id": 27853,
+    "token": " paragraph",
+    "count": 8
+  },
+  {
+    "token_id": 395,
+    "token": " for",
+    "count": 8
+  },
+  {
+    "token_id": 2632,
+    "token": " So",
+    "count": 8
+  },
+  {
+    "token_id": 2201,
+    "token": " text",
+    "count": 8
+  },
+  {
+    "token_id": 3357,
+    "token": " keep",
+    "count": 7
+  },
+  {
+    "token_id": 722,
+    "token": " all",
+    "count": 7
+  },
+  {
+    "token_id": 10175,
+    "token": " gave",
+    "count": 7
+  },
+  {
+    "token_id": 382,
+    "token": " is",
+    "count": 7
+  },
+  {
+    "token_id": 3100,
+    "token": " content",
+    "count": 7
+  },
+  {
+    "token_id": 1309,
+    "token": " need",
+    "count": 7
+  },
+  {
+    "token_id": 16835,
+    "token": " Keep",
+    "count": 7
+  },
+  {
+    "token_id": 328,
+    "token": " of",
+    "count": 7
+  },
+  {
+    "token_id": 1495,
+    "token": " how",
+    "count": 7
+  },
+  {
+    "token_id": 20837,
+    "token": " AI",
+    "count": 7
+  },
+  {
+    "token_id": 74564,
+    "token": " preserving",
+    "count": 6
+  },
+  {
+    "token_id": 2500,
+    "token": "This",
+    "count": 6
+  },
+  {
+    "token_id": 4335,
+    "token": " given",
+    "count": 6
+  },
+  {
+    "token_id": 3310,
+    "token": "​",
+    "count": 6
+  },
+  {
+    "token_id": 1416,
+    "token": " We",
+    "count": 6
+  },
+  {
+    "token_id": 3086,
+    "token": "the",
+    "count": 6
+  },
+  {
+    "token_id": 3164,
+    "token": " They",
+    "count": 6
+  },
+  {
+    "token_id": 200002,
+    "token": "<|return|>",
+    "count": 5
+  },
+  {
+    "token_id": 34415,
+    "token": "...\"",
+    "count": 5
+  },
+  {
+    "token_id": 19792,
+    "token": " Need",
+    "count": 5
+  },
+  {
+    "token_id": 18057,
+    "token": " Should",
+    "count": 5
+  },
+  {
+    "token_id": 581,
+    "token": " we",
+    "count": 5
+  },
+  {
+    "token_id": 10635,
+    "token": " produce",
+    "count": 5
+  },
+  {
+    "token_id": 679,
+    "token": " have",
+    "count": 5
+  },
+  {
+    "token_id": 1819,
+    "token": " through",
+    "count": 5
+  },
+  {
+    "token_id": 853,
+    "token": " has",
+    "count": 5
+  },
+  {
+    "token_id": 448,
+    "token": " an",
+    "count": 5
+  },
+  {
+    "token_id": 16044,
+    "token": " influence",
+    "count": 5
+  },
+  {
+    "token_id": 1039,
+    "token": " our",
+    "count": 5
+  },
+  {
+    "token_id": 2617,
+    "token": " those",
+    "count": 5
+  },
+  {
+    "token_id": 392,
+    "token": " \"",
+    "count": 5
+  },
+  {
+    "token_id": 33507,
+    "token": " preserve",
+    "count": 5
+  },
+  {
+    "token_id": 672,
+    "token": "\",",
+    "count": 5
+  },
+  {
+    "token_id": 31354,
+    "token": " investigate",
+    "count": 5
+  },
+  {
+    "token_id": 6651,
+    "token": " paper",
+    "count": 5
+  },
+  {
+    "token_id": 18919,
+    "token": " framework",
+    "count": 4
+  },
+  {
+    "token_id": 1825,
+    "token": " user",
+    "count": 4
+  },
+  {
+    "token_id": 3692,
+    "token": ".\"",
+    "count": 4
+  },
+  {
+    "token_id": 145099,
+    "token": "Rewrite",
+    "count": 4
+  },
+  {
+    "token_id": 620,
+    "token": " new",
+    "count": 4
+  },
+  {
+    "token_id": 802,
+    "token": "’s",
+    "count": 4
+  },
+  {
+    "token_id": 350,
+    "token": " (",
+    "count": 4
+  },
+  {
+    "token_id": 22910,
+    "token": " propose",
+    "count": 4
+  },
+  {
+    "token_id": 1,
+    "token": "\"",
+    "count": 4
+  },
+  {
+    "token_id": 1118,
+    "token": " which",
+    "count": 4
+  },
+  {
+    "token_id": 7139,
+    "token": " approach",
+    "count": 4
+  },
+  {
+    "token_id": 17511,
+    "token": " Using",
+    "count": 4
+  },
+  {
+    "token_id": 25707,
+    "token": " approaches",
+    "count": 4
+  },
+  {
+    "token_id": 118959,
+    "token": " heightened",
+    "count": 4
+  },
+  {
+    "token_id": 7933,
+    "token": " methods",
+    "count": 4
+  },
+  {
+    "token_id": 885,
+    "token": "'s",
+    "count": 4
+  },
+  {
+    "token_id": 503,
+    "token": " or",
+    "count": 4
+  },
+  {
+    "token_id": 3518,
+    "token": " within",
+    "count": 4
+  },
+  {
+    "token_id": 1617,
+    "token": " its",
+    "count": 4
+  },
+  {
+    "token_id": 4376,
+    "token": " results",
+    "count": 4
+  },
+  {
+    "token_id": 11227,
+    "token": " studies",
+    "count": 4
+  },
+  {
+    "token_id": 3772,
+    "token": " address",
+    "count": 4
+  },
+  {
+    "token_id": 5296,
+    "token": " task",
+    "count": 4
+  },
+  {
+    "token_id": 402,
+    "token": " on",
+    "count": 4
+  },
+  {
+    "token_id": 665,
+    "token": " can",
+    "count": 4
+  },
+  {
+    "token_id": 1238,
+    "token": " data",
+    "count": 4
+  },
+  {
+    "token_id": 2575,
+    "token": " develop",
+    "count": 4
+  },
+  {
+    "token_id": 64439,
+    "token": " pathways",
+    "count": 3
+  },
+  {
+    "token_id": 1757,
+    "token": " should",
+    "count": 3
+  },
+  {
+    "token_id": 4783,
+    "token": " often",
+    "count": 3
+  },
+  {
+    "token_id": 170971,
+    "token": " Utilizing",
+    "count": 3
+  },
+  {
+    "token_id": 480,
+    "token": " it",
+    "count": 3
+  },
+  {
+    "token_id": 10915,
+    "token": " meaning",
+    "count": 3
+  },
+  {
+    "token_id": 1327,
+    "token": " just",
+    "count": 3
+  },
+  {
+    "token_id": 1078,
+    "token": " about",
+    "count": 3
+  },
+  {
+    "token_id": 25980,
+    "token": " \n\n\n",
+    "count": 3
+  },
+  {
+    "token_id": 2322,
+    "token": "—",
+    "count": 3
+  },
+  {
+    "token_id": 17002,
+    "token": " linked",
+    "count": 3
+  },
+  {
+    "token_id": 1101,
+    "token": " work",
+    "count": 3
+  },
+  {
+    "token_id": 7902,
+    "token": " affect",
+    "count": 3
+  },
+  {
+    "token_id": 42039,
+    "token": " implications",
+    "count": 3
+  },
+  {
+    "token_id": 25499,
+    "token": " findings",
+    "count": 3
+  },
+  {
+    "token_id": 2501,
+    "token": " create",
+    "count": 3
+  },
+  {
+    "token_id": 13525,
+    "token": " challenges",
+    "count": 3
+  },
+  {
+    "token_id": 58369,
+    "token": "Let's",
+    "count": 3
+  },
+  {
+    "token_id": 15142,
+    "token": " strategies",
+    "count": 3
+  },
+  {
+    "token_id": 2647,
+    "token": " different",
+    "count": 3
+  },
+  {
+    "token_id": 4541,
+    "token": "dr",
+    "count": 3
+  },
+  {
+    "token_id": 62813,
+    "token": " systematic",
+    "count": 3
+  },
+  {
+    "token_id": 59175,
+    "token": "Paragraph",
+    "count": 3
+  },
+  {
+    "token_id": 17377,
+    "token": " practical",
+    "count": 3
+  },
+  {
+    "token_id": 2238,
+    "token": " such",
+    "count": 3
+  },
+  {
+    "token_id": 18443,
+    "token": " enhance",
+    "count": 3
+  },
+  {
+    "token_id": 6933,
+    "token": " significant",
+    "count": 3
+  },
+  {
+    "token_id": 1328,
+    "token": " This",
+    "count": 3
+  },
+  {
+    "token_id": 9198,
+    "token": " serious",
+    "count": 3
+  },
+  {
+    "token_id": 18921,
+    "token": " platforms",
+    "count": 3
+  },
+  {
+    "token_id": 1062,
+    "token": " any",
+    "count": 3
+  },
+  {
+    "token_id": 6451,
+    "token": " potential",
+    "count": 3
+  },
+  {
+    "token_id": 5251,
+    "token": " across",
+    "count": 3
+  },
+  {
+    "token_id": 591,
+    "token": " from",
+    "count": 3
+  },
+  {
+    "token_id": 20865,
+    "token": "Original",
+    "count": 3
+  },
+  {
+    "token_id": 17834,
+    "token": "....\n\n",
+    "count": 3
+  },
+  {
+    "token_id": 24058,
+    "token": " insight",
+    "count": 3
+  },
+  {
+    "token_id": 76833,
+    "token": " emphasize",
+    "count": 3
+  },
+  {
+    "token_id": 5890,
+    "token": " various",
+    "count": 3
+  },
+  {
+    "token_id": 2356,
+    "token": " show",
+    "count": 3
+  },
+  {
+    "token_id": 4176,
+    "token": " research",
+    "count": 3
+  },
+  {
+    "token_id": 117920,
+    "token": " rewritten",
+    "count": 3
+  },
+  {
+    "token_id": 127106,
+    "token": " investigates",
+    "count": 3
+  },
+  {
+    "token_id": 26676,
+    "token": " Results",
+    "count": 3
+  },
+  {
+    "token_id": 4050,
+    "token": "\".",
+    "count": 3
+  },
+  {
+    "token_id": 47643,
+    "token": " explores",
+    "count": 3
+  },
+  {
+    "token_id": 495,
+    "token": " this",
+    "count": 3
+  },
+  {
+    "token_id": 16419,
+    "token": " despite",
+    "count": 3
+  },
+  {
+    "token_id": 6086,
+    "token": " issues",
+    "count": 3
+  },
+  {
+    "token_id": 3587,
+    "token": " provide",
+    "count": 3
+  },
+  {
+    "token_id": 9072,
+    "token": " providing",
+    "count": 3
+  },
+  {
+    "token_id": 10634,
+    "token": " traditional",
+    "count": 2
+  },
+  {
+    "token_id": 8660,
+    "token": " decision",
+    "count": 2
+  },
+  {
+    "token_id": 3333,
+    "token": " present",
+    "count": 2
+  },
+  {
+    "token_id": 1340,
+    "token": " may",
+    "count": 2
+  },
+  {
+    "token_id": 91423,
+    "token": " comprehension",
+    "count": 2
+  },
+  {
+    "token_id": 6052,
+    "token": " answer",
+    "count": 2
+  },
+  {
+    "token_id": 1877,
+    "token": " As",
+    "count": 2
+  },
+  {
+    "token_id": 47221,
+    "token": " theoretical",
+    "count": 2
+  },
+  {
+    "token_id": 2420,
+    "token": " system",
+    "count": 2
+  },
+  {
+    "token_id": 6635,
+    "token": ".\"\n\n",
+    "count": 2
+  },
+  {
+    "token_id": 8820,
+    "token": " Also",
+    "count": 2
+  },
+  {
+    "token_id": 28556,
+    "token": " delivering",
+    "count": 2
+  },
+  {
+    "token_id": 77618,
+    "token": " grounded",
+    "count": 2
+  },
+  {
+    "token_id": 3378,
+    "token": " important",
+    "count": 2
+  },
+  {
+    "token_id": 1010,
+    "token": " void",
+    "count": 2
+  },
+  {
+    "token_id": 26890,
+    "token": " insights",
+    "count": 2
+  },
+  {
+    "token_id": 39838,
+    "token": " deployment",
+    "count": 2
+  },
+  {
+    "token_id": 16644,
+    "token": " explain",
+    "count": 2
+  },
+  {
+    "token_id": 4410,
+    "token": " large",
+    "count": 2
+  },
+  {
+    "token_id": 1606,
+    "token": " only",
+    "count": 2
+  },
+  {
+    "token_id": 43821,
+    "token": " presenting",
+    "count": 2
+  },
+  {
+    "token_id": 23973,
+    "token": " strategic",
+    "count": 2
+  },
+  {
+    "token_id": 14321,
+    "token": " relationships",
+    "count": 2
+  },
+  {
+    "token_id": 62051,
+    "token": " Drawing",
+    "count": 2
+  },
+  {
+    "token_id": 355,
+    "token": " A",
+    "count": 2
+  },
+  {
+    "token_id": 1023,
+    "token": " they",
+    "count": 2
+  },
+  {
+    "token_id": 21849,
+    "token": " presents",
+    "count": 2
+  },
+  {
+    "token_id": 21991,
+    "token": " collaboration",
+    "count": 2
+  },
+  {
+    "token_id": 4784,
+    "token": " either",
+    "count": 2
+  },
+  {
+    "token_id": 621,
+    "token": " do",
+    "count": 2
+  },
+  {
+    "token_id": 9419,
+    "token": " conduct",
+    "count": 2
+  },
+  {
+    "token_id": 24667,
+    "token": " applying",
+    "count": 2
+  },
+  {
+    "token_id": 20606,
+    "token": " investigation",
+    "count": 2
+  },
+  {
+    "token_id": 7557,
+    "token": " upon",
+    "count": 2
+  },
+  {
+    "token_id": 10772,
+    "token": " strategy",
+    "count": 2
+  },
+  {
+    "token_id": 12530,
+    "token": " poor",
+    "count": 2
+  },
+  {
+    "token_id": 21611,
+    "token": " indicate",
+    "count": 2
+  },
+  {
+    "token_id": 1001,
+    "token": " one",
+    "count": 2
+  },
+  {
+    "token_id": 11410,
+    "token": " identify",
+    "count": 2
+  },
+  {
+    "token_id": 3274,
+    "token": " There",
+    "count": 2
+  },
+  {
+    "token_id": 67568,
+    "token": " contexts",
+    "count": 2
+  },
+  {
+    "token_id": 6961,
+    "token": "??",
+    "count": 2
+  },
+  {
+    "token_id": 410,
+    "token": "**",
+    "count": 2
+  },
+  {
+    "token_id": 14805,
+    "token": " advance",
+    "count": 2
+  },
+  {
+    "token_id": 25284,
+    "token": " revolution",
+    "count": 2
+  },
+  {
+    "token_id": 8896,
+    "token": " groups",
+    "count": 2
+  },
+  {
+    "token_id": 10539,
+    "token": " regarding",
+    "count": 2
+  },
+  {
+    "token_id": 21344,
+    "token": " guidance",
+    "count": 2
+  },
+  {
+    "token_id": 68015,
+    "token": " lessen",
+    "count": 2
+  },
+  {
+    "token_id": 54121,
+    "token": " enhancing",
+    "count": 2
+  },
+  {
+    "token_id": 52008,
+    "token": " gaps",
+    "count": 2
+  },
+  {
+    "token_id": 13110,
+    "token": " sharing",
+    "count": 2
+  },
+  {
+    "token_id": 7413,
+    "token": "-\n",
+    "count": 2
+  },
+  {
+    "token_id": 2910,
+    "token": " market",
+    "count": 2
+  },
+  {
+    "token_id": 7015,
+    "token": " models",
+    "count": 2
+  },
+  {
+    "token_id": 438,
+    "token": "’",
+    "count": 2
+  },
+  {
+    "token_id": 6361,
+    "token": " platform",
+    "count": 2
+  },
+  {
+    "token_id": 24832,
+    "token": " indicates",
+    "count": 2
+  },
+  {
+    "token_id": 5339,
+    "token": " Our",
+    "count": 2
+  },
+  {
+    "token_id": 27559,
+    "token": "\n\n\n\n\n",
+    "count": 2
+  },
+  {
+    "token_id": 19294,
+    "token": " mainly",
+    "count": 2
+  },
+  {
+    "token_id": 8808,
+    "token": " benefits",
+    "count": 2
+  },
+  {
+    "token_id": 60285,
+    "token": "impact",
+    "count": 2
+  },
+  {
+    "token_id": 14253,
+    "token": " showing",
+    "count": 2
+  },
+  {
+    "token_id": 5746,
+    "token": " unique",
+    "count": 2
+  },
+  {
+    "token_id": 966,
+    "token": " “",
+    "count": 2
+  },
+  {
+    "token_id": 6427,
+    "token": " sites",
+    "count": 2
+  },
+  {
+    "token_id": 47283,
+    "token": " Nevertheless",
+    "count": 2
+  },
+  {
+    "token_id": 1199,
+    "token": " use",
+    "count": 2
+  },
+  {
+    "token_id": 9595,
+    "token": " existing",
+    "count": 2
+  },
+  {
+    "token_id": 3322,
+    "token": " response",
+    "count": 2
+  },
+  {
+    "token_id": 723,
+    "token": " [",
+    "count": 2
+  },
+  {
+    "token_id": 734,
+    "token": ":\n",
+    "count": 2
+  },
+  {
+    "token_id": 4534,
+    "token": " By",
+    "count": 2
+  },
+  {
+    "token_id": 1407,
+    "token": " co",
+    "count": 2
+  },
+  {
+    "token_id": 3240,
+    "token": " experience",
+    "count": 2
+  },
+  {
+    "token_id": 48782,
+    "token": " generates",
+    "count": 2
+  },
+  {
+    "token_id": 2359,
+    "token": " model",
+    "count": 2
+  },
+  {
+    "token_id": 6232,
+    "token": " impact",
+    "count": 2
+  },
+  {
+    "token_id": 43810,
+    "token": " Ensure",
+    "count": 2
+  },
+  {
+    "token_id": 4919,
+    "token": " several",
+    "count": 2
+  },
+  {
+    "token_id": 5006,
+    "token": " These",
+    "count": 2
+  },
+  {
+    "token_id": 5297,
+    "token": " offers",
+    "count": 2
+  },
+  {
+    "token_id": 8663,
+    "token": " numbers",
+    "count": 2
+  },
+  {
+    "token_id": 3072,
+    "token": " But",
+    "count": 2
+  },
+  {
+    "token_id": 8684,
+    "token": " attention",
+    "count": 2
+  },
+  {
+    "token_id": 175451,
+    "token": " Guided",
+    "count": 2
+  },
+  {
+    "token_id": 3004,
+    "token": " No",
+    "count": 2
+  },
+  {
+    "token_id": 6626,
+    "token": " issue",
+    "count": 2
+  },
+  {
+    "token_id": 18604,
+    "token": " supporting",
+    "count": 2
+  },
+  {
+    "token_id": 146779,
+    "token": " emphasizing",
+    "count": 2
+  },
+  {
+    "token_id": 2870,
+    "token": " between",
+    "count": 2
+  },
+  {
+    "token_id": 4590,
+    "token": " single",
+    "count": 2
+  },
+  {
+    "token_id": 2961,
+    "token": " offer",
+    "count": 2
+  },
+  {
+    "token_id": 51441,
+    "token": " Provide",
+    "count": 2
+  },
+  {
+    "token_id": 23659,
+    "token": " landscape",
+    "count": 2
+  },
+  {
+    "token_id": 20672,
+    "token": " engagement",
+    "count": 2
+  },
+  {
+    "token_id": 72477,
+    "token": " guiding",
+    "count": 2
+  },
+  {
+    "token_id": 14678,
+    "token": " decisions",
+    "count": 2
+  },
+  {
+    "token_id": 5385,
+    "token": " users",
+    "count": 2
+  },
+  {
+    "token_id": 10740,
+    "token": " greater",
+    "count": 2
+  },
+  {
+    "token_id": 73000,
+    "token": " prevalent",
+    "count": 2
+  },
+  {
+    "token_id": 6217,
+    "token": " prior",
+    "count": 2
+  },
+  {
+    "token_id": 117852,
+    "token": " actionable",
+    "count": 2
+  },
+  {
+    "token_id": 23753,
+    "token": " concepts",
+    "count": 2
+  },
+  {
+    "token_id": 58273,
+    "token": " informational",
+    "count": 2
+  },
+  {
+    "token_id": 1921,
+    "token": " see",
+    "count": 2
+  },
+  {
+    "token_id": 28035,
+    "token": " examine",
+    "count": 2
+  },
+  {
+    "token_id": 41801,
+    "token": " exhibit",
+    "count": 2
+  },
+  {
+    "token_id": 165324,
+    "token": " implying",
+    "count": 2
+  },
+  {
+    "token_id": 2476,
+    "token": " ‘",
+    "count": 2
+  },
+  {
+    "token_id": 27752,
+    "token": " employed",
+    "count": 2
+  },
+  {
+    "token_id": 115971,
+    "token": " fostering",
+    "count": 2
+  },
+  {
+    "token_id": 258,
+    "token": "in",
+    "count": 2
+  },
+  {
+    "token_id": 2652,
+    "token": "­",
+    "count": 2
+  },
+  {
+    "token_id": 3992,
+    "token": " following",
+    "count": 2
+  },
+  {
+    "token_id": 4568,
+    "token": " \r\n",
+    "count": 2
+  },
+  {
+    "token_id": 2316,
+    "token": " own",
+    "count": 2
+  },
+  {
+    "token_id": 5941,
+    "token": " terms",
+    "count": 2
+  },
+  {
+    "token_id": 17527,
+    "token": "AI",
+    "count": 2
+  },
+  {
+    "token_id": 50768,
+    "token": " centered",
+    "count": 2
+  },
+  {
+    "token_id": 79391,
+    "token": " mitigate",
+    "count": 2
+  },
+  {
+    "token_id": 70186,
+    "token": " employing",
+    "count": 2
+  },
+  {
+    "token_id": 5192,
+    "token": " due",
+    "count": 2
+  },
+  {
+    "token_id": 16005,
+    "token": " measures",
+    "count": 2
+  },
+  {
+    "token_id": 10112,
+    "token": " maybe",
+    "count": 2
+  },
+  {
+    "token_id": 22489,
+    "token": " awareness",
+    "count": 2
+  },
+  {
+    "token_id": 49701,
+    "token": " organizational",
+    "count": 2
+  },
+  {
+    "token_id": 24693,
+    "token": " outcomes",
+    "count": 2
+  },
+  {
+    "token_id": 1534,
+    "token": " result",
+    "count": 2
+  },
+  {
+    "token_id": 11245,
+    "token": " broad",
+    "count": 2
+  },
+  {
+    "token_id": 11884,
+    "token": " particularly",
+    "count": 2
+  },
+  {
+    "token_id": 1299,
+    "token": " like",
+    "count": 2
+  },
+  {
+    "token_id": 2813,
+    "token": " game",
+    "count": 2
+  },
+  {
+    "token_id": 2928,
+    "token": " still",
+    "count": 2
+  },
+  {
+    "token_id": 23736,
+    "token": " capabilities",
+    "count": 2
+  },
+  {
+    "token_id": 36801,
+    "token": " enabling",
+    "count": 2
+  },
+  {
+    "token_id": 18864,
+    "token": " fundamental",
+    "count": 2
+  },
+  {
+    "token_id": 11434,
+    "token": " enable",
+    "count": 2
+  },
+  {
+    "token_id": 23021,
+    "token": " association",
+    "count": 2
+  },
+  {
+    "token_id": 6980,
+    "token": " especially",
+    "count": 2
+  },
+  {
+    "token_id": 9327,
+    "token": " effects",
+    "count": 2
+  },
+  {
+    "token_id": 25995,
+    "token": " recognition",
+    "count": 2
+  },
+  {
+    "token_id": 1932,
+    "token": " high",
+    "count": 2
+  },
+  {
+    "token_id": 22897,
+    "token": " firms",
+    "count": 2
+  },
+  {
+    "token_id": 77996,
+    "token": " employs",
+    "count": 2
+  },
+  {
+    "token_id": 1273,
+    "token": " other",
+    "count": 2
+  },
+  {
+    "token_id": 21407,
+    "token": " evaluation",
+    "count": 2
+  },
+  {
+    "token_id": 4589,
+    "token": " display",
+    "count": 1
+  },
+  {
+    "token_id": 28185,
+    "token": " accounting",
+    "count": 1
+  },
+  {
+    "token_id": 37707,
+    "token": " incorporate",
+    "count": 1
+  },
+  {
+    "token_id": 17865,
+    "token": " funding",
+    "count": 1
+  },
+  {
+    "token_id": 40519,
+    "token": " reflects",
+    "count": 1
+  },
+  {
+    "token_id": 31821,
+    "token": " tension",
+    "count": 1
+  },
+  {
+    "token_id": 1511,
+    "token": " into",
+    "count": 1
+  },
+  {
+    "token_id": 8117,
+    "token": " leading",
+    "count": 1
+  },
+  {
+    "token_id": 132793,
+    "token": " profoundly",
+    "count": 1
+  },
+  {
+    "token_id": 8451,
+    "token": " prices",
+    "count": 1
+  },
+  {
+    "token_id": 1217,
+    "token": " also",
+    "count": 1
+  },
+  {
+    "token_id": 43604,
+    "token": " damp",
+    "count": 1
+  },
+  {
+    "token_id": 2823,
+    "token": " direct",
+    "count": 1
+  },
+  {
+    "token_id": 79937,
+    "token": "central",
+    "count": 1
+  },
+  {
+    "token_id": 6462,
+    "token": " simply",
+    "count": 1
+  },
+  {
+    "token_id": 363,
+    "token": " C",
+    "count": 1
+  },
+  {
+    "token_id": 10970,
+    "token": " truly",
+    "count": 1
+  },
+  {
+    "token_id": 16547,
+    "token": "..\n",
+    "count": 1
+  },
+  {
+    "token_id": 9368,
+    "token": " solutions",
+    "count": 1
+  },
+  {
+    "token_id": 16691,
+    "token": " forces",
+    "count": 1
+  },
+  {
+    "token_id": 1373,
+    "token": " them",
+    "count": 1
+  },
+  {
+    "token_id": 18879,
+    "token": " proven",
+    "count": 1
+  },
+  {
+    "token_id": 108958,
+    "token": " uptake",
+    "count": 1
+  },
+  {
+    "token_id": 10251,
+    "token": " pin",
+    "count": 1
+  },
+  {
+    "token_id": 38916,
+    "token": " acceptance",
+    "count": 1
+  },
+  {
+    "token_id": 2344,
+    "token": " top",
+    "count": 1
+  },
+  {
+    "token_id": 1623,
+    "token": " inform",
+    "count": 1
+  },
+  {
+    "token_id": 105885,
+    "token": " narratives",
+    "count": 1
+  },
+  {
+    "token_id": 140814,
+    "token": " resolves",
+    "count": 1
+  },
+  {
+    "token_id": 64699,
+    "token": " uniquely",
+    "count": 1
+  },
+  {
+    "token_id": 196883,
+    "token": " catalysts",
+    "count": 1
+  },
+  {
+    "token_id": 5003,
+    "token": " says",
+    "count": 1
+  },
+  {
+    "token_id": 5808,
+    "token": "So",
+    "count": 1
+  },
+  {
+    "token_id": 6771,
+    "token": " similar",
+    "count": 1
+  },
+  {
+    "token_id": 52139,
+    "token": " harness",
+    "count": 1
+  },
+  {
+    "token_id": 41990,
+    "token": " integrate",
+    "count": 1
+  },
+  {
+    "token_id": 73170,
+    "token": " originated",
+    "count": 1
+  },
+  {
+    "token_id": 94607,
+    "token": " proposes",
+    "count": 1
+  },
+  {
+    "token_id": 322,
+    "token": " re",
+    "count": 1
+  },
+  {
+    "token_id": 12486,
+    "token": " missing",
+    "count": 1
+  },
+  {
+    "token_id": 14469,
+    "token": " performed",
+    "count": 1
+  },
+  {
+    "token_id": 54504,
+    "token": " conclude",
+    "count": 1
+  },
+  {
+    "token_id": 46830,
+    "token": " We'll",
+    "count": 1
+  },
+  {
+    "token_id": 3193,
+    "token": "Gr",
+    "count": 1
+  },
+  {
+    "token_id": 83710,
+    "token": " founders",
+    "count": 1
+  },
+  {
+    "token_id": 57876,
+    "token": " fluctu",
+    "count": 1
+  },
+  {
+    "token_id": 8496,
+    "token": " concept",
+    "count": 1
+  },
+  {
+    "token_id": 40695,
+    "token": " entrepreneurs",
+    "count": 1
+  },
+  {
+    "token_id": 26163,
+    "token": " cod",
+    "count": 1
+  },
+  {
+    "token_id": 9209,
+    "token": " Initial",
+    "count": 1
+  },
+  {
+    "token_id": 132104,
+    "token": " resh",
+    "count": 1
+  },
+  {
+    "token_id": 13560,
+    "token": "-term",
+    "count": 1
+  },
+  {
+    "token_id": 10648,
+    "token": " wants",
+    "count": 1
+  },
+  {
+    "token_id": 5787,
+    "token": " article",
+    "count": 1
+  },
+  {
+    "token_id": 113074,
+    "token": " detrimental",
+    "count": 1
+  },
+  {
+    "token_id": 20123,
+    "token": " assessment",
+    "count": 1
+  },
+  {
+    "token_id": 23442,
+    "token": ")\",",
+    "count": 1
+  },
+  {
+    "token_id": 23007,
+    "token": " characteristics",
+    "count": 1
+  },
+  {
+    "token_id": 88369,
+    "token": " differentiate",
+    "count": 1
+  },
+  {
+    "token_id": 7124,
+    "token": " knowledge",
+    "count": 1
+  },
+  {
+    "token_id": 8359,
+    "token": " properties",
+    "count": 1
+  },
+  {
+    "token_id": 4350,
+    "token": " employ",
+    "count": 1
+  },
+  {
+    "token_id": 34901,
+    "token": " reveals",
+    "count": 1
+  },
+  {
+    "token_id": 43639,
+    "token": " suggesting",
+    "count": 1
+  },
+  {
+    "token_id": 140050,
+    "token": " crowdfunding",
+    "count": 1
+  },
+  {
+    "token_id": 73405,
+    "token": " demonstrating",
+    "count": 1
+  },
+  {
+    "token_id": 59679,
+    "token": "Modern",
+    "count": 1
+  },
+  {
+    "token_id": 62652,
+    "token": " encounters",
+    "count": 1
+  },
+  {
+    "token_id": 11293,
+    "token": " increasing",
+    "count": 1
+  },
+  {
+    "token_id": 4414,
+    "token": " needs",
+    "count": 1
+  },
+  {
+    "token_id": 2758,
+    "token": " main",
+    "count": 1
+  },
+  {
+    "token_id": 28330,
+    "token": " highlights",
+    "count": 1
+  },
+  {
+    "token_id": 49166,
+    "token": " influences",
+    "count": 1
+  },
+  {
+    "token_id": 9538,
+    "token": " align",
+    "count": 1
+  },
+  {
+    "token_id": 27837,
+    "token": " focusing",
+    "count": 1
+  },
+  {
+    "token_id": 144129,
+    "token": ")—",
+    "count": 1
+  },
+  {
+    "token_id": 6884,
+    "token": " designed",
+    "count": 1
+  },
+  {
+    "token_id": 6092,
+    "token": " cut",
+    "count": 1
+  },
+  {
+    "token_id": 189979,
+    "token": " geographically",
+    "count": 1
+  },
+  {
+    "token_id": 14326,
+    "token": " explore",
+    "count": 1
+  },
+  {
+    "token_id": 8734,
+    "token": " IT",
+    "count": 1
+  },
+  {
+    "token_id": 21073,
+    "token": " increases",
+    "count": 1
+  },
+  {
+    "token_id": 3214,
+    "token": " team",
+    "count": 1
+  },
+  {
+    "token_id": 102984,
+    "token": " advancements",
+    "count": 1
+  },
+  {
+    "token_id": 2305,
+    "token": "As",
+    "count": 1
+  },
+  {
+    "token_id": 32055,
+    "token": " Legal",
+    "count": 1
+  },
+  {
+    "token_id": 51669,
+    "token": " contrary",
+    "count": 1
+  },
+  {
+    "token_id": 21169,
+    "token": " expectations",
+    "count": 1
+  },
+  {
+    "token_id": 29886,
+    "token": " adopted",
+    "count": 1
+  },
+  {
+    "token_id": 810,
+    "token": " go",
+    "count": 1
+  },
+  {
+    "token_id": 813,
+    "token": " so",
+    "count": 1
+  },
+  {
+    "token_id": 15712,
+    "token": " aspects",
+    "count": 1
+  },
+  {
+    "token_id": 19995,
+    "token": " routine",
+    "count": 1
+  },
+  {
+    "token_id": 18685,
+    "token": " carried",
+    "count": 1
+  },
+  {
+    "token_id": 29068,
+    "token": " subsequent",
+    "count": 1
+  },
+  {
+    "token_id": 13335,
+    "token": " applied",
+    "count": 1
+  },
+  {
+    "token_id": 11273,
+    "token": " teams",
+    "count": 1
+  },
+  {
+    "token_id": 139300,
+    "token": " emulate",
+    "count": 1
+  },
+  {
+    "token_id": 4951,
+    "token": " enough",
+    "count": 1
+  },
+  {
+    "token_id": 47613,
+    "token": " prototype",
+    "count": 1
+  },
+  {
+    "token_id": 68753,
+    "token": " approximate",
+    "count": 1
+  },
+  {
+    "token_id": 119689,
+    "token": " judgments",
+    "count": 1
+  },
+  {
+    "token_id": 2498,
+    "token": " support",
+    "count": 1
+  },
+  {
+    "token_id": 26673,
+    "token": "-down",
+    "count": 1
+  },
+  {
+    "token_id": 23962,
+    "token": " advantages",
+    "count": 1
+  },
+  {
+    "token_id": 8532,
+    "token": " fields",
+    "count": 1
+  },
+  {
+    "token_id": 11207,
+    "token": " sector",
+    "count": 1
+  },
+  {
+    "token_id": 29293,
+    "token": " equally",
+    "count": 1
+  },
+  {
+    "token_id": 94953,
+    "token": " distributing",
+    "count": 1
+  },
+  {
+    "token_id": 11526,
+    "token": " forms",
+    "count": 1
+  },
+  {
+    "token_id": 40724,
+    "token": " notion",
+    "count": 1
+  },
+  {
+    "token_id": 168008,
+    "token": " underscores",
+    "count": 1
+  },
+  {
+    "token_id": 23379,
+    "token": " suggests",
+    "count": 1
+  },
+  {
+    "token_id": 1072,
+    "token": " over",
+    "count": 1
+  },
+  {
+    "token_id": 16431,
+    "token": " causes",
+    "count": 1
+  },
+  {
+    "token_id": 7398,
+    "token": " shows",
+    "count": 1
+  },
+  {
+    "token_id": 4581,
+    "token": " situ",
+    "count": 1
+  },
+  {
+    "token_id": 46487,
+    "token": " phenomenon",
+    "count": 1
+  },
+  {
+    "token_id": 1596,
+    "token": "work",
+    "count": 1
+  },
+  {
+    "token_id": 76423,
+    "token": " computational",
+    "count": 1
+  },
+  {
+    "token_id": 76137,
+    "token": " Specifically",
+    "count": 1
+  },
+  {
+    "token_id": 31765,
+    "token": " situated",
+    "count": 1
+  },
+  {
+    "token_id": 83982,
+    "token": " accounted",
+    "count": 1
+  },
+  {
+    "token_id": 264,
+    "token": "re",
+    "count": 1
+  },
+  {
+    "token_id": 15609,
+    "token": " creation",
+    "count": 1
+  },
+  {
+    "token_id": 53586,
+    "token": " shifting",
+    "count": 1
+  },
+  {
+    "token_id": 38560,
+    "token": " transformed",
+    "count": 1
+  },
+  {
+    "token_id": 16622,
+    "token": " usage",
+    "count": 1
+  },
+  {
+    "token_id": 63792,
+    "token": " spotlight",
+    "count": 1
+  },
+  {
+    "token_id": 26416,
+    "token": " evolution",
+    "count": 1
+  },
+  {
+    "token_id": 18130,
+    "token": " effectively",
+    "count": 1
+  },
+  {
+    "token_id": 27916,
+    "token": " aims",
+    "count": 1
+  },
+  {
+    "token_id": 20830,
+    "token": " dataset",
+    "count": 1
+  },
+  {
+    "token_id": 15174,
+    "token": " diverse",
+    "count": 1
+  },
+  {
+    "token_id": 10089,
+    "token": " core",
+    "count": 1
+  },
+  {
+    "token_id": 3778,
+    "token": " looking",
+    "count": 1
+  },
+  {
+    "token_id": 102462,
+    "token": " amidst",
+    "count": 1
+  },
+  {
+    "token_id": 738,
+    "token": " will",
+    "count": 1
+  },
+  {
+    "token_id": 174421,
+    "token": " nuanced",
+    "count": 1
+  },
+  {
+    "token_id": 29569,
+    "token": " promoting",
+    "count": 1
+  },
+  {
+    "token_id": 168394,
+    "token": "```",
+    "count": 1
+  },
+  {
+    "token_id": 41825,
+    "token": "information",
+    "count": 1
+  },
+  {
+    "token_id": 52632,
+    "token": " swift",
+    "count": 1
+  },
+  {
+    "token_id": 45650,
+    "token": " concentrate",
+    "count": 1
+  },
+  {
+    "token_id": 7238,
+    "token": " players",
+    "count": 1
+  },
+  {
+    "token_id": 14266,
+    "token": " discussion",
+    "count": 1
+  },
+  {
+    "token_id": 17245,
+    "token": " quantity",
+    "count": 1
+  },
+  {
+    "token_id": 31197,
+    "token": " rival",
+    "count": 1
+  },
+  {
+    "token_id": 5588,
+    "token": " whether",
+    "count": 1
+  },
+  {
+    "token_id": 11716,
+    "token": " evidence",
+    "count": 1
+  },
+  {
+    "token_id": 14608,
+    "token": " senior",
+    "count": 1
+  },
+  {
+    "token_id": 103970,
+    "token": " leveraging",
+    "count": 1
+  },
+  {
+    "token_id": 6993,
+    "token": "isation",
+    "count": 1
+  },
+  {
+    "token_id": 30392,
+    "token": " environments",
+    "count": 1
+  },
+  {
+    "token_id": 144049,
+    "token": " contrasts",
+    "count": 1
+  },
+  {
+    "token_id": 53748,
+    "token": " instinct",
+    "count": 1
+  },
+  {
+    "token_id": 74857,
+    "token": " advancing",
+    "count": 1
+  },
+  {
+    "token_id": 9446,
+    "token": " counter",
+    "count": 1
+  },
+  {
+    "token_id": 188824,
+    "token": " intensified",
+    "count": 1
+  },
+  {
+    "token_id": 12871,
+    "token": " construct",
+    "count": 1
+  },
+  {
+    "token_id": 13610,
+    "token": "aug",
+    "count": 1
+  },
+  {
+    "token_id": 56391,
+    "token": " uncover",
+    "count": 1
+  },
+  {
+    "token_id": 7627,
+    "token": " reach",
+    "count": 1
+  },
+  {
+    "token_id": 83356,
+    "token": " neglected",
+    "count": 1
+  },
+  {
+    "token_id": 24878,
+    "token": " covering",
+    "count": 1
+  },
+  {
+    "token_id": 37591,
+    "token": " hypoth",
+    "count": 1
+  },
+  {
+    "token_id": 5184,
+    "token": " focus",
+    "count": 1
+  },
+  {
+    "token_id": 28226,
+    "token": " abilities",
+    "count": 1
+  },
+  {
+    "token_id": 47588,
+    "token": " barriers",
+    "count": 1
+  },
+  {
+    "token_id": 3880,
+    "token": " options",
+    "count": 1
+  },
+  {
+    "token_id": 2864,
+    "token": "off",
+    "count": 1
+  },
+  {
+    "token_id": 21043,
+    "token": " regions",
+    "count": 1
+  },
+  {
+    "token_id": 31060,
+    "token": " constraints",
+    "count": 1
+  },
+  {
+    "token_id": 28991,
+    "token": " counts",
+    "count": 1
+  },
+  {
+    "token_id": 12110,
+    "token": " boost",
+    "count": 1
+  },
+  {
+    "token_id": 6284,
+    "token": " cannot",
+    "count": 1
+  },
+  {
+    "token_id": 1100,
+    "token": "“",
+    "count": 1
+  },
+  {
+    "token_id": 33110,
+    "token": "???",
+    "count": 1
+  },
+  {
+    "token_id": 7539,
+    "token": " outside",
+    "count": 1
+  },
+  {
+    "token_id": 16897,
+    "token": " expertise",
+    "count": 1
+  },
+  {
+    "token_id": 16093,
+    "token": " skill",
+    "count": 1
+  },
+  {
+    "token_id": 18728,
+    "token": " frequently",
+    "count": 1
+  },
+  {
+    "token_id": 7598,
+    "token": " multiple",
+    "count": 1
+  },
+  {
+    "token_id": 8104,
+    "token": " ones",
+    "count": 1
+  },
+  {
+    "token_id": 4149,
+    "token": " possible",
+    "count": 1
+  },
+  {
+    "token_id": 81048,
+    "token": " establishments",
+    "count": 1
+  },
+  {
+    "token_id": 22575,
+    "token": " introduction",
+    "count": 1
+  },
+  {
+    "token_id": 75979,
+    "token": " unified",
+    "count": 1
+  },
+  {
+    "token_id": 15187,
+    "token": " attributes",
+    "count": 1
+  },
+  {
+    "token_id": 8711,
+    "token": " category",
+    "count": 1
+  },
+  {
+    "token_id": 5870,
+    "token": " environment",
+    "count": 1
+  },
+  {
+    "token_id": 54336,
+    "token": " Origin",
+    "count": 1
+  },
+  {
+    "token_id": 4871,
+    "token": " initial",
+    "count": 1
+  },
+  {
+    "token_id": 2973,
+    "token": " both",
+    "count": 1
+  },
+  {
+    "token_id": 2140,
+    "token": " key",
+    "count": 1
+  },
+  {
+    "token_id": 9064,
+    "token": " ideal",
+    "count": 1
+  },
+  {
+    "token_id": 126097,
+    "token": " openness",
+    "count": 1
+  },
+  {
+    "token_id": 69091,
+    "token": " detailing",
+    "count": 1
+  },
+  {
+    "token_id": 74447,
+    "token": " utilizes",
+    "count": 1
+  },
+  {
+    "token_id": 41515,
+    "token": " analyses",
+    "count": 1
+  },
+  {
+    "token_id": 14036,
+    "token": " Although",
+    "count": 1
+  },
+  {
+    "token_id": 58078,
+    "token": " emerge",
+    "count": 1
+  },
+  {
+    "token_id": 91655,
+    "token": "Assistant",
+    "count": 1
+  },
+  {
+    "token_id": 13392,
+    "token": " presented",
+    "count": 1
+  },
+  {
+    "token_id": 177109,
+    "token": " rewriting",
+    "count": 1
+  },
+  {
+    "token_id": 1815,
+    "token": " then",
+    "count": 1
+  },
+  {
+    "token_id": 11955,
+    "token": " wrote",
+    "count": 1
+  },
+  {
+    "token_id": 9289,
+    "token": " didn't",
+    "count": 1
+  },
+  {
+    "token_id": 26178,
+    "token": "``",
+    "count": 1
+  },
+  {
+    "token_id": 5495,
+    "token": " though",
+    "count": 1
+  },
+  {
+    "token_id": 6800,
+    "token": " South",
+    "count": 1
+  },
+  {
+    "token_id": 13765,
+    "token": " aid",
+    "count": 1
+  },
+  {
+    "token_id": 6144,
+    "token": "icip",
+    "count": 1
+  },
+  {
+    "token_id": 15940,
+    "token": " highlight",
+    "count": 1
+  },
+  {
+    "token_id": 65363,
+    "token": "—a",
+    "count": 1
+  },
+  {
+    "token_id": 19504,
+    "token": " differences",
+    "count": 1
+  },
+  {
+    "token_id": 191635,
+    "token": " Findings",
+    "count": 1
+  },
+  {
+    "token_id": 21706,
+    "token": " dealing",
+    "count": 1
+  },
+  {
+    "token_id": 7266,
+    "token": " higher",
+    "count": 1
+  },
+  {
+    "token_id": 39745,
+    "token": " qualities",
+    "count": 1
+  },
+  {
+    "token_id": 68537,
+    "token": " compartment",
+    "count": 1
+  },
+  {
+    "token_id": 22639,
+    "token": " earned",
+    "count": 1
+  },
+  {
+    "token_id": 94517,
+    "token": " uneven",
+    "count": 1
+  },
+  {
+    "token_id": 26929,
+    "token": " stronger",
+    "count": 1
+  },
+  {
+    "token_id": 4527,
+    "token": " amount",
+    "count": 1
+  },
+  {
+    "token_id": 2622,
+    "token": " follow",
+    "count": 1
+  },
+  {
+    "token_id": 130846,
+    "token": " complements",
+    "count": 1
+  },
+  {
+    "token_id": 1645,
+    "token": " most",
+    "count": 1
+  },
+  {
+    "token_id": 11402,
+    "token": " spread",
+    "count": 1
+  },
+  {
+    "token_id": 8275,
+    "token": " discover",
+    "count": 1
+  },
+  {
+    "token_id": 2893,
+    "token": " non",
+    "count": 1
+  },
+  {
+    "token_id": 53271,
+    "token": " extending",
+    "count": 1
+  },
+  {
+    "token_id": 3211,
+    "token": " level",
+    "count": 1
+  },
+  {
+    "token_id": 13986,
+    "token": " generation",
+    "count": 1
+  },
+  {
+    "token_id": 558,
+    "token": ".\n",
+    "count": 1
+  },
+  {
+    "token_id": 8601,
+    "token": " starting",
+    "count": 1
+  },
+  {
+    "token_id": 38841,
+    "token": " rolled",
+    "count": 1
+  },
+  {
+    "token_id": 7756,
+    "token": " assist",
+    "count": 1
+  },
+  {
+    "token_id": 27067,
+    "token": " Based",
+    "count": 1
+  },
+  {
+    "token_id": 8554,
+    "token": " projects",
+    "count": 1
+  },
+  {
+    "token_id": 4877,
+    "token": " features",
+    "count": 1
+  },
+  {
+    "token_id": 62274,
+    "token": " contributes",
+    "count": 1
+  },
+  {
+    "token_id": 31353,
+    "token": " campaigns",
+    "count": 1
+  },
+  {
+    "token_id": 3343,
+    "token": " change",
+    "count": 1
+  },
+  {
+    "token_id": 7747,
+    "token": " asked",
+    "count": 1
+  },
+  {
+    "token_id": 2684,
+    "token": " same",
+    "count": 1
+  },
+  {
+    "token_id": 11814,
+    "token": " technical",
+    "count": 1
+  },
+  {
+    "token_id": 33672,
+    "token": " utilized",
+    "count": 1
+  },
+  {
+    "token_id": 67567,
+    "token": " insufficient",
+    "count": 1
+  },
+  {
+    "token_id": 46435,
+    "token": " arise",
+    "count": 1
+  },
+  {
+    "token_id": 2935,
+    "token": " without",
+    "count": 1
+  },
+  {
+    "token_id": 53958,
+    "token": " partly",
+    "count": 1
+  },
+  {
+    "token_id": 27432,
+    "token": " sees",
+    "count": 1
+  },
+  {
+    "token_id": 1919,
+    "token": " where",
+    "count": 1
+  },
+  {
+    "token_id": 29026,
+    "token": " signals",
+    "count": 1
+  },
+  {
+    "token_id": 18418,
+    "token": " perspective",
+    "count": 1
+  },
+  {
+    "token_id": 48445,
+    "token": "creator",
+    "count": 1
+  },
+  {
+    "token_id": 2169,
+    "token": " item",
+    "count": 1
+  },
+  {
+    "token_id": 6365,
+    "token": " implement",
+    "count": 1
+  },
+  {
+    "token_id": 52911,
+    "token": "based",
+    "count": 1
+  },
+  {
+    "token_id": 130986,
+    "token": " inefficient",
+    "count": 1
+  },
+  {
+    "token_id": 9349,
+    "token": " push",
+    "count": 1
+  },
+  {
+    "token_id": 20692,
+    "token": " improvement",
+    "count": 1
+  },
+  {
+    "token_id": 180033,
+    "token": " customizing",
+    "count": 1
+  },
+  {
+    "token_id": 130555,
+    "token": " interconnected",
+    "count": 1
+  },
+  {
+    "token_id": 46572,
+    "token": " discusses",
+    "count": 1
+  },
+  {
+    "token_id": 12760,
+    "token": " remain",
+    "count": 1
+  },
+  {
+    "token_id": 9719,
+    "token": "Your",
+    "count": 1
+  },
+  {
+    "token_id": 14999,
+    "token": "Ok",
+    "count": 1
+  },
+  {
+    "token_id": 129564,
+    "token": " abstraction",
+    "count": 1
+  },
+  {
+    "token_id": 4022,
+    "token": " short",
+    "count": 1
+  },
+  {
+    "token_id": 50795,
+    "token": " demonstrates",
+    "count": 1
+  },
+  {
+    "token_id": 17994,
+    "token": " proposed",
+    "count": 1
+  },
+  {
+    "token_id": 6177,
+    "token": " seen",
+    "count": 1
+  },
+  {
+    "token_id": 26671,
+    "token": " focuses",
+    "count": 1
+  },
+  {
+    "token_id": 176901,
+    "token": " merges",
+    "count": 1
+  },
+  {
+    "token_id": 46067,
+    "token": " perspectives",
+    "count": 1
+  },
+  {
+    "token_id": 77114,
+    "token": " lifecycle",
+    "count": 1
+  },
+  {
+    "token_id": 23418,
+    "token": " concerning",
+    "count": 1
+  },
+  {
+    "token_id": 92745,
+    "token": " Employ",
+    "count": 1
+  },
+  {
+    "token_id": 4950,
+    "token": " face",
+    "count": 1
+  },
+  {
+    "token_id": 42823,
+    "token": "-being",
+    "count": 1
+  },
+  {
+    "token_id": 20418,
+    "token": " recognized",
+    "count": 1
+  },
+  {
+    "token_id": 69452,
+    "token": " prolonged",
+    "count": 1
+  },
+  {
+    "token_id": 75942,
+    "token": " adaptive",
+    "count": 1
+  },
+  {
+    "token_id": 53499,
+    "token": " promotes",
+    "count": 1
+  },
+  {
+    "token_id": 158843,
+    "token": " modalities",
+    "count": 1
+  },
+  {
+    "token_id": 56002,
+    "token": " wherein",
+    "count": 1
+  },
+  {
+    "token_id": 140469,
+    "token": " Preserve",
+    "count": 1
+  },
+  {
+    "token_id": 138839,
+    "token": "scenario",
+    "count": 1
+  },
+  {
+    "token_id": 95604,
+    "token": " viewpoint",
+    "count": 1
+  },
+  {
+    "token_id": 45865,
+    "token": " improves",
+    "count": 1
+  },
+  {
+    "token_id": 45215,
+    "token": "contin",
+    "count": 1
+  },
+  {
+    "token_id": 10606,
+    "token": " growing",
+    "count": 1
+  },
+  {
+    "token_id": 13936,
+    "token": " repair",
+    "count": 1
+  },
+  {
+    "token_id": 49362,
+    "token": " tactics",
+    "count": 1
+  },
+  {
+    "token_id": 41871,
+    "token": " inquiry",
+    "count": 1
+  },
+  {
+    "token_id": 3814,
+    "token": " context",
+    "count": 1
+  },
+  {
+    "token_id": 4694,
+    "token": " mis",
+    "count": 1
+  },
+  {
+    "token_id": 40702,
+    "token": " notable",
+    "count": 1
+  },
+  {
+    "token_id": 9359,
+    "token": " successful",
+    "count": 1
+  },
+  {
+    "token_id": 2678,
+    "token": "\"\n\n",
+    "count": 1
+  },
+  {
+    "token_id": 1520,
+    "token": " make",
+    "count": 1
+  },
+  {
+    "token_id": 30002,
+    "token": " Despite",
+    "count": 1
+  },
+  {
+    "token_id": 71302,
+    "token": " visualization",
+    "count": 1
+  },
+  {
+    "token_id": 103913,
+    "token": " conflicting",
+    "count": 1
+  },
+  {
+    "token_id": 1490,
+    "token": " type",
+    "count": 1
+  },
+  {
+    "token_id": 5430,
+    "token": " role",
+    "count": 1
+  },
+  {
+    "token_id": 22378,
+    "token": " commonly",
+    "count": 1
+  },
+  {
+    "token_id": 48721,
+    "token": " earliest",
+    "count": 1
+  },
+  {
+    "token_id": 5666,
+    "token": " stop",
+    "count": 1
+  },
+  {
+    "token_id": 36067,
+    "token": "Analy",
+    "count": 1
+  },
+  {
+    "token_id": 57319,
+    "token": " validated",
+    "count": 1
+  },
+  {
+    "token_id": 25394,
+    "token": " driven",
+    "count": 1
+  },
+  {
+    "token_id": 42908,
+    "token": " traits",
+    "count": 1
+  },
+  {
+    "token_id": 1330,
+    "token": " act",
+    "count": 1
+  },
+  {
+    "token_id": 42497,
+    "token": " foster",
+    "count": 1
+  },
+  {
+    "token_id": 58,
+    "token": "[",
+    "count": 1
+  },
+  {
+    "token_id": 6286,
+    "token": " feature",
+    "count": 1
+  },
+  {
+    "token_id": 45298,
+    "token": " partially",
+    "count": 1
+  },
+  {
+    "token_id": 8065,
+    "token": " quickly",
+    "count": 1
+  },
+  {
+    "token_id": 1114,
+    "token": " function",
+    "count": 1
+  },
+  {
+    "token_id": 601,
+    "token": " U",
+    "count": 1
+  },
+  {
+    "token_id": 67551,
+    "token": " comprehend",
+    "count": 1
+  },
+  {
+    "token_id": 9195,
+    "token": " individuals",
+    "count": 1
+  },
+  {
+    "token_id": 54215,
+    "token": " anch",
+    "count": 1
+  },
+  {
+    "token_id": 10389,
+    "token": " reduce",
+    "count": 1
+  },
+  {
+    "token_id": 41482,
+    "token": " today's",
+    "count": 1
+  },
+  {
+    "token_id": 118841,
+    "token": " manners",
+    "count": 1
+  },
+  {
+    "token_id": 127381,
+    "token": "connections",
+    "count": 1
+  },
+  {
+    "token_id": 5025,
+    "token": " become",
+    "count": 1
+  },
+  {
+    "token_id": 49366,
+    "token": " user's",
+    "count": 1
+  },
+  {
+    "token_id": 11673,
+    "token": " mere",
+    "count": 1
+  },
+  {
+    "token_id": 9362,
+    "token": " links",
+    "count": 1
+  },
+  {
+    "token_id": 2325,
+    "token": " view",
+    "count": 1
+  },
+  {
+    "token_id": 55310,
+    "token": " exploit",
+    "count": 1
+  },
+  {
+    "token_id": 3861,
+    "token": "summary",
+    "count": 1
+  },
+  {
+    "token_id": 27179,
+    "token": " phrase",
+    "count": 1
+  },
+  {
+    "token_id": 26584,
+    "token": " medi",
+    "count": 1
+  },
+  {
+    "token_id": 35357,
+    "token": " variations",
+    "count": 1
+  },
+  {
+    "token_id": 6008,
+    "token": " provides",
+    "count": 1
+  },
+  {
+    "token_id": 79470,
+    "token": " discern",
+    "count": 1
+  },
+  {
+    "token_id": 4124,
+    "token": " lead",
+    "count": 1
+  },
+  {
+    "token_id": 186590,
+    "token": " Accurate",
+    "count": 1
+  },
+  {
+    "token_id": 38328,
+    "token": " simultaneously",
+    "count": 1
+  },
+  {
+    "token_id": 174535,
+    "token": " Facing",
+    "count": 1
+  },
+  {
+    "token_id": 135468,
+    "token": " prominence",
+    "count": 1
+  },
+  {
+    "token_id": 25909,
+    "token": " greatly",
+    "count": 1
+  },
+  {
+    "token_id": 36074,
+    "token": " psychological",
+    "count": 1
+  },
+  {
+    "token_id": 4251,
+    "token": " along",
+    "count": 1
+  },
+  {
+    "token_id": 17946,
+    "token": " predict",
+    "count": 1
+  },
+  {
+    "token_id": 30629,
+    "token": " whereas",
+    "count": 1
+  },
+  {
+    "token_id": 30710,
+    "token": " exclusively",
+    "count": 1
+  },
+  {
+    "token_id": 155481,
+    "token": "\"As",
+    "count": 1
+  },
+  {
+    "token_id": 38245,
+    "token": "character",
+    "count": 1
+  },
+  {
+    "token_id": 48891,
+    "token": " continually",
+    "count": 1
+  },
+  {
+    "token_id": 13729,
+    "token": " typically",
+    "count": 1
+  },
+  {
+    "token_id": 31804,
+    "token": " Root",
+    "count": 1
+  },
+  {
+    "token_id": 19383,
+    "token": " excel",
+    "count": 1
+  },
+  {
+    "token_id": 945,
+    "token": " more",
+    "count": 1
+  },
+  {
+    "token_id": 19069,
+    "token": " react",
+    "count": 1
+  },
+  {
+    "token_id": 143957,
+    "token": " illuminate",
+    "count": 1
+  },
+  {
+    "token_id": 4857,
+    "token": " specific",
+    "count": 1
+  },
+  {
+    "token_id": 2061,
+    "token": " used",
+    "count": 1
+  },
+  {
+    "token_id": 11076,
+    "token": " variable",
+    "count": 1
+  },
+  {
+    "token_id": 9837,
+    "token": " rates",
+    "count": 1
+  },
+  {
+    "token_id": 16045,
+    "token": " importance",
+    "count": 1
+  },
+  {
+    "token_id": 3684,
+    "token": " search",
+    "count": 1
+  },
+  {
+    "token_id": 13319,
+    "token": " alternative",
+    "count": 1
+  },
+  {
+    "token_id": 1043,
+    "token": " their",
+    "count": 1
+  },
+  {
+    "token_id": 3572,
+    "token": " might",
+    "count": 1
+  },
+  {
+    "token_id": 61025,
+    "token": " respondents",
+    "count": 1
+  },
+  {
+    "token_id": 36988,
+    "token": " intend",
+    "count": 1
+  },
+  {
+    "token_id": 22962,
+    "token": " repeat",
+    "count": 1
+  },
+  {
+    "token_id": 6301,
+    "token": " relationship",
+    "count": 1
+  },
+  {
+    "token_id": 13311,
+    "token": " Two",
+    "count": 1
+  },
+  {
+    "token_id": 91592,
+    "token": " weaker",
+    "count": 1
+  },
+  {
+    "token_id": 34700,
+    "token": " indicating",
+    "count": 1
+  },
+  {
+    "token_id": 6456,
+    "token": " staff",
+    "count": 1
+  },
+  {
+    "token_id": 3658,
+    "token": " extends",
+    "count": 1
+  },
+  {
+    "token_id": 20376,
+    "token": " poster",
+    "count": 1
+  },
+  {
+    "token_id": 12314,
+    "token": " posted",
+    "count": 1
+  },
+  {
+    "token_id": 8959,
+    "token": " costs",
+    "count": 1
+  },
+  {
+    "token_id": 21469,
+    "token": " featuring",
+    "count": 1
+  },
+  {
+    "token_id": 32038,
+    "token": "also",
+    "count": 1
+  },
+  {
+    "token_id": 15424,
+    "token": " dates",
+    "count": 1
+  },
+  {
+    "token_id": 82281,
+    "token": " inception",
+    "count": 1
+  },
+  {
+    "token_id": 151109,
+    "token": " aspiration",
+    "count": 1
+  },
+  {
+    "token_id": 21573,
+    "token": " contemporary",
+    "count": 1
+  },
+  {
+    "token_id": 153459,
+    "token": " conversational",
+    "count": 1
+  },
+  {
+    "token_id": 48160,
+    "token": " linking",
+    "count": 1
+  },
+  {
+    "token_id": 8450,
+    "token": " analysis",
+    "count": 1
+  },
+  {
+    "token_id": 118485,
+    "token": "-phase",
+    "count": 1
+  },
+  {
+    "token_id": 11674,
+    "token": " Dev",
+    "count": 1
+  },
+  {
+    "token_id": 5371,
+    "token": " created",
+    "count": 1
+  },
+  {
+    "token_id": 58821,
+    "token": " recordings",
+    "count": 1
+  },
+  {
+    "token_id": 1074,
+    "token": "data",
+    "count": 1
+  },
+  {
+    "token_id": 4270,
+    "token": "response",
+    "count": 1
+  },
+  {
+    "token_id": 4733,
+    "token": " output",
+    "count": 1
+  },
+  {
+    "token_id": 2616,
+    "token": " request",
+    "count": 1
+  },
+  {
+    "token_id": 59111,
+    "token": " highlighting",
+    "count": 1
+  },
+  {
+    "token_id": 38389,
+    "token": " substitute",
+    "count": 1
+  },
+  {
+    "token_id": 40596,
+    "token": " dynamics",
+    "count": 1
+  },
+  {
+    "token_id": 143294,
+    "token": " firstly",
+    "count": 1
+  },
+  {
+    "token_id": 19957,
+    "token": " minimal",
+    "count": 1
+  },
+  {
+    "token_id": 829,
+    "token": " dis",
+    "count": 1
+  },
+  {
+    "token_id": 17125,
+    "token": " labels",
+    "count": 1
+  },
+  {
+    "token_id": 44432,
+    "token": " assists",
+    "count": 1
+  },
+  {
+    "token_id": 23704,
+    "token": " staying",
+    "count": 1
+  },
+  {
+    "token_id": 16435,
+    "token": " mixed",
+    "count": 1
+  },
+  {
+    "token_id": 1428,
+    "token": "user",
+    "count": 1
+  },
+  {
+    "token_id": 15258,
+    "token": "alg",
+    "count": 1
+  },
+  {
+    "token_id": 413,
+    "token": " be",
+    "count": 1
+  },
+  {
+    "token_id": 8501,
+    "token": " trust",
+    "count": 1
+  },
+  {
+    "token_id": 13576,
+    "token": " compreh",
+    "count": 1
+  },
+  {
+    "token_id": 62238,
+    "token": " extensively",
+    "count": 1
+  },
+  {
+    "token_id": 13847,
+    "token": " implementation",
+    "count": 1
+  },
+  {
+    "token_id": 38991,
+    "token": " publicly",
+    "count": 1
+  },
+  {
+    "token_id": 12073,
+    "token": " listed",
+    "count": 1
+  },
+  {
+    "token_id": 89822,
+    "token": " facets",
+    "count": 1
+  },
+  {
+    "token_id": 45641,
+    "token": " adverse",
+    "count": 1
+  },
+  {
+    "token_id": 46613,
+    "token": " Avoid",
+    "count": 1
+  },
+  {
+    "token_id": 5018,
+    "token": " extra",
+    "count": 1
+  },
+  {
+    "token_id": 141047,
+    "token": " rethink",
+    "count": 1
+  },
+  {
+    "token_id": 43748,
+    "token": " automotive",
+    "count": 1
+  },
+  {
+    "token_id": 33348,
+    "token": " maker",
+    "count": 1
+  },
+  {
+    "token_id": 20344,
+    "token": " conducted",
+    "count": 1
+  },
+  {
+    "token_id": 16988,
+    "token": " discovered",
+    "count": 1
+  },
+  {
+    "token_id": 10505,
+    "token": " serve",
+    "count": 1
+  },
+  {
+    "token_id": 74294,
+    "token": " reflective",
+    "count": 1
+  },
+  {
+    "token_id": 5396,
+    "token": " human",
+    "count": 1
+  },
+  {
+    "token_id": 33761,
+    "token": " impacts",
+    "count": 1
+  },
+  {
+    "token_id": 73565,
+    "token": " Applied",
+    "count": 1
+  },
+  {
+    "token_id": 48083,
+    "token": " assessed",
+    "count": 1
+  },
+  {
+    "token_id": 18186,
+    "token": " innovative",
+    "count": 1
+  },
+  {
+    "token_id": 25393,
+    "token": "-box",
+    "count": 1
+  },
+  {
+    "token_id": 74479,
+    "token": " integrating",
+    "count": 1
+  },
+  {
+    "token_id": 16601,
+    "token": " rise",
+    "count": 1
+  },
+  {
+    "token_id": 10988,
+    "token": " reports",
+    "count": 1
+  },
+  {
+    "token_id": 20684,
+    "token": " Through",
+    "count": 1
+  },
+  {
+    "token_id": 24923,
+    "token": " derived",
+    "count": 1
+  },
+  {
+    "token_id": 36838,
+    "token": " implementing",
+    "count": 1
+  },
+  {
+    "token_id": 27034,
+    "token": " artificial",
+    "count": 1
+  },
+  {
+    "token_id": 22751,
+    "token": " industries",
+    "count": 1
+  },
+  {
+    "token_id": 5035,
+    "token": " major",
+    "count": 1
+  },
+  {
+    "token_id": 136132,
+    "token": " portrayal",
+    "count": 1
+  },
+  {
+    "token_id": 23053,
+    "token": " improving",
+    "count": 1
+  },
+  {
+    "token_id": 22488,
+    "token": " responses",
+    "count": 1
+  },
+  {
+    "token_id": 79301,
+    "token": "-stage",
+    "count": 1
+  },
+  {
+    "token_id": 48681,
+    "token": " methodology",
+    "count": 1
+  },
+  {
+    "token_id": 47795,
+    "token": " benchmark",
+    "count": 1
+  },
+  {
+    "token_id": 23216,
+    "token": " literature",
+    "count": 1
+  },
+  {
+    "token_id": 45250,
+    "token": " consistency",
+    "count": 1
+  },
+  {
+    "token_id": 125794,
+    "token": " benchmarks",
+    "count": 1
+  },
+  {
+    "token_id": 5506,
+    "token": " box",
+    "count": 1
+  },
+  {
+    "token_id": 2208,
+    "token": " current",
+    "count": 1
+  },
+  {
+    "token_id": 878,
+    "token": " es",
+    "count": 1
+  },
+  {
+    "token_id": 12905,
+    "token": " techniques",
+    "count": 1
+  },
+  {
+    "token_id": 126393,
+    "token": " usefulness",
+    "count": 1
+  },
+  {
+    "token_id": 10848,
+    "token": "{\"",
+    "count": 1
+  },
+  {
+    "token_id": 44834,
+    "token": "....\n",
+    "count": 1
+  },
+  {
+    "token_id": 12870,
+    "token": " notes",
+    "count": 1
+  },
+  {
+    "token_id": 3762,
+    "token": " …",
+    "count": 1
+  },
+  {
+    "token_id": 82,
+    "token": "s",
+    "count": 1
+  },
+  {
+    "token_id": 135113,
+    "token": " hierarchical",
+    "count": 1
+  },
+  {
+    "token_id": 1562,
+    "token": " list",
+    "count": 1
+  },
+  {
+    "token_id": 73928,
+    "token": " unchanged",
+    "count": 1
+  },
+  {
+    "token_id": 1458,
+    "token": " had",
+    "count": 1
+  },
+  {
+    "token_id": 17162,
+    "token": " broken",
+    "count": 1
+  },
+  {
+    "token_id": 8424,
+    "token": " daily",
+    "count": 1
+  },
+  {
+    "token_id": 35672,
+    "token": " opacity",
+    "count": 1
+  },
+  {
+    "token_id": 66818,
+    "token": "-induced",
+    "count": 1
+  },
+  {
+    "token_id": 76014,
+    "token": " consequently",
+    "count": 1
+  },
+  {
+    "token_id": 5632,
+    "token": "There",
+    "count": 1
+  },
+  {
+    "token_id": 44207,
+    "token": " maximize",
+    "count": 1
+  },
+  {
+    "token_id": 33780,
+    "token": " affects",
+    "count": 1
+  },
+  {
+    "token_id": 17000,
+    "token": " significantly",
+    "count": 1
+  },
+  {
+    "token_id": 451,
+    "token": " L",
+    "count": 1
+  },
+  {
+    "token_id": 166438,
+    "token": " chaining",
+    "count": 1
+  },
+  {
+    "token_id": 2375,
+    "token": " world",
+    "count": 1
+  },
+  {
+    "token_id": 126263,
+    "token": " transformative",
+    "count": 1
+  },
+  {
+    "token_id": 13958,
+    "token": " keeping",
+    "count": 1
+  },
+  {
+    "token_id": 1652,
+    "token": " help",
+    "count": 1
+  },
+  {
+    "token_id": 77368,
+    "token": " forthcoming",
+    "count": 1
+  },
+  {
+    "token_id": 41254,
+    "token": " acknowledge",
+    "count": 1
+  },
+  {
+    "token_id": 48316,
+    "token": "organization",
+    "count": 1
+  },
+  {
+    "token_id": 42318,
+    "token": " scenarios",
+    "count": 1
+  },
+  {
+    "token_id": 2237,
+    "token": " home",
+    "count": 1
+  },
+  {
+    "token_id": 53426,
+    "token": " lacking",
+    "count": 1
+  },
+  {
+    "token_id": 77701,
+    "token": " observing",
+    "count": 1
+  },
+  {
+    "token_id": 38519,
+    "token": " opponent",
+    "count": 1
+  },
+  {
+    "token_id": 93844,
+    "token": " opaque",
+    "count": 1
+  },
+  {
+    "token_id": 25758,
+    "token": " Still",
+    "count": 1
+  },
+  {
+    "token_id": 26695,
+    "token": " supplied",
+    "count": 1
+  },
+  {
+    "token_id": 28135,
+    "token": " produces",
+    "count": 1
+  },
+  {
+    "token_id": 69457,
+    "token": " explanations",
+    "count": 1
+  },
+  {
+    "token_id": 80854,
+    "token": "...\n\n\n",
+    "count": 1
+  },
+  {
+    "token_id": 10930,
+    "token": "Write",
+    "count": 1
+  },
+  {
+    "token_id": 44474,
+    "token": " augment",
+    "count": 1
+  },
+  {
+    "token_id": 35971,
+    "token": " ",
+    "count": 1
+  },
+  {
+    "token_id": 93000,
+    "token": "requires",
+    "count": 1
+  },
+  {
+    "token_id": 1938,
+    "token": "for",
+    "count": 1
+  },
+  {
+    "token_id": 127289,
+    "token": "ideas",
+    "count": 1
+  },
+  {
+    "token_id": 4928,
+    "token": " question",
+    "count": 1
+  },
+  {
+    "token_id": 5926,
+    "token": "Gener",
+    "count": 1
+  },
+  {
+    "token_id": 26184,
+    "token": " confront",
+    "count": 1
+  },
+  {
+    "token_id": 11082,
+    "token": " central",
+    "count": 1
+  },
+  {
+    "token_id": 21461,
+    "token": " conflict",
+    "count": 1
+  },
+  {
+    "token_id": 35520,
+    "token": "-use",
+    "count": 1
+  },
+  {
+    "token_id": 6282,
+    "token": " building",
+    "count": 1
+  },
+  {
+    "token_id": 16796,
+    "token": " comprehensive",
+    "count": 1
+  },
+  {
+    "token_id": 22958,
+    "token": " developers",
+    "count": 1
+  },
+  {
+    "token_id": 20483,
+    "token": " functional",
+    "count": 1
+  },
+  {
+    "token_id": 1920,
+    "token": " two",
+    "count": 1
+  },
+  {
+    "token_id": 19282,
+    "token": " adds",
+    "count": 1
+  },
+  {
+    "token_id": 11206,
+    "token": " opportunities",
+    "count": 1
+  },
+  {
+    "token_id": 66026,
+    "token": " utilization",
+    "count": 1
+  },
+  {
+    "token_id": 6984,
+    "token": " ways",
+    "count": 1
+  },
+  {
+    "token_id": 60955,
+    "token": " grap",
+    "count": 1
+  },
+  {
+    "token_id": 147321,
+    "token": " unlocking",
+    "count": 1
+  },
+  {
+    "token_id": 11332,
+    "token": " vast",
+    "count": 1
+  },
+  {
+    "token_id": 6384,
+    "token": " except",
+    "count": 1
+  },
+  {
+    "token_id": 32711,
+    "token": " There's",
+    "count": 1
+  },
+  {
+    "token_id": 29335,
+    "token": "-ad",
+    "count": 1
+  },
+  {
+    "token_id": 115266,
+    "token": " disruptive",
+    "count": 1
+  },
+  {
+    "token_id": 85949,
+    "token": " embraced",
+    "count": 1
+  },
+  {
+    "token_id": 43992,
+    "token": " congr",
+    "count": 1
+  },
+  {
+    "token_id": 117279,
+    "token": " (‘",
+    "count": 1
+  },
+  {
+    "token_id": 656,
+    "token": " by",
+    "count": 1
+  },
+  {
+    "token_id": 171796,
+    "token": " worsen",
+    "count": 1
+  },
+  {
+    "token_id": 68088,
+    "token": "We've",
+    "count": 1
+  },
+  {
+    "token_id": 7127,
+    "token": "First",
+    "count": 1
+  },
+  {
+    "token_id": 8982,
+    "token": " fresh",
+    "count": 1
+  },
+  {
+    "token_id": 42171,
+    "token": " comparing",
+    "count": 1
+  },
+  {
+    "token_id": 9637,
+    "token": " fully",
+    "count": 1
+  },
+  {
+    "token_id": 23483,
+    "token": "Need",
+    "count": 1
+  },
+  {
+    "token_id": 71265,
+    "token": " parap",
+    "count": 1
+  },
+  {
+    "token_id": 45932,
+    "token": "-driven",
+    "count": 1
+  },
+  {
+    "token_id": 20959,
+    "token": " guidelines",
+    "count": 1
+  },
+  {
+    "token_id": 7497,
+    "token": "'\n\n",
+    "count": 1
+  },
+  {
+    "token_id": 4483,
+    "token": " fund",
+    "count": 1
+  },
+  {
+    "token_id": 7544,
+    "token": " international",
+    "count": 1
+  },
+  {
+    "token_id": 55518,
+    "token": " bypass",
+    "count": 1
+  },
+  {
+    "token_id": 67634,
+    "token": " DF",
+    "count": 1
+  },
+  {
+    "token_id": 8844,
+    "token": " uses",
+    "count": 1
+  },
+  {
+    "token_id": 26707,
+    "token": " tied",
+    "count": 1
+  },
+  {
+    "token_id": 75975,
+    "token": " disruption",
+    "count": 1
+  },
+  {
+    "token_id": 41762,
+    "token": " amid",
+    "count": 1
+  },
+  {
+    "token_id": 33358,
+    "token": " habits",
+    "count": 1
+  },
+  {
+    "token_id": 2214,
+    "token": " For",
+    "count": 1
+  },
+  {
+    "token_id": 12384,
+    "token": " larger",
+    "count": 1
+  },
+  {
+    "token_id": 7064,
+    "token": " increase",
+    "count": 1
+  },
+  {
+    "token_id": 13010,
+    "token": " retail",
+    "count": 1
+  },
+  {
+    "token_id": 13602,
+    "token": " Because",
+    "count": 1
+  },
+  {
+    "token_id": 1354,
+    "token": " there",
+    "count": 1
+  },
+  {
+    "token_id": 22398,
+    "token": " serves",
+    "count": 1
+  },
+  {
+    "token_id": 1689,
+    "token": " An",
+    "count": 1
+  },
+  {
+    "token_id": 31614,
+    "token": " observe",
+    "count": 1
+  },
+  {
+    "token_id": 6056,
+    "token": " idea",
+    "count": 1
+  },
+  {
+    "token_id": 129538,
+    "token": " debated",
+    "count": 1
+  },
+  {
+    "token_id": 3347,
+    "token": " perform",
+    "count": 1
+  },
+  {
+    "token_id": 8235,
+    "token": "-based",
+    "count": 1
+  },
+  {
+    "token_id": 2009,
+    "token": " much",
+    "count": 1
+  },
+  {
+    "token_id": 22478,
+    "token": " Building",
+    "count": 1
+  },
+  {
+    "token_id": 6544,
+    "token": " further",
+    "count": 1
+  },
+  {
+    "token_id": 175738,
+    "token": " destabil",
+    "count": 1
+  },
+  {
+    "token_id": 16360,
+    "token": " accurate",
+    "count": 1
+  },
+  {
+    "token_id": 7524,
+    "token": " learning",
+    "count": 1
+  },
+  {
+    "token_id": 15093,
+    "token": " continues",
+    "count": 1
+  },
+  {
+    "token_id": 27867,
+    "token": " genuine",
+    "count": 1
+  },
+  {
+    "token_id": 57711,
+    "token": " datasets",
+    "count": 1
+  },
+  {
+    "token_id": 43326,
+    "token": " distinctive",
+    "count": 1
+  },
+  {
+    "token_id": 274,
+    "token": " c",
+    "count": 1
+  },
+  {
+    "token_id": 12588,
+    "token": " Exper",
+    "count": 1
+  },
+  {
+    "token_id": 4756,
+    "token": " original",
+    "count": 1
+  },
+  {
+    "token_id": 5551,
+    "token": " However",
+    "count": 1
+  },
+  {
+    "token_id": 9913,
+    "token": " limited",
+    "count": 1
+  },
+  {
+    "token_id": 2595,
+    "token": " method",
+    "count": 1
+  },
+  {
+    "token_id": 57465,
+    "token": " analyzing",
+    "count": 1
+  },
+  {
+    "token_id": 186046,
+    "token": " assesses",
+    "count": 1
+  },
+  {
+    "token_id": 21561,
+    "token": " suggestions",
+    "count": 1
+  },
+  {
+    "token_id": 9176,
+    "token": " meeting",
+    "count": 1
+  },
+  {
+    "token_id": 13633,
+    "token": " numerous",
+    "count": 1
+  },
+  {
+    "token_id": 16398,
+    "token": " consumers",
+    "count": 1
+  },
+  {
+    "token_id": 22747,
+    "token": " smartphone",
+    "count": 1
+  },
+  {
+    "token_id": 12930,
+    "token": " maintain",
+    "count": 1
+  },
+  {
+    "token_id": 9822,
+    "token": " reported",
+    "count": 1
+  },
+  {
+    "token_id": 54446,
+    "token": " violations",
+    "count": 1
+  },
+  {
+    "token_id": 18612,
+    "token": " substantial",
+    "count": 1
+  },
+  {
+    "token_id": 48217,
+    "token": " invas",
+    "count": 1
+  },
+  {
+    "token_id": 195977,
+    "token": "Skipping",
+    "count": 1
+  },
+  {
+    "token_id": 29368,
+    "token": "Previous",
+    "count": 1
+  },
+  {
+    "token_id": 3566,
+    "token": " group",
+    "count": 1
+  },
+  {
+    "token_id": 9716,
+    "token": " organization",
+    "count": 1
+  },
+  {
+    "token_id": 7876,
+    "token": " throughout",
+    "count": 1
+  },
+  {
+    "token_id": 106264,
+    "token": " pinpoint",
+    "count": 1
+  },
+  {
+    "token_id": 4122,
+    "token": " based",
+    "count": 1
+  },
+  {
+    "token_id": 45089,
+    "token": " tailored",
+    "count": 1
+  },
+  {
+    "token_id": 27804,
+    "token": " strike",
+    "count": 1
+  },
+  {
+    "token_id": 34299,
+    "token": " gathering",
+    "count": 1
+  },
+  {
+    "token_id": 11707,
+    "token": " thanks",
+    "count": 1
+  },
+  {
+    "token_id": 33239,
+    "token": " developments",
+    "count": 1
+  },
+  {
+    "token_id": 1225,
+    "token": " It",
+    "count": 1
+  },
+  {
+    "token_id": 19240,
+    "token": " revealed",
+    "count": 1
+  },
+  {
+    "token_id": 144073,
+    "token": " manipulating",
+    "count": 1
+  },
+  {
+    "token_id": 50716,
+    "token": " likelihood",
+    "count": 1
+  },
+  {
+    "token_id": 15742,
+    "token": " Mobile",
+    "count": 1
+  },
+  {
+    "token_id": 472,
+    "token": " as",
+    "count": 1
+  },
+  {
+    "token_id": 35181,
+    "token": " compiled",
+    "count": 1
+  },
+  {
+    "token_id": 5151,
+    "token": " above",
+    "count": 1
+  },
+  {
+    "token_id": 15186,
+    "token": " cultural",
+    "count": 1
+  },
+  {
+    "token_id": 12741,
+    "token": " behavior",
+    "count": 1
+  },
+  {
+    "token_id": 5060,
+    "token": " hold",
+    "count": 1
+  },
+  {
+    "token_id": 18135,
+    "token": " interpret",
+    "count": 1
+  },
+  {
+    "token_id": 27241,
+    "token": " demands",
+    "count": 1
+  },
+  {
+    "token_id": 11773,
+    "token": " aim",
+    "count": 1
+  },
+  {
+    "token_id": 1991,
+    "token": " many",
+    "count": 1
+  },
+  {
+    "token_id": 4792,
+    "token": " problem",
+    "count": 1
+  },
+  {
+    "token_id": 154399,
+    "token": " amplified",
+    "count": 1
+  },
+  {
+    "token_id": 16515,
+    "token": " specifically",
+    "count": 1
+  },
+  {
+    "token_id": 6096,
+    "token": " apply",
+    "count": 1
+  },
+  {
+    "token_id": 2468,
+    "token": "gen",
+    "count": 1
+  },
+  {
+    "token_id": 32542,
+    "token": " weigh",
+    "count": 1
+  },
+  {
+    "token_id": 52235,
+    "token": " viable",
+    "count": 1
+  },
+  {
+    "token_id": 51778,
+    "token": " responding",
+    "count": 1
+  },
+  {
+    "token_id": 31922,
+    "token": " timing",
+    "count": 1
+  },
+  {
+    "token_id": 45796,
+    "token": " establishing",
+    "count": 1
+  },
+  {
+    "token_id": 8248,
+    "token": " practice",
+    "count": 1
+  },
+  {
+    "token_id": 8731,
+    "token": " essential",
+    "count": 1
+  },
+  {
+    "token_id": 2273,
+    "token": " process",
+    "count": 1
+  },
+  {
+    "token_id": 50568,
+    "token": " broader",
+    "count": 1
+  },
+  {
+    "token_id": 625,
+    "token": " not",
+    "count": 1
+  },
+  {
+    "token_id": 14732,
+    "token": " meta",
+    "count": 1
+  },
+  {
+    "token_id": 58636,
+    "token": " introduces",
+    "count": 1
+  },
+  {
+    "token_id": 27746,
+    "token": " largely",
+    "count": 1
+  },
+  {
+    "token_id": 19008,
+    "token": " crucial",
+    "count": 1
+  },
+  {
+    "token_id": 6809,
+    "token": " modern",
+    "count": 1
+  },
+  {
+    "token_id": 89289,
+    "token": " paradox",
+    "count": 1
+  },
+  {
+    "token_id": 81469,
+    "token": " tracing",
+    "count": 1
+  },
+  {
+    "token_id": 4321,
+    "token": " cover",
+    "count": 1
+  },
+  {
+    "token_id": 125084,
+    "token": " lineage",
+    "count": 1
+  },
+  {
+    "token_id": 13546,
+    "token": " owners",
+    "count": 1
+  },
+  {
+    "token_id": 5989,
+    "token": " customer",
+    "count": 1
+  },
+  {
+    "token_id": 15226,
+    "token": " prompt",
+    "count": 1
+  },
+  {
+    "token_id": 193129,
+    "token": " grapple",
+    "count": 1
+  },
+  {
+    "token_id": 92114,
+    "token": " fraudulent",
+    "count": 1
+  },
+  {
+    "token_id": 10370,
+    "token": " actions",
+    "count": 1
+  },
+  {
+    "token_id": 62822,
+    "token": " Traditional",
+    "count": 1
+  },
+  {
+    "token_id": 44091,
+    "token": " costly",
+    "count": 1
+  },
+  {
+    "token_id": 76464,
+    "token": " retaining",
+    "count": 1
+  },
+  {
+    "token_id": 10176,
+    "token": " sample",
+    "count": 1
+  },
+  {
+    "token_id": 66240,
+    "token": " simplify",
+    "count": 1
+  },
+  {
+    "token_id": 136667,
+    "token": " outlining",
+    "count": 1
+  },
+  {
+    "token_id": 10331,
+    "token": " steps",
+    "count": 1
+  },
+  {
+    "token_id": 575,
+    "token": " i",
+    "count": 1
+  },
+  {
+    "token_id": 35611,
+    "token": " prediction",
+    "count": 1
+  },
+  {
+    "token_id": 39042,
+    "token": " examined",
+    "count": 1
+  },
+  {
+    "token_id": 190262,
+    "token": " quantified",
+    "count": 1
+  },
+  {
+    "token_id": 53325,
+    "token": " explored",
+    "count": 1
+  },
+  {
+    "token_id": 75728,
+    "token": " volatility",
+    "count": 1
+  },
+  {
+    "token_id": 35437,
+    "token": " experiments",
+    "count": 1
+  },
+  {
+    "token_id": 20866,
+    "token": " addresses",
+    "count": 1
+  },
+  {
+    "token_id": 15601,
+    "token": " Emp",
+    "count": 1
+  },
+  {
+    "token_id": 1682,
+    "token": " want",
+    "count": 1
+  },
+  {
+    "token_id": 2454,
+    "token": " each",
+    "count": 1
+  },
+  {
+    "token_id": 127631,
+    "token": " sway",
+    "count": 1
+  },
+  {
+    "token_id": 15700,
+    "token": " eating",
+    "count": 1
+  },
+  {
+    "token_id": 6428,
+    "token": " foot",
+    "count": 1
+  },
+  {
+    "token_id": 7065,
+    "token": " according",
+    "count": 1
+  },
+  {
+    "token_id": 4561,
+    "token": " live",
+    "count": 1
+  },
+  {
+    "token_id": 4495,
+    "token": " status",
+    "count": 1
+  },
+  {
+    "token_id": 12545,
+    "token": " distribution",
+    "count": 1
+  },
+  {
+    "token_id": 40774,
+    "token": " striking",
+    "count": 1
+  },
+  {
+    "token_id": 79755,
+    "token": " slash",
+    "count": 1
+  },
+  {
+    "token_id": 91475,
+    "token": " staffing",
+    "count": 1
+  },
+  {
+    "token_id": 83182,
+    "token": " sequential",
+    "count": 1
+  },
+  {
+    "token_id": 9570,
+    "token": " respond",
+    "count": 1
+  },
+  {
+    "token_id": 12265,
+    "token": " Since",
+    "count": 1
+  },
+  {
+    "token_id": 9554,
+    "token": " emerg",
+    "count": 1
+  },
+  {
+    "token_id": 9407,
+    "token": " states",
+    "count": 1
+  },
+  {
+    "token_id": 21475,
+    "token": "spec",
+    "count": 1
+  },
+  {
+    "token_id": 46881,
+    "token": " enrich",
+    "count": 1
+  },
+  {
+    "token_id": 7515,
+    "token": " drive",
+    "count": 1
+  },
+  {
+    "token_id": 2212,
+    "token": " great",
+    "count": 1
+  },
+  {
+    "token_id": 6151,
+    "token": " training",
+    "count": 1
+  },
+  {
+    "token_id": 10232,
+    "token": " contain",
+    "count": 1
+  },
+  {
+    "token_id": 53379,
+    "token": " assessments",
+    "count": 1
+  },
+  {
+    "token_id": 1261,
+    "token": " when",
+    "count": 1
+  },
+  {
+    "token_id": 73643,
+    "token": " forecasts",
+    "count": 1
+  },
+  {
+    "token_id": 127870,
+    "token": " stemming",
+    "count": 1
+  },
+  {
+    "token_id": 50,
+    "token": "S",
+    "count": 1
+  },
+  {
+    "token_id": 130181,
+    "token": " transitioning",
+    "count": 1
+  },
+  {
+    "token_id": 9140,
+    "token": " requirements",
+    "count": 1
+  },
+  {
+    "token_id": 744,
+    "token": " class",
+    "count": 1
+  },
+  {
+    "token_id": 16913,
+    "token": " distinct",
+    "count": 1
+  },
+  {
+    "token_id": 6005,
+    "token": " companies",
+    "count": 1
+  },
+  {
+    "token_id": 59995,
+    "token": " shoppers",
+    "count": 1
+  },
+  {
+    "token_id": 85355,
+    "token": "perimental",
+    "count": 1
+  },
+  {
+    "token_id": 1646,
+    "token": " find",
+    "count": 1
+  },
+  {
+    "token_id": 18522,
+    "token": " summary",
+    "count": 1
+  },
+  {
+    "token_id": 6167,
+    "token": " taking",
+    "count": 1
+  },
+  {
+    "token_id": 25377,
+    "token": " Yet",
+    "count": 1
+  },
+  {
+    "token_id": 51660,
+    "token": " disclosure",
+    "count": 1
+  },
+  {
+    "token_id": 15318,
+    "token": " consumer",
+    "count": 1
+  },
+  {
+    "token_id": 85476,
+    "token": " perceptions",
+    "count": 1
+  },
+  {
+    "token_id": 71308,
+    "token": " evaluations",
+    "count": 1
+  },
+  {
+    "token_id": 12886,
+    "token": " describe",
+    "count": 1
+  },
+  {
+    "token_id": 31082,
+    "token": " Moreover",
+    "count": 1
+  },
+  {
+    "token_id": 19206,
+    "token": " intens",
+    "count": 1
+  },
+  {
+    "token_id": 74858,
+    "token": "Logical",
+    "count": 1
+  },
+  {
+    "token_id": 18587,
+    "token": " patterns",
+    "count": 1
+  },
+  {
+    "token_id": 80646,
+    "token": " inadequate",
+    "count": 1
+  },
+  {
+    "token_id": 37304,
+    "token": " facial",
+    "count": 1
+  }
+]
