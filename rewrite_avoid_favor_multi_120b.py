@@ -401,11 +401,12 @@ def get_token_set_json(domain, algorithm, model_name, sample_mode, sample_seed, 
     )
 
 
-def get_output_json(domain, algorithm, model_name, sample_mode, sample_seed, max_samples):
+def get_output_json(domain, algorithm, model_name, sample_mode, sample_seed, max_samples, tag=None):
     safe = sanitize_model_name(model_name)
+    suffix = f"_{tag}" if tag else ""
     return os.path.join(
         OUTPUT_DIR,
-        f"rewrite_avoid_favor_{domain}_{algorithm}_{safe}_{sample_mode}_seed{sample_seed}_n{max_samples}_top{TOP_K_TOKENS}.json",
+        f"rewrite_avoid_favor_{domain}_{algorithm}_{safe}_{sample_mode}_seed{sample_seed}_n{max_samples}_top{TOP_K_TOKENS}{suffix}.json",
     )
 
 
@@ -732,10 +733,11 @@ def choose_best_favor_candidate(candidates, terms, src_len):
 def run_one_setting(
     model, tokenizer, cfg, model_name, domain, algorithm,
     sample_mode, sample_seed, max_samples,
+    test_limit=None, num_retries=NUM_RETRIES, output_tag=None,
 ):
     input_path = get_input_text_json(domain, algorithm, model_name, sample_mode, sample_seed, max_samples)
     token_path = get_token_set_json(domain, algorithm, model_name, sample_mode, sample_seed, max_samples)
-    save_path = get_output_json(domain, algorithm, model_name, sample_mode, sample_seed, max_samples)
+    save_path = get_output_json(domain, algorithm, model_name, sample_mode, sample_seed, max_samples, tag=output_tag)
 
     if not os.path.exists(input_path):
         print(f"[SKIP] missing input file: {input_path}")
@@ -758,8 +760,8 @@ def run_one_setting(
 
     data = load_json(input_path)
 
-    if TEST_MODE:
-        data = data[:TEST_LIMIT]
+    if test_limit is not None:
+        data = data[:test_limit]
         print(f"[TEST MODE] Only running first {len(data)} samples.")
 
     token_ids = load_top_token_ids(token_path, TOP_K_TOKENS)
@@ -790,7 +792,7 @@ def run_one_setting(
         watermarked_avoid_candidates = []
         unwatermarked_favor_candidates = []
 
-        for _ in range(NUM_RETRIES):
+        for _ in range(num_retries):
             try:
                 rw_avoid = rewrite_once_watermarked_avoid(
                     model=model, tokenizer=tokenizer, wm=wm, cfg=cfg,
@@ -855,6 +857,13 @@ def main():
     parser.add_argument("--torch_dtype", type=str, default="bfloat16",
                          choices=["bfloat16", "float16", "float32"])
     parser.add_argument("--max_memory", type=str, default=None)
+    parser.add_argument("--test", action="store_true",
+                         help="小測試模式：每個 domain/algorithm 只跑前 --test_limit 筆，"
+                              "輸出檔名會加上 _test 後綴，不會覆蓋正式輸出。")
+    parser.add_argument("--test_limit", type=int, default=TEST_LIMIT,
+                         help="測試模式下每個 domain/algorithm 跑幾筆（預設 3）")
+    parser.add_argument("--num_retries", type=int, default=NUM_RETRIES,
+                         help="每筆資料 avoid/favor 各取樣幾次挑最佳候選（測試時可調小，例如 2）")
     args = parser.parse_args()
 
     set_seed(args.sample_seed)
@@ -866,6 +875,12 @@ def main():
         torch_dtype=args.torch_dtype,
         max_memory=args.max_memory,
     )
+
+    test_limit = args.test_limit if args.test else None
+    output_tag = "test" if args.test else None
+
+    if args.test:
+        print(f"[TEST MODE] test_limit={args.test_limit}, num_retries={args.num_retries}")
 
     for domain in args.domains:
         for algorithm in args.algorithms:
@@ -879,6 +894,9 @@ def main():
                 sample_mode=args.sample_mode,
                 sample_seed=args.sample_seed,
                 max_samples=args.max_samples,
+                test_limit=test_limit,
+                num_retries=args.num_retries,
+                output_tag=output_tag,
             )
 
     del model
