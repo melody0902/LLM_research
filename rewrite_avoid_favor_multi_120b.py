@@ -533,32 +533,45 @@ def build_messages(text, terms, mode="avoid"):
 # ---------------------------------------------------------------------------
 
 def generate_with_exp_watermark(wm, prompt_text: str, max_new_tokens: int = MAX_NEW_TOKENS):
+    """
+    效能修正：原本每一步都把「目前為止的完整序列」重新丟進模型做 forward，
+    對 120B 模型來說等於 O(n^2) 開銷，260 tokens 會慢到不合理。
+    這裡改成用 KV cache，每步只餵「上一個新 token」進去，O(n)。
+    """
     tokenizer = wm.config.generation_tokenizer
     model = wm.config.generation_model
     device = wm.config.device
     temperature = wm.config.temperature
 
     encoded = tokenizer(prompt_text, return_tensors="pt", add_special_tokens=True).to(device)
-    prefix_ids = encoded["input_ids"]
+    generated_ids = encoded["input_ids"]
     attention_mask = encoded.get("attention_mask", None)
-    prompt_len = prefix_ids.shape[1]
+    prompt_len = generated_ids.shape[1]
+
+    cur_input_ids = generated_ids
+    past_key_values = None
 
     for _ in range(max_new_tokens):
         with torch.inference_mode():
-            if attention_mask is not None:
-                logits = model(prefix_ids, attention_mask=attention_mask).logits[:, -1, :]
-            else:
-                logits = model(prefix_ids).logits[:, -1, :]
+            outputs = model(
+                input_ids=cur_input_ids,
+                attention_mask=attention_mask,
+                past_key_values=past_key_values,
+                use_cache=True,
+            )
+        logits = outputs.logits[:, -1, :]
+        past_key_values = outputs.past_key_values
 
         vocab_size = logits.shape[-1]
         probs = torch.softmax(logits[:, :vocab_size] / temperature, dim=-1).cpu()
 
-        wm.utils.seed_rng(prefix_ids[0])
+        wm.utils.seed_rng(generated_ids[0])
         u = torch.rand(vocab_size, generator=wm.utils.rng).unsqueeze(0)
         next_token = wm.utils.exp_sampling(probs, u).to(device)
 
         next_id = next_token.view(1, 1)
-        prefix_ids = torch.cat([prefix_ids, next_id], dim=1)
+        generated_ids = torch.cat([generated_ids, next_id], dim=1)
+        cur_input_ids = next_id  # 下一步只餵新 token，靠 cache 補上下文
 
         if attention_mask is not None:
             attention_mask = torch.cat([
@@ -569,11 +582,11 @@ def generate_with_exp_watermark(wm, prompt_text: str, max_new_tokens: int = MAX_
         if tokenizer.eos_token_id is not None and next_id.item() == tokenizer.eos_token_id:
             break
 
-        partial_text = tokenizer.decode(prefix_ids[0, prompt_len:], skip_special_tokens=True)
+        partial_text = tokenizer.decode(generated_ids[0, prompt_len:], skip_special_tokens=True)
         if should_stop_generation(partial_text):
             break
 
-    completion_ids = prefix_ids[0, prompt_len:]
+    completion_ids = generated_ids[0, prompt_len:]
     raw = tokenizer.decode(completion_ids, skip_special_tokens=True).strip()
     return clean_rewritten_text(raw)
 
@@ -792,7 +805,15 @@ def run_one_setting(
         watermarked_avoid_candidates = []
         unwatermarked_favor_candidates = []
 
-        for _ in range(num_retries):
+        # EXP 演算法的 avoid 生成是「確定性」的：wm.utils.seed_rng() 是根據序列內容
+        # 做確定性 hash，同一個 prompt 每次跑出來的 token 序列會完全一樣。
+        # 所以對 EXP 來說，重複 num_retries 次只會得到 num_retries 份一模一樣的
+        # 文字，純粹浪費算力 —— avoid 這邊只跑 1 次即可。
+        # KGW/SWEET/Unigram/SynthID 的 avoid 走 model.generate + do_sample=True，
+        # 仍然是隨機的，保留 num_retries 次取最佳候選。
+        avoid_retries = 1 if algorithm == "EXP" else num_retries
+
+        for _ in range(avoid_retries):
             try:
                 rw_avoid = rewrite_once_watermarked_avoid(
                     model=model, tokenizer=tokenizer, wm=wm, cfg=cfg,
@@ -804,6 +825,7 @@ def run_one_setting(
 
             watermarked_avoid_candidates.append(rw_avoid)
 
+        for _ in range(num_retries):
             try:
                 rw_favor = rewrite_once_unwatermarked_favor(
                     model=model, tokenizer=tokenizer, cfg=cfg,
