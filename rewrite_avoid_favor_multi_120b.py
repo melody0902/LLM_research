@@ -587,7 +587,11 @@ def generate_with_exp_watermark(wm, prompt_text: str, max_new_tokens: int = MAX_
             break
 
     completion_ids = generated_ids[0, prompt_len:]
-    raw = tokenizer.decode(completion_ids, skip_special_tokens=True).strip()
+    # 注意：這裡故意用 skip_special_tokens=False，保留 <|channel|>/<|message|> 等
+    # harmony 特殊 token，讓 clean_rewritten_text 裡的 strip_gpt_oss_meta_prefix
+    # 能靠這些標記正確切出「final」段落，避免 analysis 推理文字混進結果。
+    # 若先用 skip_special_tokens=True 解碼，這些邊界標記會被砍光，導致清洗失效。
+    raw = tokenizer.decode(completion_ids, skip_special_tokens=False).strip()
     return clean_rewritten_text(raw)
 
 
@@ -625,7 +629,9 @@ def generate_completion(
         )[0]
 
     completion_ids = output_ids[prompt_len:]
-    raw = tokenizer.decode(completion_ids, skip_special_tokens=True).strip()
+    # 同上：先保留特殊 token 讓 harmony channel 邊界能被正確偵測，
+    # 清洗完再由 strip_gpt_oss_meta_prefix / clean_rewritten_text 統一移除。
+    raw = tokenizer.decode(completion_ids, skip_special_tokens=False).strip()
     return clean_rewritten_text(raw)
 
 
