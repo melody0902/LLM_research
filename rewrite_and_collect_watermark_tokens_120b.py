@@ -1,7 +1,13 @@
 # ============================================================
 # rewrite_and_collect_watermark_tokens_120b.py
-# 120B subset version
-# Fixed version: remove gpt-oss analysis/final meta text
+#
+# 120B version.
+# Fixes:
+#   1. Decode gpt-oss output with special tokens first, then extract final answer.
+#   2. Remove analysis/User/prompt/meta contamination from rewritten.
+#   3. Validate rewritten quality; retry with safer prompt when output is bad.
+#   4. If rewritten/plain is still bad, keep it empty instead of saving prompt garbage.
+#   5. Keep original in every record so downstream scripts can always use original.
 # ============================================================
 
 import os
@@ -27,18 +33,27 @@ from watermark.auto_watermark import AutoWatermark
 from utils.transformers_config import TransformersConfig
 
 
-# ================== basic setup ==================
 DEFAULT_SEED = 30
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-device = "cuda" if torch.cuda.is_available() else "cpu"
+BAD_META_PATTERNS = [
+    r"\bwe need to\b",
+    r"\blet'?s craft\b",
+    r"\blet'?s rewrite\b",
+    r"\bthe user wants\b",
+    r"\buser\s*\n",
+    r"\bassistant\s*\n",
+    r"\bsystem\s*\n",
+    r"\banalysis\b",
+    r"\bfinal answer\b",
+    r"\bmust rewrite\b",
+    r"\boutput only\b",
+    r"\boriginal paragraph\b",
+    r"\bgiven paragraph\b",
+    r"\bpreserving meaning\b",
+    r"\bpreserve all numbers\b",
+]
 
-
-# ================== stop / clean config ==================
-# NOTE:
-# gpt-oss models can emit harmony/channel-looking text such as
-# "analysis" / "assistantfinal" early in the generation. Do NOT use those
-# as hard stopping markers, otherwise generation may stop after 1-2 tokens
-# and the cleaned rewritten text becomes empty.
 STOP_MARKERS = [
     "\nNote that",
     "\nNote:",
@@ -48,6 +63,9 @@ STOP_MARKERS = [
     "\nOriginal:",
     "\nRewritten:",
     "\nRewritten paragraph:",
+    "\nUser",
+    "\nAssistant",
+    "\nSystem",
     "Note that this",
     "Note: I made",
     "(Note: I made",
@@ -61,12 +79,10 @@ STOP_MARKERS = [
 ]
 
 
-
 def set_seed(seed: int):
     torch.manual_seed(seed)
     np.random.seed(seed)
     random.seed(seed)
-
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
 
@@ -75,12 +91,10 @@ def sanitize_model_name(model_name: str) -> str:
     return model_name.replace("/", "__").replace(" ", "_")
 
 
-def get_dynamic_max_new_tokens(text: str, max_cap: int = 260) -> int:
+def get_dynamic_max_new_tokens(text: str, max_cap: int = 300) -> int:
     if not text:
-        return min(120, max_cap)
-
+        return min(160, max_cap)
     word_count = len(text.split())
-
     return min(max_cap, max(180, int(word_count * 1.45)))
 
 
@@ -93,30 +107,26 @@ def remove_repeated_sentences(text: str) -> str:
     seen = set()
 
     for sent in sentences:
-        normalized = re.sub(r"\s+", " ", sent.strip().lower())
+        sent = sent.strip()
+        normalized = re.sub(r"\s+", " ", sent.lower())
         if not normalized:
             continue
         if normalized in seen:
             continue
-
         seen.add(normalized)
-        cleaned.append(sent.strip())
+        cleaned.append(sent)
 
     return " ".join(cleaned).strip()
 
 
+def strip_special_tokens(text: str) -> str:
+    if not text:
+        return ""
+    text = re.sub(r"<\|[^>]*?\|>", "", text)
+    return text.strip()
 
 
-def strip_gpt_oss_meta_prefix(text: str) -> str:
-    """
-    gpt-oss may output harmony-style visible text like:
-    analysisWe need to rewrite...
-    assistantfinalActual answer...
-
-    Keep only the content after assistantfinal / assistant final / final marker.
-    Do NOT use this as a stopping condition during generation.
-    Only clean after generation is complete.
-    """
+def extract_after_last_final_marker(text: str) -> str:
     if text is None:
         return ""
 
@@ -124,54 +134,123 @@ def strip_gpt_oss_meta_prefix(text: str) -> str:
     if not text:
         return ""
 
-    patterns = [
+    markers = [
         r"assistantfinal",
         r"assistant\s+final",
         r"<\|channel\|>\s*final\s*<\|message\|>",
         r"<\|channel\|>\s*final",
         r"<\|final\|>",
+        r"final\s*<\|message\|>",
     ]
 
+    best_end = None
     lowered = text.lower()
 
-    # Keep content after the last final marker.
-    best_idx = -1
-    best_pat = None
-
-    for pat in patterns:
+    for pat in markers:
         matches = list(re.finditer(pat, lowered, flags=re.IGNORECASE))
         if matches:
             m = matches[-1]
-            if m.start() > best_idx:
-                best_idx = m.start()
-                best_pat = m
+            if best_end is None or m.end() > best_end:
+                best_end = m.end()
 
-    if best_pat is not None:
-        text = text[best_pat.end():].strip()
+    if best_end is not None:
+        return text[best_end:].strip()
 
-    # If there is still a leading "analysis..." block and no final marker was found,
-    # remove only short obvious leading meta text, not the whole generation.
-    text = re.sub(
-        r"^analysis\s*(we need to|let'?s|we should|i need to).*?(?=[A-Z][a-z])",
-        "",
-        text,
-        flags=re.IGNORECASE | re.DOTALL,
-    ).strip()
+    return text.strip()
 
-    # Remove any remaining special tokens.
-    text = re.sub(r"<\|.*?\|>", "", text).strip()
 
-    return text
+def remove_leading_meta_block(text: str) -> str:
+    if not text:
+        return ""
 
-def clean_rewritten_text(text: str) -> str:
+    text = text.strip()
+
+    # Remove common gpt-oss visible channel/meta prefixes.
+    text = re.sub(r"^(analysis|assistantfinal|assistant final|final)\s*", "", text, flags=re.I).strip()
+
+    # If a meta paragraph appears before a quoted rewrite, keep the quoted paragraph.
+    quote_match = re.search(r'["“](.{80,})["”]', text, flags=re.S)
+    if quote_match:
+        candidate = quote_match.group(1).strip()
+        if not has_meta_contamination(candidate):
+            text = candidate
+
+    # Remove obvious leading reasoning paragraphs until a sentence that looks like content.
+    lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
+    kept = []
+    skipping = True
+
+    for ln in lines:
+        low = ln.lower()
+        looks_meta = (
+            low in {"user", "assistant", "system"}
+            or low.startswith("we need")
+            or low.startswith("let's")
+            or low.startswith("the user")
+            or low.startswith("need to")
+            or "output only" in low
+            or "preserve all" in low
+            or "rewrite the following" in low
+            or "given paragraph" in low
+        )
+
+        if skipping and looks_meta:
+            continue
+
+        skipping = False
+        kept.append(ln)
+
+    return " ".join(kept).strip() if kept else text.strip()
+
+
+def has_meta_contamination(text: str) -> bool:
+    if not text:
+        return True
+
+    low = text.lower()
+    for pat in BAD_META_PATTERNS:
+        if re.search(pat, low, flags=re.I):
+            return True
+
+    return False
+
+
+def is_bad_rewrite(text: str, original: str | None = None) -> bool:
+    if not text or not text.strip():
+        return True
+
+    stripped = text.strip()
+    low = stripped.lower()
+
+    if has_meta_contamination(stripped):
+        return True
+
+    if len(stripped.split()) < 20:
+        return True
+
+    if original:
+        original_words = max(1, len(original.split()))
+        rewrite_words = len(stripped.split())
+        if rewrite_words < max(20, int(original_words * 0.35)):
+            return True
+
+    # Bad output often starts with punctuation/meta fragments.
+    if re.match(r"^[\.\,\'\"\)\]\}]+", stripped):
+        return True
+
+    return False
+
+
+def clean_rewritten_text(text: str, original: str | None = None) -> str:
     if text is None:
         return ""
 
-    text = strip_gpt_oss_meta_prefix(text)
-    text = text.replace("\\n", "\n")
+    text = text.replace("\\n", "\n").strip()
+    text = extract_after_last_final_marker(text)
+    text = strip_special_tokens(text)
+    text = remove_leading_meta_block(text)
     text = text.strip()
 
-    # Cut off note/explanation/meta parts.
     for marker in STOP_MARKERS:
         idx = text.find(marker)
         if idx != -1:
@@ -181,7 +260,7 @@ def clean_rewritten_text(text: str) -> str:
         r"\n?\(?\s*Note\s*[:：-].*$",
         r"\n?\(?\s*Explanation\s*[:：-].*$",
         r"\n?\(?\s*Original\s*[:：-].*$",
-        r"\n?\(?\s*Rewritten\s*(paragraph)?\s*[:：-].*$",
+        r"\n?\(?\s*Rewritten\s*(paragraph|text)?\s*[:：-].*$",
         r"\n?\(?\s*I made some minor changes.*$",
         r"\n?\(?\s*I have made some minor changes.*$",
         r"\n?\s*analysis\s+.*$",
@@ -192,18 +271,20 @@ def clean_rewritten_text(text: str) -> str:
     for pattern in note_patterns:
         text = re.sub(pattern, "", text, flags=re.IGNORECASE | re.DOTALL).strip()
 
-    # Remove remaining one-line labels at the beginning.
     text = re.sub(
-        r"^(Rewritten paragraph|Rewritten|Answer|Output)\s*[:：-]\s*",
+        r"^(Rewritten paragraph|Rewritten text|Rewritten|Answer|Output)\s*[:：-]\s*",
         "",
         text,
         flags=re.IGNORECASE,
     ).strip()
 
-    while "\n\n\n" in text:
-        text = text.replace("\n\n\n", "\n\n")
+    text = re.sub(r"\s+", " ", text).strip()
+    text = remove_repeated_sentences(text)
 
-    return remove_repeated_sentences(text).strip()
+    if is_bad_rewrite(text, original=original):
+        return ""
+
+    return text.strip()
 
 
 def should_stop_generation(decoded_text: str) -> bool:
@@ -212,10 +293,6 @@ def should_stop_generation(decoded_text: str) -> bool:
 
     lowered = decoded_text.lower().lstrip()
 
-    # Only stop on real post-answer add-ons.
-    # Do NOT stop on "analysis", "assistantfinal", or harmony channel markers here;
-    # gpt-oss may produce them at the beginning, and stopping immediately causes
-    # generated_len ~= 1-2 with rewritten == "".
     dangerous_markers = [
         "\nnote:",
         "\nexplanation:",
@@ -237,7 +314,6 @@ class StopOnMarkersCriteria(StoppingCriteria):
         return should_stop_generation(decoded)
 
 
-# ================== model config ==================
 def get_transformers_config(
     model_name: str,
     load_in_4bit: bool = False,
@@ -262,7 +338,6 @@ def get_transformers_config(
     )
 
     if max_memory:
-        # Example: --max_memory "0:78GiB,cpu:200GiB"
         memory_map = {}
         for item in max_memory.split(","):
             k, v = item.split(":", 1)
@@ -272,8 +347,7 @@ def get_transformers_config(
                 memory_map[int(k.strip())] = v.strip()
         model_kwargs["max_memory"] = memory_map
 
-    # openai/gpt-oss models already carry an MXFP4 quantization config.
-    # Passing BitsAndBytesConfig via --load_in_4bit / --load_in_8bit conflicts with it.
+    # gpt-oss already uses MXFP4. Do not wrap again with BitsAndBytesConfig.
     if "gpt-oss" in model_name.lower():
         if load_in_4bit:
             print("[warning] gpt-oss already uses MXFP4; ignoring --load_in_4bit")
@@ -294,12 +368,9 @@ def get_transformers_config(
         )
 
     if load_in_8bit:
-        model_kwargs["quantization_config"] = BitsAndBytesConfig(
-            load_in_8bit=True,
-        )
+        model_kwargs["quantization_config"] = BitsAndBytesConfig(load_in_8bit=True)
 
     model = AutoModelForCausalLM.from_pretrained(model_name, **model_kwargs)
-
     tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
 
     if tokenizer.pad_token is None:
@@ -322,29 +393,38 @@ def get_transformers_config(
         model=model,
         tokenizer=tokenizer,
         vocab_size=real_vocab_size,
-        device=device,
+        device=DEVICE,
         max_new_tokens=300,
         do_sample=False,
+        repetition_penalty=1.08,
+        no_repeat_ngram_size=4,
     )
 
 
-def build_rewrite_prompt(tokenizer, text: str, use_chat_template: bool = True) -> str:
+def build_rewrite_prompt(tokenizer, text: str, use_chat_template: bool = True, strict: bool = False) -> str:
     system_instruction = (
-        "Reasoning: low\n"
-        "You are a rewriting engine. "
+        "You are a text rewriting engine. "
         "Return only the rewritten paragraph. "
-        "Do not reveal reasoning, analysis, hidden thoughts, channel names, labels, or notes."
+        "Do not show reasoning, analysis, prompt text, labels, notes, or explanations."
     )
 
     user_instruction = (
-        "Rewrite the following paragraph in your own words while preserving the meaning.\n"
-        "Preserve all numbers, percentages, dataset names, and technical terms exactly.\n"
-        "Output only the rewritten paragraph itself.\n"
-        "Do not add explanations, notes, labels, comments, or meta text.\n"
-        "Do not repeat sentences.\n"
-        "Stop immediately after the rewritten paragraph.\n\n"
-        f"Text:\n{text}"
+        "Rewrite the paragraph below in your own words while preserving the meaning.\n"
+        "Keep all numbers, percentages, dataset names, and technical terms exactly.\n"
+        "Do not add new information.\n"
+        "Do not summarize.\n"
+        "Do not include labels such as User, Assistant, Analysis, Original, Rewritten, or Note.\n"
+        "Output only one rewritten paragraph.\n\n"
+        f"Paragraph:\n{text}"
     )
+
+    if strict:
+        user_instruction = (
+            "Paraphrase this paragraph only.\n"
+            "Return the paraphrased paragraph directly.\n"
+            "No preface. No notes. No analysis. No labels.\n\n"
+            f"{text}"
+        )
 
     if use_chat_template and hasattr(tokenizer, "apply_chat_template"):
         messages = [
@@ -360,24 +440,14 @@ def build_rewrite_prompt(tokenizer, text: str, use_chat_template: bool = True) -
         except Exception as e:
             print(f"[warning] chat template failed; using plain prompt. {e}")
 
-    return system_instruction + "\n\n" + user_instruction + "\n\nRewritten paragraph:"
+    return system_instruction + "\n\n" + user_instruction + "\n\n"
 
 
 def reset_synthid_state(wm):
-    """
-    Reset SynthID logits_processor state safely.
-
-    Some SynthID state tensors may be created inside torch.inference_mode().
-    In-place ops like fill_() / zero_() on those tensors outside inference mode
-    can trigger:
-
-    RuntimeError: Inplace update to inference tensor outside InferenceMode is not allowed.
-    """
     if not hasattr(wm, "logits_processor"):
         return
 
     lp = wm.logits_processor
-
     if not hasattr(lp, "state") or lp.state is None:
         return
 
@@ -389,17 +459,15 @@ def reset_synthid_state(wm):
     for key in ("context", "context_history"):
         if key in state and torch.is_tensor(state[key]):
             old = state[key]
-            state[key] = torch.zeros(
-                old.shape,
-                dtype=old.dtype,
-                device=old.device,
-            )
-            
+            state[key] = torch.zeros(old.shape, dtype=old.dtype, device=old.device)
+
+
 def generate_completion(
     model,
     tokenizer,
     encoded_prompt,
     prompt_len,
+    original_text=None,
     logits_processor=None,
     gen_kwargs=None,
     max_new_tokens=None,
@@ -429,20 +497,24 @@ def generate_completion(
         )[0]
 
     completion_ids = output_ids[prompt_len:]
+
+    # Keep special tokens first so final/channel markers remain visible for cleaning.
     decoded_raw = tokenizer.decode(completion_ids, skip_special_tokens=False)
-    decoded = tokenizer.decode(completion_ids, skip_special_tokens=True)
-    cleaned = clean_rewritten_text(decoded)
+    cleaned = clean_rewritten_text(decoded_raw, original=original_text)
 
     if not cleaned:
-        print("\n[DEBUG empty generation]")
+        decoded_clean = tokenizer.decode(completion_ids, skip_special_tokens=True)
+        cleaned = clean_rewritten_text(decoded_clean, original=original_text)
+
+    if not cleaned:
+        print("\n[DEBUG bad/empty generation]")
         print("completion_token_count =", len(completion_ids))
         print("decoded_raw[:1000] =", repr(decoded_raw[:1000]))
-        print("decoded_clean[:1000] =", repr(decoded[:1000]))
 
     return cleaned
 
 
-def generate_with_exp_watermark(wm, prompt_text: str, max_new_tokens: int = 300):
+def generate_with_exp_watermark(wm, prompt_text: str, original_text: str | None = None, max_new_tokens: int = 300):
     tokenizer = wm.config.generation_tokenizer
     model = wm.config.generation_model
     device = wm.config.device
@@ -460,11 +532,11 @@ def generate_with_exp_watermark(wm, prompt_text: str, max_new_tokens: int = 300)
             else:
                 logits = model(prefix_ids).logits[:, -1, :]
 
-        V = logits.shape[-1]
-        probs = torch.softmax(logits[:, :V] / temperature, dim=-1).cpu()
+        vocab_size = logits.shape[-1]
+        probs = torch.softmax(logits[:, :vocab_size] / temperature, dim=-1).cpu()
 
         wm.utils.seed_rng(prefix_ids[0])
-        u = torch.rand(V, generator=wm.utils.rng).unsqueeze(0)
+        u = torch.rand(vocab_size, generator=wm.utils.rng).unsqueeze(0)
         next_token = wm.utils.exp_sampling(probs, u).to(device)
 
         next_id = next_token.view(1, 1)
@@ -480,20 +552,21 @@ def generate_with_exp_watermark(wm, prompt_text: str, max_new_tokens: int = 300)
             break
 
         partial_text = tokenizer.decode(prefix_ids[0, prompt_len:], skip_special_tokens=True)
-
         if should_stop_generation(partial_text):
             break
 
     completion_ids = prefix_ids[0, prompt_len:]
     decoded_raw = tokenizer.decode(completion_ids, skip_special_tokens=False)
-    decoded = tokenizer.decode(completion_ids, skip_special_tokens=True)
-    cleaned = clean_rewritten_text(decoded)
+    cleaned = clean_rewritten_text(decoded_raw, original=original_text)
 
     if not cleaned:
-        print("\n[DEBUG empty EXP generation]")
+        decoded_clean = tokenizer.decode(completion_ids, skip_special_tokens=True)
+        cleaned = clean_rewritten_text(decoded_clean, original=original_text)
+
+    if not cleaned:
+        print("\n[DEBUG bad/empty EXP generation]")
         print("completion_token_count =", len(completion_ids))
         print("decoded_raw[:1000] =", repr(decoded_raw[:1000]))
-        print("decoded_clean[:1000] =", repr(decoded[:1000]))
 
     return cleaned
 
@@ -528,10 +601,10 @@ def collect_watermark_injected_tokens(wm, prompt_text, max_steps=300):
 
         if algo == "EXP":
             temperature = wm.config.temperature
-            V = base_logits.shape[-1]
-            probs = torch.softmax(base_logits[:, :V] / temperature, dim=-1).cpu()
+            vocab_size = base_logits.shape[-1]
+            probs = torch.softmax(base_logits[:, :vocab_size] / temperature, dim=-1).cpu()
             wm.utils.seed_rng(prefix_ids[0])
-            u = torch.rand(V, generator=wm.utils.rng).unsqueeze(0)
+            u = torch.rand(vocab_size, generator=wm.utils.rng).unsqueeze(0)
             token = wm.utils.exp_sampling(probs, u).to(device)
             wm_next = int(token.item())
         else:
@@ -553,7 +626,6 @@ def collect_watermark_injected_tokens(wm, prompt_text, max_steps=300):
                 probs = torch.softmax(base_logits, dim=-1)
                 entropy = -torch.sum(probs * torch.log(probs + 1e-12), dim=-1).item()
                 info["entropy"] = entropy
-
                 if entropy > wm.config.entropy_threshold:
                     injected.append(info)
             else:
@@ -572,7 +644,6 @@ def collect_watermark_injected_tokens(wm, prompt_text, max_steps=300):
             break
 
         partial_text = tokenizer.decode(prefix_ids[0, prompt_len:], skip_special_tokens=True)
-
         if should_stop_generation(partial_text):
             break
 
@@ -585,7 +656,6 @@ def load_prompt_jsonl(dataset_path, max_samples=None):
     with open(dataset_path, "r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
-
             if not line:
                 continue
 
@@ -601,7 +671,6 @@ def load_prompt_jsonl(dataset_path, max_samples=None):
 
 
 def load_dataset_all(dataset_path, tokenizer=None):
-    # For random sampling, do not pre-truncate to start_index + max_samples.
     if dataset_path.endswith(".jsonl"):
         return load_prompt_jsonl(dataset_path, max_samples=None)
 
@@ -634,7 +703,6 @@ def get_plain_cache_path(output_dir, domain, model_name, sample_seed, max_sample
     safe_model_name = sanitize_model_name(model_name)
     cache_dir = os.path.join(output_dir, "plain_cache")
     os.makedirs(cache_dir, exist_ok=True)
-
     mode = "random" if random_sample else "sequential"
 
     return os.path.join(
@@ -656,6 +724,79 @@ def load_plain_cache(cache_path):
 def save_plain_cache(cache, cache_path):
     with open(cache_path, "w", encoding="utf-8") as f:
         json.dump({str(k): v for k, v in cache.items()}, f, ensure_ascii=False, indent=2)
+
+
+def generate_rewrite_with_retry(
+    algorithm,
+    wm,
+    cfg,
+    original_text,
+    max_new_tokens,
+    use_chat_template=True,
+    watermarked=True,
+    max_attempts=2,
+):
+    tokenizer = cfg.tokenizer
+    model = cfg.model
+
+    for attempt in range(max_attempts):
+        prompt = build_rewrite_prompt(
+            tokenizer,
+            original_text,
+            use_chat_template=use_chat_template,
+            strict=(attempt > 0),
+        )
+
+        encoded = tokenizer(
+            prompt,
+            return_tensors="pt",
+            add_special_tokens=True,
+        ).to(DEVICE)
+
+        prompt_len = encoded["input_ids"].shape[1]
+
+        if watermarked:
+            if algorithm == "EXP":
+                rewritten = generate_with_exp_watermark(
+                    wm,
+                    prompt,
+                    original_text=original_text,
+                    max_new_tokens=max_new_tokens,
+                )
+            else:
+                if algorithm == "SynthID":
+                    reset_synthid_state(wm)
+
+                rewritten = generate_completion(
+                    model=model,
+                    tokenizer=tokenizer,
+                    encoded_prompt=encoded,
+                    prompt_len=prompt_len,
+                    original_text=original_text,
+                    logits_processor=LogitsProcessorList([wm.logits_processor]),
+                    gen_kwargs=cfg.gen_kwargs,
+                    max_new_tokens=max_new_tokens,
+                )
+        else:
+            rewritten = generate_completion(
+                model=model,
+                tokenizer=tokenizer,
+                encoded_prompt=encoded,
+                prompt_len=prompt_len,
+                original_text=original_text,
+                logits_processor=None,
+                gen_kwargs=cfg.gen_kwargs,
+                max_new_tokens=max_new_tokens,
+            )
+
+        rewritten = clean_rewritten_text(rewritten, original=original_text)
+
+        if rewritten:
+            return rewritten
+
+        print(f"[warning] bad rewrite attempt={attempt + 1}, retrying...")
+
+    return ""
 
 
 def rewrite_and_collect_120b(
@@ -732,84 +873,62 @@ def rewrite_and_collect_120b(
 
     for local_idx, i in enumerate(selected_indices, start=1):
         s = dataset[i]
-        text = s.get("prompt") if isinstance(s, dict) else str(s)
+        original_text = s.get("prompt") if isinstance(s, dict) else str(s)
 
         max_new_tokens = get_dynamic_max_new_tokens(
-            text,
+            original_text,
             max_cap=max_new_tokens_cap,
         )
 
-        tokenizer = cfg.tokenizer
-        model = cfg.model
-
-        prompt = build_rewrite_prompt(
-            tokenizer,
-            text,
+        rewritten = generate_rewrite_with_retry(
+            algorithm=algorithm,
+            wm=wm,
+            cfg=cfg,
+            original_text=original_text,
+            max_new_tokens=max_new_tokens,
             use_chat_template=use_chat_template,
+            watermarked=True,
+            max_attempts=2,
         )
-
-        encoded = tokenizer(
-            prompt,
-            return_tensors="pt",
-            add_special_tokens=True,
-        ).to(device)
-
-        prompt_len = encoded["input_ids"].shape[1]
-
-        if algorithm == "EXP":
-            rewritten = generate_with_exp_watermark(
-                wm,
-                prompt,
-                max_new_tokens=max_new_tokens,
-            )
-        else:
-            if algorithm == "SynthID":
-                reset_synthid_state(wm)
-        
-            rewritten = generate_completion(
-                model=model,
-                tokenizer=tokenizer,
-                encoded_prompt=encoded,
-                prompt_len=prompt_len,
-                logits_processor=LogitsProcessorList([wm.logits_processor]),
-                gen_kwargs=cfg.gen_kwargs,
-                max_new_tokens=max_new_tokens,
-            )
 
         if skip_plain:
             plain = None
         elif use_plain_cache and i in plain_cache:
-            plain = plain_cache[i]
+            plain = clean_rewritten_text(plain_cache[i], original=original_text)
             print(f"[plain cache hit] dataset_index={i}")
         else:
-            plain = generate_completion(
-                model=model,
-                tokenizer=tokenizer,
-                encoded_prompt=encoded,
-                prompt_len=prompt_len,
-                logits_processor=None,
-                gen_kwargs=cfg.gen_kwargs,
+            plain = generate_rewrite_with_retry(
+                algorithm=algorithm,
+                wm=wm,
+                cfg=cfg,
+                original_text=original_text,
                 max_new_tokens=max_new_tokens,
+                use_chat_template=use_chat_template,
+                watermarked=False,
+                max_attempts=2,
             )
-
-            plain = clean_rewritten_text(plain)
 
             if use_plain_cache:
                 plain_cache[i] = plain
                 save_plain_cache(plain_cache, plain_cache_path)
                 print(f"[plain cache saved] dataset_index={i}")
 
-        rewritten = clean_rewritten_text(rewritten)
-
         if not rewritten:
-            print(f"[warning] empty rewritten output at dataset_index={i}")
+            print(f"[warning] empty or contaminated rewritten output at dataset_index={i}")
 
-        if plain is not None:
-            plain = clean_rewritten_text(plain)
+        if plain is not None and not plain:
+            print(f"[warning] empty or contaminated plain output at dataset_index={i}")
+
+        prompt_for_token_collection = build_rewrite_prompt(
+            cfg.tokenizer,
+            original_text,
+            use_chat_template=use_chat_template,
+            strict=False,
+        )
 
         injected, stats = collect_watermark_injected_tokens(
             wm,
-            prompt,
+            prompt_for_token_collection,
             max_steps=max_new_tokens,
         )
 
@@ -823,7 +942,7 @@ def rewrite_and_collect_120b(
             "model_name": model_name,
             "algorithm": algorithm,
             "domain": domain,
-            "original": text,
+            "original": original_text,
             "rewritten": rewritten,
             "plain": plain,
             "watermark_injected_tokens": injected,
@@ -832,7 +951,8 @@ def rewrite_and_collect_120b(
 
         print(
             f"[{local_idx}/{len(selected_indices)}] done "
-            f"(dataset_index={i}, max_new_tokens={max_new_tokens})"
+            f"(dataset_index={i}, max_new_tokens={max_new_tokens}, "
+            f"rewritten_words={len(rewritten.split()) if rewritten else 0})"
         )
 
     mode = "random" if random_sample else "sequential"
@@ -907,7 +1027,6 @@ if __name__ == "__main__":
     elif args.random_sample:
         random_sample = True
     else:
-        # 120B script defaults to random sampling.
         random_sample = True
 
     rewrite_and_collect_120b(
