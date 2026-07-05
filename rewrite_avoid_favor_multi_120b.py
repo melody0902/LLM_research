@@ -1,25 +1,11 @@
 # ============================================================
 # rewrite_avoid_favor_multi_120b.py
 #
-# 這支是「avoid/favor 改寫」腳本的 120B 版本。
-#
-# 邏輯（誰要做什麼）沿用自:
-#   rewrite_avoid_favor_multi_0517.py
-#     -> build_messages(avoid/favor) / rewrite_once_watermarked_avoid /
-#        rewrite_once_unwatermarked_favor / candidate scoring
-#
-# 模型載入與文字清洗沿用自（因為 gpt-oss-120b 需要特殊處理）:
-#   rewrite_and_collect_watermark_tokens_120b.py
-#     -> get_transformers_config (不能用 BitsAndBytesConfig 包 gpt-oss，
-#        gpt-oss 已經是 MXFP4 量化)
-#     -> strip_gpt_oss_meta_prefix / clean_rewritten_text / should_stop_generation
-#        (清掉 harmony 格式的 analysis / assistantfinal 等雜訊)
-#     -> StopOnMarkersCriteria (生成中即時停止，避免產生一堆 Note: 補充說明)
-#     -> reset_synthid_state 安全版 (避免 inference tensor 就地修改報錯)
-#
-# 檔名規則沿用你目前 120b 產出的檔名格式：
-#   rewritten_{domain}_{algorithm}_{model_name}_{mode}_seed{seed}_n{max_samples}_wm_tokens.json
-#   rewritten_{domain}_{algorithm}_{model_name}_{mode}_seed{seed}_n{max_samples}_wm_token_freq.json
+# 120B avoid/favor rewrite.
+# Fix:
+#   src_text ALWAYS comes from item["original"] first.
+#   Never use item["rewritten"] as source because 120B rewritten may be empty
+#   or contaminated by gpt-oss analysis/meta text.
 # ============================================================
 
 import argparse
@@ -27,6 +13,7 @@ import json
 import os
 import random
 import re
+import math
 
 import numpy as np
 import torch
@@ -43,37 +30,45 @@ from transformers import (
 from watermark.auto_watermark import AutoWatermark
 from utils.transformers_config import TransformersConfig
 
+
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-
-# ---------------------------------------------------------------------------
-# 預設設定（可被 CLI 參數覆蓋）
-# ---------------------------------------------------------------------------
-
 DEFAULT_MODEL_NAME = "openai/gpt-oss-120b"
-
 DEFAULT_ALGORITHMS = ["KGW", "SWEET", "Unigram", "EXP", "SynthID"]
 DEFAULT_DOMAINS = ["ai", "bio", "med", "mis", "security"]
 
-DEFAULT_SAMPLE_MODE = "sequential"    # 對應檔名裡的 sequential / random
+DEFAULT_SAMPLE_MODE = "sequential"
 DEFAULT_SAMPLE_SEED = 30
-DEFAULT_MAX_SAMPLES = 200             # 對應檔名裡的 n200
+DEFAULT_MAX_SAMPLES = 200
 
 TOP_K_TOKENS = 200
 NUM_RETRIES = 5
 MAX_NEW_TOKENS = 260
 
-TEST_MODE = False
 TEST_LIMIT = 3
 
 INPUT_DIR = "outputs/wm_tokens_120b_0_200"
-TOKEN_DIR = "outputs/wm_tokens_120b_0_200"       # 和輸入同一個目錄
+TOKEN_DIR = "outputs/wm_tokens_120b_0_200"
 OUTPUT_DIR = "outputs/rewrite_avoid_favor_multi_120b"
 
 
-# ---------------------------------------------------------------------------
-# gpt-oss 專用噪音清洗（沿用自 120b 腳本）
-# ---------------------------------------------------------------------------
+BAD_META_PATTERNS = [
+    r"\bwe need to\b",
+    r"\blet'?s craft\b",
+    r"\blet'?s rewrite\b",
+    r"\bthe user wants\b",
+    r"\buser\s*\n",
+    r"\bassistant\s*\n",
+    r"\bsystem\s*\n",
+    r"\banalysis\b",
+    r"\bfinal answer\b",
+    r"\bmust rewrite\b",
+    r"\boutput only\b",
+    r"\boriginal paragraph\b",
+    r"\bgiven paragraph\b",
+    r"\bpreserving meaning\b",
+    r"\bpreserve all numbers\b",
+]
 
 STOP_MARKERS = [
     "\nNote that",
@@ -84,6 +79,9 @@ STOP_MARKERS = [
     "\nOriginal:",
     "\nRewritten:",
     "\nRewritten paragraph:",
+    "\nUser",
+    "\nAssistant",
+    "\nSystem",
     "Note that this",
     "Note: I made",
     "(Note: I made",
@@ -118,27 +116,26 @@ def remove_repeated_sentences(text: str) -> str:
     seen = set()
 
     for sent in sentences:
-        normalized = re.sub(r"\s+", " ", sent.strip().lower())
+        sent = sent.strip()
+        normalized = re.sub(r"\s+", " ", sent.lower())
         if not normalized:
             continue
         if normalized in seen:
             continue
         seen.add(normalized)
-        cleaned.append(sent.strip())
+        cleaned.append(sent)
 
     return " ".join(cleaned).strip()
 
 
-def strip_gpt_oss_meta_prefix(text: str) -> str:
-    """
-    gpt-oss 可能輸出 harmony 格式的可見文字，例如：
-    analysisWe need to rewrite...
-    assistantfinalActual answer...
+def strip_special_tokens(text: str) -> str:
+    if not text:
+        return ""
+    text = re.sub(r"<\|[^>]*?\|>", "", text)
+    return text.strip()
 
-    只保留 assistantfinal / final marker 之後的內容。
-    注意：這個函式只在「生成完成後」清洗，不能拿來當生成中的停止條件，
-    否則 gpt-oss 一開始就吐 analysis... 會導致生成馬上被截斷成空字串。
-    """
+
+def extract_after_last_final_marker(text: str) -> str:
     if text is None:
         return ""
 
@@ -146,47 +143,115 @@ def strip_gpt_oss_meta_prefix(text: str) -> str:
     if not text:
         return ""
 
-    patterns = [
+    markers = [
         r"assistantfinal",
         r"assistant\s+final",
         r"<\|channel\|>\s*final\s*<\|message\|>",
         r"<\|channel\|>\s*final",
         r"<\|final\|>",
+        r"final\s*<\|message\|>",
     ]
 
     lowered = text.lower()
-    best_idx = -1
-    best_pat = None
+    best_end = None
 
-    for pat in patterns:
-        matches = list(re.finditer(pat, lowered, flags=re.IGNORECASE))
+    for pat in markers:
+        matches = list(re.finditer(pat, lowered, flags=re.I))
         if matches:
             m = matches[-1]
-            if m.start() > best_idx:
-                best_idx = m.start()
-                best_pat = m
+            if best_end is None or m.end() > best_end:
+                best_end = m.end()
 
-    if best_pat is not None:
-        text = text[best_pat.end():].strip()
+    if best_end is not None:
+        return text[best_end:].strip()
 
-    text = re.sub(
-        r"^analysis\s*(we need to|let'?s|we should|i need to).*?(?=[A-Z][a-z])",
-        "",
-        text,
-        flags=re.IGNORECASE | re.DOTALL,
-    ).strip()
-
-    text = re.sub(r"<\|.*?\|>", "", text).strip()
-
-    return text
+    return text.strip()
 
 
-def clean_rewritten_text(text: str) -> str:
+def has_meta_contamination(text: str) -> bool:
+    if not text:
+        return True
+
+    low = text.lower()
+    for pat in BAD_META_PATTERNS:
+        if re.search(pat, low, flags=re.I):
+            return True
+
+    return False
+
+
+def remove_leading_meta_block(text: str) -> str:
+    if not text:
+        return ""
+
+    text = text.strip()
+    text = re.sub(r"^(analysis|assistantfinal|assistant final|final)\s*", "", text, flags=re.I).strip()
+
+    quote_match = re.search(r'["“](.{80,})["”]', text, flags=re.S)
+    if quote_match:
+        candidate = quote_match.group(1).strip()
+        if not has_meta_contamination(candidate):
+            text = candidate
+
+    lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
+    kept = []
+    skipping = True
+
+    for ln in lines:
+        low = ln.lower()
+        looks_meta = (
+            low in {"user", "assistant", "system"}
+            or low.startswith("we need")
+            or low.startswith("let's")
+            or low.startswith("the user")
+            or low.startswith("need to")
+            or "output only" in low
+            or "preserve all" in low
+            or "rewrite the following" in low
+            or "given paragraph" in low
+        )
+
+        if skipping and looks_meta:
+            continue
+
+        skipping = False
+        kept.append(ln)
+
+    return " ".join(kept).strip() if kept else text.strip()
+
+
+def is_bad_rewrite(text: str, original: str | None = None) -> bool:
+    if not text or not text.strip():
+        return True
+
+    stripped = text.strip()
+
+    if has_meta_contamination(stripped):
+        return True
+
+    if len(stripped.split()) < 20:
+        return True
+
+    if original:
+        original_words = max(1, len(original.split()))
+        rewrite_words = len(stripped.split())
+        if rewrite_words < max(20, int(original_words * 0.35)):
+            return True
+
+    if re.match(r"^[\.\,\'\"\)\]\}]+", stripped):
+        return True
+
+    return False
+
+
+def clean_rewritten_text(text: str, original: str | None = None) -> str:
     if text is None:
         return ""
 
-    text = strip_gpt_oss_meta_prefix(text)
-    text = text.replace("\\n", "\n")
+    text = text.replace("\\n", "\n").strip()
+    text = extract_after_last_final_marker(text)
+    text = strip_special_tokens(text)
+    text = remove_leading_meta_block(text)
     text = text.strip()
 
     for marker in STOP_MARKERS:
@@ -198,7 +263,7 @@ def clean_rewritten_text(text: str) -> str:
         r"\n?\(?\s*Note\s*[:：-].*$",
         r"\n?\(?\s*Explanation\s*[:：-].*$",
         r"\n?\(?\s*Original\s*[:：-].*$",
-        r"\n?\(?\s*Rewritten\s*(paragraph)?\s*[:：-].*$",
+        r"\n?\(?\s*Rewritten\s*(paragraph|text)?\s*[:：-].*$",
         r"\n?\(?\s*I made some minor changes.*$",
         r"\n?\(?\s*I have made some minor changes.*$",
         r"\n?\s*analysis\s+.*$",
@@ -207,19 +272,22 @@ def clean_rewritten_text(text: str) -> str:
     ]
 
     for pattern in note_patterns:
-        text = re.sub(pattern, "", text, flags=re.IGNORECASE | re.DOTALL).strip()
+        text = re.sub(pattern, "", text, flags=re.I | re.S).strip()
 
     text = re.sub(
-        r"^(Rewritten paragraph|Rewritten|Answer|Output)\s*[:：-]\s*",
+        r"^(Rewritten paragraph|Rewritten text|Rewritten|Answer|Output)\s*[:：-]\s*",
         "",
         text,
-        flags=re.IGNORECASE,
+        flags=re.I,
     ).strip()
 
-    while "\n\n\n" in text:
-        text = text.replace("\n\n\n", "\n\n")
+    text = re.sub(r"\s+", " ", text).strip()
+    text = remove_repeated_sentences(text)
 
-    return remove_repeated_sentences(text).strip()
+    if is_bad_rewrite(text, original=original):
+        return ""
+
+    return text.strip()
 
 
 def should_stop_generation(decoded_text: str) -> bool:
@@ -227,7 +295,6 @@ def should_stop_generation(decoded_text: str) -> bool:
         return False
 
     lowered = decoded_text.lower().lstrip()
-
     dangerous_markers = [
         "\nnote:",
         "\nexplanation:",
@@ -249,10 +316,6 @@ class StopOnMarkersCriteria(StoppingCriteria):
         return should_stop_generation(decoded)
 
 
-# ---------------------------------------------------------------------------
-# File I/O helpers
-# ---------------------------------------------------------------------------
-
 def load_json(path):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -263,10 +326,6 @@ def save_json(obj, path):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(obj, f, indent=2, ensure_ascii=False)
 
-
-# ---------------------------------------------------------------------------
-# Model loading（120b / gpt-oss 專用，沿用自 120b 收集腳本）
-# ---------------------------------------------------------------------------
 
 def load_model_tokenizer_and_cfg(
     model_name: str,
@@ -292,7 +351,6 @@ def load_model_tokenizer_and_cfg(
     )
 
     if max_memory:
-        # 範例："0:78GiB,cpu:200GiB"
         memory_map = {}
         for item in max_memory.split(","):
             k, v = item.split(":", 1)
@@ -302,17 +360,16 @@ def load_model_tokenizer_and_cfg(
                 memory_map[int(k.strip())] = v.strip()
         model_kwargs["max_memory"] = memory_map
 
-    # openai/gpt-oss 系列已經內建 MXFP4 量化，不能再疊 BitsAndBytesConfig
     if "gpt-oss" in model_name.lower():
         if load_in_4bit:
-            print("[warning] gpt-oss 已使用 MXFP4，忽略 --load_in_4bit")
+            print("[warning] gpt-oss already uses MXFP4; ignoring --load_in_4bit")
             load_in_4bit = False
         if load_in_8bit:
-            print("[warning] gpt-oss 已使用 MXFP4，忽略 --load_in_8bit")
+            print("[warning] gpt-oss already uses MXFP4; ignoring --load_in_8bit")
             load_in_8bit = False
 
     if load_in_4bit and load_in_8bit:
-        raise ValueError("load_in_4bit 和 load_in_8bit 只能擇一。")
+        raise ValueError("load_in_4bit and load_in_8bit cannot both be enabled.")
 
     if load_in_4bit:
         model_kwargs["quantization_config"] = BitsAndBytesConfig(
@@ -339,8 +396,6 @@ def load_model_tokenizer_and_cfg(
     else:
         real_vocab_size = model.config.vocab_size
 
-    # avoid/favor 改寫需要抽樣多樣性（NUM_RETRIES 次取最好的候選），
-    # 所以這裡用 do_sample=True，跟 120b 收集腳本（do_sample=False）不同。
     cfg = TransformersConfig(
         model=model,
         tokenizer=tokenizer,
@@ -358,15 +413,10 @@ def load_model_tokenizer_and_cfg(
 
 
 def reset_synthid_state(wm):
-    """
-    安全版 reset：不用 fill_() 這種就地操作，改成建立新的零張量，
-    避免 'Inplace update to inference tensor outside InferenceMode' 錯誤。
-    """
     if not hasattr(wm, "logits_processor"):
         return
 
     lp = wm.logits_processor
-
     if not hasattr(lp, "state") or lp.state is None:
         return
 
@@ -380,10 +430,6 @@ def reset_synthid_state(wm):
             old = state[key]
             state[key] = torch.zeros(old.shape, dtype=old.dtype, device=old.device)
 
-
-# ---------------------------------------------------------------------------
-# Path helpers（依照你 120b 產出的檔名規則）
-# ---------------------------------------------------------------------------
 
 def get_input_text_json(domain, algorithm, model_name, sample_mode, sample_seed, max_samples):
     safe = sanitize_model_name(model_name)
@@ -417,10 +463,6 @@ def load_top_token_ids(path, top_k=None):
     return [x["token_id"] for x in data]
 
 
-# ---------------------------------------------------------------------------
-# Token / term helpers（沿用自 0517 avoid/favor 腳本）
-# ---------------------------------------------------------------------------
-
 def normalize_term(s: str) -> str:
     s = s.replace("\n", " ").strip()
     s = s.replace("Ġ", " ").replace("▁", " ")
@@ -446,6 +488,7 @@ def token_ids_to_terms(tokenizer, token_ids, min_len=2):
 
     seen = set()
     uniq = []
+
     for t in terms:
         if t not in seen:
             seen.add(t)
@@ -454,73 +497,50 @@ def token_ids_to_terms(tokenizer, token_ids, min_len=2):
     return uniq
 
 
-# ---------------------------------------------------------------------------
-# Prompt builder（沿用 avoid/favor 邏輯，加上 gpt-oss 的 "Reasoning: low" 提示
-# 以減少 harmony analysis channel 雜訊）
-# ---------------------------------------------------------------------------
-
-def build_messages(text, terms, mode="avoid"):
+def build_messages(text, terms, mode="avoid", strict=False):
     terms_preview = ", ".join(terms[:80])
-
-    reasoning_hint = "Reasoning: low\n"
 
     if mode == "avoid":
         system_msg = (
-            reasoning_hint +
             "You are a rewriting engine. "
-            "The very first token of your response MUST be the first word of the rewritten text. "
-            "Output ONLY the rewritten text — nothing before it and nothing after it. "
+            "Output only the rewritten text. "
             "Do not reveal reasoning, analysis, hidden thoughts, channel names, labels, or notes. "
-            "NEVER include preambles such as 'Here is', 'The rewritten text', 'I rewrote', "
-            "'Note:', 'Below is', or any sentence describing what you did. "
-            "NEVER append notes, comments, explanations, bullet points, or lists of changes. "
-            "NEVER use double newlines (\\n\\n) — output a single continuous block of text. "
-            "Preserve the original meaning, facts, tone, and approximate length. "
-            "Stop immediately after the last sentence of the rewritten text."
+            "Preserve meaning, facts, tone, and approximate length."
         )
-        instruction = "Avoid these favored words/phrases as much as possible"
-
+        instruction = "Avoid these words/phrases as much as possible"
     elif mode == "favor":
         system_msg = (
-            reasoning_hint +
             "You are a rewriting engine. "
-            "The very first token of your response MUST be the first word of the rewritten text. "
-            "Output ONLY the rewritten text — nothing before it and nothing after it. "
+            "Output only the rewritten text. "
             "Do not reveal reasoning, analysis, hidden thoughts, channel names, labels, or notes. "
-            "NEVER include preambles such as 'Here is', 'The rewritten text', 'I rewrote', "
-            "'Note:', 'Below is', 'The original text has been rewritten', "
-            "or any sentence describing what you did. "
-            "NEVER append notes, comments, explanations, bullet points, or lists of changes. "
-            "NEVER use double newlines (\\n\\n) — output a single continuous block of text. "
-            "Do NOT summarize, shorten, omit, compress, or remove details. "
-            "The rewritten text must be approximately the same length as the input. "
-            "Use the listed favored words or phrases whenever they fit naturally. "
-            "Stop immediately after the last sentence of the rewritten text."
+            "Do not summarize, shorten, omit, compress, or remove details. "
+            "Preserve meaning, facts, tone, and approximate length."
         )
-        instruction = "Use these favored words/phrases as much as possible when natural"
-
+        instruction = "Use these words/phrases as much as possible when natural"
     else:
         raise ValueError(f"Unknown rewrite mode: {mode}")
 
-    user_msg = (
-        "Rewrite the following text.\n\n"
-        "Rules:\n"
-        "1. Preserve all meaning and factual content.\n"
-        "2. Do not summarize, shorten, omit, or compress the text.\n"
-        "3. Keep the output fluent and natural.\n"
-        "4. The rewritten text must be between 90%–110% of the input length.\n"
-        f"5. {instruction}:\n"
-        f"   {terms_preview}\n"
-        "6. YOUR RESPONSE = REWRITTEN TEXT ONLY.\n"
-        "   - Do NOT write 'Note:', 'Note that', 'I rewrote', 'Here is', "
-        "'The original text has been rewritten', 'Below is', or anything\n"
-        "     that is not part of the rewritten text itself.\n"
-        "   - Do NOT use double newlines (\\n\\n) anywhere in your response.\n"
-        "   - Do NOT repeat sentences.\n"
-        "   - Do NOT add any text after the final sentence.\n"
-        "   - Begin your response with the first word of the rewritten text immediately.\n\n"
-        f"Original text:\n{text}"
-    )
+    if strict:
+        user_msg = (
+            "Paraphrase the following text only.\n"
+            "No preface. No notes. No labels. No analysis.\n"
+            f"{instruction}: {terms_preview}\n\n"
+            f"{text}"
+        )
+    else:
+        user_msg = (
+            "Rewrite the following text.\n\n"
+            "Rules:\n"
+            "1. Preserve all meaning and factual content.\n"
+            "2. Do not summarize, shorten, omit, or compress the text.\n"
+            "3. Keep the output fluent and natural.\n"
+            "4. The rewritten text must be between 90%-110% of the input length.\n"
+            f"5. {instruction}:\n"
+            f"   {terms_preview}\n"
+            "6. Output the rewritten text only.\n"
+            "7. Do not write Note, User, Assistant, Analysis, Original, Rewritten, or Explanation.\n\n"
+            f"Text:\n{text}"
+        )
 
     return [
         {"role": "system", "content": system_msg},
@@ -528,16 +548,21 @@ def build_messages(text, terms, mode="avoid"):
     ]
 
 
-# ---------------------------------------------------------------------------
-# Generation helpers（用 120b 版的 stopping criteria + gpt-oss 清洗）
-# ---------------------------------------------------------------------------
+def apply_chat_template_or_plain(tokenizer, messages):
+    if hasattr(tokenizer, "apply_chat_template"):
+        try:
+            return tokenizer.apply_chat_template(
+                messages,
+                tokenize=False,
+                add_generation_prompt=True,
+            )
+        except Exception as e:
+            print(f"[warning] chat template failed; using plain prompt. {e}")
 
-def generate_with_exp_watermark(wm, prompt_text: str, max_new_tokens: int = MAX_NEW_TOKENS):
-    """
-    效能修正：原本每一步都把「目前為止的完整序列」重新丟進模型做 forward，
-    對 120B 模型來說等於 O(n^2) 開銷，260 tokens 會慢到不合理。
-    這裡改成用 KV cache，每步只餵「上一個新 token」進去，O(n)。
-    """
+    return "\n\n".join([m["content"] for m in messages]) + "\n\n"
+
+
+def generate_with_exp_watermark(wm, prompt_text: str, original_text: str, max_new_tokens: int = MAX_NEW_TOKENS):
     tokenizer = wm.config.generation_tokenizer
     model = wm.config.generation_model
     device = wm.config.device
@@ -559,6 +584,7 @@ def generate_with_exp_watermark(wm, prompt_text: str, max_new_tokens: int = MAX_
                 past_key_values=past_key_values,
                 use_cache=True,
             )
+
         logits = outputs.logits[:, -1, :]
         past_key_values = outputs.past_key_values
 
@@ -571,7 +597,7 @@ def generate_with_exp_watermark(wm, prompt_text: str, max_new_tokens: int = MAX_
 
         next_id = next_token.view(1, 1)
         generated_ids = torch.cat([generated_ids, next_id], dim=1)
-        cur_input_ids = next_id  # 下一步只餵新 token，靠 cache 補上下文
+        cur_input_ids = next_id
 
         if attention_mask is not None:
             attention_mask = torch.cat([
@@ -587,12 +613,8 @@ def generate_with_exp_watermark(wm, prompt_text: str, max_new_tokens: int = MAX_
             break
 
     completion_ids = generated_ids[0, prompt_len:]
-    # 注意：這裡故意用 skip_special_tokens=False，保留 <|channel|>/<|message|> 等
-    # harmony 特殊 token，讓 clean_rewritten_text 裡的 strip_gpt_oss_meta_prefix
-    # 能靠這些標記正確切出「final」段落，避免 analysis 推理文字混進結果。
-    # 若先用 skip_special_tokens=True 解碼，這些邊界標記會被砍光，導致清洗失效。
-    raw = tokenizer.decode(completion_ids, skip_special_tokens=False).strip()
-    return clean_rewritten_text(raw)
+    raw = tokenizer.decode(completion_ids, skip_special_tokens=False)
+    return clean_rewritten_text(raw, original=original_text)
 
 
 @torch.no_grad()
@@ -601,18 +623,22 @@ def generate_completion(
     tokenizer,
     encoded_prompt,
     prompt_len,
+    original_text,
     logits_processor=None,
     gen_kwargs=None,
     max_new_tokens=None,
 ):
     safe_gen_kwargs = dict(gen_kwargs or {})
-    if max_new_tokens is not None:
-        safe_gen_kwargs["max_new_tokens"] = max_new_tokens
-    safe_gen_kwargs.setdefault("max_new_tokens", MAX_NEW_TOKENS)
+    safe_gen_kwargs["max_new_tokens"] = max_new_tokens or MAX_NEW_TOKENS
     safe_gen_kwargs.setdefault("do_sample", True)
+    safe_gen_kwargs.setdefault("temperature", 0.7)
+    safe_gen_kwargs.setdefault("top_p", 0.9)
+    safe_gen_kwargs.setdefault("repetition_penalty", 1.08)
+    safe_gen_kwargs.setdefault("no_repeat_ngram_size", 4)
 
     if tokenizer.eos_token_id is not None:
         safe_gen_kwargs.setdefault("eos_token_id", tokenizer.eos_token_id)
+
     if tokenizer.pad_token_id is not None:
         safe_gen_kwargs.setdefault("pad_token_id", tokenizer.pad_token_id)
 
@@ -629,31 +655,35 @@ def generate_completion(
         )[0]
 
     completion_ids = output_ids[prompt_len:]
-    # 同上：先保留特殊 token 讓 harmony channel 邊界能被正確偵測，
-    # 清洗完再由 strip_gpt_oss_meta_prefix / clean_rewritten_text 統一移除。
-    raw = tokenizer.decode(completion_ids, skip_special_tokens=False).strip()
-    return clean_rewritten_text(raw)
+    raw = tokenizer.decode(completion_ids, skip_special_tokens=False)
+    cleaned = clean_rewritten_text(raw, original=original_text)
+
+    if not cleaned:
+        raw2 = tokenizer.decode(completion_ids, skip_special_tokens=True)
+        cleaned = clean_rewritten_text(raw2, original=original_text)
+
+    return cleaned
 
 
-# ---------------------------------------------------------------------------
-# Rewrite functions（沿用 0517 avoid/favor 邏輯）
-# ---------------------------------------------------------------------------
-
-def rewrite_once_watermarked_avoid(model, tokenizer, wm, cfg, algorithm, text, avoid_terms):
-    """Version A：保留 watermark，盡量避開 token set terms。"""
-    messages = build_messages(text, avoid_terms, mode="avoid")
-    prompt = tokenizer.apply_chat_template(
-        messages, tokenize=False, add_generation_prompt=True,
-    )
+def rewrite_once_watermarked_avoid(model, tokenizer, wm, cfg, algorithm, text, avoid_terms, strict=False):
+    messages = build_messages(text, avoid_terms, mode="avoid", strict=strict)
+    prompt = apply_chat_template_or_plain(tokenizer, messages)
 
     if algorithm == "EXP":
-        return generate_with_exp_watermark(wm, prompt, max_new_tokens=MAX_NEW_TOKENS)
+        return generate_with_exp_watermark(
+            wm,
+            prompt,
+            original_text=text,
+            max_new_tokens=MAX_NEW_TOKENS,
+        )
 
     gen_model = wm.config.generation_model
     gen_tokenizer = wm.config.generation_tokenizer
 
     encoded = gen_tokenizer(
-        prompt, return_tensors="pt", add_special_tokens=True,
+        prompt,
+        return_tensors="pt",
+        add_special_tokens=True,
     ).to(wm.config.device)
 
     prompt_len = encoded["input_ids"].shape[1]
@@ -666,21 +696,21 @@ def rewrite_once_watermarked_avoid(model, tokenizer, wm, cfg, algorithm, text, a
         tokenizer=gen_tokenizer,
         encoded_prompt=encoded,
         prompt_len=prompt_len,
+        original_text=text,
         logits_processor=LogitsProcessorList([wm.logits_processor]),
         gen_kwargs=cfg.gen_kwargs,
         max_new_tokens=MAX_NEW_TOKENS,
     )
 
 
-def rewrite_once_unwatermarked_favor(model, tokenizer, cfg, text, favor_terms):
-    """Version B：不加 watermark logits processor，盡量使用 token set terms。"""
-    messages = build_messages(text, favor_terms, mode="favor")
-    prompt = tokenizer.apply_chat_template(
-        messages, tokenize=False, add_generation_prompt=True,
-    )
+def rewrite_once_unwatermarked_favor(model, tokenizer, cfg, text, favor_terms, strict=False):
+    messages = build_messages(text, favor_terms, mode="favor", strict=strict)
+    prompt = apply_chat_template_or_plain(tokenizer, messages)
 
     encoded = tokenizer(
-        prompt, return_tensors="pt", add_special_tokens=True,
+        prompt,
+        return_tensors="pt",
+        add_special_tokens=True,
     ).to(DEVICE)
 
     prompt_len = encoded["input_ids"].shape[1]
@@ -690,18 +720,15 @@ def rewrite_once_unwatermarked_favor(model, tokenizer, cfg, text, favor_terms):
         tokenizer=tokenizer,
         encoded_prompt=encoded,
         prompt_len=prompt_len,
+        original_text=text,
         logits_processor=None,
         gen_kwargs=cfg.gen_kwargs,
         max_new_tokens=MAX_NEW_TOKENS,
     )
 
 
-# ---------------------------------------------------------------------------
-# Candidate scoring（沿用 0517 avoid/favor 腳本，原封不動）
-# ---------------------------------------------------------------------------
-
 def count_term_hits(text, terms):
-    low = text.lower()
+    low = (text or "").lower()
     total_hits = 0
     hit_terms = []
 
@@ -720,39 +747,64 @@ def count_term_hits(text, terms):
 def choose_best_avoid_candidate(candidates, terms, src_len):
     scored = []
     for c in candidates:
+        c = c or ""
         hits, hit_terms = count_term_hits(c, terms)
         scored.append({
             "text": c,
             "set_hits": hits,
             "set_hit_terms": hit_terms,
             "length_gap": abs(len(c) - src_len),
+            "is_empty": not bool(c.strip()),
         })
-    scored.sort(key=lambda x: (x["set_hits"], x["length_gap"]))
+
+    scored.sort(key=lambda x: (x["is_empty"], x["set_hits"], x["length_gap"]))
     return scored[0], scored
 
 
 def choose_best_favor_candidate(candidates, terms, src_len):
     scored = []
     for c in candidates:
+        c = c or ""
         hits, hit_terms = count_term_hits(c, terms)
         scored.append({
             "text": c,
             "set_hits": hits,
             "set_hit_terms": hit_terms,
             "length_gap": abs(len(c) - src_len),
+            "is_empty": not bool(c.strip()),
         })
-    scored.sort(key=lambda x: (-x["set_hits"], x["length_gap"]))
+
+    scored.sort(key=lambda x: (x["is_empty"], -x["set_hits"], x["length_gap"]))
     return scored[0], scored
 
 
-# ---------------------------------------------------------------------------
-# Main pipeline
-# ---------------------------------------------------------------------------
+def get_source_text(item):
+    """
+    Important fix:
+    Always use original first.
+    Do NOT use item["rewritten"] as source because rewrite_and_collect 120B
+    may produce empty/contaminated rewritten strings.
+    """
+    src = item.get("original") or item.get("text") or item.get("prompt") or ""
+    if isinstance(src, str):
+        return src.strip()
+    return str(src).strip()
+
 
 def run_one_setting(
-    model, tokenizer, cfg, model_name, domain, algorithm,
-    sample_mode, sample_seed, max_samples,
-    test_limit=None, num_retries=NUM_RETRIES, output_tag=None,
+    model,
+    tokenizer,
+    cfg,
+    model_name,
+    domain,
+    algorithm,
+    sample_mode,
+    sample_seed,
+    max_samples,
+    test_limit=None,
+    num_retries=NUM_RETRIES,
+    output_tag=None,
+    overwrite=False,
 ):
     input_path = get_input_text_json(domain, algorithm, model_name, sample_mode, sample_seed, max_samples)
     token_path = get_token_set_json(domain, algorithm, model_name, sample_mode, sample_seed, max_samples)
@@ -766,7 +818,7 @@ def run_one_setting(
         print(f"[SKIP] missing token file: {token_path}")
         return
 
-    if os.path.exists(save_path):
+    if os.path.exists(save_path) and not overwrite:
         print(f"[SKIP] already exists: {save_path}")
         return
 
@@ -789,7 +841,7 @@ def run_one_setting(
     output = []
 
     for item in tqdm(data, desc=f"{domain}/{algorithm}"):
-        src_text = item.get("rewritten") or item.get("plain") or item.get("text") or item.get("original") or ""
+        src_text = get_source_text(item)
 
         if not src_text:
             output.append({
@@ -797,6 +849,8 @@ def run_one_setting(
                 "domain": domain,
                 "algorithm": algorithm,
                 "rewrite_model": model_name,
+                "src_text_key": None,
+                "src_text": "",
                 "rewrite_watermarked_avoid_set": "",
                 "watermarked_avoid_set_hits": None,
                 "watermarked_avoid_set_hit_terms": [],
@@ -811,43 +865,54 @@ def run_one_setting(
         watermarked_avoid_candidates = []
         unwatermarked_favor_candidates = []
 
-        # EXP 演算法的 avoid 生成是「確定性」的：wm.utils.seed_rng() 是根據序列內容
-        # 做確定性 hash，同一個 prompt 每次跑出來的 token 序列會完全一樣。
-        # 所以對 EXP 來說，重複 num_retries 次只會得到 num_retries 份一模一樣的
-        # 文字，純粹浪費算力 —— avoid 這邊只跑 1 次即可。
-        # KGW/SWEET/Unigram/SynthID 的 avoid 走 model.generate + do_sample=True，
-        # 仍然是隨機的，保留 num_retries 次取最佳候選。
         avoid_retries = 1 if algorithm == "EXP" else num_retries
 
-        for _ in range(avoid_retries):
+        for retry_idx in range(avoid_retries):
             try:
                 rw_avoid = rewrite_once_watermarked_avoid(
-                    model=model, tokenizer=tokenizer, wm=wm, cfg=cfg,
-                    algorithm=algorithm, text=src_text, avoid_terms=set_terms,
+                    model=model,
+                    tokenizer=tokenizer,
+                    wm=wm,
+                    cfg=cfg,
+                    algorithm=algorithm,
+                    text=src_text,
+                    avoid_terms=set_terms,
+                    strict=(retry_idx > 0),
                 )
             except Exception as e:
                 print(f"[WARN] {domain}/{algorithm} watermarked avoid failed: {e}")
                 rw_avoid = ""
 
+            rw_avoid = clean_rewritten_text(rw_avoid, original=src_text)
             watermarked_avoid_candidates.append(rw_avoid)
 
-        for _ in range(num_retries):
+        for retry_idx in range(num_retries):
             try:
                 rw_favor = rewrite_once_unwatermarked_favor(
-                    model=model, tokenizer=tokenizer, cfg=cfg,
-                    text=src_text, favor_terms=set_terms,
+                    model=model,
+                    tokenizer=tokenizer,
+                    cfg=cfg,
+                    text=src_text,
+                    favor_terms=set_terms,
+                    strict=(retry_idx > 0),
                 )
             except Exception as e:
                 print(f"[WARN] {domain}/{algorithm} unwatermarked favor failed: {e}")
                 rw_favor = ""
 
+            rw_favor = clean_rewritten_text(rw_favor, original=src_text)
             unwatermarked_favor_candidates.append(rw_favor)
 
         best_avoid, scored_avoid = choose_best_avoid_candidate(
-            watermarked_avoid_candidates, set_terms, len(src_text),
+            watermarked_avoid_candidates,
+            set_terms,
+            len(src_text),
         )
+
         best_favor, scored_favor = choose_best_favor_candidate(
-            unwatermarked_favor_candidates, set_terms, len(src_text),
+            unwatermarked_favor_candidates,
+            set_terms,
+            len(src_text),
         )
 
         output.append({
@@ -855,6 +920,8 @@ def run_one_setting(
             "domain": domain,
             "algorithm": algorithm,
             "rewrite_model": model_name,
+            "src_text_key": "original",
+            "src_text": src_text,
 
             "rewrite_watermarked_avoid_set": best_avoid["text"],
             "watermarked_avoid_set_hits": best_avoid["set_hits"],
@@ -873,27 +940,33 @@ def run_one_setting(
 
 def main():
     parser = argparse.ArgumentParser()
+
     parser.add_argument("--model_name", type=str, default=DEFAULT_MODEL_NAME)
     parser.add_argument("--domains", type=str, nargs="+", default=DEFAULT_DOMAINS)
     parser.add_argument("--algorithms", type=str, nargs="+", default=DEFAULT_ALGORITHMS)
-    parser.add_argument("--sample_mode", type=str, default=DEFAULT_SAMPLE_MODE,
-                         choices=["sequential", "random"])
+    parser.add_argument(
+        "--sample_mode",
+        type=str,
+        default=DEFAULT_SAMPLE_MODE,
+        choices=["sequential", "random"],
+    )
     parser.add_argument("--sample_seed", type=int, default=DEFAULT_SAMPLE_SEED)
     parser.add_argument("--max_samples", type=int, default=DEFAULT_MAX_SAMPLES)
     parser.add_argument("--load_in_4bit", action="store_true")
     parser.add_argument("--load_in_8bit", action="store_true")
-    parser.add_argument("--torch_dtype", type=str, default="bfloat16",
-                         choices=["bfloat16", "float16", "float32"])
+    parser.add_argument(
+        "--torch_dtype",
+        type=str,
+        default="bfloat16",
+        choices=["bfloat16", "float16", "float32"],
+    )
     parser.add_argument("--max_memory", type=str, default=None)
-    parser.add_argument("--test", action="store_true",
-                         help="小測試模式：每個 domain/algorithm 只跑前 --test_limit 筆，"
-                              "輸出檔名會加上 _test 後綴，不會覆蓋正式輸出。")
-    parser.add_argument("--test_limit", type=int, default=TEST_LIMIT,
-                         help="測試模式下每個 domain/algorithm 跑幾筆（預設 3）")
-    parser.add_argument("--num_retries", type=int, default=NUM_RETRIES,
-                         help="每筆資料 avoid/favor 各取樣幾次挑最佳候選（測試時可調小，例如 2）")
-    args = parser.parse_args()
+    parser.add_argument("--test", action="store_true")
+    parser.add_argument("--test_limit", type=int, default=TEST_LIMIT)
+    parser.add_argument("--num_retries", type=int, default=NUM_RETRIES)
+    parser.add_argument("--overwrite", action="store_true")
 
+    args = parser.parse_args()
     set_seed(args.sample_seed)
 
     model, tokenizer, cfg = load_model_tokenizer_and_cfg(
@@ -925,11 +998,13 @@ def main():
                 test_limit=test_limit,
                 num_retries=args.num_retries,
                 output_tag=output_tag,
+                overwrite=args.overwrite,
             )
 
     del model
     del tokenizer
-    torch.cuda.empty_cache()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
 
 
 if __name__ == "__main__":
