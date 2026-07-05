@@ -345,7 +345,7 @@ def load_model_tokenizer_and_cfg(
 
     model_kwargs = dict(
         device_map="auto",
-        dtype=dtype,
+        torch_dtype=dtype,
         low_cpu_mem_usage=True,
         trust_remote_code=True,
     )
