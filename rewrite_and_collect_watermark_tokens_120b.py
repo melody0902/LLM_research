@@ -332,7 +332,7 @@ def get_transformers_config(
 
     model_kwargs = dict(
         device_map="auto",
-        dtype=dtype,
+        torch_dtype=dtype,
         low_cpu_mem_usage=True,
         trust_remote_code=True,
     )
