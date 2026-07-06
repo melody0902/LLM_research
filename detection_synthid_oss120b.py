@@ -23,27 +23,16 @@ from utils.transformers_config import TransformersConfig
 OSS_120B_MODEL_NAME = "openai/gpt-oss-120b"
 OSS_120B_MODEL_TAG = OSS_120B_MODEL_NAME.replace("/", "__")
 
-# TODO: 改成你自己的 120B 文字輸出路徑
-# 需要對應到：
-#   rewritten_{domain}_{alg}_{model_tag}_wm_tokens.json
-#
-# 例如：
-#   outputs/oss120b_200green/rewritten_ai_KGW_openai__gpt-oss-120b_wm_tokens.json
-#   outputs/oss120b_200green/rewritten_ai_SynthID_openai__gpt-oss-120b_wm_tokens.json
 OSS_120B_TEXT_JSON_TMPL = (
-    "outputs/oss120b_200green/"
-    "rewritten_{domain}_{alg}_{model_tag}_wm_tokens.json"
+    "/home/soslab/Desktop/Melody/signature/llm-watermark-research/"
+    "outputs/wm_tokens_120b_0_200/"
+    "rewritten_{domain}_{alg}_{model_tag}_sequential_seed30_n200_wm_tokens.json"
 )
 
-# TODO: 改成你自己的 120B token frequency 路徑
-# 需要對應到：
-#   rewritten_{domain}_{alg}_wm_token_freq.json
-#
-# 例如：
-#   outputs/oss120b_200test/rewritten_ai_SynthID_wm_token_freq.json
 OSS_120B_TOKEN_SET_TMPL = (
-    "outputs/oss120b_200test/"
-    "rewritten_{domain}_{alg}_wm_token_freq.json"
+    "/home/soslab/Desktop/Melody/signature/llm-watermark-research/"
+    "outputs/wm_tokens_120b_0_200/"
+    "rewritten_{domain}_{alg}_{model_tag}_sequential_seed30_n200_wm_token_freq.json"
 )
 
 OSS_120B_OUTPUT_PATH = (
