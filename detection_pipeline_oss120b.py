@@ -2,8 +2,13 @@
 
 Place this file next to detection_pipeline.py and run:
     python detection_pipeline_oss120b.py
+
+Important:
+    This file does NOT reuse the original 8B data paths.
+    Edit the OSS_120B_* path constants below to match your 120B generated files.
 """
 
+import os
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
@@ -11,21 +16,104 @@ import detection_pipeline as base
 from utils.transformers_config import TransformersConfig
 
 
+# ============================================================
+# OSS 120B settings
+# ============================================================
+
 OSS_120B_MODEL_NAME = "openai/gpt-oss-120b"
+OSS_120B_MODEL_TAG = OSS_120B_MODEL_NAME.replace("/", "__")
 
-
-# Override the original 8B model settings.
-base.MODEL_NAME = OSS_120B_MODEL_NAME
-base.MODEL_TAG = base.MODEL_NAME.replace("/", "__")
-base.OUTPUT_PATH = (
-    f"outputs/test/detect/"
-    f"subset_vs_baseline_{base.DOMAIN}_{base.MODEL_TAG}_avoid_top{base.TOP_K_TOKENS}.json"
+# TODO: 改成你自己的 120B 文字輸出路徑
+# 需要對應到：
+#   rewritten_{domain}_{alg}_{model_tag}_wm_tokens.json
+#
+# 例如：
+#   outputs/oss120b_200green/rewritten_ai_KGW_openai__gpt-oss-120b_wm_tokens.json
+#   outputs/oss120b_200green/rewritten_ai_SWEET_openai__gpt-oss-120b_wm_tokens.json
+#   outputs/oss120b_200green/rewritten_ai_Unigram_openai__gpt-oss-120b_wm_tokens.json
+#   outputs/oss120b_200green/rewritten_ai_EXP_openai__gpt-oss-120b_wm_tokens.json
+OSS_120B_TEXT_JSON_TMPL = (
+    "outputs/oss120b_200green/"
+    "rewritten_{domain}_{alg}_{model_tag}_wm_tokens.json"
 )
+
+# TODO: 改成你自己的 120B token frequency 路徑
+# 需要對應到：
+#   rewritten_{domain}_{alg}_wm_token_freq.json
+#
+# 例如：
+#   outputs/oss120b_200test/rewritten_ai_KGW_wm_token_freq.json
+#   outputs/oss120b_200test/rewritten_ai_SWEET_wm_token_freq.json
+#   outputs/oss120b_200test/rewritten_ai_Unigram_wm_token_freq.json
+#   outputs/oss120b_200test/rewritten_ai_EXP_wm_token_freq.json
+OSS_120B_TOKEN_SET_TMPL = (
+    "outputs/oss120b_200test/"
+    "rewritten_{domain}_{alg}_wm_token_freq.json"
+)
+
+OSS_120B_OUTPUT_PATH = (
+    f"outputs/test/detect/oss120b/"
+    f"subset_vs_baseline_{base.DOMAIN}_{OSS_120B_MODEL_TAG}_avoid_top{base.TOP_K_TOKENS}.json"
+)
+
+
+# ============================================================
+# Override base detection_pipeline.py globals
+# ============================================================
+
+base.MODEL_NAME = OSS_120B_MODEL_NAME
+base.MODEL_TAG = OSS_120B_MODEL_TAG
+base.TEXT_JSON_TMPL = OSS_120B_TEXT_JSON_TMPL
+base.TOKEN_SET_TMPL = OSS_120B_TOKEN_SET_TMPL
+base.OUTPUT_PATH = OSS_120B_OUTPUT_PATH
+
+
+def _check_required_files():
+    """Fail early if the OSS 120B input files are not where this script expects."""
+    missing = []
+
+    plain_path = base.TEXT_JSON_TMPL.format(
+        domain=base.DOMAIN,
+        alg=base.BASE_ALGO_FOR_PLAIN,
+        model_tag=base.MODEL_TAG,
+        top_k=base.TOP_K_TOKENS,
+    )
+    if not os.path.exists(plain_path):
+        missing.append(plain_path)
+
+    for alg in base.ALGORITHMS:
+        wm_path = base.TEXT_JSON_TMPL.format(
+            domain=base.DOMAIN,
+            alg=alg,
+            model_tag=base.MODEL_TAG,
+            top_k=base.TOP_K_TOKENS,
+        )
+        token_path = base.TOKEN_SET_TMPL.format(
+            domain=base.DOMAIN,
+            alg=alg,
+            model_tag=base.MODEL_TAG,
+            top_k=base.TOP_K_TOKENS,
+        )
+
+        if not os.path.exists(wm_path):
+            missing.append(wm_path)
+        if not os.path.exists(token_path):
+            missing.append(token_path)
+
+    if missing:
+        raise FileNotFoundError(
+            "OSS 120B input files were not found. "
+            "Please update OSS_120B_TEXT_JSON_TMPL and OSS_120B_TOKEN_SET_TMPL.\n"
+            + "\n".join(f"  - {p}" for p in missing)
+        )
 
 
 def get_transformers_config():
     print(f"Using model: {base.MODEL_NAME}")
     print(f"Using model tag: {base.MODEL_TAG}")
+    print(f"Using text path template: {base.TEXT_JSON_TMPL}")
+    print(f"Using token-set path template: {base.TOKEN_SET_TMPL}")
+    print(f"Output path: {base.OUTPUT_PATH}")
 
     model = AutoModelForCausalLM.from_pretrained(
         base.MODEL_NAME,
@@ -51,4 +139,5 @@ base.get_transformers_config = get_transformers_config
 
 
 if __name__ == "__main__":
+    _check_required_files()
     base.main()
