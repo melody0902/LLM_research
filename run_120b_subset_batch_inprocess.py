@@ -24,14 +24,14 @@ from watermark.auto_watermark import AutoWatermark
 
 
 algorithms = ["KGW", "SWEET", "Unigram", "EXP", "SynthID"]
-# algorithms = ["SynthID"]
+
 
 datasets = [
     ("dataset/zhtw/mydatasets/ai/output_data_combined_iclr_abstracts_merged_prompt.jsonl", "ai"),
     ("dataset/zhtw/mydatasets/bio/output_data_combined_BIO2_abstracts_merged_prompt.jsonl", "bio"),
-    ("dataset/zhtw/mydatasets/med/output_data_combined_MIE_abstracts_merged_prompt.jsonl", "med"),
-    ("dataset/zhtw/mydatasets/mis/combined_icis_merged_prompt.jsonl", "mis"),
-    ("dataset/zhtw/mydatasets/Security/output_data_combined_SP_abstracts_merged_prompt.jsonl", "security"),
+    # ("dataset/zhtw/mydatasets/med/output_data_combined_MIE_abstracts_merged_prompt.jsonl", "med"),
+    # ("dataset/zhtw/mydatasets/mis/combined_icis_merged_prompt.jsonl", "mis"),
+    # ("dataset/zhtw/mydatasets/Security/output_data_combined_SP_abstracts_merged_prompt.jsonl", "security"),
 ]
 
 MODEL_NAME = "openai/gpt-oss-120b"
@@ -43,7 +43,7 @@ MAX_SAMPLES = 200
 # 如果你想更保守可以改回 230。
 MAX_NEW_TOKENS_CAP = 260
 
-OUTPUT_DIR = "outputs/wm_tokens_120b_0_200"
+OUTPUT_DIR = "outputs/wm_tokens_120b_0_200_with_plain"
 
 TORCH_DTYPE = "bfloat16"
 MAX_MEMORY = "0:76GiB,cpu:200GiB"
@@ -53,9 +53,9 @@ MAX_MEMORY = "0:76GiB,cpu:200GiB"
 # True = random subset
 RANDOM_SAMPLE = False
 
-SKIP_PLAIN = True
-USE_PLAIN_CACHE = True
 
+SKIP_PLAIN = False
+USE_PLAIN_CACHE = True
 # For gpt-oss, do not use bitsandbytes 4bit/8bit.
 LOAD_IN_4BIT = False
 LOAD_IN_8BIT = False
