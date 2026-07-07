@@ -267,6 +267,28 @@ def find_best_threshold_both(wm_scores, plain_scores):
 
     return best
 
+def _get_gamma_from_wm(wm):
+    """
+    Try best-effort to fetch the greenlist/mask expected rate (gamma) from watermark config.
+    Adjust the attribute names here if your config uses different keys.
+    """
+    for name in ["gamma", "greenlist_ratio", "greenlist_fraction", "watermark_gamma"]:
+        if hasattr(wm.config, name):
+            g = getattr(wm.config, name)
+            if g is not None:
+                return float(g)
+    raise AttributeError(
+        "Cannot find gamma in wm.config. Tried: gamma / greenlist_ratio / greenlist_fraction / watermark_gamma. "
+        "Please check your watermark config fields."
+    )
+
+
+def _zscore(obs, n, p, eps=1e-12):
+    # Binomial z-score
+    if n <= 0:
+        return 0.0
+    var = n * p * (1.0 - p)
+    return float((obs - n * p) / math.sqrt(var + eps))
 
 
 # # ============================================================
