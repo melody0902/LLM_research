@@ -229,12 +229,31 @@ def main():
     wm_scores_base, plain_scores_base = [], []
     wm_scores_subset, plain_scores_subset = [], []
 
-    for w, p in tqdm(zip(wm_texts, plain_texts), total=len(plain_texts)):
-        wm_scores_base.append(baseline_detector.detect(w))
-        plain_scores_base.append(baseline_detector.detect(p))
+    skipped_pairs = 0
 
-        wm_scores_subset.append(subset_detector.detect(w))
-        plain_scores_subset.append(subset_detector.detect(p))
+    for idx, (w, p) in enumerate(tqdm(zip(wm_texts, plain_texts), total=len(plain_texts))):
+        try:
+            # skip empty / None / whitespace-only text
+            if w is None or p is None or not str(w).strip() or not str(p).strip():
+                skipped_pairs += 1
+                continue
+    
+            wm_b = baseline_detector.detect(w)
+            pl_b = baseline_detector.detect(p)
+    
+            wm_s = subset_detector.detect(w)
+            pl_s = subset_detector.detect(p)
+    
+            wm_scores_base.append(wm_b)
+            plain_scores_base.append(pl_b)
+            wm_scores_subset.append(wm_s)
+            plain_scores_subset.append(pl_s)
+    
+        except Exception as e:
+            # skip too-short texts, e.g. not enough tokens after prefix/ngram requirement
+            print(f"[skip] idx={idx}, reason={e}")
+            skipped_pairs += 1
+            continue
 
     results = {
         "algorithm": ALGORITHM,
@@ -242,6 +261,9 @@ def main():
         "model_name": MODEL_NAME,
         "model_tag": MODEL_TAG,
         "subset_size": len(token_subset),
+        "num_total_pairs": len(plain_texts),
+        "num_valid_pairs": len(wm_scores_base),
+        "num_skipped_pairs": skipped_pairs,
         "baseline": find_best_threshold(wm_scores_base, plain_scores_base),
         "subset": find_best_threshold(wm_scores_subset, plain_scores_subset),
     }
