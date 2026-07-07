@@ -81,7 +81,26 @@ def get_transformers_config():
 
 def load_texts(path, key):
     with open(path, "r", encoding="utf-8") as f:
-        return [x[key] for x in json.load(f)]
+        data = json.load(f)
+
+    texts = []
+    for i, x in enumerate(data):
+        text = x.get(key, "")
+
+        if text is None:
+            print(f"Skip None text at index {i}")
+            continue
+
+        if not isinstance(text, str):
+            text = str(text)
+
+        if text.strip() == "":
+            print(f"Skip empty text at index {i}")
+            continue
+
+        texts.append(text)
+
+    return texts
 
 
 def load_token_subset(path, top_k=None):
