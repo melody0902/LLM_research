@@ -25,13 +25,13 @@ OSS_120B_MODEL_TAG = OSS_120B_MODEL_NAME.replace("/", "__")
 
 OSS_120B_TEXT_JSON_TMPL = (
     "/home/soslab/Desktop/Melody/signature/llm-watermark-research/"
-    "outputs/wm_tokens_120b_0_200/"
+    "outputs/wm_tokens_120b_0_200_with_plain/"
     "rewritten_{domain}_{alg}_{model_tag}_sequential_seed30_n200_wm_tokens.json"
 )
 
 OSS_120B_TOKEN_SET_TMPL = (
     "/home/soslab/Desktop/Melody/signature/llm-watermark-research/"
-    "outputs/wm_tokens_120b_0_200/"
+    "outputs/wm_tokens_120b_0_200_with_plain/"
     "rewritten_{domain}_{alg}_{model_tag}_sequential_seed30_n200_wm_token_freq.json"
 )
 
