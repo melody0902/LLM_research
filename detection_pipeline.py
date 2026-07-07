@@ -525,24 +525,39 @@ def main():
         # EXP extra baseline: avg evidence
         wm_base_avg, plain_base_avg = [], []
 
+        skipped_pairs = 0
+
         for w, p in tqdm(zip(wm_texts, plain_texts), total=len(plain_texts)):
-            # ===== baseline score from library =====
-            wm_base.append(baseline_detector(w, return_dict=True)["score"])
-            plain_base.append(baseline_detector(p, return_dict=True)["score"])
-
-            # ===== subset score =====
-            wm_subset.append(subset_detector.detect(w))
-            plain_subset.append(subset_detector.detect(p))
-
-            # ===== optional: EXP avg_score baseline =====
-            if alg == "EXP":
-                wm_stats = exp_pvalue_and_avgscore(wm, w)
-                pl_stats = exp_pvalue_and_avgscore(wm, p)
-                wm_base_avg.append(wm_stats["avg_score"])
-                plain_base_avg.append(pl_stats["avg_score"])
+            try:
+                # ===== baseline score from library =====
+                wm_b = baseline_detector(w, return_dict=True)["score"]
+                pl_b = baseline_detector(p, return_dict=True)["score"]
+        
+                # ===== subset score =====
+                wm_s = subset_detector.detect(w)
+                pl_s = subset_detector.detect(p)
+        
+                wm_base.append(wm_b)
+                plain_base.append(pl_b)
+                wm_subset.append(wm_s)
+                plain_subset.append(pl_s)
+        
+                # ===== optional: EXP avg_score baseline =====
+                if alg == "EXP":
+                    wm_stats = exp_pvalue_and_avgscore(wm, w)
+                    pl_stats = exp_pvalue_and_avgscore(wm, p)
+                    wm_base_avg.append(wm_stats["avg_score"])
+                    plain_base_avg.append(pl_stats["avg_score"])
+        
+            except ValueError as e:
+                skipped_pairs += 1
+                continue
 
         entry = {
             "subset_size": len(token_subset),
+            "num_total_pairs": len(plain_texts),
+            "num_valid_pairs": len(wm_base),
+            "num_skipped_pairs": skipped_pairs,
             "baseline": find_best_threshold_both(wm_base, plain_base),
             "subset": find_best_threshold_both(wm_subset, plain_subset),
         }
