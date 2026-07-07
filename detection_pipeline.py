@@ -85,19 +85,7 @@ def load_texts(path, key):
 
     texts = []
     for i, x in enumerate(data):
-        text = x.get(key, "")
-
-        if text is None:
-            print(f"Skip None text at index {i}")
-            continue
-
-        if not isinstance(text, str):
-            text = str(text)
-
-        if text.strip() == "":
-            print(f"Skip empty text at index {i}")
-            continue
-
+        text = normalize_text(x.get(key, ""))
         texts.append(text)
 
     return texts
@@ -110,7 +98,76 @@ def load_token_subset(path, top_k=None):
         freq = freq[:top_k]
     return {x["token_id"] for x in freq}
 
+def normalize_text(x):
+    if x is None:
+        return ""
+    if not isinstance(x, str):
+        x = str(x)
+    return x.strip()
 
+
+def token_len(tokenizer, text):
+    ids = tokenizer(
+        text,
+        return_tensors="pt",
+        add_special_tokens=False
+    )["input_ids"][0]
+    return int(ids.numel())
+
+
+def is_too_short_for_alg(text, tokenizer, wm, alg):
+    text = normalize_text(text)
+
+    if not text:
+        return True
+
+    n_tokens = token_len(tokenizer, text)
+
+    if n_tokens == 0:
+        return True
+
+    # KGW / SWEET / EXP need positions after prefix_length.
+    if alg in {"KGW", "SWEET", "EXP"}:
+        prefix_len = getattr(wm.config, "prefix_length", 0)
+        return n_tokens <= prefix_len
+
+    # Unigram can technically score any non-empty token sequence.
+    if alg == "Unigram":
+        return False
+
+    # SynthID-like algorithms usually need at least ngram_len tokens.
+    if hasattr(wm.config, "ngram_len"):
+        return n_tokens < wm.config.ngram_len
+
+    return False
+
+
+def safe_baseline_score(wm, alg, text):
+    text = normalize_text(text)
+
+    if is_too_short_for_alg(text, wm.config.generation_tokenizer, wm, alg):
+        return None
+
+    try:
+        result = wm.detect_watermark(text, return_dict=True)
+        return float(result["score"])
+    except Exception as e:
+        print(f"[skip baseline] alg={alg}, reason={repr(e)}, text={repr(text[:80])}")
+        return None
+
+
+def safe_subset_score(detector, text):
+    text = normalize_text(text)
+
+    if not text:
+        return None
+
+    try:
+        return float(detector.detect(text))
+    except Exception as e:
+        print(f"[skip subset] reason={repr(e)}, text={repr(text[:80])}")
+        return None
+        
 # ============================================================
 # 3.1 EXP evidence computation (baseline avg_score)
 # ============================================================
@@ -158,8 +215,19 @@ def exp_pvalue_and_avgscore(wm, text, eps=1e-12):
 # ============================================================
 
 def find_best_threshold_both(wm_scores, plain_scores):
+    if len(wm_scores) == 0 or len(plain_scores) == 0:
+        return {
+            "TPR": 0.0,
+            "F1": 0.0,
+            "precision": 0.0,
+            "FPR": 0.0,
+            "threshold": None,
+            "direction": None,
+            "note": "No valid scores available after skipping empty/too-short/error cases.",
+        }
+
     scores = wm_scores + plain_scores
-    labels = [1]*len(wm_scores) + [0]*len(plain_scores)
+    labels = [1] * len(wm_scores) + [0] * len(plain_scores)
 
     best = None
 
@@ -170,7 +238,7 @@ def find_best_threshold_both(wm_scores, plain_scores):
         for thr in sorted(set(scores)):
             if direction == "gt":
                 preds = [1 if s > thr else 0 for s in scores]
-            else:  # "lt"
+            else:
                 preds = [1 if s < thr else 0 for s in scores]
 
             TP = sum(p == 1 and y == 1 for p, y in zip(preds, labels))
@@ -181,7 +249,7 @@ def find_best_threshold_both(wm_scores, plain_scores):
             TPR = TP / (TP + FN) if (TP + FN) else 0.0
             precision = TP / (TP + FP) if (TP + FP) else 0.0
             FPR = FP / (FP + TN) if (FP + TN) else 0.0
-            F1 = 2*precision*TPR/(precision+TPR) if (precision+TPR) else 0.0
+            F1 = 2 * precision * TPR / (precision + TPR) if (precision + TPR) else 0.0
 
             if F1 > best_f1:
                 best_f1 = F1
@@ -194,10 +262,11 @@ def find_best_threshold_both(wm_scores, plain_scores):
                     "direction": direction,
                 }
 
-        if best is None or best_metrics["F1"] > best["F1"]:
+        if best_metrics is not None and (best is None or best_metrics["F1"] > best["F1"]):
             best = best_metrics
 
     return best
+
 
 
 # # ============================================================
@@ -205,142 +274,10 @@ def find_best_threshold_both(wm_scores, plain_scores):
 # # ============================================================
 
 # class SubsetAwareKGWDetector:
-#     """
-#     subset score = (# positions i where token in S AND token in greenlist(prefix_i)) / (# positions i where token in S)
-#     """
-#     def __init__(self, wm, S):
-#         self.wm = wm
-#         self.utils = wm.utils
-#         self.tokenizer = wm.config.generation_tokenizer
-#         self.prefix_len = wm.config.prefix_length
-#         self.S = set(S)
-
-#     def detect(self, text):
-#         ids = self.tokenizer(text, return_tensors="pt", add_special_tokens=False)["input_ids"][0]
-#         ids = ids.to(self.wm.config.device)
-
-#         obs, total = 0, 0
-#         for i in range(self.prefix_len, len(ids)):
-#             t = ids[i].item()
-#             if t not in self.S:
-#                 continue
-#             total += 1
-#             if t in self.utils.get_greenlist_ids(ids[:i]):
-#                 obs += 1
-#         return obs / total if total > 0 else 0.0
-
-
-# class SubsetAwareSWEETDetector(SubsetAwareKGWDetector):
-#     """
-#     SWEET subset score = same as KGW but only on high-entropy positions (entropy[i] > threshold)
-#     """
-#     def __init__(self, wm, S):
-#         super().__init__(wm, S)
-#         self.model = wm.config.generation_model
-#         self.entropy_threshold = wm.config.entropy_threshold
-
-#     def detect(self, text):
-#         ids = self.tokenizer(text, return_tensors="pt", add_special_tokens=False)["input_ids"][0]
-#         ids = ids.to(self.wm.config.device)
-
-#         entropy = self.utils.calculate_entropy(self.model, ids)
-
-#         obs, total = 0, 0
-#         for i in range(self.prefix_len, len(ids)):
-#             if entropy[i] <= self.entropy_threshold:
-#                 continue
-#             t = ids[i].item()
-#             if t not in self.S:
-#                 continue
-#             total += 1
-#             if t in self.utils.get_greenlist_ids(ids[:i]):
-#                 obs += 1
-#         return obs / total if total > 0 else 0.0
-
-
-# class SubsetAwareUnigramDetector:
-#     """
-#     Unigram subset score = (# tokens t in S with mask[t]=1) / (# tokens t in S)
-#     (does not use prefix_len in this implementation)
-#     """
-#     def __init__(self, wm, S):
-#         self.mask = wm.utils.mask
-#         self.tokenizer = wm.config.generation_tokenizer
-#         self.S = set(S)
-
-#     def detect(self, text):
-#         ids = self.tokenizer(text, return_tensors="pt", add_special_tokens=False)["input_ids"][0].tolist()
-
-#         obs, total = 0, 0
-#         for t in ids:
-#             if t not in self.S:
-#                 continue
-#             total += 1
-#             if self.mask[t]:
-#                 obs += 1
-#         return obs / total if total > 0 else 0.0
-
-
-# class SubsetAwareEXPDetector:
-#     """
-#     EXP subset score = average_i[-log(1-r_i)] over positions where token in S (and i >= prefix_len)
-#     """
-#     def __init__(self, wm, S):
-#         self.wm = wm
-#         self.utils = wm.utils
-#         self.tokenizer = wm.config.generation_tokenizer
-#         self.prefix_len = wm.config.prefix_length
-#         self.vocab_size = wm.config.vocab_size
-#         self.S = set(S)
-
-#     def detect(self, text):
-#         ids = self.tokenizer(text, return_tensors="pt", add_special_tokens=False)["input_ids"][0]
-
-#         score, total = 0.0, 0
-#         for i in range(self.prefix_len, len(ids)):
-#             t = ids[i].item()
-#             if t not in self.S:
-#                 continue
-#             self.utils.seed_rng(ids[:i])
-#             r = torch.rand(self.vocab_size, generator=self.utils.rng)[t].item()
-#             score += -math.log(1.0 - r)  # == log(1/(1-r))
-#             total += 1
-#         return score / total if total > 0 else 0.0
-
-# ============================================================
-# 5. Subset-aware detectors (BASELINE Z-SCORE STYLE)
-#     - score uses z-score like baseline
-#     - BUT n = #subset tokens (scorable positions that are in S)
-# ============================================================
-
-def _get_gamma_from_wm(wm):
-    """
-    Try best-effort to fetch the greenlist/mask expected rate (gamma) from watermark config.
-    Adjust the attribute names here if your config uses different keys.
-    """
-    for name in ["gamma", "greenlist_ratio", "greenlist_fraction", "watermark_gamma"]:
-        if hasattr(wm.config, name):
-            g = getattr(wm.config, name)
-            if g is not None:
-                return float(g)
-    raise AttributeError(
-        "Cannot find gamma in wm.config. Tried: gamma / greenlist_ratio / greenlist_fraction / watermark_gamma. "
-        "Please check your watermark config fields."
-    )
-
-
-def _zscore(obs, n, p, eps=1e-12):
-    # Binomial z-score
-    if n <= 0:
-        return 0.0
-    var = n * p * (1.0 - p)
-    return float((obs - n * p) / math.sqrt(var + eps))
-
-
-class SubsetAwareKGWDetector:
     """
     Baseline-style z-score, but n = # positions (i>=prefix_len) where token in S.
     obs = # of those positions that are also in greenlist(prefix_i).
+    KGW does not use entropy.
     """
 
     def __init__(self, wm, S):
@@ -352,37 +289,33 @@ class SubsetAwareKGWDetector:
         self.gamma = _get_gamma_from_wm(wm)
 
     def detect(self, text):
+        text = normalize_text(text)
+        if not text:
+            return 0.0
+
         ids = self.tokenizer(
             text,
             return_tensors="pt",
             add_special_tokens=False
         )["input_ids"][0].to(self.wm.config.device)
-    
-        if ids.numel() == 0:
+
+        if ids.numel() == 0 or ids.numel() <= self.prefix_len:
             return 0.0
-    
-        if ids.numel() <= self.prefix_len:
-            return 0.0
-    
-        entropy = self.utils.calculate_entropy(self.model, ids)
-    
+
         obs = 0
         n = 0
-    
+
         for i in range(self.prefix_len, len(ids)):
-            if entropy[i] <= self.entropy_threshold:
-                continue
-    
             t = ids[i].item()
-    
+
             if t not in self.S:
                 continue
-    
+
             n += 1
-    
+
             if t in self.utils.get_greenlist_ids(ids[:i]):
                 obs += 1
-    
+
         return _zscore(obs, n, self.gamma)
 
 
@@ -398,9 +331,18 @@ class SubsetAwareSWEETDetector(SubsetAwareKGWDetector):
         self.entropy_threshold = wm.config.entropy_threshold
 
     def detect(self, text):
+        text = normalize_text(text)
+        if not text:
+            return 0.0
+
         ids = self.tokenizer(
-            text, return_tensors="pt", add_special_tokens=False
+            text,
+            return_tensors="pt",
+            add_special_tokens=False
         )["input_ids"][0].to(self.wm.config.device)
+
+        if ids.numel() == 0 or ids.numel() <= self.prefix_len:
+            return 0.0
 
         entropy = self.utils.calculate_entropy(self.model, ids)
 
@@ -412,10 +354,12 @@ class SubsetAwareSWEETDetector(SubsetAwareKGWDetector):
                 continue
 
             t = ids[i].item()
+
             if t not in self.S:
                 continue
 
             n += 1
+
             if t in self.utils.get_greenlist_ids(ids[:i]):
                 obs += 1
 
@@ -427,7 +371,6 @@ class SubsetAwareUnigramDetector:
     Baseline-style z-score for Unigram:
     - obs = # tokens in S with mask[t]==1
     - n   = # tokens in S
-    p(gamma) uses wm.config.* (same gamma meaning: expected mask-on rate)
     """
 
     def __init__(self, wm, S):
@@ -438,9 +381,18 @@ class SubsetAwareUnigramDetector:
         self.gamma = _get_gamma_from_wm(wm)
 
     def detect(self, text):
+        text = normalize_text(text)
+        if not text:
+            return 0.0
+
         ids = self.tokenizer(
-            text, return_tensors="pt", add_special_tokens=False
+            text,
+            return_tensors="pt",
+            add_special_tokens=False
         )["input_ids"][0].tolist()
+
+        if len(ids) == 0:
+            return 0.0
 
         obs = 0
         n = 0
@@ -448,7 +400,9 @@ class SubsetAwareUnigramDetector:
         for t in ids:
             if t not in self.S:
                 continue
+
             n += 1
+
             if self.mask[t]:
                 obs += 1
 
@@ -457,11 +411,7 @@ class SubsetAwareUnigramDetector:
 
 class SubsetAwareEXPDetector:
     """
-    EXP 不太是二項(success/failure)→ z-score 的形式通常不適用。
-    這裡給一個「baseline風格」的做法：只在 subset tokens 上計算 EXP 的 avg evidence
-    （也就是用 subset token 當 total token）。
-    如果你 baseline 的 EXP score 不是 avg evidence，而是 p-value/其他統計量，
-    再把這裡換成一致的那個即可。
+    EXP subset score = average evidence over subset tokens at scorable positions.
     """
 
     def __init__(self, wm, S):
@@ -473,21 +423,32 @@ class SubsetAwareEXPDetector:
         self.S = set(S)
 
     def detect(self, text, eps=1e-12):
+        text = normalize_text(text)
+        if not text:
+            return 0.0
+
         ids = self.tokenizer(
-            text, return_tensors="pt", add_special_tokens=False
+            text,
+            return_tensors="pt",
+            add_special_tokens=False
         )["input_ids"][0]
+
+        if ids.numel() == 0 or ids.numel() <= self.prefix_len:
+            return 0.0
 
         score_sum = 0.0
         n = 0
 
         for i in range(self.prefix_len, len(ids)):
             t = ids[i].item()
+
             if t not in self.S:
                 continue
 
             self.utils.seed_rng(ids[:i])
             r = torch.rand(self.vocab_size, generator=self.utils.rng)[t].item()
             r = min(max(r, 0.0), 1.0 - eps)
+
             score_sum += -math.log(1.0 - r)
             n += 1
 
@@ -561,35 +522,39 @@ def main():
 
         skipped_pairs = 0
 
-        for w, p in tqdm(zip(wm_texts, plain_texts), total=len(plain_texts)):
-            try:
-                # ===== baseline score from library =====
-                wm_b = baseline_detector(w, return_dict=True)["score"]
-                pl_b = baseline_detector(p, return_dict=True)["score"]
+        n_pairs = min(len(wm_texts), len(plain_texts))
+        for idx, (w, p) in enumerate(tqdm(zip(wm_texts[:n_pairs], plain_texts[:n_pairs]), total=n_pairs)):
+            w = normalize_text(w)
+            p = normalize_text(p)
         
-                # ===== subset score =====
-                wm_s = subset_detector.detect(w)
-                pl_s = subset_detector.detect(p)
+            if is_too_short_for_alg(w, cfg.tokenizer, wm, alg) or is_too_short_for_alg(p, cfg.tokenizer, wm, alg):
+                skipped_pairs += 1
+                print(f"[skip pair] alg={alg}, idx={idx}, reason=empty_or_too_short")
+                continue
         
-                wm_base.append(wm_b)
-                plain_base.append(pl_b)
-                wm_subset.append(wm_s)
-                plain_subset.append(pl_s)
+            wm_b = safe_baseline_score(wm, alg, w)
+            pl_b = safe_baseline_score(wm, alg, p)
+            wm_s = safe_subset_score(subset_detector, w)
+            pl_s = safe_subset_score(subset_detector, p)
         
-                # ===== optional: EXP avg_score baseline =====
-                if alg == "EXP":
-                    wm_stats = exp_pvalue_and_avgscore(wm, w)
-                    pl_stats = exp_pvalue_and_avgscore(wm, p)
-                    wm_base_avg.append(wm_stats["avg_score"])
-                    plain_base_avg.append(pl_stats["avg_score"])
-        
-            except ValueError as e:
+            if wm_b is None or pl_b is None or wm_s is None or pl_s is None:
                 skipped_pairs += 1
                 continue
+        
+            wm_base.append(wm_b)
+            plain_base.append(pl_b)
+            wm_subset.append(wm_s)
+            plain_subset.append(pl_s)
+        
+            if alg == "EXP":
+                wm_stats = exp_pvalue_and_avgscore(wm, w)
+                pl_stats = exp_pvalue_and_avgscore(wm, p)
+                wm_base_avg.append(wm_stats["avg_score"])
+                plain_base_avg.append(pl_stats["avg_score"])
 
         entry = {
             "subset_size": len(token_subset),
-            "num_total_pairs": len(plain_texts),
+            "num_total_pairs": n_pairs,
             "num_valid_pairs": len(wm_base),
             "num_skipped_pairs": skipped_pairs,
             "baseline": find_best_threshold_both(wm_base, plain_base),
