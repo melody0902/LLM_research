@@ -273,7 +273,7 @@ def find_best_threshold_both(wm_scores, plain_scores):
 # # 5. Subset-aware detectors
 # # ============================================================
 
-# class SubsetAwareKGWDetector:
+class SubsetAwareKGWDetector:
     """
     Baseline-style z-score, but n = # positions (i>=prefix_len) where token in S.
     obs = # of those positions that are also in greenlist(prefix_i).
