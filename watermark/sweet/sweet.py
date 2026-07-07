@@ -223,33 +223,49 @@ class SWEET(BaseWatermark):
         return watermarked_text
 
     def detect_watermark(self, text: str, return_dict: bool = True, *args, **kwargs):
-        """Detect watermark in the text."""
-
         # encode text
-        encoded_text = self.config.generation_tokenizer(text, return_tensors="pt", add_special_tokens=False)["input_ids"][0].to(self.config.device)
-
+        encoded_text = self.config.generation_tokenizer(
+            text,
+            return_tensors="pt",
+            add_special_tokens=False
+        )["input_ids"][0].to(self.config.device)
+    
+        # 防止空字串 / 空 token 直接丟進模型
+        if encoded_text.numel() == 0:
+            if return_dict:
+                return {
+                    "is_watermarked": False,
+                    "score": 0.0
+                }
+            else:
+                return (False, 0.0)
+    
+        # 如果 token 數小於 prefix_length，也無法正常算 SWEET score
+        if encoded_text.numel() <= self.config.prefix_length:
+            if return_dict:
+                return {
+                    "is_watermarked": False,
+                    "score": 0.0
+                }
+            else:
+                return (False, 0.0)
+    
         # calculate entropy
-        entropy_list = self.utils.calculate_entropy(self.config.generation_model, encoded_text)
-        
+        entropy_list = self.utils.calculate_entropy(
+            self.config.generation_model,
+            encoded_text
+        )
+    
         # compute z_score
         z_score, _, _ = self.utils.score_sequence(encoded_text, entropy_list)
-
-        # Determine if the z_score indicates a watermark
+    
         is_watermarked = z_score > self.config.z_threshold
-
-        # above_threshold_count = sum(1 for entropy in entropy_list if entropy > self.config.entropy_threshold)
-        # total_tokens = len(entropy_list)
-        # proportion_above_threshold = above_threshold_count / total_tokens if total_tokens > 0 else 0
-
-        # print(f"z_score: {z_score}")
-        # print(f"is_watermarked: {is_watermarked}")
-        # print(f"Total tokens: {total_tokens}")
-        # print(f"Tokens with entropy above threshold: {above_threshold_count}")
-        # print(f"Proportion of tokens above threshold: {proportion_above_threshold:.4f}")
-
-        # Return results based on the return_dict flag
+    
         if return_dict:
-            return {"is_watermarked": is_watermarked, "score": z_score}
+            return {
+                "is_watermarked": is_watermarked,
+                "score": z_score
+            }
         else:
             return (is_watermarked, z_score)
 
