@@ -334,21 +334,36 @@ class SubsetAwareKGWDetector:
 
     def detect(self, text):
         ids = self.tokenizer(
-            text, return_tensors="pt", add_special_tokens=False
+            text,
+            return_tensors="pt",
+            add_special_tokens=False
         )["input_ids"][0].to(self.wm.config.device)
-
+    
+        if ids.numel() == 0:
+            return 0.0
+    
+        if ids.numel() <= self.prefix_len:
+            return 0.0
+    
+        entropy = self.utils.calculate_entropy(self.model, ids)
+    
         obs = 0
         n = 0
-
+    
         for i in range(self.prefix_len, len(ids)):
+            if entropy[i] <= self.entropy_threshold:
+                continue
+    
             t = ids[i].item()
+    
             if t not in self.S:
                 continue
-
+    
             n += 1
+    
             if t in self.utils.get_greenlist_ids(ids[:i]):
                 obs += 1
-
+    
         return _zscore(obs, n, self.gamma)
 
 
